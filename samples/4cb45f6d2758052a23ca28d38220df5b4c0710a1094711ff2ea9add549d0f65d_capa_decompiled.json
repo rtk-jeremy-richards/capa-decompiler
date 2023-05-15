@@ -1,0 +1,30 @@
+{
+    "null": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "0550b6cc": {
+        "rules": [
+            "execute shellcode via CopyFile2/5e26aed72a5343dd8575e85c80658d9d/1e72b327ed77488fa8075dcc8fba7738"
+        ],
+        "decompiled_code": "\nvoid fcn.0550b6cc(void)\n\n{\n    int32_t unaff_EBP;\n    uint var_213h;\n    \n    fcn.0550b69a();\n    *(unaff_EBP + -0x213) = 5;\n    fcn.0550b69a();\n    return;\n}\n",
+        "token_count": 70
+    },
+    "0550b8ef": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n// WARNING: Instruction at (ram,0x0550b8c4) overlaps instruction at (ram,0x0550b8c0)\n// \n\nvoid __fastcall fcn.0550b8ef(int32_t param_1, uint param_2)\n\n{\n    uint8_t *puVar1;\n    uint32_t uVar2;\n    uint8_t uVar3;\n    uint8_t uVar4;\n    uint32_t uVar5;\n    int32_t iVar6;\n    uint32_t in_EAX;\n    uint8_t *puVar7;\n    ushort uVar8;\n    uint8_t *unaff_EBX;\n    uint32_t unaff_EBP;\n    int32_t unaff_ESI;\n    bool in_CF;\n    uint8_t in_AF;\n    \n    uVar8 = param_2;\n    if (in_CF) {\n        *unaff_EBX = *unaff_EBX | unaff_EBX >> 8;\n    // WARNING: Bad instruction - Truncating control flow here\n        halt_baddata();\n    }\n    puVar1 = *(unaff_ESI + 0x14);\n    puVar7 = param_1 + puVar1 * 2;\n    *(unaff_ESI + 0x1f) = *(unaff_ESI + 0x1f) - (param_2 >> 8);\n    uVar2 = *0x8b32eb25;\n    uVar5 = (in_EAX ^ 0x27) & 0xc;\n    uVar3 = uVar5;\n    if (*puVar1 <= uVar3) {\n        *(puVar1 + -0x57024993) = (*(puVar1 + -0x57024993) - unaff_EBP) - (uVar3 < *puVar1);\n        if (uVar2 == 0) {\n            iVar6 = (uVar2 - 1 & 0xffffff00 | (uVar2 - 1) + 0x72) + 0xeb04408b +\n                    *(((in_EAX & 0xffffff00 | uVar5) - puVar7 >> 1) + -0x2dccfb40);\n        }\n        else {\n            puVar1[1] = uVar2;\n            uVar4 = puVar1 + 2;\n            uVar3 = 9 < (uVar4 & 0xf) | in_AF;\n            uVar4 = uVar4 + uVar3 * '\\x06';\n            puVar7 = puVar1 + 1;\n            uVar5 = puVar1 + 2 & 0xffffff00 |\n                    uVar4 + (0x90 < (uVar4 & 0xf0) |\n                            (unaff_EBP < *(uVar2 + 0x50) || unaff_EBP - *(uVar2 + 0x50) < (uVar2 < 0x60)) |\n                            uVar3 * (0xf9 < uVar4)) * '`' | 0x945b5f0c;\n            *0x14488986 = *0x14488986 + 1;\n            if (*(uVar5 - 3) == -1) {\n                iVar6 = *(uVar5 + 4);\n            }\n            else {\n                iVar6 = uVar5 + 4;\n            }\n            uVar8 = 0;\n        }\n        *(iVar6 + puVar7 * 2) = uVar8;\n        return;\n    }\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 792
+    },
+    "0550b69a": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nulong fcn.0550b69a(void)\n\n{\n    ulong uVar1;\n    int32_t iVar2;\n    int32_t unaff_EBP;\n    int32_t unaff_ESI;\n    code *unaff_EDI;\n    code *in_stack_00000050;\n    code *in_stack_00000054;\n    uint var_213h;\n    uint uStack4;\n    \n    do {\n        uStack4 = 8;\n        (*in_stack_00000054)();\n        *(unaff_EBP + -0x213) = *(unaff_EBP + -0x213) + 1;\n        (*in_stack_00000054)();\n        (*in_stack_00000054)(&uStack4);\n        (*in_stack_00000054)();\n        (*in_stack_00000050)();\n        iVar2 = (*unaff_EDI)();\n    } while (unaff_ESI == iVar2);\n    uVar1 = rdtsc();\n    return uVar1;\n}\n",
+        "token_count": 213
+    }
+}

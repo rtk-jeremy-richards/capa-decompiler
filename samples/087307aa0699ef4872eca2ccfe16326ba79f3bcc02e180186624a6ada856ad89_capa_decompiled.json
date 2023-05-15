@@ -1,0 +1,12 @@
+{
+    "null": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\nuint entry0(void)\n\n{\n    int32_t iVar1;\n    int32_t extraout_ECX;\n    int32_t var_34h;\n    int32_t var_30h;\n    int32_t var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_10h;\n    uint var_ch;\n    code *var_8h;\n    uint var_4h;\n    \n    *0x40f578 = 6;\n    *0x40f3bc = 0x3d;\n    var_24h = 99;\n    for (var_30h = 0; var_30h < 0x8b0031; var_30h = var_30h + 1) {\n        *0x40f420 = *0x40f420 + -10;\n        *0x40f544 = var_30h / 0xd + *0x40f544;\n    }\n    iVar1 = (*_sym.imp.KERNEL32.dll_GetCommandLineA)();\n    if (iVar1 != 0) {\n        *0x40f040 = *0x40f040 + 99;\n    }\n    iVar1 = (*_sym.imp.KERNEL32.dll_GetACP)();\n    if (iVar1 != 0) {\n        *0x40f5f4 = *0x40f5f4 + 0x40f15c;\n    }\n    (*_sym.imp.KERNEL32.dll_CreateMutexA)(0, 0, 0);\n    var_8h = 0xffe4d299;\n    if (*0x40f364 != 0) {\n        var_24h = *0x40f080 + 99;\n    }\n    *0x40f544 = *0x40f544 + 0x215;\n    if (extraout_ECX != -0x5b22eecd) {\n        *0x40f040 = *0x40f040 + var_24h;\n        for (var_34h = 0; var_34h < 0x2df1da9; var_34h = var_34h + 1) {\n            *0x40f420 = *0x40f420 + -200;\n            *0x40f544 = var_34h / 3 + *0x40f544;\n            if (var_34h == 0x2dcb70) {\n                (*var_8h)();\n            }\n            if (var_34h % 1000000 == 0) {\n                var_8h = var_8h + var_34h;\n            }\n        }\n    }\n    return 0;\n}\n",
+        "token_count": 591
+    }
+}

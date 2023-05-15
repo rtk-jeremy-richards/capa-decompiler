@@ -1,0 +1,38 @@
+{
+    "null": {
+        "rules": [
+            "encrypt data using HC-128/26f802cd5bd1485c91b2d289e18acd95"
+        ],
+        "decompiled_code": "\nvoid __fastcall entry0(uint32_t param_1)\n\n{\n    uint uVar1;\n    uint extraout_ECX;\n    uint32_t unaff_ESI;\n    uchar uVar2;\n    char cVar3;\n    char cVar4;\n    ulong in_MM0;\n    uint64_t in_MM2;\n    uint64_t in_MM3;\n    ulong in_MM6;\n    uint in_XMM0_Da;\n    uint in_XMM0_Db;\n    uint in_XMM0_Dc;\n    uint in_XMM0_Dd;\n    uchar auVar5 [16];\n    \n    uVar1 = *0x405611;\n    param_1 = &stack0xffffffe0 & param_1;\n    if (param_1 < 0) {\n        param_1 = unaff_ESI >> 0x13;\n    }\n    cVar3 = '\\0';\n    uVar2 = param_1 == 0;\n    cVar4 = '\\0';\n    paddsb(in_MM6, in_MM0);\n    psubusb(in_MM3 ^ in_MM2, in_MM3 ^ in_MM2);\n    (**0x403068)(*0x404a5f);\n    fcn.0040100f();\n    (*_sym.imp.KERNEL32.DLL_LockResource)(uVar1);\n    fcn.00401046();\n    auVar5 = CONCAT412(in_XMM0_Dd, CONCAT48(in_XMM0_Dc, CONCAT44(in_XMM0_Db, in_XMM0_Da)));\n    sqrtps(auVar5, auVar5);\n    (**0x403088)(0x4afa000, extraout_ECX, 0xa31e000);\n    (*0x401069)();\n    (**0x40308c)(*0x404d09, 0x154, 0, 0);\n    if (uVar2 || cVar4 != cVar3) {\n        (**0x40308c)(0xcc, 0, 0x198, *0x40568f);\n        (**0x403088)(0xa57b000, 1, 0);\n        return;\n    }\n    (**0x40308c)(0, 0xb4, 0, 0x6c);\n    // WARNING: Could not recover jumptable at 0x0040119f. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*0x4014e6)();\n    return;\n}\n",
+        "token_count": 533
+    },
+    "00401046": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid fcn.00401046(void)\n\n{\n    bool bVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    \n    iVar2 = 0x2a;\n    do {\n        iVar3 = iVar2 + -1;\n        bVar1 = 0 < iVar2;\n        iVar2 = iVar3;\n    } while (iVar3 != 0 && bVar1);\n    (**0x40305c)();\n    return;\n}\n",
+        "token_count": 99
+    },
+    "00401407": {
+        "rules": [
+            "contain loop",
+            "extract resource via kernel32 functions"
+        ],
+        "decompiled_code": "\nvoid fcn.00401407(void)\n\n{\n    int32_t iVar1;\n    \n    iVar1 = 0x35;\n    do {\n        iVar1 = iVar1 + -1;\n    } while (iVar1 != 0);\n    (*_sym.imp.KERNEL32.DLL_LockResource)(0);\n    return;\n}\n",
+        "token_count": 71
+    },
+    "004017a1": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid fcn.004017a1(void)\n\n{\n    bool bVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    code *UNRECOVERED_JUMPTABLE;\n    \n    iVar2 = 0x29;\n    do {\n        iVar3 = iVar2 + -1;\n        bVar1 = 0 < iVar2;\n        iVar2 = iVar3;\n    } while (iVar3 != 0 && bVar1);\n    (*_sym.imp.KERNEL32.DLL_GetConsoleMode)(1, 0xbb0c000);\n    // WARNING: Could not recover jumptable at 0x004017bd. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*UNRECOVERED_JUMPTABLE)();\n    return;\n}\n",
+        "token_count": 170
+    },
+    "004017dd": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid fcn.004017dd(void)\n\n{\n    bool bVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    code *UNRECOVERED_JUMPTABLE;\n    \n    iVar2 = 0x28;\n    do {\n        iVar3 = iVar2 + -1;\n        bVar1 = 0 < iVar2;\n        iVar2 = iVar3;\n    } while (iVar3 != 0 && bVar1);\n    (*_sym.imp.KERNEL32.DLL_ResetEvent)(1);\n    // WARNING: Could not recover jumptable at 0x004017f4. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*UNRECOVERED_JUMPTABLE)();\n    return;\n}\n",
+        "token_count": 162
+    }
+}

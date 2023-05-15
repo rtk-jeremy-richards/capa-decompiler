@@ -1,0 +1,109 @@
+{
+    "null": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "0040102d": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.0040102d(uint32_t arg_8h, int32_t arg_ch)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    int32_t iVar4;\n    int32_t iVar5;\n    uint var_8h;\n    int32_t *var_4h;\n    \n    iVar3 = arg_8h;\n    arg_8h = 0;\n    iVar1 = *(*(iVar3 + 0x3c) + 0x78 + iVar3);\n    iVar5 = iVar1 + iVar3;\n    var_4h = *(iVar1 + 0x20 + iVar3) + iVar3;\n    iVar1 = *(iVar5 + 0x1c);\n    iVar2 = *(iVar5 + 0x24);\n    if (*(iVar5 + 0x18) != 0) {\n        do {\n            iVar4 = fcn.004010eb(*var_4h + iVar3);\n            if (iVar4 == arg_ch) {\n                return *(iVar1 + iVar3 + *(iVar2 + iVar3 + arg_8h * 2) * 4) + iVar3;\n            }\n            arg_8h = arg_8h + 1;\n            var_4h = var_4h + 1;\n        } while (arg_8h < *(iVar5 + 0x18));\n    }\n    return 0;\n}\n",
+        "token_count": 318
+    },
+    "00401159": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_18h\n// WARNING: Variable defined which should be unmapped: var_ch\n// WARNING: Variable defined which should be unmapped: var_10h\n// WARNING: Variable defined which should be unmapped: var_14h\n\nvoid fcn.00401159(void)\n\n{\n    code *pcVar1;\n    int32_t iVar2;\n    uint uVar3;\n    uint *puVar4;\n    int32_t extraout_ECX;\n    int32_t unaff_EBP;\n    uint *in_FS_OFFSET;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    sub.MSVCRT.dll__EH_prolog();\n    sub.MFC42.DLL_CString::operator_1(*(extraout_ECX + 200) + 0x110);\n    sub.MFC42.DLL_CString::operator_1(*(extraout_ECX + 200) + 0x114);\n    sub.MFC42.DLL_CString::operator_1(*(extraout_ECX + 200) + 0x118);\n    if (*(extraout_ECX + 0xd4) == 0) {\n        *(extraout_ECX + 0xd4) = *(*(extraout_ECX + 200) + 8);\n    }\n    iVar2 = (**(*(extraout_ECX + 0xcc) + 0x14))(2, 0, 4);\n    pcVar1 = _sym.imp.USER32.dll_SendMessageA;\n    if (iVar2 != 0) {\n        (*_sym.imp.USER32.dll_SendMessageA)(*(extraout_ECX + 0xa8), 0x184, 0, 0);\n        while (*(extraout_ECX + 0x194) == 0) {\n            uVar3 = sub.MFC42.DLL_operator_2(unaff_EBP + -0x18, extraout_ECX + 0x1e8, 0x40a68c);\n            *(unaff_EBP + -4) = 0;\n            uVar3 = sub.MFC42.DLL_operator_1(unaff_EBP + -0x14, uVar3, extraout_ECX + 0x1f0);\n            *(unaff_EBP + -4) = 1;\n            puVar4 = sub.MFC42.DLL_operator(unaff_EBP + -0x10, uVar3, 0x29);\n            (*pcVar1)(*(extraout_ECX + 0xa8), 0x180, 0, *puVar4);\n            fcn.004037a0();\n            *(unaff_EBP + -4) = 0;\n            fcn.004037a0();\n            *(unaff_EBP + -4) = 0xffffffff;\n            fcn.004037a0();\n            (**(*(extraout_ECX + 0xcc) + 0x1c))(1, 1);\n        }\n        (**(*(extraout_ECX + 0xcc) + 0x18))();\n    }\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return;\n}\n",
+        "token_count": 704
+    },
+    "004010eb": {
+        "rules": [
+            "encrypt data using HC-128/425018b86d394d5ebff49c9438559e47"
+        ],
+        "decompiled_code": "\nuint32_t fcn.004010eb(uint8_t *param_1)\n\n{\n    uint8_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    \n    uVar2 = 0xffffffff;\n    uVar1 = *param_1;\n    while (uVar1 != 0) {\n        uVar3 = uVar2 ^ uVar1;\n        uVar2 = (uVar3 << 0x1e) >> 0x1f & 0xee0e612cU ^\n                (uVar3 << 0x1f) >> 0x1f & 0x77073096U ^ (uVar3 << 0x1d) >> 0x1f & 0x76dc419U ^\n                (uVar3 << 0x19) >> 0x1f & 0x76dc4190U ^ (uVar3 << 0x1a) >> 0x1f & 0x3b6e20c8U ^\n                (uVar3 << 0x1b) >> 0x1f & 0x1db71064U ^ (uVar3 << 0x1c) >> 0x1f & 0xedb8832U ^ uVar2 >> 8 ^\n                (uVar3 << 0x18) >> 0x1f & 0xedb88320U;\n        param_1 = param_1 + 1;\n        uVar1 = *param_1;\n    }\n    return ~uVar2;\n}\n",
+        "token_count": 348
+    },
+    "0040104b": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040104b(void)\n\n{\n    uint8_t uVar1;\n    int32_t iVar2;\n    uint *puVar3;\n    uint8_t *puVar4;\n    uint32_t uVar5;\n    int32_t in_FS_OFFSET;\n    \n    puVar3 = *(*(*(in_FS_OFFSET + 0x30) + 0xc) + 0x14);\n    do {\n        iVar2 = 0x18;\n        uVar5 = 0;\n        puVar4 = puVar3[10];\n        do {\n            uVar1 = *puVar4;\n            if ('`' < uVar1) {\n                uVar1 = uVar1 - 0x20;\n            }\n            uVar5 = (uVar5 >> 0xd | uVar5 << 0x13) + uVar1;\n            iVar2 = iVar2 + -1;\n            puVar4 = puVar4 + 1;\n        } while (iVar2 != 0);\n        puVar3 = *puVar3;\n    } while (uVar5 != *0x40aa08);\n    return;\n}\n",
+        "token_count": 247
+    },
+    "00401055": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_3ch\n\nuint32_t __cdecl fcn.00401055(uint arg_8h, uint arg_ch, uint arg_10h, uint arg_14h)\n\n{\n    int32_t *piVar1;\n    uint32_t *puVar2;\n    uint32_t uVar3;\n    int32_t iVar4;\n    uint uVar5;\n    int32_t unaff_EBP;\n    int32_t iVar6;\n    int32_t arg_8h_00;\n    uint *in_FS_OFFSET;\n    uint var_3ch;\n    uint var_2ch;\n    uint var_1ch;\n    uint var_ch;\n    uint var_4h;\n    \n    uVar3 = sub.MSVCRT.dll__EH_prolog();\n    if (*(unaff_EBP + 0x10) != 0) {\n        iVar4 = fcn.0040114a(unaff_EBP + -0x2c, 0xee, 0);\n        arg_8h_00 = \n        _sym.imp.MSVCP60.dll_unsigned_short_int_const__private:_static_unsigned_short_int_const____cdecl_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Nullstr_void_::_2::_C\n        ;\n        iVar4 = *(iVar4 + 4);\n        *(unaff_EBP + -4) = 0;\n        if (iVar4 != 0) {\n            arg_8h_00 = iVar4;\n        }\n        iVar4 = fcn.0040114a(unaff_EBP + -0x1c, 0xe9, 0);\n        iVar6 = \n        _sym.imp.MSVCP60.dll_unsigned_short_int_const__private:_static_unsigned_short_int_const____cdecl_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Nullstr_void_::_2::_C\n        ;\n        iVar4 = *(iVar4 + 4);\n        *(unaff_EBP + -4) = 1;\n        if (iVar4 != 0) {\n            iVar6 = iVar4;\n        }\n        uVar5 = fcn.00401154(arg_8h_00);\n        uVar5 = fcn.0040112c(iVar6, uVar5);\n        *(unaff_EBP + -0x3c) = uVar5;\n        *(unaff_EBP + -4) = 0;\n        (*\n        _sym.imp.MSVCP60.dll_private:_void___thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Tidy_bool_\n        )(1);\n        *(unaff_EBP + -4) = 0xffffffff;\n        (*\n        _sym.imp.MSVCP60.dll_private:_void___thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Tidy_bool_\n        )(1);\n        piVar1 = *(unaff_EBP + 0xc);\n        uVar3 = (**(unaff_EBP + -0x3c))(*(unaff_EBP + 0x10), *(unaff_EBP + 0x14), 1, 0, piVar1, 0, 0);\n        if (uVar3 != 0) {\n            uVar3 = (*_sym.imp.MSVCRT.dll_malloc)(*piVar1 + 1);\n            puVar2 = *(unaff_EBP + 8);\n            *puVar2 = uVar3;\n            if (uVar3 != 0) {\n                sub.MSVCRT.dll_memset(uVar3, 0, *piVar1 + 1);\n                uVar3 = (**(unaff_EBP + -0x3c))(*(unaff_EBP + 0x10), *(unaff_EBP + 0x14), 1, *puVar2, piVar1, 0, 0);\n                uVar3 = uVar3 & 0xffffff00 | uVar3 != 0;\n                goto code_r0x00401aaf;\n            }\n        }\n    }\n    uVar3 = uVar3 & 0xffffff00;\ncode_r0x00401aaf:\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return uVar3;\n}\n",
+        "token_count": 972
+    },
+    "004011b3": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_30h\n\nuint32_t fcn.004011b3(void)\n\n{\n    int32_t iVar1;\n    uint uVar2;\n    code *pcVar3;\n    uint32_t uVar4;\n    int32_t unaff_EBP;\n    int32_t iVar5;\n    int32_t arg_8h;\n    uint *in_FS_OFFSET;\n    uint var_30h;\n    uint var_20h;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    sub.MSVCRT.dll__EH_prolog();\n    iVar1 = fcn.0040114a(unaff_EBP + -0x30, 0xed, 0);\n    arg_8h = \n    _sym.imp.MSVCP60.dll_unsigned_short_int_const__private:_static_unsigned_short_int_const____cdecl_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Nullstr_void_::_2::_C\n    ;\n    iVar1 = *(iVar1 + 4);\n    *(unaff_EBP + -4) = 0;\n    if (iVar1 != 0) {\n        arg_8h = iVar1;\n    }\n    iVar1 = fcn.0040114a(unaff_EBP + -0x20, 0xea, 0);\n    iVar5 = \n    _sym.imp.MSVCP60.dll_unsigned_short_int_const__private:_static_unsigned_short_int_const____cdecl_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Nullstr_void_::_2::_C\n    ;\n    iVar1 = *(iVar1 + 4);\n    *(unaff_EBP + -4) = 1;\n    if (iVar1 != 0) {\n        iVar5 = iVar1;\n    }\n    uVar2 = fcn.00401154(arg_8h);\n    pcVar3 = fcn.0040112c(iVar5, uVar2);\n    *(unaff_EBP + -4) = 0;\n    (*\n    _sym.imp.MSVCP60.dll_private:_void___thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Tidy_bool_\n    )(1);\n    *(unaff_EBP + -4) = 0xffffffff;\n    (*\n    _sym.imp.MSVCP60.dll_private:_void___thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Tidy_bool_\n    )(1);\n    *(unaff_EBP + -0x10) = 0;\n    uVar4 = (*pcVar3)(unaff_EBP + -0x10, 0, 0, 1, 0);\n    if (uVar4 != 0) {\n        iVar1 = (*pcVar3)(unaff_EBP + -0x10, 0, 0, 1, 8);\n        uVar4 = iVar1 != 0;\n    }\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return uVar4;\n}\n",
+        "token_count": 709
+    },
+    "00401050": {
+        "rules": [
+            "validate payment card number using luhn algorithm with lookup table/f2e93a0d9a164553a93d71878df6b782"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid fcn.00401050(void)\n\n{\n    uint extraout_ECX;\n    int32_t unaff_EBP;\n    uint *in_FS_OFFSET;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    sub.MSVCRT.dll__EH_prolog();\n    *(unaff_EBP + -0x10) = extraout_ECX;\n    *(unaff_EBP + -4) = 8;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 7;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 6;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 5;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 4;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 3;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 2;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 1;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 0;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 0xffffffff;\n    fcn.0040379a();\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return;\n}\n",
+        "token_count": 351
+    },
+    "004010c3": {
+        "rules": [
+            "validate payment card number using luhn algorithm with lookup table/f2e93a0d9a164553a93d71878df6b782"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_10h\n// WARNING: Variable defined which should be unmapped: var_4h\n// WARNING: Variable defined which should be unmapped: var_ch\n\nuint * __cdecl fcn.004010c3(uint arg_8h)\n\n{\n    uint *extraout_ECX;\n    int32_t unaff_EBP;\n    uint *in_FS_OFFSET;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    sub.MSVCRT.dll__EH_prolog();\n    *(unaff_EBP + -0x10) = extraout_ECX;\n    sub.MFC42.DLL_CRecordset::CRecordset(*(unaff_EBP + 8));\n    *(unaff_EBP + -4) = 0;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 1;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 2;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 3;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 4;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 5;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 6;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 7;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 8;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 9;\n    *extraout_ECX = 0x407854;\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    extraout_ECX[5] = 5;\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return extraout_ECX;\n}\n",
+        "token_count": 621
+    },
+    "0040117c": {
+        "rules": [
+            "validate payment card number using luhn algorithm with lookup table/f2e93a0d9a164553a93d71878df6b782"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid fcn.0040117c(void)\n\n{\n    uint extraout_ECX;\n    int32_t unaff_EBP;\n    uint *in_FS_OFFSET;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    sub.MSVCRT.dll__EH_prolog();\n    *(unaff_EBP + -0x10) = extraout_ECX;\n    *(unaff_EBP + -4) = 8;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 7;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 6;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 5;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 4;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 3;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 2;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 1;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 0;\n    fcn.004037a0();\n    *(unaff_EBP + -4) = 0xffffffff;\n    fcn.0040379a();\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return;\n}\n",
+        "token_count": 352
+    },
+    "004011bd": {
+        "rules": [
+            "validate payment card number using luhn algorithm with lookup table/f2e93a0d9a164553a93d71878df6b782"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_10h\n// WARNING: Variable defined which should be unmapped: var_4h\n// WARNING: Variable defined which should be unmapped: var_ch\n\nuint * __cdecl fcn.004011bd(uint arg_8h)\n\n{\n    uint *extraout_ECX;\n    int32_t unaff_EBP;\n    uint *in_FS_OFFSET;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    sub.MSVCRT.dll__EH_prolog();\n    *(unaff_EBP + -0x10) = extraout_ECX;\n    sub.MFC42.DLL_CRecordset::CRecordset(*(unaff_EBP + 8));\n    *(unaff_EBP + -4) = 0;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 1;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 2;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 3;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 4;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 5;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 6;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 7;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 8;\n    sub.MFC42.DLL_CString::CString();\n    *(unaff_EBP + -4) = 9;\n    *extraout_ECX = 0x40762c;\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    extraout_ECX[0x48] = 0;\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    extraout_ECX[0x4a] = 0;\n    extraout_ECX[0x4b] = 0;\n    extraout_ECX[0x4c] = 0;\n    extraout_ECX[0x4d] = 0;\n    extraout_ECX[5] = 0xb;\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    sub.MFC42.DLL_CString::operator(0x40aa34);\n    *in_FS_OFFSET = *(unaff_EBP + -0xc);\n    return extraout_ECX;\n}\n",
+        "token_count": 696
+    },
+    "00401154": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.00401154(int32_t arg_8h)\n\n{\n    uint arg_8h_00;\n    code *pcVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    uint arg_ch;\n    uint var_ch;\n    uint var_4h;\n    \n    arg_ch = 0x9a80e589;\n    arg_8h_00 = fcn.0040104b();\n    pcVar1 = fcn.0040102d(arg_8h_00, arg_ch);\n    if (((arg_8h != 0) && (iVar2 = (*pcVar1)(0xfde9, 0, arg_8h, 0xffffffff, 0, 0, 0, 0),  iVar2 != 0)) &&\n       (iVar3 = (*_sym.imp.MSVCRT.dll_malloc)(iVar2 + 1),  iVar3 != 0)) {\n        (*pcVar1)(0xfde9, 0, arg_8h, 0xffffffff, iVar3, iVar2, 0, 0);\n        return iVar3;\n    }\n    return 0;\n}\n",
+        "token_count": 256
+    },
+    "00401096": {
+        "rules": [
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "hide graphical window",
+            "encode data using XOR"
+        ],
+        "decompiled_code": "\nvoid fcn.00401096(int32_t param_1, int32_t param_2, uint32_t param_3)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    \n    uVar2 = 0;\n    if (param_3 != 0) {\n        do {\n            (*_sym.imp.USER32.dll_ShowWindow)(0, 0);\n            uVar1 = sub.MSVCRT.dll_strlen(param_1);\n            *(uVar2 + param_2) = *(uVar2 + param_2) ^ *(uVar2 % uVar1 + param_1);\n            uVar2 = uVar2 + 1;\n        } while (uVar2 != param_3);\n    }\n    return;\n}\n",
+        "token_count": 165
+    },
+    "0040114a": {
+        "rules": [
+            "resolve function by hash"
+        ],
+        "decompiled_code": "\nuchar * __cdecl fcn.0040114a(uchar *arg_8h, uint uID, uint hInstance)\n\n{\n    uint uVar1;\n    int32_t iVar2;\n    uint lpBuffer;\n    \n    lpBuffer = 0;\n    iVar2 = (*_sym.imp.USER32.dll_LoadStringW)(hInstance, uID, &lpBuffer, 0);\n    uVar1 = lpBuffer;\n    if (iVar2 == 0) {\n        *arg_8h = arg_8h._3_1_;\n        (*\n        _sym.imp.MSVCP60.dll_private:_void___thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Tidy_bool_\n        )(0);\n    }\n    else {\n        *0x40aa08 = 0x6a4abc5b;\n        *arg_8h = arg_8h._3_1_;\n        (*\n        _sym.imp.MSVCP60.dll_private:_void___thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::_Tidy_bool_\n        )(0);\n        (*\n        _sym.imp.MSVCP60.dll_public:_class_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int______thiscall_std::basic_string_unsigned_short_int__struct_std::char_traits_unsigned_short_int___class_std::allocator_unsigned_short_int__::assign_unsigned_short_int_const___unsigned_int_\n        )(uVar1, iVar2);\n    }\n    return arg_8h;\n}\n",
+        "token_count": 357
+    }
+}

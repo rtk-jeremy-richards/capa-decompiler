@@ -1,0 +1,17 @@
+{
+    "null": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "0550b6e3": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n// WARNING: Instruction at (ram,0x0550b6d0) overlaps instruction at (ram,0x0550b6cc)\n// \n\nvoid __fastcall fcn.0550b6e3(int32_t param_1, uint param_2, uint param_3, uint32_t param_4)\n\n{\n    uint8_t *puVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint8_t uVar4;\n    uint8_t uVar5;\n    int32_t iVar6;\n    uint32_t in_EAX;\n    uint32_t uVar7;\n    uint8_t *puVar8;\n    ushort uVar9;\n    uint8_t *unaff_EBX;\n    int32_t unaff_EBP;\n    uint8_t in_AF;\n    \n    uVar9 = param_2;\n    uVar7 = (in_EAX & 0xffffff00 | in_EAX + 0x73) + 0x10d6085e;\n    if (param_4 < 0x3957f0b6U - unaff_EBX) {\n        *unaff_EBX = *unaff_EBX | unaff_EBX >> 8;\n    // WARNING: Bad instruction - Truncating control flow here\n        halt_baddata();\n    }\n    puVar1 = *(unaff_EBP + 0x14);\n    puVar8 = param_1 + puVar1 * 2;\n    *(unaff_EBP + 0x1f) = *(unaff_EBP + 0x1f) - (param_2 >> 8);\n    uVar3 = *0x8b32eb25;\n    uVar2 = (uVar7 ^ 0x27) & 0xc;\n    uVar4 = uVar2;\n    if (*puVar1 <= uVar4) {\n        *(puVar1 + -0x57024993) = (*(puVar1 + -0x57024993) - &stack0xfffffffc) - (uVar4 < *puVar1);\n        if (uVar3 == 0) {\n            iVar6 = (uVar3 - 1 & 0xffffff00 | (uVar3 - 1) + 0x72) + 0xeb04408b +\n                    *(((uVar7 & 0xffffff00 | uVar2) - puVar8 >> 1) + -0x2dccfb40);\n        }\n        else {\n            puVar1[1] = uVar3;\n            uVar5 = puVar1 + 2;\n            uVar4 = 9 < (uVar5 & 0xf) | in_AF;\n            uVar5 = uVar5 + uVar4 * '\\x06';\n            puVar8 = puVar1 + 1;\n            uVar7 = puVar1 + 2 & 0xffffff00 |\n                    uVar5 + (0x90 < (uVar5 & 0xf0) |\n                            (&stack0xfffffffc < *(uVar3 + 0x50) || &stack0xfffffffc + -*(uVar3 + 0x50) < (uVar3 < 0x60))\n                            | uVar4 * (0xf9 < uVar5)) * '`' | 0x945b5f0c;\n            *0x14488986 = *0x14488986 + 1;\n            if (*(uVar7 - 3) == -1) {\n                iVar6 = *(uVar7 + 4);\n            }\n            else {\n                iVar6 = uVar7 + 4;\n            }\n            uVar9 = 0;\n        }\n        *(iVar6 + puVar8 * 2) = uVar9;\n        return;\n    }\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 852
+    }
+}

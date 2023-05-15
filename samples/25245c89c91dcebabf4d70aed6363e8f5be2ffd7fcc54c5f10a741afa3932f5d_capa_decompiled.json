@@ -1,0 +1,49 @@
+{
+    "00401000": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc"
+        ],
+        "decompiled_code": "\nvoid fcn.00401000(uint32_t *param_1, uint32_t param_2)\n\n{\n    uint32_t in_EAX;\n    \n    // [00] -r-x section size 4296704 named .text\n    if (*0x8259b4 == 3) {\n        (**0x81a038)(0, 0, 0, 0, 0);\n    }\n    *param_1 = in_EAX ^ param_2;\n    return;\n}\n",
+        "token_count": 107
+    },
+    "null": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00401035": {
+        "rules": [
+            "check HTTP status code/09dd97b2e76544bcbbe79d95da398605"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00401035(uint32_t *arg_8h)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    ulong uVar4;\n    uint var_444h;\n    uint var_44h;\n    int32_t var_2ch;\n    uint var_28h;\n    int32_t var_24h;\n    uint var_20h;\n    uint var_1ch;\n    int32_t var_18h;\n    int32_t var_14h;\n    uint32_t var_10h;\n    uint var_ch;\n    int32_t var_8h;\n    \n    uVar2 = *arg_8h;\n    var_10h = arg_8h[1];\n    var_28h = *0x822e00;\n    var_20h = *0x822e04;\n    var_8h = 0;\n    var_24h = -0x61c88647;\n    fcn.0040102e();\n    var_8h = var_8h + 0xe0;\n    if (*0x8259b4 == 200) {\n        (**0x81a080)(0, 0);\n    }\n    var_1ch = *0x822e08;\n    var_2ch = *0x822e0c;\n    var_18h = 0x20;\n    do {\n        var_ch = 5;\n        if (*0x8259b4 == 0x4c3) {\n            (**0x81a00c)(0x81c1fc);\n            (**0x81a050)(0);\n            (**0x81a074)(0, 0, 0);\n            (**0x81a034)(&var_44h, 0);\n        }\n        if (*0x8259b4 == 0xfa9) {\n            *0x8259b0 = 0xedeb2e40;\n        }\n        if (*0x8259b4 == 0x3eb) {\n            *0x824494 = 0;\n        }\n        *0x8259ac = 0x9150ce2e;\n        uVar4 = fcn.00401027(var_8h + uVar2);\n        iVar1 = uVar4 >> 0x20;\n        uVar3 = (uVar2 >> (var_ch & 0x1f)) + var_2ch;\n        if (iVar1 == 399) {\n            (**0x81a01c)(&var_444h, 0, 0);\n            (**0x81a084)(0, 0, 0, 0);\n            iVar1 = *0x8259b4;\n        }\n        var_10h = var_10h - (uVar3 ^ uVar4);\n        if (iVar1 == 0xc) {\n            (**0x81a054)(0);\n        }\n        var_14h = fcn.00401027(var_8h + var_10h);\n        fcn.00401000();\n        uVar2 = uVar2 - var_14h;\n        *0x824490 = 0;\n        var_8h = var_8h - var_24h;\n        var_18h = var_18h + -1;\n    } while (var_18h != 0);\n    *arg_8h = uVar2;\n    arg_8h[1] = var_10h;\n    return;\n}\n",
+        "token_count": 770
+    },
+    "004011c2": {
+        "rules": [
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0",
+            "hash data using aphash/10489b186fc44711a1078750698db7a9"
+        ],
+        "decompiled_code": "\nvoid fcn.004011c2(void)\n\n{\n    uint32_t uVar1;\n    int32_t arg_8h;\n    \n    arg_8h = *0x8254a4;\n    for (uVar1 = *0x8259b4 >> 3; uVar1 != 0; uVar1 = uVar1 - 1) {\n        if (*0x8259b4 == 0xae9) {\n            (**0x81a020)(0);\n            (**0x81a028)(0);\n            (**0x81a030)(0x81c22c, 0x81c210, &stack0xfffffbf0, 0);\n            (**0x81a02c)(0, 0, 0);\n        }\n        fcn.00401035(arg_8h);\n        arg_8h = arg_8h + 8;\n    }\n    return;\n}\n",
+        "token_count": 201
+    },
+    "0040102e": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040102e(void)\n\n{\n    int32_t *in_EAX;\n    \n    *in_EAX = *in_EAX + -0x3910c9c0;\n    return;\n}\n",
+        "token_count": 47
+    },
+    "00401235": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00401235(void)\n\n{\n    uint var_4h;\n    \n    return;\n}\n",
+        "token_count": 23
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "00bead46": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "\n// WARNING (jumptable): Unable to track spacebase fully for stack\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.00bead46(void)\n\n{\n    int16_t iVar1;\n    int32_t iVar2;\n    uint32_t uVar3;\n    uchar *puVar4;\n    code *UNRECOVERED_JUMPTABLE;\n    uchar *puVar5;\n    uchar *unaff_ESI;\n    uint unaff_EDI;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    \n    if (unaff_ESI <= &stack0x00000060) {\n        iVar1 = 0xf;\n        if (unaff_EDI != 0) {\n            for (; unaff_EDI >> iVar1 == 0; iVar1 = iVar1 + -1) {\n            }\n        }\n        uVar3 = unaff_ESI + -0x80 & 0xfffffffc;\n        puVar4 = uVar3 - 0x40;\n        *(uVar3 - 0x44) = unaff_EDI;\n        *(uVar3 - 0x48) = unaff_ESI;\n        *(uVar3 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar3, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar4 < 0) * 0x80 | (puVar4 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar4 & 0xff) & 1U) == 0) * 4 | uVar3 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        puVar5 = *0x10;\n        for (iVar2 = 0x40; iVar2 != 0; iVar2 = iVar2 + -1) {\n            *puVar4 = *puVar5;\n            puVar5 = puVar5 + 1;\n            puVar4 = puVar4 + 1;\n        }\n    }\n    // WARNING: Could not recover jumptable at 0x007c393a. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*UNRECOVERED_JUMPTABLE)();\n    return;\n}\n",
+        "token_count": 632
+    },
+    "00801046": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00c75615)\n\nuint32_t __fastcall fcn.00801046(int32_t param_1)\n\n{\n    uint8_t *puVar1;\n    uint8_t uVar2;\n    uint8_t *in_EAX;\n    uint8_t uVar3;\n    uint8_t uVar4;\n    \n    uVar4 = 0;\n    param_1 = param_1 - in_EAX;\n    do {\n        uVar3 = *in_EAX;\n        puVar1 = in_EAX + param_1;\n        in_EAX = in_EAX + 1;\n        uVar2 = *puVar1 ^ (0x1c263d91 << (uVar4 & 0x1f) | 0x1c263d91 >> 0x20 - (uVar4 & 0x1f)) + uVar4;\n        uVar4 = uVar4 + 1;\n        if (uVar2 + 0xbf < 0x1a) {\n            uVar2 = uVar2 + 0x20;\n        }\n        if (uVar3 + 0xbf < 0x1a) {\n            uVar3 = uVar3 + 0x20;\n        }\n    } while ((uVar2 != 0) && (uVar2 == uVar3));\n    if (uVar3 <= uVar2) {\n        return uVar3 < uVar2;\n    }\n    return 0xffffffff;\n}\n",
+        "token_count": 331
+    },
+    "00b11615": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nvoid fcn.00b11615(uint32_t param_1)\n\n{\n    int16_t iVar1;\n    uint16_t unaff_BX;\n    uint32_t uVar2;\n    uint32_t *puVar3;\n    \n    uVar2 = (param_1 ^ 0x2f0c6b74) - 1;\n    iVar1 = 0xf;\n    if ((unaff_BX & 0xff7f) != 0) {\n        for (; (unaff_BX & 0xff7f) >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    puVar3 = ~(uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | uVar2 * 0x1000000);\n    uVar2 = *puVar3 ^ puVar3;\n    // WARNING: Could not recover jumptable at 0x00809e76. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*(0x800e47 - (-1 - (uVar2 >> 3 | uVar2 << 0x1d))))();\n    return;\n}\n",
+        "token_count": 276
+    },
+    "008113ee": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING (jumptable): Unable to track spacebase fully for stack\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.008113ee(void)\n\n{\n    int16_t iVar1;\n    uint32_t uVar2;\n    int32_t iVar3;\n    uint32_t uVar4;\n    uchar *puVar5;\n    uint32_t extraout_EDX;\n    uint32_t uVar6;\n    uint32_t unaff_EBX;\n    int32_t unaff_EBP;\n    uint32_t *puVar7;\n    uchar *unaff_ESI;\n    uint16_t uVar8;\n    uint32_t unaff_EDI;\n    uint8_t in_CF;\n    uint8_t in_PF;\n    uint8_t in_AF;\n    uint8_t in_ZF;\n    uint8_t in_SF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_OF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint32_t uStack4;\n    \n    uStack4 = (in_NT & 1) * 0x4000 | (in_OF & 1) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n              (in_SF & 1) * 0x80 | (in_ZF & 1) * 0x40 | (in_AF & 1) * 0x10 | (in_PF & 1) * 4 | in_CF & 1 |\n              (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000 | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n    uVar8 = unaff_EDI << 0xb;\n    fcn.00b7fa88();\n    uVar6 = ~(extraout_EDX ^ unaff_EBX) + 1;\n    uVar2 = uVar6 * 8;\n    if (unaff_ESI <= &stack0x0000005c) {\n        iVar1 = 0xf;\n        if (uVar8 != 0) {\n            for (; uVar8 >> iVar1 == 0; iVar1 = iVar1 + -1) {\n            }\n        }\n        uVar4 = unaff_ESI + -0x80 & 0xfffffffc;\n        puVar5 = uVar4 - 0x40;\n        *(uVar4 - 0x44) = unaff_EDI & 0xffff0000 | uVar8;\n        *(uVar4 - 0x48) = unaff_ESI;\n        *(uVar4 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar4, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar5 < 0) * 0x80 | (puVar5 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar5 & 0xff) & 1U) == 0) * 4 | uVar4 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        puVar7 = &uStack4;\n        for (iVar3 = 0x40; iVar3 != 0; iVar3 = iVar3 + -1) {\n            *puVar5 = *puVar7;\n            puVar7 = puVar7 + 1;\n            puVar5 = puVar5 + 1;\n        }\n    }\n    // WARNING: Could not recover jumptable at 0x007c393a. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*(unaff_EBP + (uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | (uVar2 | uVar6 >> 0x1d) << 0x18)))\n              ();\n    return;\n}\n",
+        "token_count": 1017
+    },
+    "00b7fa88": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00b7fa88(void)\n\n{\n    uint uStack00000008;\n    uint uStack0000000c;\n    \n    uStack0000000c = 0xa1d3b74;\n    uStack00000008 = 0xb7faa4;\n    fcn.00b11615();\n    return;\n}\n",
+        "token_count": 76
+    },
+    "null": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid entry0(void)\n\n{\n    fcn.008113ee();\n    return;\n}\n",
+        "token_count": 19
+    }
+}

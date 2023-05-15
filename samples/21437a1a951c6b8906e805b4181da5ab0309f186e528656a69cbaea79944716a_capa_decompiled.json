@@ -1,0 +1,705 @@
+{
+    "null": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00401a80": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nuint fcn.00401a80(uint param_1)\n\n{\n    int32_t iVar1;\n    uint uVar2;\n    int32_t *unaff_EDI;\n    uint *in_FS_OFFSET;\n    bool bVar3;\n    uchar *puVar4;\n    uint32_t *puVar5;\n    uint32_t auStack156 [2];\n    uchar auStack148 [12];\n    uchar auStack136 [100];\n    uint uStack36;\n    uint uStack28;\n    uint uStack24;\n    uint uStack20;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5a60;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    if ((unaff_EDI != NULL) && (*unaff_EDI == 0)) {\n        puVar5 = 0x18;\n        iVar1 = fcn.00404b31(0x18);\n        uStack4 = 0;\n        bVar3 = iVar1 == 0;\n        if (bVar3) {\n            iVar1 = 0;\n        }\n        else {\n            puVar5 = auStack156;\n            uVar2 = fcn.00401860(param_1, puVar5);\n            uStack12 = CONCAT31(uStack12._1_3_, 1);\n            puVar4 = auStack136;\n            fcn.00401420(puVar4, uVar2, param_1, puVar5, 1);\n            uStack20 = 2;\n            iVar1 = fcn.00401a00(iVar1, puVar4, uVar2, 3);\n        }\n        *unaff_EDI = iVar1;\n        uStack24 = 3;\n        if (!bVar3) {\n            fcn.004014c0(auStack148);\n        }\n        uStack28 = 0xffffffff;\n        if ((!bVar3) && (0xf < auStack156[0])) {\n            fcn.004048f7(puVar5);\n        }\n    }\n    *in_FS_OFFSET = uStack36;\n    return 2;\n}\n",
+        "token_count": 486
+    },
+    "00402650": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9",
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9",
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00402650(code **param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d5978;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::basic_stringbuf_char__struct_std::char_traits_char___class_std::allocator_char__.0;\n    uStack4 = 0;\n    if ((*(param_1 + 0x10) & 1) != 0) {\n        fcn.004048f7(*param_1[4]);\n    }\n    *param_1[4] = 0;\n    *param_1[8] = 0;\n    *param_1[0xc] = 0;\n    *param_1[5] = 0;\n    *param_1[9] = 0;\n    *param_1[0xd] = 0;\n    param_1[0x10] = param_1[0x10] & 0xfffffffe;\n    param_1[0xf] = NULL;\n    uStack4 = 0xffffffff;\n    fcn.00402230();\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 294
+    },
+    "00402df0": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nint32_t * __thiscall fcn.00402df0(int32_t *param_1, uint8_t param_2)\n\n{\n    uint *puVar1;\n    \n    if (*param_1 != 0) {\n        puVar1 = fcn.004016e0();\n        if (puVar1 != NULL) {\n            (***puVar1)(1);\n        }\n    }\n    if ((param_2 & 1) != 0) {\n        fcn.004048f7(param_1);\n    }\n    return param_1;\n}\n",
+        "token_count": 122
+    },
+    "00403230": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\ncode ** fcn.00403230(code **param_1, uint8_t param_2)\n\n{\n    code *pcVar1;\n    uint unaff_EBX;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5958;\n    *in_FS_OFFSET = &uStack12;\n    fcn.004034a0(param_1);\n    pcVar1 = NULL;\n    *param_1 = vtable.std::basic_stringbuf_char__struct_std::char_traits_char___class_std::allocator_char__.0;\n    if ((param_2 & 1) == 0) {\n        pcVar1 = 0x4;\n    }\n    if ((param_2 & 2) == 0) {\n        pcVar1 = pcVar1 | 2;\n    }\n    if ((param_2 & 8) != 0) {\n        pcVar1 = pcVar1 | 8;\n    }\n    if ((param_2 & 4) != 0) {\n        pcVar1 = pcVar1 | 0x10;\n    }\n    param_1[0xf] = NULL;\n    param_1[0x10] = pcVar1;\n    *in_FS_OFFSET = unaff_EBX;\n    return param_1;\n}\n",
+        "token_count": 314
+    },
+    "0040f76d": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nuint __cdecl fcn.0040f76d(uint arg_8h, uint arg_ch, uint32_t arg_10h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t arg_8h_00;\n    uint uVar3;\n    code *pcVar4;\n    code *pcVar5;\n    uint var_14h;\n    uint var_ch;\n    uint var_8h;\n    int32_t var_4h;\n    \n    iVar1 = fcn.00408b7f();\n    var_4h = 0;\n    if (*0x8de73c == 0) {\n        iVar2 = (**0x8d6020)(\"USER32.DLL\");\n        pcVar4 = *0x8d601c;\n        if (iVar2 == 0) {\n            return 0;\n        }\n        arg_8h_00 = (**0x8d601c)(iVar2, \"MessageBoxA\");\n        if (arg_8h_00 == 0) {\n            return 0;\n        }\n        *0x8de73c = fcn.00408b0d(arg_8h_00);\n        uVar3 = (*pcVar4)(iVar2, \"GetActiveWindow\");\n        *0x8de740 = fcn.00408b0d(uVar3);\n        uVar3 = (*pcVar4)(iVar2, \"GetLastActivePopup\");\n        *0x8de744 = fcn.00408b0d(uVar3);\n        uVar3 = (*pcVar4)(iVar2, \"GetUserObjectInformationA\");\n        *0x8de74c = fcn.00408b0d(uVar3);\n        if (*0x8de74c != 0) {\n            uVar3 = (*pcVar4)(iVar2, \"GetProcessWindowStation\");\n            *0x8de748 = fcn.00408b0d(uVar3);\n        }\n    }\n    if ((*0x8de748 != iVar1) && (*0x8de74c != iVar1)) {\n        pcVar4 = fcn.00408b88(*0x8de748);\n        pcVar5 = fcn.00408b88(*0x8de74c);\n        if (((pcVar4 != NULL) && (pcVar5 != NULL)) &&\n           (((iVar2 = (*pcVar4)(),  iVar2 == 0 || (iVar2 = (*pcVar5)(iVar2, 1, &var_14h, 0xc, &var_8h),  iVar2 == 0)) ||\n            ((var_ch & 1) == 0)))) {\n            arg_10h = arg_10h | 0x200000;\n            goto code_r0x0040f8af;\n        }\n    }\n    if ((((*0x8de740 != iVar1) && (pcVar4 = fcn.00408b88(*0x8de740),  pcVar4 != NULL)) &&\n        (var_4h = (*pcVar4)(),  var_4h != 0)) &&\n       ((*0x8de744 != iVar1 && (pcVar4 = fcn.00408b88(*0x8de744),  pcVar4 != NULL)))) {\n        var_4h = (*pcVar4)(var_4h);\n    }\ncode_r0x0040f8af:\n    pcVar4 = fcn.00408b88(*0x8de73c);\n    if (pcVar4 == NULL) {\n        return 0;\n    }\n    uVar3 = (*pcVar4)(var_4h, arg_8h, arg_ch, arg_10h);\n    return uVar3;\n}\n",
+        "token_count": 828
+    },
+    "0041141e": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nvoid __cdecl fcn.0041141e(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    int32_t iVar1;\n    uint unaff_EBX;\n    uint var_28h;\n    uint var_24h;\n    int32_t var_1ch;\n    uint var_18h;\n    uint32_t var_14h;\n    uint var_10h;\n    uint32_t var_4h;\n    \n    var_4h = *0x8dc460 ^ &stack0xfffffffc;\n    fcn.0040637f(arg_10h);\n    var_14h = fcn.00412c59(&var_10h, &var_28h, arg_ch, 0, 0, 0, 0, &var_24h);\n    iVar1 = fcn.004121d1(&var_10h, arg_8h);\n    if ((var_14h & 3) == 0) {\n        if (iVar1 == 1) {\ncode_r0x00411477:\n            if (var_18h != '\\0') {\n                *(var_1ch + 0x70) = *(var_1ch + 0x70) & 0xfffffffd;\n            }\n            goto code_r0x004114b7;\n        }\n        if (iVar1 != 2) {\ncode_r0x004114a9:\n            if (var_18h != '\\0') {\n                *(var_1ch + 0x70) = *(var_1ch + 0x70) & 0xfffffffd;\n            }\n            goto code_r0x004114b7;\n        }\n    }\n    else if ((var_14h & 1) == 0) {\n        if ((var_14h & 2) == 0) goto code_r0x004114a9;\n        goto code_r0x00411477;\n    }\n    if (var_18h != '\\0') {\n        *(var_1ch + 0x70) = *(var_1ch + 0x70) & 0xfffffffd;\n    }\ncode_r0x004114b7:\n    fcn.004052d8(unaff_EBX);\n    return;\n}\n",
+        "token_count": 501
+    },
+    "004114c6": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nvoid __cdecl fcn.004114c6(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    int32_t iVar1;\n    uint unaff_EBX;\n    uint var_28h;\n    uint var_24h;\n    int32_t var_1ch;\n    uint var_18h;\n    uint32_t var_14h;\n    uint var_10h;\n    uint32_t var_4h;\n    \n    var_4h = *0x8dc460 ^ &stack0xfffffffc;\n    fcn.0040637f(arg_10h);\n    var_14h = fcn.00412c59(&var_10h, &var_28h, arg_ch, 0, 0, 0, 0, &var_24h);\n    iVar1 = fcn.00412715(&var_10h, arg_8h);\n    if ((var_14h & 3) == 0) {\n        if (iVar1 == 1) {\ncode_r0x0041151f:\n            if (var_18h != '\\0') {\n                *(var_1ch + 0x70) = *(var_1ch + 0x70) & 0xfffffffd;\n            }\n            goto code_r0x0041155f;\n        }\n        if (iVar1 != 2) {\ncode_r0x00411551:\n            if (var_18h != '\\0') {\n                *(var_1ch + 0x70) = *(var_1ch + 0x70) & 0xfffffffd;\n            }\n            goto code_r0x0041155f;\n        }\n    }\n    else if ((var_14h & 1) == 0) {\n        if ((var_14h & 2) == 0) goto code_r0x00411551;\n        goto code_r0x0041151f;\n    }\n    if (var_18h != '\\0') {\n        *(var_1ch + 0x70) = *(var_1ch + 0x70) & 0xfffffffd;\n    }\ncode_r0x0041155f:\n    fcn.004052d8(unaff_EBX);\n    return;\n}\n",
+        "token_count": 500
+    },
+    "00412c59": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00412f1b)\n// WARNING: Removing unreachable block (ram,0x00412ee4)\n// WARNING: Removing unreachable block (ram,0x004132cc)\n// WARNING: Removing unreachable block (ram,0x00412ef3)\n// WARNING: Removing unreachable block (ram,0x00412efb)\n// WARNING: Removing unreachable block (ram,0x00412f01)\n// WARNING: Removing unreachable block (ram,0x00412f04)\n// WARNING: Removing unreachable block (ram,0x00412f0b)\n// WARNING: Removing unreachable block (ram,0x00412f15)\n// WARNING: Removing unreachable block (ram,0x00412f70)\n// WARNING: Removing unreachable block (ram,0x00412f6a)\n// WARNING: Removing unreachable block (ram,0x00412f76)\n// WARNING: Removing unreachable block (ram,0x00412f93)\n// WARNING: Removing unreachable block (ram,0x00412f95)\n// WARNING: Removing unreachable block (ram,0x00412f9d)\n// WARNING: Removing unreachable block (ram,0x00412fa0)\n// WARNING: Removing unreachable block (ram,0x00412fa5)\n// WARNING: Removing unreachable block (ram,0x00412fa8)\n// WARNING: Removing unreachable block (ram,0x004132d5)\n// WARNING: Removing unreachable block (ram,0x00412fb3)\n// WARNING: Removing unreachable block (ram,0x004132ec)\n// WARNING: Removing unreachable block (ram,0x004132f3)\n// WARNING: Removing unreachable block (ram,0x00412fbe)\n// WARNING: Removing unreachable block (ram,0x00412fd1)\n// WARNING: Removing unreachable block (ram,0x00412fd3)\n// WARNING: Removing unreachable block (ram,0x00412fe0)\n// WARNING: Removing unreachable block (ram,0x00412fe5)\n// WARNING: Removing unreachable block (ram,0x00412feb)\n// WARNING: Removing unreachable block (ram,0x00412ff4)\n// WARNING: Removing unreachable block (ram,0x00412ffb)\n// WARNING: Removing unreachable block (ram,0x00413013)\n// WARNING: Removing unreachable block (ram,0x00413024)\n// WARNING: Removing unreachable block (ram,0x00413032)\n// WARNING: Removing unreachable block (ram,0x00413071)\n// WARNING: Removing unreachable block (ram,0x0041307a)\n// WARNING: Removing unreachable block (ram,0x00413292)\n// WARNING: Removing unreachable block (ram,0x00413088)\n// WARNING: Removing unreachable block (ram,0x00413092)\n// WARNING: Removing unreachable block (ram,0x004132ad)\n// WARNING: Removing unreachable block (ram,0x0041309f)\n// WARNING: Removing unreachable block (ram,0x004130a6)\n// WARNING: Removing unreachable block (ram,0x004130b0)\n// WARNING: Removing unreachable block (ram,0x004130b5)\n// WARNING: Removing unreachable block (ram,0x004130c5)\n// WARNING: Removing unreachable block (ram,0x004130ca)\n// WARNING: Removing unreachable block (ram,0x004130d4)\n// WARNING: Removing unreachable block (ram,0x004130d9)\n// WARNING: Removing unreachable block (ram,0x004130eb)\n// WARNING: Removing unreachable block (ram,0x004130f8)\n// WARNING: Removing unreachable block (ram,0x00413107)\n// WARNING: Removing unreachable block (ram,0x00413114)\n// WARNING: Removing unreachable block (ram,0x00413131)\n// WARNING: Removing unreachable block (ram,0x00413135)\n// WARNING: Removing unreachable block (ram,0x0041313c)\n// WARNING: Removing unreachable block (ram,0x00413145)\n// WARNING: Removing unreachable block (ram,0x00413148)\n// WARNING: Removing unreachable block (ram,0x00413159)\n// WARNING: Removing unreachable block (ram,0x00413167)\n// WARNING: Removing unreachable block (ram,0x00413172)\n// WARNING: Removing unreachable block (ram,0x00413179)\n// WARNING: Removing unreachable block (ram,0x004131a4)\n// WARNING: Removing unreachable block (ram,0x004131a9)\n// WARNING: Removing unreachable block (ram,0x004131b4)\n// WARNING: Removing unreachable block (ram,0x004131bd)\n// WARNING: Removing unreachable block (ram,0x004131c3)\n// WARNING: Removing unreachable block (ram,0x004131c6)\n// WARNING: Removing unreachable block (ram,0x004131ec)\n// WARNING: Removing unreachable block (ram,0x004131f1)\n// WARNING: Removing unreachable block (ram,0x004131f6)\n// WARNING: Removing unreachable block (ram,0x00413203)\n// WARNING: Removing unreachable block (ram,0x00413214)\n// WARNING: Removing unreachable block (ram,0x00413245)\n// WARNING: Removing unreachable block (ram,0x0041321a)\n// WARNING: Removing unreachable block (ram,0x00413240)\n// WARNING: Removing unreachable block (ram,0x00413224)\n// WARNING: Removing unreachable block (ram,0x0041323a)\n// WARNING: Removing unreachable block (ram,0x00413233)\n// WARNING: Removing unreachable block (ram,0x00413248)\n// WARNING: Removing unreachable block (ram,0x00413275)\n// WARNING: Removing unreachable block (ram,0x00413252)\n// WARNING: Removing unreachable block (ram,0x004130dd)\n// WARNING: Removing unreachable block (ram,0x004130ba)\n// WARNING: Removing unreachable block (ram,0x004132b0)\n// WARNING: Removing unreachable block (ram,0x00412ff6)\n// WARNING: Removing unreachable block (ram,0x004132ba)\n// WARNING: Removing unreachable block (ram,0x004132fb)\n// WARNING: Variable defined which should be unmapped: var_7ch\n\nvoid __cdecl\nfcn.00412c59(uint arg_8h, uint arg_ch, char *arg_10h, uint arg_14h, uint arg_18h, uint arg_1ch, uint arg_20h, \n            int32_t arg_24h)\n\n{\n    char cVar1;\n    uint *puVar2;\n    uint var_7ch;\n    uint var_78h;\n    uint var_74h;\n    uint var_70h;\n    uint var_6ch;\n    uint var_68h;\n    uint var_64h;\n    uint var_60h;\n    uint var_5ch;\n    uint var_58h;\n    uint var_54h;\n    uint var_50h;\n    uint var_4ch;\n    uint var_48h;\n    uint var_3ch;\n    uint var_34h;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_9h;\n    uint var_4h;\n    \n    if (arg_24h == 0) {\n        puVar2 = fcn.00407587();\n        *puVar2 = 0x16;\n        fcn.004048b6(0, 0, 0, 0, 0);\n        fcn.004052d8(var_7ch);\n        return;\n    }\n    for (; (((cVar1 = *arg_10h,  cVar1 == ' ' || (cVar1 == '\\t')) || (cVar1 == '\\n')) || (cVar1 == '\\r'));\n        arg_10h = arg_10h + 1) {\n    }\n    // WARNING: Could not recover jumptable at 0x00412cec. Too many branches\n    // WARNING: Treating indirect jump as call\n    // switch table (12 cases) at 0x413321\n    (**0x413321)();\n    return;\n}\n",
+        "token_count": 1787
+    },
+    "00401610": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nint32_t __fastcall fcn.00401610(uint param_1)\n\n{\n    int32_t iVar1;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5688;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    if (*0x8ddcd0 == 0) {\n        fcn.00403e18(0);\n        if (*0x8ddcd0 == 0) {\n            *0x8ddccc = *0x8ddccc + 1;\n            *0x8ddcd0 = *0x8ddccc;\n        }\n        uStack8 = 0xffffffff;\n        fcn.00403e40();\n    }\n    iVar1 = *0x8ddcd0;\n    *in_FS_OFFSET = param_1;\n    return iVar1;\n}\n",
+        "token_count": 217
+    },
+    "004030c0": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid __thiscall fcn.004030c0(int32_t param_1, char param_2, int32_t param_3)\n\n{\n    uint arg_10h;\n    \n    if ((param_2 != '\\0') && (0xf < *(param_1 + 0x18))) {\n        arg_10h = *(param_1 + 4);\n        if (param_3 != 0) {\n            fcn.00404902(param_1 + 4, 0x10, arg_10h, param_3);\n        }\n        fcn.004048f7(arg_10h);\n    }\n    *(param_1 + 0x14) = param_3;\n    *(param_1 + 0x18) = 0xf;\n    *(param_1 + 4 + param_3) = 0;\n    return;\n}\n",
+        "token_count": 189
+    },
+    "00403110": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid fcn.00403110(uint32_t param_1)\n\n{\n    code *pcVar1;\n    \n    if (param_1 == 0) {\n        param_1 = 0;\n    }\n    else if (0xffffffff / param_1 == 0) {\n        fcn.00401000();\n        fcn.00405364(&stack0xfffffff0, 0x8dae88);\n        pcVar1 = swi(3);\n        (*pcVar1)();\n        return;\n    }\n    fcn.00404b31(param_1);\n    return;\n}\n",
+        "token_count": 126
+    },
+    "00403160": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint fcn.00403160(void)\n\n{\n    int32_t in_EAX;\n    \n    if (**(in_EAX + 0x20) != 0) {\n        return **(in_EAX + 0x30);\n    }\n    return 0;\n}\n",
+        "token_count": 59
+    },
+    "00403180": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint fcn.00403180(void)\n\n{\n    int32_t in_EAX;\n    \n    if (**(in_EAX + 0x24) != 0) {\n        return **(in_EAX + 0x34);\n    }\n    return 0;\n}\n",
+        "token_count": 59
+    },
+    "00403820": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nint32_t * fcn.00403820(void)\n\n{\n    int32_t *piVar1;\n    uint32_t uVar2;\n    int32_t iVar3;\n    int32_t *piVar4;\n    char *unaff_EBX;\n    uint *in_FS_OFFSET;\n    uchar auStack32 [4];\n    uint uStack28;\n    uint uStack20;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5a98;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.00403e18(0);\n    piVar1 = *0x34da088;\n    uStack8 = 0;\n    uVar2 = fcn.00401610();\n    iVar3 = *unaff_EBX;\n    if (uVar2 < *(iVar3 + 0xc)) {\n        piVar4 = *(*(iVar3 + 8) + uVar2 * 4);\n        if (piVar4 == NULL) goto code_r0x0040386f;\ncode_r0x0040388d:\n        if (piVar4 != NULL) goto code_r0x004038e2;\n    }\n    else {\n        piVar4 = NULL;\ncode_r0x0040386f:\n        if (*(iVar3 + 0x14) == '\\0') goto code_r0x0040388d;\n        iVar3 = fcn.00403af6();\n        if (uVar2 < *(iVar3 + 0xc)) {\n            piVar4 = *(*(iVar3 + 8) + uVar2 * 4);\n            goto code_r0x0040388d;\n        }\n    }\n    piVar4 = piVar1;\n    if (piVar1 == NULL) {\n        iVar3 = fcn.00401a80();\n        if (iVar3 == -1) {\n            unaff_EBX = \"bad cast\";\n            fcn.004043cc(\"bad cast\");\n            fcn.00405364(auStack32, 0x8dae50);\n        }\n        *0x34da088 = unaff_EBX;\n        fcn.00401680();\n        fcn.00403bbb(unaff_EBX);\n        piVar4 = unaff_EBX;\n    }\ncode_r0x004038e2:\n    uStack20 = 0xffffffff;\n    fcn.00403e40();\n    *in_FS_OFFSET = uStack28;\n    return piVar4;\n}\n",
+        "token_count": 564
+    },
+    "004043a9": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.004043a9(code **param_1)\n\n{\n    *param_1 = vtable.std::exception.0;\n    if (param_1[2] != NULL) {\n        fcn.0040445a(param_1[1]);\n    }\n    return;\n}\n",
+        "token_count": 65
+    },
+    "0040445a": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid __cdecl fcn.0040445a(uint arg_8h)\n\n{\n    int32_t arg_8h_00;\n    int32_t iVar1;\n    uint *puVar2;\n    uint uVar3;\n    int32_t unaff_EBP;\n    uint var_1ch;\n    uint var_4h;\n    \n    fcn.004082a8(0x8da8f0, 0xc);\n    iVar1 = *(unaff_EBP + 8);\n    if (iVar1 != 0) {\n        if (*0x34da1d8 == 3) {\n            fcn.004077ae(4);\n            *(unaff_EBP + -4) = 0;\n            arg_8h_00 = fcn.004077e1(iVar1);\n            *(unaff_EBP + -0x1c) = arg_8h_00;\n            if (arg_8h_00 != 0) {\n                fcn.00407811(arg_8h_00, iVar1);\n            }\n            *(unaff_EBP + -4) = 0xfffffffe;\n            fcn.004044b0();\n            if (*(unaff_EBP + -0x1c) != 0) goto code_r0x004044e2;\n            iVar1 = *(unaff_EBP + 8);\n        }\n        iVar1 = (**0x8d605c)(*0x8dddcc, 0, iVar1);\n        if (iVar1 == 0) {\n            puVar2 = fcn.00407587();\n            uVar3 = (**0x8d6058)();\n            uVar3 = fcn.00407545(uVar3);\n            *puVar2 = uVar3;\n        }\n    }\ncode_r0x004044e2:\n    fcn.004082ed();\n    return;\n}\n",
+        "token_count": 422
+    },
+    "00404fe8": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint __cdecl\nfcn.00404fe8(uint noname_0, uint noname_1, uint noname_2, uint noname_3, uint noname_4, uint noname_5, uint noname_6, \n            uint noname_7, uint noname_8, uint noname_9, uint noname_10, uint noname_11, uint noname_12, uint noname_13\n            , uint noname_14, uint arg_8h, uint arg_ch, uint noname_17, uint noname_18, uint arg_18h, uint arg_1ch, \n            uint arg_20h)\n\n{\n    int32_t iVar1;\n    int32_t *in_FS_OFFSET;\n    uint *var_8h_3;\n    uint *var_ch_2;\n    uint var_10h_2;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    uint var_38h;\n    uint *var_34h;\n    uint var_30h;\n    code *var_2ch;\n    uint *var_28h_2;\n    code *pcStack40;\n    uint32_t uStack36;\n    uint uStack32;\n    uint *puStack28;\n    uint uStack24;\n    uint uStack20;\n    uchar *puStack16;\n    uchar *var_8h_2;\n    int32_t var_4h_2;\n    \n    var_8h_2 = &stack0xfffffffc;\n    puStack16 = &stack0xffffffc0;\n    if (var_8h_3 == 0x123) {\n        *var_ch_2 = 0x405093;\n        var_38h = 1;\n    }\n    else {\n        pcStack40 = fcn.004050bf;\n        uStack36 = *0x8dc460 ^ &fcn.00404fe8::var_28h_2;\n        uStack32 = var_24h;\n        puStack28 = var_ch_2;\n        uStack24 = var_20h;\n        uStack20 = var_1ch;\n        var_4h_2 = 0;\n        var_28h_2 = *in_FS_OFFSET;\n        *in_FS_OFFSET = &fcn.00404fe8::var_28h_2;\n        var_34h = var_8h_3;\n        var_30h = var_10h_2;\n        iVar1 = fcn.00408dd4();\n        var_2ch = *(iVar1 + 0x80);\n        (*var_2ch)(*var_8h_3, &fcn.00404fe8::var_34h);\n        var_38h = 0;\n        if (var_4h_2 == 0) {\n            *in_FS_OFFSET = var_28h_2;\n        }\n        else {\n            *var_28h_2 = **in_FS_OFFSET;\n            *in_FS_OFFSET = var_28h_2;\n        }\n    }\n    return var_38h;\n}\n",
+        "token_count": 721
+    },
+    "004052d8": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004052d8(uint arg_8h)\n\n{\n    uint in_EAX;\n    uint uVar1;\n    int32_t in_ECX;\n    uint in_EDX;\n    uint unaff_EBX;\n    uint unaff_EBP;\n    uint unaff_ESI;\n    uint unaff_EDI;\n    ushort in_ES;\n    ushort in_CS;\n    ushort in_SS;\n    ushort in_DS;\n    ushort in_FS;\n    ushort in_GS;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint unaff_retaddr;\n    int32_t var_328h;\n    uint var_324h;\n    uint var_320h;\n    \n    if (in_ECX == *0x8dc460) {\n        return;\n    }\n    *0x8de4d8 = (in_NT & 1) * 0x4000 | SBORROW4(&stack0xfffffffc, 0x328) * 0x800 | (in_IF & 1) * 0x200 |\n                (in_TF & 1) * 0x100 | (&var_328h < 0) * 0x80 | (*0x10 == 0x32c) * 0x40 | (in_AF & 1) * 0x10 |\n                ((POPCOUNT(&var_328h & 0xff) & 1U) == 0) * 4 | &stack0xfffffffc < 0x328 | (in_ID & 1) * 0x200000 |\n                (in_VIP & 1) * 0x100000 | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n    *0x8de4dc = &arg_8h;\n    *0x8de418 = 0x10001;\n    *0x8de3c0 = 0xc0000409;\n    *0x8de3c4 = 1;\n    var_328h = *0x8dc460;\n    var_324h = *0x8dc464;\n    *0x8de3cc = unaff_retaddr;\n    *0x8de4a4 = in_GS;\n    *0x8de4a8 = in_FS;\n    *0x8de4ac = in_ES;\n    *0x8de4b0 = in_DS;\n    *0x8de4b4 = unaff_EDI;\n    *0x8de4b8 = unaff_ESI;\n    *0x8de4bc = unaff_EBX;\n    *0x8de4c0 = in_EDX;\n    *0x8de4c4 = in_ECX;\n    *0x8de4c8 = in_EAX;\n    *0x8de4cc = unaff_EBP;\n    *0x8de4d0 = unaff_retaddr;\n    *0x8de4d4 = in_CS;\n    *0x8de4e0 = in_SS;\n    *0x8de410 = (**0x8d6074)();\n    fcn.0040914d(1);\n    (**0x8d6070)(0);\n    (**0x8d606c)(0x8d8ac0);\n    if (*0x8de410 == 0) {\n        fcn.0040914d(1);\n    }\n    uVar1 = (**0x8d6068)(0xc0000409);\n    (**0x8d6064)(uVar1);\n    return;\n}\n",
+        "token_count": 838
+    },
+    "0040872e": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\n// WARNING: Possible PIC construction at 0x00408821: Changing call to branch\n// WARNING: Removing unreachable block (ram,0x00408826)\n// WARNING: Removing unreachable block (ram,0x00408854)\n// WARNING: Removing unreachable block (ram,0x0040882c)\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid __cdecl fcn.0040872e(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    int32_t *piVar1;\n    int32_t *piVar2;\n    int32_t iVar3;\n    code *pcVar4;\n    int32_t unaff_EBP;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_4h;\n    \n    fcn.004082a8(0x8daa10, 0x18);\n    fcn.004077ae(8);\n    *(unaff_EBP + -4) = 0;\n    if (*0x8ddf54 != 1) {\n        *0x8ddf50 = 1;\n        *0x8ddf4c = *(unaff_EBP + 0x10);\n        if (*(unaff_EBP + 0xc) == 0) {\n            piVar1 = fcn.00408b88(*0x34da1b4);\n            *(unaff_EBP + -0x28) = piVar1;\n            if (piVar1 != NULL) {\n                piVar2 = fcn.00408b88(*0x34da1b0);\n                *(unaff_EBP + -0x24) = piVar2;\n                *(unaff_EBP + -0x1c) = piVar1;\n                *(unaff_EBP + -0x20) = piVar2;\n                while( true ) {\n                    piVar2 = piVar2 + -1;\n                    *(unaff_EBP + -0x24) = piVar2;\n                    if (piVar2 < piVar1) break;\n                    iVar3 = fcn.00408b7f();\n                    if (*piVar2 != iVar3) {\n                        if (piVar2 < piVar1) break;\n                        pcVar4 = fcn.00408b88(*piVar2);\n                        iVar3 = fcn.00408b7f();\n                        *piVar2 = iVar3;\n                        (*pcVar4)();\n                        iVar3 = fcn.00408b88(*0x34da1b4);\n                        piVar1 = fcn.00408b88(*0x34da1b0);\n                        if ((*(unaff_EBP + -0x1c) != iVar3) || (*(unaff_EBP + -0x20) != piVar1)) {\n                            *(unaff_EBP + -0x1c) = iVar3;\n                            *(unaff_EBP + -0x28) = iVar3;\n                            *(unaff_EBP + -0x20) = piVar1;\n                            *(unaff_EBP + -0x24) = piVar1;\n                            piVar2 = piVar1;\n                        }\n                        piVar1 = *(unaff_EBP + -0x28);\n                    }\n                }\n            }\n            fcn.00408668(0x8d617c);\n        }\n        fcn.00408668(0x8d6184);\n    }\n    *(unaff_EBP + -4) = 0xfffffffe;\n    if (*(unaff_EBP + 0x10) != 0) {\n        fcn.004076d4(8);\n    }\n    return;\n}\n",
+        "token_count": 806
+    },
+    "0040930e": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check if file exists/0479f02c3c8a4099bfdd7ca8c1e3802e/20122460e93841beb56e12792b6a4896"
+        ],
+        "decompiled_code": "\nfloat10 fcn.0040930e(double param_1)\n\n{\n    double dVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    int32_t iVar4;\n    int32_t iVar5;\n    uint arg_14h;\n    double dVar6;\n    uchar in_XMM0 [16];\n    double dVar7;\n    double dVar8;\n    uint64_t in_XMM2_Qa;\n    double dVar9;\n    uint32_t uVar11;\n    uchar auVar10 [16];\n    double dVar12;\n    ulong in_XMM6_Qa;\n    double dVar13;\n    double dVar14;\n    double dVar15;\n    double dVar16;\n    double dVar17;\n    uint in_XMM7_Dc;\n    uint in_XMM7_Dd;\n    double dStack12;\n    \n    dVar6 = SUB168(in_XMM0, 0);\n    uVar11 = SUB164(in_XMM0 >> 0x20, 0);\n    uVar3 = uVar11 >> 0xc;\n    auVar10 = pinsrw(ZEXT816(0), 0x2000, 2);\n    uVar2 = uVar3 & 0x7ffff;\n    if (uVar2 - 0x3fb00 < 0x3bb) {\n        iVar4 = (uVar3 & 0xfffc) - 0xfb00;\n        auVar10 = CONCAT88(in_XMM2_Qa & CONCAT44(in_XMM7_Dd, in_XMM7_Dc), *0x8d8998 & dVar6) | auVar10;\n        iVar5 = iVar4 * 4;\n        dVar9 = SUB168(auVar10, 0);\n        dVar13 = dVar6 * *(iVar4 * 2 + 0x8d8100);\n        dVar1 = SQRT(*0x8d89a0 - dVar6 * dVar6) * dVar9;\n        dVar7 = dVar13 - dVar1;\n        uVar11 = SUB164(auVar10 >> 0x20, 0);\n        uVar2 = uVar11 & 0x80000000;\n        dVar8 = dVar7 * dVar7;\n        return ((dVar6 - dVar9) * (dVar6 + dVar9)) / (dVar13 + dVar1) +\n               (*0x8d8940 + *0x8d8948 * dVar8) * dVar7 * dVar8 * dVar8 +\n               _str.UUUUUU * dVar7 * dVar8 + (*(iVar5 + 0x8d7200) ^ uVar2 << 0x20) +\n               ((*(iVar5 + 0x8d7208) ^ SUB168(CONCAT412(uVar11, ZEXT412(uVar2) << 0x20) >> 0x40, 0)) &\n               0xffffffff00000000);\n    }\n    if (uVar2 - 0x3febb < 0x43) {\n        dVar1 = SQRT(*0x8d89a0 - dVar6 * dVar6);\n        dVar7 = dVar6 & *0x8d8930;\n        dVar8 = (dVar6 & 0x7fffffffffffffff) - dVar7;\n        dVar9 = *0x8d8998 & dVar1 | SUB168(auVar10, 0);\n        iVar5 = ((dVar1 << 2) >> 0x30) - 0xfec0;\n        dVar1 = dVar1 * *(iVar5 * 8 + 0x8d8100);\n        dVar13 = (dVar7 * dVar9 - dVar1) + dVar8 * dVar9;\n        iVar5 = iVar5 * 0x10;\n        dVar14 = dVar13 * dVar13;\n        auVar10 = pinsrw(0x0, (SUB161(CONCAT412(in_XMM7_Dd, CONCAT48(in_XMM7_Dc, dVar6)) >> 0x3f, 0) & 1) << 0xf, 3);\n        return (((*0x8d8948 * dVar14 + *0x8d8940) * dVar13 * dVar14 * dVar14 +\n                _str.UUUUUU * dVar13 * dVar14 + (*0x8d8900 - *(iVar5 + 0x8d7200))) -\n               (((*0x8d89a0 - dVar7 * dVar7) - dVar9 * dVar9) - ((dVar6 & 0x7fffffffffffffff) + dVar7) * dVar8) /\n               (dVar1 + dVar1 + dVar13)) + (*0x8d8908 - *(iVar5 + 0x8d7208) & 0xffffffff00000000) | SUB168(auVar10, 0);\n    }\n    if (uVar2 - 0x3c300 < 0x3800) {\n        dVar1 = dVar6 * dVar6;\n        dVar7 = dVar6 * dVar6;\n        dVar8 = dVar6 * dVar1;\n        return dVar6 + dVar8 * dVar8 * dVar8 * (*0x8d8950 * dVar1 + *0x8d8960 + *0x8d8970 * dVar1 * dVar1) +\n                       dVar6 * dVar7 * (*0x8d8958 * dVar7 + *0x8d8968 + *0x8d8978 * dVar7 * dVar7);\n    }\n    if (uVar2 - 0x3fefe < 2) {\n        dVar1 = SQRT(*0x8d89a0 - dVar6 * dVar6);\n        dVar8 = dVar6 & *0x8d8920;\n        uVar11 = dVar1 >> 0x20;\n        dVar14 = dVar1 & 0xffffffff | uVar11 << 0x20;\n        dVar7 = dVar1 & *0x8d8920;\n        dVar6 = dVar6 - dVar8;\n        dVar12 = SUB168(CONCAT412(uVar11, CONCAT48(SUB84(dVar1, 0), dVar14)) >> 0x40, 0);\n        dVar15 = SUB128(CONCAT84(in_XMM6_Qa, uVar11), 0) << 0x20;\n        dVar1 = (uVar11 << 0x20) * (uVar11 << 0x20);\n        dVar9 = (uVar11 << 0x20) * (uVar11 << 0x20);\n        dVar16 = dVar15 * dVar1;\n        dVar17 = SUB168(CONCAT412(uVar11, ZEXT812(dVar15)) >> 0x40, 0) * dVar9;\n        dVar13 = dVar16 * dVar16 * dVar16;\n        auVar10 = pinsrw(ZEXT816(0), SUB162(in_XMM0 >> 0x30, 0) & 0x8000, 3);\n        return (((*0x8d8900 + (*0x8d8980 * dVar1 + *0x8d8988) * dVar16 * dVar16 * dVar13) -\n                ((dVar1 * dVar1 * *0x8d8970 + *0x8d8960 + *0x8d8950 * dVar1) * dVar13 +\n                 (SUB128(CONCAT84(dVar17, (dVar9 * dVar9 * *0x8d8978 + *0x8d8968 + *0x8d8958 * dVar9) * dVar17 >> 0x20)\n                         , 0) << 0x20) +\n                (((((*0x8d89a0 - dVar8 * dVar8) - (dVar8 + dVar8) * dVar6) - dVar7 * dVar7) - dVar6 * dVar6) +\n                (dVar14 + dVar14 + (dVar7 - dVar14)) * (dVar7 - dVar14)) / (dVar12 + dVar12))) -\n               (dVar15 - (*0x8d8908 + (dVar15 - *0x8d8908)))) - (dVar15 - *0x8d8908) | SUB168(auVar10, 0);\n    }\n    if (uVar2 < 0x3ff00) {\n        if (0x7fdf < (param_1 >> 0x30 & 0x7ff0) - 0x10) {\n            param_1 = param_1 | param_1 + 0.0;\n        }\n        return param_1;\n    }\n    if ((0x3ff00000 - (uVar11 & 0x7fffffff) | SUB164(in_XMM0, 0)) != 0) {\n        if (((param_1 >> 0x20 & 0x7fffffff) + 0x80100000) - (SUB84(param_1, 0) == 0) < 0) {\n            auVar10 = pinsrw(ZEXT816(0), 0x7ff0, 3);\n            dStack12 = SUB168(auVar10, 0) * 0.0;\n            arg_14h = 0x3d;\n        }\n        else {\n            dStack12 = param_1 + 0.0;\n            arg_14h = 0x3f1;\n        }\n        fcn.0040fac6(&param_1, &param_1, &dStack12, arg_14h);\n        return dStack12;\n    }\n    return *0x8d8908 + *0x8d8900 | ~*0x8d8990 & dVar6;\n}\n",
+        "token_count": 2248
+    },
+    "0040a832": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid fcn.0040a832(void)\n\n{\n    int32_t unaff_EBP;\n    uint var_1ch;\n    \n    if (*(unaff_EBP + -0x1c) != 0) {\n        fcn.004076d4(0);\n    }\n    return;\n}\n",
+        "token_count": 65
+    },
+    "0040a966": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid __cdecl fcn.0040a966(uint arg_8h, uint noname_1, uint arg_10h, uint arg_14h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    int32_t *piVar4;\n    int32_t unaff_EBP;\n    int32_t iVar5;\n    uint var_20h;\n    uint var_1ch;\n    uint var_4h;\n    \n    fcn.004082a8(0x8dab00, 0x10);\n    iVar1 = *(unaff_EBP + 0x10);\n    iVar2 = *(unaff_EBP + 8);\n    if (*(iVar1 + 4) < 0x81) {\n        iVar5 = *(iVar2 + 8);\n    }\n    else {\n        iVar5 = *(iVar2 + 8);\n    }\n    *(unaff_EBP + -0x1c) = iVar5;\n    iVar3 = fcn.00408dd4();\n    *(iVar3 + 0x90) = *(iVar3 + 0x90) + 1;\n    *(unaff_EBP + -4) = 0;\n    while (iVar5 != *(unaff_EBP + 0x14)) {\n        if ((iVar5 < 0) || (*(iVar1 + 4) <= iVar5)) {\n            fcn.0040b573();\n        }\n        iVar3 = iVar5 * 8;\n        piVar4 = *(iVar1 + 8) + iVar3;\n        iVar5 = *piVar4;\n        *(unaff_EBP + -0x20) = iVar5;\n        *(unaff_EBP + -4) = 1;\n        if (piVar4[1] != 0) {\n            *(iVar2 + 8) = iVar5;\n            fcn.0040b5c0(*(*(iVar1 + 8) + 4 + iVar3), iVar2, 0x103);\n        }\n        *(unaff_EBP + -4) = 0;\n        *(unaff_EBP + -0x1c) = iVar5;\n    }\n    *(unaff_EBP + -4) = 0xfffffffe;\n    fcn.0040aa2c();\n    if (iVar5 != *(unaff_EBP + 0x14)) {\n        fcn.0040b573();\n    }\n    *(iVar2 + 8) = iVar5;\n    fcn.004082ed();\n    return;\n}\n",
+        "token_count": 570
+    },
+    "0040aa2c": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid fcn.0040aa2c(void)\n\n{\n    int32_t iVar1;\n    \n    iVar1 = fcn.00408dd4();\n    if (0 < *(iVar1 + 0x90)) {\n        iVar1 = fcn.00408dd4();\n        *(iVar1 + 0x90) = *(iVar1 + 0x90) + -1;\n    }\n    return;\n}\n",
+        "token_count": 90
+    },
+    "0040acf4": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040acf4(uint noname_0, uint noname_1, uint arg_10h)\n\n{\n    int32_t iVar1;\n    int32_t unaff_EBP;\n    int32_t *unaff_ESI;\n    int32_t unaff_EDI;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint var_1ch;\n    \n    *(unaff_EDI + -4) = *(unaff_EBP + -0x24);\n    fcn.00405226(*(unaff_EBP + -0x28));\n    iVar1 = fcn.00408dd4();\n    *(iVar1 + 0x88) = *(unaff_EBP + -0x2c);\n    iVar1 = fcn.00408dd4();\n    *(iVar1 + 0x8c) = *(unaff_EBP + -0x30);\n    if ((((*unaff_ESI == -0x1f928c9d) && (unaff_ESI[4] == 3)) &&\n        ((iVar1 = unaff_ESI[5],  iVar1 == 0x19930520 || ((iVar1 == 0x19930521 || (iVar1 == 0x19930522)))))) &&\n       ((*(unaff_EBP + -0x34) == 0 && (*(unaff_EBP + -0x1c) != 0)))) {\n        iVar1 = fcn.004051ff(unaff_ESI[6]);\n        if (iVar1 != 0) {\n            fcn.0040aa8c(unaff_ESI);\n        }\n    }\n    return;\n}\n",
+        "token_count": 381
+    },
+    "004121d1": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.004121d1(uint16_t *arg_8h, uint32_t *arg_ch)\n\n{\n    uint32_t *puVar1;\n    uint16_t uVar2;\n    uint32_t uVar3;\n    int32_t iVar4;\n    uint uVar5;\n    uint8_t uVar6;\n    uint32_t *puVar7;\n    uint *puVar8;\n    uint32_t uVar9;\n    uint32_t uVar10;\n    uint32_t uVar11;\n    int32_t iVar12;\n    int32_t iVar13;\n    bool bVar14;\n    uint var_2ch;\n    uint32_t var_20h;\n    uint32_t var_1ch;\n    int32_t var_18h;\n    uint32_t var_14h;\n    uint32_t var_10h;\n    uint32_t var_ch;\n    int32_t var_8h;\n    int32_t var_4h;\n    \n    var_14h = arg_8h[5] & 0x8000;\n    uVar10 = *(arg_8h + 3);\n    var_20h = uVar10;\n    uVar3 = *(arg_8h + 1);\n    uVar2 = *arg_8h;\n    uVar11 = arg_8h[5] & 0x7fff;\n    iVar12 = uVar11 - 0x3fff;\n    var_1ch = uVar3;\n    var_18h = uVar2 << 0x10;\n    if (iVar12 == -0x3fff) {\n        iVar12 = 0;\n        iVar4 = 0;\n        do {\n            if ((&var_20h)[iVar4] != 0) {\n                var_20h = 0;\n                var_1ch = 0;\n                uVar5 = 2;\n                goto code_r0x004126d2;\n            }\n            iVar4 = iVar4 + 1;\n        } while (iVar4 < 3);\n        uVar5 = 0;\n    }\n    else {\n        arg_8h = NULL;\n        iVar13 = str.5_v_[0] + L'\\xffffffff';\n        iVar4 = str.5_v_[0] + (str.5_v_[0] >> 0x1f & 0x1fU) >> 5;\n        uVar9 = str.5_v_[0] & 0x8000001f;\n        var_10h = iVar12;\n        var_ch = iVar4;\n        if (uVar9 < 0) {\n            uVar9 = (uVar9 - 1 | 0xffffffe0) + 1;\n        }\n        puVar1 = &var_20h + iVar4;\n        uVar6 = 0x1f - uVar9;\n        var_8h = 0x1f - uVar9;\n        if ((*puVar1 & 1 << (uVar6 & 0x1f)) != 0) {\n            uVar9 = (&var_20h)[iVar4] & ~(-1 << (uVar6 & 0x1f));\n            while( true ) {\n                if (uVar9 != 0) {\n                    iVar4 = iVar13 + (iVar13 >> 0x1f & 0x1fU) >> 5;\n                    var_4h = 0;\n                    uVar9 = 1 << (0x1f - (iVar13 & 0x1f) & 0x1f);\n                    puVar7 = &var_20h + iVar4;\n                    arg_8h = *puVar7 + uVar9;\n                    if (arg_8h < *puVar7) goto code_r0x00412306;\n                    bVar14 = arg_8h < uVar9;\n                    do {\n                        var_4h = 0;\n                        if (!bVar14) goto code_r0x0041230d;\ncode_r0x00412306:\n                        do {\n                            var_4h = 1;\ncode_r0x0041230d:\n                            iVar4 = iVar4 + -1;\n                            *puVar7 = arg_8h;\n                            if ((iVar4 < 0) || (var_4h == 0)) {\n                                arg_8h = var_4h;\n                                goto code_r0x0041231b;\n                            }\n                            var_4h = 0;\n                            puVar7 = &var_20h + iVar4;\n                            arg_8h = *puVar7 + 1;\n                        } while (arg_8h < *puVar7);\n                        bVar14 = arg_8h == NULL;\n                    } while( true );\n                }\n                iVar4 = iVar4 + 1;\n                if (2 < iVar4) break;\n                uVar9 = (&var_20h)[iVar4];\n            }\n        }\ncode_r0x0041231b:\n        *puVar1 = *puVar1 & -1 << (var_8h & 0x1f);\n        iVar4 = var_ch + 1;\n        if (iVar4 < 3) {\n            puVar8 = &var_20h + iVar4;\n            for (iVar13 = 3 - iVar4; iVar13 != 0; iVar13 = iVar13 + -1) {\n                *puVar8 = 0;\n                puVar8 = puVar8 + 1;\n            }\n        }\n        if (arg_8h != NULL) {\n            iVar12 = uVar11 - 0x3ffe;\n        }\n        if (iVar12 < *0x8dced4 - str.5_v_[0]) {\n            var_20h = 0;\n            var_1ch = 0;\n        }\n        else {\n            if (*0x8dced4 < iVar12) {\n                if (iVar12 < *0x8dced0) {\n                    var_20h = var_20h & 0x7fffffff;\n                    iVar12 = iVar12 + str.5_v_[3];\n                    iVar4 = str.5_v_[1] + (str.5_v_[1] >> 0x1f & 0x1fU) >> 5;\n                    uVar10 = str.5_v_[1] & 0x8000001f;\n                    if (uVar10 < 0) {\n                        uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n                    }\n                    var_ch = 0;\n                    arg_8h = NULL;\n                    var_4h = 0x20 - uVar10;\n                    do {\n                        var_10h = (&var_20h)[arg_8h] & ~(-1 << (uVar10 & 0x1f));\n                        (&var_20h)[arg_8h] = (&var_20h)[arg_8h] >> (uVar10 & 0x1f) | var_ch;\n                        arg_8h = arg_8h + 1;\n                        var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n                    } while (arg_8h < 3);\n                    iVar13 = 2;\n                    puVar8 = &var_18h + -iVar4;\n                    do {\n                        if (iVar13 < iVar4) {\n                            (&var_20h)[iVar13] = 0;\n                        }\n                        else {\n                            (&var_20h)[iVar13] = *puVar8;\n                        }\n                        iVar13 = iVar13 + -1;\n                        puVar8 = puVar8 + -1;\n                    } while (-1 < iVar13);\n                    uVar5 = 0;\n                }\n                else {\n                    var_1ch = 0;\n                    var_18h = 0;\n                    var_20h = 0x80000000;\n                    iVar12 = str.5_v_[1] + (str.5_v_[1] >> 0x1f & 0x1fU) >> 5;\n                    uVar10 = str.5_v_[1] & 0x8000001f;\n                    if (uVar10 < 0) {\n                        uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n                    }\n                    var_ch = 0;\n                    arg_8h = NULL;\n                    var_4h = 0x20 - uVar10;\n                    do {\n                        uVar3 = (&var_20h)[arg_8h];\n                        var_10h = uVar3 & ~(-1 << (uVar10 & 0x1f));\n                        (&var_20h)[arg_8h] = uVar3 >> (uVar10 & 0x1f) | var_ch;\n                        arg_8h = arg_8h + 1;\n                        var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n                    } while (arg_8h < 3);\n                    iVar4 = 2;\n                    puVar8 = &var_18h + -iVar12;\n                    do {\n                        if (iVar4 < iVar12) {\n                            (&var_20h)[iVar4] = 0;\n                        }\n                        else {\n                            (&var_20h)[iVar4] = *puVar8;\n                        }\n                        iVar4 = iVar4 + -1;\n                        puVar8 = puVar8 + -1;\n                    } while (-1 < iVar4);\n                    iVar12 = str.5_v_[3] + *0x8dced0;\n                    uVar5 = 1;\n                }\n                goto code_r0x004126d2;\n            }\n            var_10h = *0x8dced4 - var_10h;\n            var_20h = uVar10;\n            var_1ch = uVar3;\n            iVar12 = var_10h + (var_10h >> 0x1f & 0x1fU) >> 5;\n            uVar10 = var_10h & 0x8000001f;\n            if (uVar10 < 0) {\n                uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n            }\n            var_ch = 0;\n            arg_8h = NULL;\n            var_4h = 0x20 - uVar10;\n            do {\n                uVar3 = (&var_20h)[arg_8h];\n                var_10h = uVar3 & ~(-1 << (uVar10 & 0x1f));\n                (&var_20h)[arg_8h] = uVar3 >> (uVar10 & 0x1f) | var_ch;\n                arg_8h = arg_8h + 1;\n                var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n            } while (arg_8h < 3);\n            iVar4 = 2;\n            puVar8 = &var_18h + -iVar12;\n            do {\n                if (iVar4 < iVar12) {\n                    (&var_20h)[iVar4] = 0;\n                }\n                else {\n                    (&var_20h)[iVar4] = *puVar8;\n                }\n                iVar4 = iVar4 + -1;\n                puVar8 = puVar8 + -1;\n            } while (-1 < iVar4);\n            iVar4 = str.5_v_[0] + L'\\xffffffff';\n            iVar12 = str.5_v_[0] + (str.5_v_[0] >> 0x1f & 0x1fU) >> 5;\n            uVar10 = str.5_v_[0] & 0x8000001f;\n            var_ch = iVar12;\n            if (uVar10 < 0) {\n                uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n            }\n            uVar6 = 0x1f - uVar10;\n            puVar1 = &var_20h + iVar12;\n            var_10h = 0x1f - uVar10;\n            if ((*puVar1 & 1 << (uVar6 & 0x1f)) != 0) {\n                uVar10 = (&var_20h)[iVar12] & ~(-1 << (uVar6 & 0x1f));\n                while (uVar10 == 0) {\n                    iVar12 = iVar12 + 1;\n                    if (2 < iVar12) goto code_r0x004124be;\n                    uVar10 = (&var_20h)[iVar12];\n                }\n                iVar12 = iVar4 + (iVar4 >> 0x1f & 0x1fU) >> 5;\n                bVar14 = false;\n                uVar11 = 1 << (0x1f - (iVar4 & 0x1f) & 0x1f);\n                uVar3 = (&var_20h)[iVar12];\n                uVar10 = uVar3 + uVar11;\n                if ((uVar10 < uVar3) || (uVar10 < uVar11)) {\n                    bVar14 = true;\n                }\n                (&var_20h)[iVar12] = uVar10;\n                while ((iVar12 = iVar12 + -1,  -1 < iVar12 && (bVar14))) {\n                    uVar3 = (&var_20h)[iVar12];\n                    uVar10 = uVar3 + 1;\n                    bVar14 = false;\n                    if ((uVar10 < uVar3) || (uVar10 == 0)) {\n                        bVar14 = true;\n                    }\n                    (&var_20h)[iVar12] = uVar10;\n                }\n            }\ncode_r0x004124be:\n            *puVar1 = *puVar1 & -1 << (var_10h & 0x1f);\n            iVar12 = var_ch + 1;\n            if (iVar12 < 3) {\n                puVar8 = &var_20h + iVar12;\n                for (iVar4 = 3 - iVar12; iVar4 != 0; iVar4 = iVar4 + -1) {\n                    *puVar8 = 0;\n                    puVar8 = puVar8 + 1;\n                }\n            }\n            uVar10 = str.5_v_[1] + L'\\x01';\n            iVar12 = uVar10 + (uVar10 >> 0x1f & 0x1fU) >> 5;\n            uVar10 = uVar10 & 0x8000001f;\n            if (uVar10 < 0) {\n                uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n            }\n            var_ch = 0;\n            arg_8h = NULL;\n            var_4h = 0x20 - uVar10;\n            do {\n                uVar3 = (&var_20h)[arg_8h];\n                var_10h = uVar3 & ~(-1 << (uVar10 & 0x1f));\n                (&var_20h)[arg_8h] = uVar3 >> (uVar10 & 0x1f) | var_ch;\n                arg_8h = arg_8h + 1;\n                var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n            } while (arg_8h < 3);\n            iVar4 = 2;\n            puVar8 = &var_18h + -iVar12;\n            do {\n                if (iVar4 < iVar12) {\n                    (&var_20h)[iVar4] = 0;\n                }\n                else {\n                    (&var_20h)[iVar4] = *puVar8;\n                }\n                iVar4 = iVar4 + -1;\n                puVar8 = puVar8 + -1;\n            } while (-1 < iVar4);\n        }\n        iVar12 = 0;\n        uVar5 = 2;\n    }\ncode_r0x004126d2:\n    var_20h = iVar12 << (0x1fU - str.5_v_[1] & 0x1f) | -(var_14h != 0) & 0x80000000 | var_20h;\n    if (str.5_v_[2] == L'@') {\n        arg_ch[1] = var_20h;\n        *arg_ch = var_1ch;\n    }\n    else if (str.5_v_[2] == L' ') {\n        *arg_ch = var_20h;\n    }\n    return uVar5;\n}\n",
+        "token_count": 3665
+    },
+    "00412715": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00412715(uint16_t *arg_8h, uint32_t *arg_ch)\n\n{\n    uint32_t *puVar1;\n    uint16_t uVar2;\n    uint32_t uVar3;\n    int32_t iVar4;\n    uint uVar5;\n    uint8_t uVar6;\n    uint32_t *puVar7;\n    uint *puVar8;\n    uint32_t uVar9;\n    uint32_t uVar10;\n    uint32_t uVar11;\n    int32_t iVar12;\n    int32_t iVar13;\n    bool bVar14;\n    uint var_2ch;\n    uint32_t var_20h;\n    uint32_t var_1ch;\n    int32_t var_18h;\n    uint32_t var_14h;\n    uint32_t var_10h;\n    uint32_t var_ch;\n    int32_t var_8h;\n    int32_t var_4h;\n    \n    var_14h = arg_8h[5] & 0x8000;\n    uVar10 = *(arg_8h + 3);\n    var_20h = uVar10;\n    uVar3 = *(arg_8h + 1);\n    uVar2 = *arg_8h;\n    uVar11 = arg_8h[5] & 0x7fff;\n    iVar12 = uVar11 - 0x3fff;\n    var_1ch = uVar3;\n    var_18h = uVar2 << 0x10;\n    if (iVar12 == -0x3fff) {\n        iVar12 = 0;\n        iVar4 = 0;\n        do {\n            if ((&var_20h)[iVar4] != 0) {\n                var_20h = 0;\n                var_1ch = 0;\n                uVar5 = 2;\n                goto code_r0x00412c16;\n            }\n            iVar4 = iVar4 + 1;\n        } while (iVar4 < 3);\n        uVar5 = 0;\n    }\n    else {\n        arg_8h = NULL;\n        iVar13 = *0x8dcef0 - 1;\n        iVar4 = *0x8dcef0 + (*0x8dcef0 >> 0x1f & 0x1fU) >> 5;\n        uVar9 = *0x8dcef0 & 0x8000001f;\n        var_10h = iVar12;\n        var_ch = iVar4;\n        if (uVar9 < 0) {\n            uVar9 = (uVar9 - 1 | 0xffffffe0) + 1;\n        }\n        puVar1 = &var_20h + iVar4;\n        uVar6 = 0x1f - uVar9;\n        var_8h = 0x1f - uVar9;\n        if ((*puVar1 & 1 << (uVar6 & 0x1f)) != 0) {\n            uVar9 = (&var_20h)[iVar4] & ~(-1 << (uVar6 & 0x1f));\n            while( true ) {\n                if (uVar9 != 0) {\n                    iVar4 = iVar13 + (iVar13 >> 0x1f & 0x1fU) >> 5;\n                    var_4h = 0;\n                    uVar9 = 1 << (0x1f - (iVar13 & 0x1f) & 0x1f);\n                    puVar7 = &var_20h + iVar4;\n                    arg_8h = *puVar7 + uVar9;\n                    if (arg_8h < *puVar7) goto code_r0x0041284a;\n                    bVar14 = arg_8h < uVar9;\n                    do {\n                        var_4h = 0;\n                        if (!bVar14) goto code_r0x00412851;\ncode_r0x0041284a:\n                        do {\n                            var_4h = 1;\ncode_r0x00412851:\n                            iVar4 = iVar4 + -1;\n                            *puVar7 = arg_8h;\n                            if ((iVar4 < 0) || (var_4h == 0)) {\n                                arg_8h = var_4h;\n                                goto code_r0x0041285f;\n                            }\n                            var_4h = 0;\n                            puVar7 = &var_20h + iVar4;\n                            arg_8h = *puVar7 + 1;\n                        } while (arg_8h < *puVar7);\n                        bVar14 = arg_8h == NULL;\n                    } while( true );\n                }\n                iVar4 = iVar4 + 1;\n                if (2 < iVar4) break;\n                uVar9 = (&var_20h)[iVar4];\n            }\n        }\ncode_r0x0041285f:\n        *puVar1 = *puVar1 & -1 << (var_8h & 0x1f);\n        iVar4 = var_ch + 1;\n        if (iVar4 < 3) {\n            puVar8 = &var_20h + iVar4;\n            for (iVar13 = 3 - iVar4; iVar13 != 0; iVar13 = iVar13 + -1) {\n                *puVar8 = 0;\n                puVar8 = puVar8 + 1;\n            }\n        }\n        if (arg_8h != NULL) {\n            iVar12 = uVar11 - 0x3ffe;\n        }\n        if (iVar12 < *0x8dceec - *0x8dcef0) {\n            var_20h = 0;\n            var_1ch = 0;\n        }\n        else {\n            if (*0x8dceec < iVar12) {\n                if (iVar12 < *0x8dcee8) {\n                    var_20h = var_20h & 0x7fffffff;\n                    iVar12 = iVar12 + *0x8dcefc;\n                    iVar4 = *0x8dcef4 + (*0x8dcef4 >> 0x1f & 0x1fU) >> 5;\n                    uVar10 = *0x8dcef4 & 0x8000001f;\n                    if (uVar10 < 0) {\n                        uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n                    }\n                    var_ch = 0;\n                    arg_8h = NULL;\n                    var_4h = 0x20 - uVar10;\n                    do {\n                        var_10h = (&var_20h)[arg_8h] & ~(-1 << (uVar10 & 0x1f));\n                        (&var_20h)[arg_8h] = (&var_20h)[arg_8h] >> (uVar10 & 0x1f) | var_ch;\n                        arg_8h = arg_8h + 1;\n                        var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n                    } while (arg_8h < 3);\n                    iVar13 = 2;\n                    puVar8 = &var_18h + -iVar4;\n                    do {\n                        if (iVar13 < iVar4) {\n                            (&var_20h)[iVar13] = 0;\n                        }\n                        else {\n                            (&var_20h)[iVar13] = *puVar8;\n                        }\n                        iVar13 = iVar13 + -1;\n                        puVar8 = puVar8 + -1;\n                    } while (-1 < iVar13);\n                    uVar5 = 0;\n                }\n                else {\n                    var_1ch = 0;\n                    var_18h = 0;\n                    var_20h = 0x80000000;\n                    iVar12 = *0x8dcef4 + (*0x8dcef4 >> 0x1f & 0x1fU) >> 5;\n                    uVar10 = *0x8dcef4 & 0x8000001f;\n                    if (uVar10 < 0) {\n                        uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n                    }\n                    var_ch = 0;\n                    arg_8h = NULL;\n                    var_4h = 0x20 - uVar10;\n                    do {\n                        uVar3 = (&var_20h)[arg_8h];\n                        var_10h = uVar3 & ~(-1 << (uVar10 & 0x1f));\n                        (&var_20h)[arg_8h] = uVar3 >> (uVar10 & 0x1f) | var_ch;\n                        arg_8h = arg_8h + 1;\n                        var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n                    } while (arg_8h < 3);\n                    iVar4 = 2;\n                    puVar8 = &var_18h + -iVar12;\n                    do {\n                        if (iVar4 < iVar12) {\n                            (&var_20h)[iVar4] = 0;\n                        }\n                        else {\n                            (&var_20h)[iVar4] = *puVar8;\n                        }\n                        iVar4 = iVar4 + -1;\n                        puVar8 = puVar8 + -1;\n                    } while (-1 < iVar4);\n                    iVar12 = *0x8dcefc + *0x8dcee8;\n                    uVar5 = 1;\n                }\n                goto code_r0x00412c16;\n            }\n            var_10h = *0x8dceec - var_10h;\n            var_20h = uVar10;\n            var_1ch = uVar3;\n            iVar12 = var_10h + (var_10h >> 0x1f & 0x1fU) >> 5;\n            uVar10 = var_10h & 0x8000001f;\n            if (uVar10 < 0) {\n                uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n            }\n            var_ch = 0;\n            arg_8h = NULL;\n            var_4h = 0x20 - uVar10;\n            do {\n                uVar3 = (&var_20h)[arg_8h];\n                var_10h = uVar3 & ~(-1 << (uVar10 & 0x1f));\n                (&var_20h)[arg_8h] = uVar3 >> (uVar10 & 0x1f) | var_ch;\n                arg_8h = arg_8h + 1;\n                var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n            } while (arg_8h < 3);\n            iVar4 = 2;\n            puVar8 = &var_18h + -iVar12;\n            do {\n                if (iVar4 < iVar12) {\n                    (&var_20h)[iVar4] = 0;\n                }\n                else {\n                    (&var_20h)[iVar4] = *puVar8;\n                }\n                iVar4 = iVar4 + -1;\n                puVar8 = puVar8 + -1;\n            } while (-1 < iVar4);\n            iVar4 = *0x8dcef0 - 1;\n            iVar12 = *0x8dcef0 + (*0x8dcef0 >> 0x1f & 0x1fU) >> 5;\n            uVar10 = *0x8dcef0 & 0x8000001f;\n            var_ch = iVar12;\n            if (uVar10 < 0) {\n                uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n            }\n            uVar6 = 0x1f - uVar10;\n            puVar1 = &var_20h + iVar12;\n            var_10h = 0x1f - uVar10;\n            if ((*puVar1 & 1 << (uVar6 & 0x1f)) != 0) {\n                uVar10 = (&var_20h)[iVar12] & ~(-1 << (uVar6 & 0x1f));\n                while (uVar10 == 0) {\n                    iVar12 = iVar12 + 1;\n                    if (2 < iVar12) goto code_r0x00412a02;\n                    uVar10 = (&var_20h)[iVar12];\n                }\n                iVar12 = iVar4 + (iVar4 >> 0x1f & 0x1fU) >> 5;\n                bVar14 = false;\n                uVar11 = 1 << (0x1f - (iVar4 & 0x1f) & 0x1f);\n                uVar3 = (&var_20h)[iVar12];\n                uVar10 = uVar3 + uVar11;\n                if ((uVar10 < uVar3) || (uVar10 < uVar11)) {\n                    bVar14 = true;\n                }\n                (&var_20h)[iVar12] = uVar10;\n                while ((iVar12 = iVar12 + -1,  -1 < iVar12 && (bVar14))) {\n                    uVar3 = (&var_20h)[iVar12];\n                    uVar10 = uVar3 + 1;\n                    bVar14 = false;\n                    if ((uVar10 < uVar3) || (uVar10 == 0)) {\n                        bVar14 = true;\n                    }\n                    (&var_20h)[iVar12] = uVar10;\n                }\n            }\ncode_r0x00412a02:\n            *puVar1 = *puVar1 & -1 << (var_10h & 0x1f);\n            iVar12 = var_ch + 1;\n            if (iVar12 < 3) {\n                puVar8 = &var_20h + iVar12;\n                for (iVar4 = 3 - iVar12; iVar4 != 0; iVar4 = iVar4 + -1) {\n                    *puVar8 = 0;\n                    puVar8 = puVar8 + 1;\n                }\n            }\n            uVar10 = *0x8dcef4 + 1;\n            iVar12 = uVar10 + (uVar10 >> 0x1f & 0x1fU) >> 5;\n            uVar10 = uVar10 & 0x8000001f;\n            if (uVar10 < 0) {\n                uVar10 = (uVar10 - 1 | 0xffffffe0) + 1;\n            }\n            var_ch = 0;\n            arg_8h = NULL;\n            var_4h = 0x20 - uVar10;\n            do {\n                uVar3 = (&var_20h)[arg_8h];\n                var_10h = uVar3 & ~(-1 << (uVar10 & 0x1f));\n                (&var_20h)[arg_8h] = uVar3 >> (uVar10 & 0x1f) | var_ch;\n                arg_8h = arg_8h + 1;\n                var_ch = var_10h << (0x20 - uVar10 & 0x1f);\n            } while (arg_8h < 3);\n            iVar4 = 2;\n            puVar8 = &var_18h + -iVar12;\n            do {\n                if (iVar4 < iVar12) {\n                    (&var_20h)[iVar4] = 0;\n                }\n                else {\n                    (&var_20h)[iVar4] = *puVar8;\n                }\n                iVar4 = iVar4 + -1;\n                puVar8 = puVar8 + -1;\n            } while (-1 < iVar4);\n        }\n        iVar12 = 0;\n        uVar5 = 2;\n    }\ncode_r0x00412c16:\n    var_20h = iVar12 << (0x1fU - *0x8dcef4 & 0x1f) | -(var_14h != 0) & 0x80000000 | var_20h;\n    if (*0x8dcef8 == 0x40) {\n        arg_ch[1] = var_20h;\n        *arg_ch = var_1ch;\n    }\n    else if (*0x8dcef8 == 0x20) {\n        *arg_ch = var_20h;\n    }\n    return uVar5;\n}\n",
+        "token_count": 3661
+    },
+    "00401680": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00401680(int32_t param_1)\n\n{\n    int32_t *in_FS_OFFSET;\n    int32_t iStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5688;\n    iStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &iStack12;\n    fcn.00403e18(0);\n    if (*(param_1 + 4) != -1) {\n        *(param_1 + 4) = *(param_1 + 4) + 1;\n    }\n    uStack8 = 0xffffffff;\n    fcn.00403e40();\n    *in_FS_OFFSET = param_1;\n    return;\n}\n",
+        "token_count": 173
+    },
+    "004016e0": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "\nuint32_t __fastcall fcn.004016e0(uint32_t param_1)\n\n{\n    int32_t iVar1;\n    uint32_t *in_FS_OFFSET;\n    uint32_t uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5688;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.00403e18(0);\n    iVar1 = *(param_1 + 4);\n    if ((iVar1 != 0) && (iVar1 != -1)) {\n        *(param_1 + 4) = iVar1 + -1;\n    }\n    iVar1 = *(param_1 + 4);\n    uStack8 = 0xffffffff;\n    fcn.00403e40();\n    *in_FS_OFFSET = param_1;\n    return ~-(iVar1 != 0) & param_1;\n}\n",
+        "token_count": 216
+    },
+    "00401760": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00401760(uint param_1)\n\n{\n    uint uVar1;\n    int32_t iVar2;\n    uint *unaff_EDI;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5688;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    uVar1 = fcn.00403cc8();\n    *unaff_EDI = uVar1;\n    iVar2 = fcn.00403af6();\n    fcn.00403e18(0);\n    if (*(iVar2 + 4) != -1) {\n        *(iVar2 + 4) = *(iVar2 + 4) + 1;\n    }\n    uStack8 = 0xffffffff;\n    fcn.00403e40();\n    *in_FS_OFFSET = param_1;\n    return;\n}\n",
+        "token_count": 221
+    },
+    "004017d0": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "\nvoid fcn.004017d0(int32_t *param_1)\n\n{\n    int32_t iVar1;\n    uint unaff_ESI;\n    int32_t *unaff_EDI;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5738;\n    *in_FS_OFFSET = &uStack12;\n    iVar1 = *param_1;\n    *unaff_EDI = iVar1;\n    fcn.00403e18(0);\n    if (*(iVar1 + 4) != -1) {\n        *(iVar1 + 4) = *(iVar1 + 4) + 1;\n    }\n    uStack8 = 0xffffffff;\n    fcn.00403e40();\n    *in_FS_OFFSET = unaff_ESI;\n    return;\n}\n",
+        "token_count": 210
+    },
+    "004035d0": {
+        "rules": [
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43",
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a"
+        ],
+        "decompiled_code": "\nvoid __thiscall fcn.004035d0(int32_t param_1, uint32_t param_2, int32_t param_3)\n\n{\n    uint32_t uVar1;\n    uint *arg_8h;\n    int32_t arg_10h;\n    uint *puVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint *in_FS_OFFSET;\n    uint32_t var_8h;\n    int32_t var_ch;\n    uint var_10h;\n    uint var_18h;\n    uint var_14h;\n    uint var_ch_2;\n    uint uStack12;\n    uint var_4h;\n    \n    uStack12 = 0x8d5790;\n    var_ch_2 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &var_ch_2;\n    uVar4 = var_8h | 0xf;\n    if (uVar4 != 0xffffffff) {\n        uVar1 = *(param_1 + 0x18);\n        uVar3 = uVar1 >> 1;\n        var_8h = uVar4;\n        if ((uVar4 / 3 < uVar3) && (uVar1 <= -uVar3 - 2)) {\n            var_8h = uVar3 + uVar1;\n        }\n    }\n    var_4h = 0;\n    arg_8h = fcn.00403110(var_8h + 1);\n    var_4h = 0xffffffff;\n    if (var_ch != 0) {\n        if (*(param_1 + 0x18) < 0x10) {\n            arg_10h = param_1 + 4;\n        }\n        else {\n            arg_10h = *(param_1 + 4);\n        }\n        fcn.00404902(arg_8h, var_8h + 1, arg_10h, var_ch);\n    }\n    if (0xf < *(param_1 + 0x18)) {\n        fcn.004048f7(*(param_1 + 4));\n    }\n    puVar2 = param_1 + 4;\n    *puVar2 = 0;\n    *puVar2 = arg_8h;\n    *(param_1 + 0x18) = var_8h;\n    *(param_1 + 0x14) = var_ch;\n    if (0xf < var_8h) {\n        puVar2 = arg_8h;\n    }\n    *(puVar2 + var_ch) = 0;\n    *in_FS_OFFSET = var_ch_2;\n    return;\n}\n",
+        "token_count": 576
+    },
+    "008d4160": {
+        "rules": [
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43",
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nvoid fcn.008d4160(void)\n\n{\n    uint8_t uVar1;\n    uint8_t uVar2;\n    int32_t iVar3;\n    uint32_t uVar4;\n    uint32_t uVar5;\n    uchar auStack116 [2];\n    uchar uStack114;\n    int32_t iVar6;\n    uchar auStack32 [4];\n    uchar auStack28 [12];\n    int32_t *piStack16;\n    uint32_t *puStack12;\n    uint *puStack4;\n    \n    *0x34bf264 = (**0x8d6020)();\n    *0x9b19f8 = (**0x8d601c)(*0x34bf264, \"GlobalAlloc\");\n    iVar3 = (**0x9b19f8)(0, *puStack4);\n    uVar4 = 0;\n    iVar6 = 4;\n    uVar5 = 0;\n    if (*puStack12 != 0) {\n        do {\n            *0x8f28a4 = 0;\n            if (*0x34bf26c == 0xc3a) {\n                *0x9b19f4 = 0;\n            }\n            *0x34bf23c = 0x9f4faef4;\n            uVar2 = *(*piStack16 + uVar5 + 2);\n            uVar1 = *(*piStack16 + uVar5 + 3);\n            _auStack116 = CONCAT12(*(*piStack16 + uVar5 + 1) | uVar1 << 4 & 0xc0, \n                                   CONCAT11(*(*piStack16 + uVar5) | (uVar1 & 0x30) << 2, uVar1 << 4));\n            *0x34bf258 = 0;\n            *0x34bf25c = 0;\n            if (*0x34bf26c == 0xbfb) {\n                (**0x8d6014)(0, 0, \"xajeyisewixajahuza tu\", 0, &stack0xffffff90);\n                *0x8f28a8 = 0xea6088b6;\n                *0x8f28ac = 0xffffffff;\n            }\n            *0x8f2898 = 0;\n            *0x8f289c = 0;\n            auStack116[1] = (_auStack116 & 0xffff00) >> 8;\n            uStack114 = (_auStack116 & 0xffff00) >> 0x10;\n            *(uVar4 + iVar3) = auStack116[1];\n            *(uVar4 + 1 + iVar3) = uStack114;\n            *0x34bcf1c = 0;\n            if (*0x34bf26c == 0x8a) {\n                (**0x8d6000)(0, auStack32, 0, 0, auStack28);\n                *0x8f2890 = 0x9bb5a1c2;\n            }\n            *0x9b19fc = 0;\n            *(uVar4 + 2 + iVar3) = uVar2 | uVar1 << 6;\n            uVar5 = uVar5 + iVar6;\n            uVar4 = uVar4 + 3;\n        } while (uVar5 < *puStack12);\n        *piStack16 = iVar3;\n        *puStack12 = uVar4;\n        return;\n    }\n    *piStack16 = iVar3;\n    *puStack12 = 0;\n    return;\n}\n",
+        "token_count": 796
+    },
+    "00409b65": {
+        "rules": [
+            "hash data using aphash/ab9c9a8537c84744923d9bbb8bd71d10"
+        ],
+        "decompiled_code": "\nuint32_t __fastcall fcn.00409b65(uint param_1, int32_t param_2)\n\n{\n    uint32_t uVar1;\n    \n    uVar1 = *(param_2 + 4) & 0x7ff00000;\n    if (uVar1 != 0x7ff00000) {\n        return uVar1;\n    }\n    return *(param_2 + 4);\n}\n",
+        "token_count": 92
+    },
+    "008d3e70": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint32_t fcn.008d3e70(void)\n\n{\n    if (*0x34bf26c == 0x13d4) {\n        *0x9b1258 = 0x9c9f9508;\n        *0x9b125c = 0xffffffff;\n    }\n    if (*0x34bf26c == 0x82b) {\n        *0x8de85c = 0;\n    }\n    *0x9af064 = *0x9af064 * 0x343fd + 0x269ec3;\n    *0x8f2894 = 0;\n    *0x9b19dc = 0;\n    *0x9b19e0 = 0xf71ca014;\n    *0x9b19e4 = 0xffffffff;\n    *0x34bf248 = 0x8f9ea07e;\n    *0x34bf24c = 0xffffffff;\n    return *0x9af064 >> 0x10 & 0x7fff;\n}\n",
+        "token_count": 233
+    },
+    "008d4800": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x008d5503)\n// WARNING: Could not reconcile some variable overlaps\n\nuint fcn.008d4800(void)\n\n{\n    uint uVar1;\n    uint *in_FS_OFFSET;\n    uint var_db4h;\n    int32_t var_db0h;\n    int32_t var_dach;\n    uint32_t var_da8h;\n    int32_t var_da4h;\n    int32_t var_da0h;\n    uint var_d8ch;\n    int32_t var_d78h;\n    int32_t var_d70h;\n    uint var_d6ch;\n    uint var_56ch;\n    uint var_554h;\n    uint var_4cch;\n    uint var_4c8h;\n    uint var_4c4h;\n    uint var_4c0h;\n    uint var_4bch;\n    uint var_4b8h;\n    int32_t var_4a8h;\n    uint var_498h;\n    uint var_494h;\n    uint var_490h;\n    uint var_48ch;\n    uint var_488h;\n    uint var_484h;\n    uint var_480h;\n    uint var_47ch;\n    uint var_478h;\n    uint var_474h;\n    uint var_470h;\n    uint var_40h;\n    uint var_3ch;\n    uint var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint uStack12;\n    int32_t var_4h;\n    \n    var_4h = 0xffffffff;\n    uStack12 = 0x8d5ba8;\n    var_ch = *in_FS_OFFSET;\n    *in_FS_OFFSET = &var_ch;\n    var_30h = 0;\n    *0x8f28b4 = 0;\n    *0x8f28b0 = 0;\n    *0x9af097 = 0x6f;\n    *0x34bf260 = 0x9e9f4518;\n    *0x9af09e = 0x33;\n    *0x9af080 = 0;\n    *0x9af0a3 = 0x70;\n    var_1ch = 0;\n    *0x9b19ec = 0;\n    *0x9b19e8 = 0;\n    *0x9af0a5 = 0x68;\n    *0x9af078 = 0;\n    *0x9af07c = 0;\n    *0x9af09b = 0x65;\n    *0x9af084 = 0xddbdeb2e;\n    *0x9af09c = 0x6c;\n    *0x8de858 = 0xf163fd92;\n    *0x9af091 = 0x72;\n    *0x34bcf10 = 0;\n    *0x34bcf14 = 0;\n    *0x9af0a0 = 0x53;\n    *0x9b1250 = 0x82382f38;\n    *0x9b1254 = 0xffffffff;\n    *0x9af093 = 0x61;\n    *0x9af068 = 0;\n    *0x9af06c = 0;\n    *0x9af099 = 0x6c;\n    *0x9af074 = 0;\n    *0x9af09d = 0x70;\n    *0x9af070 = 0xd594ed48;\n    *0x9af0a4 = 0x73;\n    *0x34bf254 = 0xb9a1589a;\n    *0x9af090 = 0x43;\n    *0x9af060 = 0;\n    *0x9af0a8 = 0;\n    *0x9ad3bc = 0x74;\n    var_24h = 0x3c0;\n    var_474h = *0x8de858;\n    var_470h = *0x34bcf10;\n    var_40h = *0x9af074;\n    var_3ch = *0x34bf254;\n    var_38h = *0x9af068;\n    var_34h = *0x9af084;\n    var_2ch = *0x9af070;\n    var_28h = *0x9b1250;\n    var_20h = *0x34bf260;\n    var_18h = *0x9af078;\n    var_14h = *0x9af060;\n    var_10h = *0x9af080;\n    if (var_4a8h == 0x3443d2) {\n        (**0x8d6030)(0, 0);\n        (**0x8d6018)(0, &var_d6ch);\n        (**0x8d6004)(0, 0);\n        (**0x8d602c)(0, 0, 0);\n        (**0x8d6008)(0, 0, 0, 0);\n        (**0x8d612c)(0, 0, 0, 0);\n        (**0x8d6134)(0, 0, 0);\n        (**0x8d6124)(0, 0);\n        (**0x8d6130)(0, 0, 0, 0);\n        fcn.004024b0(&var_554h, 3, 1);\n        var_4h = 0;\n        fcn.00402bb0(&var_56ch);\n        var_4h._0_1_ = 1;\n        fcn.00404768(0);\n        fcn.004020d0(0);\n        fcn.004044e8(0, 0);\n        fcn.00404577(0);\n        (**0x8d6128)(0, 0);\n        var_4h = var_4h._1_3_ << 8;\n        fcn.00402c10(&var_56ch);\n        var_4h = 0xffffffff;\n        fcn.004020f0();\n    }\n    var_d70h = 0;\n    do {\n        if (0x2881c1f9 < var_d70h) {\ncode_r0x008d4e9c:\n            for (var_da4h = 0; var_da4h < 0x41e3; var_da4h = var_da4h + 1) {\n            }\n            *0x9b19d8 = (**0x8d6024)(0, *0x34bf26c);\n            *0x34bf354 = *0x8dd458;\n            for (var_da8h = 0; var_da8h < *0x34bf26c; var_da8h = var_da8h + 1) {\n                (*0x9b19d8)[var_da8h] = *(*0x34bf354 + var_da8h + 0x4defc);\n            }\n            fcn.008d4160(0x9b19d8, 0x34bf26c);\n            var_494h = 0x40;\n            *0x34bf264 = (**0x8d6028)(\"kernel32.dll\");\n            *0x9a98e3 = 0x65;\n            *0x34da084 = 0;\n            *0x9a98da = 0x72;\n            *0x34bf240 = 0;\n            *0x34bf244 = 0;\n            *0x9a98de = 0x6c;\n            *0x34da080 = 0;\n            *0x9a98dd = 0x61;\n            *0x34bf22c = 0;\n            *0x9a98d8 = 0x56;\n            *0x8de854 = 0xb5b13a98;\n            *0x9a98e5 = 0x74;\n            *0x34bf230 = 0;\n            *0x34bf234 = 0;\n            *0x9a98e4 = 99;\n            *0x9b19f0 = 0x87a93600;\n            *0x9a98e1 = 0x6f;\n            var_47ch = 0;\n            *0x8f28a0 = 0;\n            *0x9a98e2 = 0x74;\n            *0x9af058 = 0x9cd13e94;\n            *0x9af05c = 0xffffffff;\n            *0x9a98e0 = 0x72;\n            *0x34bf238 = 0x8c592958;\n            *0x9a98db = 0x74;\n            *0x8de850 = 0xd698eb94;\n            *0x9a98df = 0x50;\n            *0x34bf358 = 0;\n            *0x34bf35c = 0;\n            *0x9a98d9 = 0x69;\n            *0x34bcf18 = 0xd44c988a;\n            *0x9a98dc = 0x75;\n            *0x9af088 = 0x9f16720e;\n            *0x9af08c = 0xffffffff;\n            *0x9a98e6 = 0;\n            var_4cch = *0x8de854;\n            var_4c8h = *0x34bf238;\n            var_4c4h = *0x34da084;\n            var_4c0h = *0x34bf240;\n            var_4bch = *0x9b19f0;\n            var_4b8h = *0x9af058;\n            var_498h = *0x34bf22c;\n            var_490h = *0x34bcf18;\n            var_48ch = *0x34bf230;\n            var_488h = *0x34bf358;\n            var_484h = *0x34da080;\n            var_480h = *0x9af088;\n            var_478h = *0x8de850;\n            for (var_dach = 0; var_dach < 0x43827a; var_dach = var_dach + 1) {\n                if (var_dach == 0x112f38) {\n                    fcn.008d3e40();\n                }\n            }\n            fcn.008d4150();\n            fcn.008d47b0();\n            for (var_db0h = 0; var_db0h < 0x8670f2; var_db0h = var_db0h + 1) {\n                if (var_db0h == 0x4f36c4) {\n                    *0x34bf268 = *0x9b19d8;\n                }\n            }\n    // WARNING: Could not recover jumptable at 0x008d54fd. Too many branches\n    // WARNING: Treating indirect jump as call\n            uVar1 = (**0x9b19d8)();\n            return uVar1;\n        }\n        (**0x8d600c)(0, 0, 0, 0);\n        (**0x8d6010)();\n        (**0x8d6128)(0, &var_d8ch);\n        if (((0xda2de0 < var_d70h) && (var_da0h != 0x229ad697)) && (var_d78h != 0x5457ef65)) {\n            *0x34bf26c = *0x8dd864 + 0x4defc;\n            goto code_r0x008d4e9c;\n        }\n        var_d70h = var_d70h + 1;\n    } while( true );\n}\n",
+        "token_count": 2733
+    },
+    "00401000": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\ncode ** __fastcall fcn.00401000(code **param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    // [00] -r-x section size 5066752 named .text\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5668;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.004042dc(&stack0x00000004);\n    *param_1 = vtable.std::bad_alloc.0;\n    *in_FS_OFFSET = param_1;\n    return param_1;\n}\n",
+        "token_count": 152
+    },
+    "00401110": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/0325759584d940e7b69154ed16836be2",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\ncode ** __thiscall fcn.00401110(code **param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d58d3;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.004042cb();\n    uStack4 = 0;\n    *param_1 = vtable.std::logic_error.0;\n    param_1[8] = NULL;\n    param_1[9] = 0xf;\n    *(param_1 + 4) = 0;\n    fcn.00402fb0(param_2, 0);\n    *in_FS_OFFSET = 0xffffffff;\n    return param_1;\n}\n",
+        "token_count": 192
+    },
+    "00401180": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00401180(code **param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d58d3;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::logic_error.0;\n    uStack4 = 0;\n    if (0xf < param_1[9]) {\n        fcn.004048f7(param_1[4]);\n    }\n    param_1[9] = 0xf;\n    param_1[8] = NULL;\n    *(param_1 + 4) = 0;\n    uStack4 = 0xffffffff;\n    fcn.004043a9();\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 197
+    },
+    "00401210": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\ncode ** __thiscall fcn.00401210(code **param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5a78;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.00401110(param_2);\n    *param_1 = vtable.std::length_error.0;\n    *in_FS_OFFSET = param_1;\n    return param_1;\n}\n",
+        "token_count": 137
+    },
+    "00401310": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\ncode ** fcn.00401310(code **param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uVar1;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5943;\n    *in_FS_OFFSET = &uStack12;\n    fcn.004042cb();\n    uStack4 = 0;\n    *param_1 = vtable.std::runtime_error.0;\n    param_1[8] = NULL;\n    param_1[9] = 0xf;\n    uVar1 = 0;\n    *(param_1 + 4) = 0;\n    fcn.00402fb0(param_2, 0, 0xffffffff);\n    *in_FS_OFFSET = uVar1;\n    return param_1;\n}\n",
+        "token_count": 206
+    },
+    "00401380": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00401380(code **param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d58d3;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::runtime_error.0;\n    uStack4 = 0;\n    if (0xf < param_1[9]) {\n        fcn.004048f7(param_1[4]);\n    }\n    param_1[9] = 0xf;\n    param_1[8] = NULL;\n    *(param_1 + 4) = 0;\n    uStack4 = 0xffffffff;\n    fcn.004043a9();\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 197
+    },
+    "00401420": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t fcn.00401420(int32_t param_1)\n\n{\n    uint unaff_EBX;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5784;\n    *in_FS_OFFSET = &uStack12;\n    fcn.00403e18(0);\n    *(param_1 + 0x1c) = 0xf;\n    *(param_1 + 0x18) = 0;\n    *(param_1 + 8) = 0;\n    *(param_1 + 0x38) = 0xf;\n    *(param_1 + 0x34) = 0;\n    *(param_1 + 0x24) = 0;\n    *(param_1 + 0x54) = 0xf;\n    *(param_1 + 0x50) = 0;\n    *(param_1 + 0x40) = 0;\n    *(param_1 + 0x70) = 0xf;\n    *(param_1 + 0x6c) = 0;\n    *(param_1 + 0x5c) = 0;\n    uStack8 = 4;\n    fcn.00403d62(param_1, param_1);\n    *in_FS_OFFSET = unaff_EBX;\n    return param_1;\n}\n",
+        "token_count": 332
+    },
+    "004014c0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nvoid fcn.004014c0(int32_t param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack8 = 0x8d5784;\n    *in_FS_OFFSET = &uStack12;\n    uStack4 = 4;\n    fcn.00403bf9(param_1);\n    uStack4._0_1_ = 3;\n    if (0xf < *(param_1 + 0x70)) {\n        fcn.004048f7(*(param_1 + 0x5c));\n    }\n    *(param_1 + 0x70) = 0xf;\n    *(param_1 + 0x6c) = 0;\n    *(param_1 + 0x5c) = 0;\n    uStack4._0_1_ = 2;\n    if (0xf < *(param_1 + 0x54)) {\n        fcn.004048f7(*(param_1 + 0x40));\n    }\n    *(param_1 + 0x54) = 0xf;\n    *(param_1 + 0x50) = 0;\n    *(param_1 + 0x40) = 0;\n    uStack4._0_1_ = 1;\n    if (0xf < *(param_1 + 0x38)) {\n        fcn.004048f7(*(param_1 + 0x24));\n    }\n    *(param_1 + 0x38) = 0xf;\n    *(param_1 + 0x34) = 0;\n    *(param_1 + 0x24) = 0;\n    uStack4 = uStack4._1_3_ << 8;\n    if (0xf < *(param_1 + 0x1c)) {\n        fcn.004048f7(*(param_1 + 8));\n    }\n    *(param_1 + 0x1c) = 0xf;\n    *(param_1 + 0x18) = 0;\n    *(param_1 + 8) = 0;\n    uStack4 = 0xffffffff;\n    fcn.00403e40();\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 528
+    },
+    "004015a0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\ncode ** __thiscall fcn.004015a0(code **param_1, int32_t param_2)\n\n{\n    int32_t *in_FS_OFFSET;\n    int32_t iVar1;\n    int32_t iStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d58d3;\n    iStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &iStack12;\n    iVar1 = param_2;\n    fcn.0040434c(param_2);\n    uStack8 = 0;\n    *param_1 = vtable.std::runtime_error.0;\n    param_1[9] = 0xf;\n    param_1[8] = NULL;\n    *(param_1 + 4) = 0;\n    fcn.00402fb0(param_2 + 0xc, 0, 0xffffffff);\n    *in_FS_OFFSET = iVar1;\n    return param_1;\n}\n",
+        "token_count": 225
+    },
+    "00401860": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\nint32_t fcn.00401860(int32_t *param_1, int32_t param_2)\n\n{\n    int32_t iVar1;\n    uint unaff_ESI;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5919;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    iVar1 = *param_1;\n    *(param_2 + 0x18) = 0xf;\n    *(param_2 + 0x14) = 0;\n    *(param_2 + 4) = 0;\n    fcn.00402fb0(iVar1 + 0x18, 0, 0xffffffff);\n    *in_FS_OFFSET = unaff_ESI;\n    return param_2;\n}\n",
+        "token_count": 204
+    },
+    "004018f0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004018f0(code **param_1)\n\n{\n    uint uVar1;\n    uint *in_FS_OFFSET;\n    uchar auStack12 [12];\n    \n    uVar1 = *in_FS_OFFSET;\n    *in_FS_OFFSET = auStack12;\n    *param_1 = vtable.std::ctype_base.0;\n    *param_1 = vtable.std::locale::facet.0;\n    *in_FS_OFFSET = uVar1;\n    return;\n}\n",
+        "token_count": 103
+    },
+    "00401990": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\ncode ** __thiscall fcn.00401990(code **param_1, int32_t param_2)\n\n{\n    int32_t *in_FS_OFFSET;\n    int32_t iVar1;\n    int32_t iStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d58d3;\n    iStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &iStack12;\n    iVar1 = param_2;\n    fcn.0040434c(param_2);\n    uStack8 = 0;\n    *param_1 = vtable.std::logic_error.0;\n    param_1[9] = 0xf;\n    param_1[8] = NULL;\n    *(param_1 + 4) = 0;\n    fcn.00402fb0(param_2 + 0xc, 0, 0xffffffff);\n    *in_FS_OFFSET = iVar1;\n    return param_1;\n}\n",
+        "token_count": 224
+    },
+    "00401a00": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/0325759584d940e7b69154ed16836be2"
+        ],
+        "decompiled_code": "\ncode ** fcn.00401a00(code **param_1)\n\n{\n    code **ppcVar1;\n    uint *in_FS_OFFSET;\n    uchar auStack28 [16];\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d58b2;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::locale::facet.0;\n    param_1[1] = NULL;\n    *param_1 = vtable.std::ctype_base.0;\n    uStack4 = 1;\n    *param_1 = vtable.std::ctype_char_.0;\n    ppcVar1 = fcn.00404071(auStack28);\n    param_1[2] = *ppcVar1;\n    param_1[3] = ppcVar1[1];\n    param_1[4] = ppcVar1[2];\n    param_1[5] = ppcVar1[3];\n    *in_FS_OFFSET = uStack12;\n    return param_1;\n}\n",
+        "token_count": 251
+    },
+    "00401bb0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00401bb0(code **param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d5892;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::ctype_char_.0;\n    uStack4 = 0;\n    if (param_1[5] < 1) {\n        if (param_1[5] < 0) {\n            fcn.004048ec(param_1[4]);\n        }\n    }\n    else {\n        fcn.0040445a(param_1[4]);\n    }\n    *param_1 = vtable.std::ctype_base.0;\n    *param_1 = vtable.std::locale::facet.0;\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 210
+    },
+    "00401df0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\ncode ** fcn.00401df0(code **param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d59f8;\n    *in_FS_OFFSET = &uStack12;\n    fcn.00401310(param_1);\n    *param_1 = vtable.std::ios_base::failure.0;\n    *in_FS_OFFSET = param_2;\n    return param_1;\n}\n",
+        "token_count": 137
+    },
+    "00401f70": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint fcn.00401f70(int32_t param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5869;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.004017d0(*(param_1 + 0x24));\n    *in_FS_OFFSET = 0;\n    return param_2;\n}\n",
+        "token_count": 125
+    },
+    "004020d0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nfloat10 fcn.004020d0(float param_1)\n\n{\n    float10 fVar1;\n    \n    fVar1 = fcn.004049d0(param_1);\n    return fVar1;\n}\n",
+        "token_count": 47
+    },
+    "004020f0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.004020f0(int32_t param_1)\n\n{\n    code **arg_8h;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d57f8;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    arg_8h = param_1 + 0x54;\n    fcn.00402550();\n    *arg_8h = vtable.std::basic_ios_char__struct_std::char_traits_char__.0;\n    uStack4 = 0xffffffff;\n    *arg_8h = vtable.std::ios_base.0;\n    fcn.00403a1d(arg_8h);\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 197
+    },
+    "00402230": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00402230(code **param_1)\n\n{\n    int32_t *piVar1;\n    uint *puVar2;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d583b;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::basic_streambuf_char__struct_std::char_traits_char__.0;\n    uStack4 = 0;\n    piVar1 = param_1[0xe];\n    if (piVar1 != NULL) {\n        if (*piVar1 != 0) {\n            puVar2 = fcn.004016e0();\n            if (puVar2 != NULL) {\n                (***puVar2)(1);\n            }\n        }\n        fcn.004048f7(piVar1);\n    }\n    uStack4 = 0xffffffff;\n    fcn.00403f4d();\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 241
+    },
+    "004024b0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t * fcn.004024b0(int32_t *param_1, uint param_2, int32_t param_3)\n\n{\n    int32_t **in_FS_OFFSET;\n    uint unaff_retaddr;\n    int32_t *piStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5b7a;\n    piStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &piStack12;\n    if (param_3 != 0) {\n        *param_1 = 0x8d9ea8;\n        param_1[2] = 0x8d9eb0;\n        param_1[0x15] = vtable.std::ios_base.0;\n        param_1[0x15] = vtable.std::basic_ios_char__struct_std::char_traits_char__.0;\n        uStack4 = 1;\n    }\n    fcn.004031a0(param_1);\n    piStack12 = 0x2;\n    *(param_1 + *(*param_1 + 4)) =\n         vtable.std::basic_stringstream_char__struct_std::char_traits_char___class_std::allocator_char__.0;\n    fcn.00403230(param_1 + 3, unaff_retaddr);\n    *in_FS_OFFSET = param_1 + 3;\n    return param_1;\n}\n",
+        "token_count": 316
+    },
+    "00402550": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00402550(int32_t param_1)\n\n{\n    int32_t iVar1;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x8d59b9;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *(*(*(param_1 + -0x54) + 4) + -0x54 + param_1) =\n         vtable.std::basic_stringstream_char__struct_std::char_traits_char___class_std::allocator_char__.0;\n    uStack4 = 0;\n    iVar1 = param_1 + -0x48;\n    fcn.00402650();\n    *(*(*(param_1 + -0x54) + 4) + -0xc + iVar1) = vtable.std::basic_iostream_char__struct_std::char_traits_char__.0;\n    *(*(*(param_1 + -0x4c) + 4) + -4 + iVar1) = vtable.std::basic_ostream_char__struct_std::char_traits_char__.0;\n    *(*(*(param_1 + -0x54) + 4) + -0xc + iVar1) = vtable.std::basic_istream_char__struct_std::char_traits_char__.0;\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 310
+    },
+    "00402bb0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/0325759584d940e7b69154ed16836be2",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\nint32_t fcn.00402bb0(int32_t param_1)\n\n{\n    uint unaff_ESI;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5ada;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.004032b0(param_1);\n    *(param_1 + 0xc) = 0;\n    *(param_1 + 0x10) = 0;\n    *(param_1 + 0x14) = 0;\n    *in_FS_OFFSET = unaff_ESI;\n    return param_1;\n}\n",
+        "token_count": 169
+    },
+    "00402c10": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00402c10(uint *param_1)\n\n{\n    uint unaff_EBX;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack8 = 0x8d5822;\n    *in_FS_OFFSET = &uStack12;\n    uStack4 = 0;\n    if (param_1[3] != 0) {\n        fcn.00403970(param_1);\n        fcn.004048f7(param_1[3]);\n    }\n    param_1[3] = 0;\n    param_1[4] = 0;\n    param_1[5] = 0;\n    uStack8 = 0xffffffff;\n    fcn.004048f7(*param_1);\n    *in_FS_OFFSET = unaff_EBX;\n    return;\n}\n",
+        "token_count": 202
+    },
+    "00402ee0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00402ee0(uint *param_1)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack8 = 0x8d56d8;\n    *in_FS_OFFSET = &uStack12;\n    uStack4 = 0xffffffff;\n    fcn.004048f7(*param_1);\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 113
+    },
+    "00402f20": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00402f20(int32_t *param_1)\n\n{\n    code **arg_8h;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack8 = 0x8d57db;\n    *in_FS_OFFSET = &uStack12;\n    arg_8h = param_1 + 3;\n    *(*(*param_1 + 4) + -0xc + arg_8h) = vtable.std::basic_iostream_char__struct_std::char_traits_char__.0;\n    *(*(param_1[2] + 4) + -4 + arg_8h) = vtable.std::basic_ostream_char__struct_std::char_traits_char__.0;\n    *(*(*param_1 + 4) + -0xc + arg_8h) = vtable.std::basic_istream_char__struct_std::char_traits_char__.0;\n    *arg_8h = vtable.std::basic_ios_char__struct_std::char_traits_char__.0;\n    uStack4 = 0xffffffff;\n    *arg_8h = vtable.std::ios_base.0;\n    fcn.00403a1d(arg_8h);\n    *in_FS_OFFSET = uStack12;\n    return;\n}\n",
+        "token_count": 295
+    },
+    "00402fb0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t __thiscall fcn.00402fb0(int32_t param_1, int32_t param_2, uint32_t param_3, uint32_t param_4)\n\n{\n    int32_t *arg_8h;\n    int32_t *piVar1;\n    uint32_t arg_14h;\n    \n    if (*(param_2 + 0x14) < param_3) {\n        fcn.00403ede();\n    }\n    arg_14h = *(param_2 + 0x14) - param_3;\n    if (param_4 < arg_14h) {\n        arg_14h = param_4;\n    }\n    if (param_1 != param_2) {\n        if (arg_14h == 0xffffffff) {\n            fcn.00403ea6();\n        }\n        if (*(param_1 + 0x18) < arg_14h) {\n            fcn.004035d0(arg_14h, *(param_1 + 0x14));\n        }\n        else if (arg_14h == 0) {\n            *(param_1 + 0x14) = 0;\n            if (*(param_1 + 0x18) < 0x10) {\n                *(param_1 + 4) = 0;\n                return param_1;\n            }\n            **(param_1 + 4) = 0;\n            return param_1;\n        }\n        if (arg_14h != 0) {\n            if (*(param_2 + 0x18) < 0x10) {\n                param_2 = param_2 + 4;\n            }\n            else {\n                param_2 = *(param_2 + 4);\n            }\n            piVar1 = param_1 + 4;\n            arg_8h = piVar1;\n            if (0xf < *(param_1 + 0x18)) {\n                arg_8h = *piVar1;\n            }\n            fcn.00404902(arg_8h, *(param_1 + 0x18), param_2 + param_3, arg_14h);\n            *(param_1 + 0x14) = arg_14h;\n            if (0xf < *(param_1 + 0x18)) {\n                piVar1 = *piVar1;\n            }\n            *(piVar1 + arg_14h) = 0;\n        }\n        return param_1;\n    }\n    fcn.00403410(arg_14h + param_3, 0xffffffff);\n    fcn.00403410(0, param_3);\n    return param_1;\n}\n",
+        "token_count": 578
+    },
+    "004031a0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t * fcn.004031a0(int32_t *param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5b36;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    *(param_1 + *(*param_1 + 4)) = vtable.std::basic_istream_char__struct_std::char_traits_char__.0;\n    param_1[1] = 0;\n    fcn.00403720(param_2);\n    *(param_1 + *(param_1[2] + 4) + 8) = vtable.std::basic_ostream_char__struct_std::char_traits_char__.0;\n    *(param_1 + *(*param_1 + 4)) = vtable.std::basic_iostream_char__struct_std::char_traits_char__.0;\n    *in_FS_OFFSET = 0;\n    return param_1;\n}\n",
+        "token_count": 240
+    },
+    "004032b0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t * fcn.004032b0(int32_t *param_1)\n\n{\n    int32_t **ppiVar1;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d56b9;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    ppiVar1 = fcn.00404b31(4);\n    if (ppiVar1 == NULL) {\n        ppiVar1 = NULL;\n    }\n    else {\n        *ppiVar1 = param_1;\n    }\n    *param_1 = ppiVar1;\n    *in_FS_OFFSET = uStack12;\n    return param_1;\n}\n",
+        "token_count": 179
+    },
+    "00403330": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t __thiscall fcn.00403330(int32_t param_1, uint *param_2, uint32_t param_3)\n\n{\n    uint32_t uVar1;\n    uint *puVar2;\n    int32_t iVar3;\n    int32_t *arg_8h;\n    uint *puVar4;\n    int32_t *piVar5;\n    \n    if (param_2 != NULL) {\n        uVar1 = *(param_1 + 0x18);\n        puVar2 = param_1 + 4;\n        puVar4 = puVar2;\n        if (0xf < uVar1) {\n            puVar4 = *puVar2;\n        }\n        if (puVar4 <= param_2) {\n            puVar4 = puVar2;\n            if (0xf < uVar1) {\n                puVar4 = *puVar2;\n            }\n            if (param_2 < *(param_1 + 0x14) + puVar4) {\n                if (0xf < uVar1) {\n                    puVar2 = *puVar2;\n                }\n                iVar3 = fcn.00402fb0(param_1, param_2 - puVar2, param_3);\n                return iVar3;\n            }\n        }\n    }\n    if (param_3 == 0xffffffff) {\n        fcn.00403ea6();\n    }\n    if (*(param_1 + 0x18) < param_3) {\n        fcn.004035d0(param_3, *(param_1 + 0x14));\n    }\n    else if (param_3 == 0) {\n        *(param_1 + 0x14) = 0;\n        if (*(param_1 + 0x18) < 0x10) {\n            *(param_1 + 4) = 0;\n            return param_1;\n        }\n        **(param_1 + 4) = 0;\n        return param_1;\n    }\n    if (param_3 != 0) {\n        piVar5 = param_1 + 4;\n        arg_8h = piVar5;\n        if (0xf < *(param_1 + 0x18)) {\n            arg_8h = *piVar5;\n        }\n        fcn.00404902(arg_8h, *(param_1 + 0x18), param_2, param_3);\n        *(param_1 + 0x14) = param_3;\n        if (0xf < *(param_1 + 0x18)) {\n            piVar5 = *piVar5;\n        }\n        *(piVar5 + param_3) = 0;\n    }\n    return param_1;\n}\n",
+        "token_count": 595
+    },
+    "00403410": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nint32_t __thiscall fcn.00403410(int32_t param_1, uint *param_2, uint32_t param_3)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    int32_t iVar3;\n    uint *puVar4;\n    uint *puVar5;\n    \n    uVar1 = param_2;\n    if (*(param_1 + 0x14) < param_2) {\n        fcn.00403ede();\n    }\n    uVar2 = *(param_1 + 0x14) - param_2;\n    if (uVar2 < param_3) {\n        param_3 = uVar2;\n    }\n    if (param_3 != 0) {\n        puVar5 = param_1 + 4;\n        puVar4 = puVar5;\n        param_2 = puVar5;\n        if (0xf < *(param_1 + 0x18)) {\n            puVar4 = *puVar5;\n            param_2 = *puVar5;\n        }\n        fcn.0040426e(puVar4 + uVar1, *(param_1 + 0x18) - uVar1, param_2 + param_3 + uVar1, uVar2 - param_3);\n        iVar3 = *(param_1 + 0x14) - param_3;\n        *(param_1 + 0x14) = iVar3;\n        if (0xf < *(param_1 + 0x18)) {\n            puVar5 = *puVar5;\n        }\n        *(iVar3 + puVar5) = 0;\n    }\n    return param_1;\n}\n",
+        "token_count": 369
+    },
+    "004034a0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\ncode ** fcn.004034a0(code **param_1)\n\n{\n    int32_t iVar1;\n    code *pcVar2;\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack12 = *in_FS_OFFSET;\n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d57ab;\n    *in_FS_OFFSET = &uStack12;\n    *param_1 = vtable.std::basic_streambuf_char__struct_std::char_traits_char__.0;\n    fcn.00403f33();\n    uStack4 = 0;\n    iVar1 = fcn.00404b31(4);\n    if (iVar1 == 0) {\n        pcVar2 = NULL;\n    }\n    else {\n        pcVar2 = fcn.00401760();\n    }\n    param_1[0xe] = pcVar2;\n    param_1[4] = param_1 + 2;\n    param_1[8] = param_1 + 6;\n    param_1[9] = param_1 + 7;\n    param_1[5] = param_1 + 3;\n    param_1[0xc] = param_1 + 10;\n    param_1[0xd] = param_1 + 0xb;\n    param_1[3] = NULL;\n    *param_1[9] = 0;\n    *param_1[0xd] = 0;\n    *param_1[4] = 0;\n    *param_1[8] = 0;\n    *param_1[0xc] = 0;\n    *in_FS_OFFSET = uStack12;\n    return param_1;\n}\n",
+        "token_count": 386
+    },
+    "00403720": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/0325759584d940e7b69154ed16836be2",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\nvoid fcn.00403720(void)\n\n{\n    uchar uVar1;\n    int32_t iVar2;\n    uint uVar3;\n    int32_t unaff_ESI;\n    uint unaff_retaddr;\n    \n    *(unaff_ESI + 0x24) = 0;\n    *(unaff_ESI + 4) = 0;\n    *(unaff_ESI + 0xc) = 0;\n    *(unaff_ESI + 0x10) = 0x201;\n    *(unaff_ESI + 0x14) = 6;\n    *(unaff_ESI + 0x18) = 0;\n    *(unaff_ESI + 0x1c) = 0;\n    *(unaff_ESI + 0x20) = 0;\n    fcn.00401e80(0);\n    iVar2 = fcn.00404b31(4);\n    if (iVar2 == 0) {\n        uVar3 = 0;\n    }\n    else {\n        uVar3 = fcn.00401760();\n    }\n    *(unaff_ESI + 0x24) = uVar3;\n    *(unaff_ESI + 0x28) = unaff_retaddr;\n    *(unaff_ESI + 0x2c) = 0;\n    uVar1 = fcn.004037a0();\n    *(unaff_ESI + 0x30) = uVar1;\n    if (*(unaff_ESI + 0x28) == 0) {\n        fcn.00401e80(*(unaff_ESI + 8) | 4);\n    }\n    *(unaff_ESI + 4) = 0;\n    return;\n}\n",
+        "token_count": 378
+    },
+    "004037a0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.004037a0(uint param_1)\n\n{\n    int32_t *piVar1;\n    uint *puVar2;\n    int32_t unaff_ESI;\n    int32_t *in_FS_OFFSET;\n    uint uStack16;\n    int32_t iStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5ab8;\n    iStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &iStack12;\n    uStack16 = param_1;\n    fcn.00401f70(param_1, &uStack16);\n    iStack12 = 0;\n    piVar1 = fcn.00403820();\n    iStack12 = -1;\n    if (unaff_ESI != 0) {\n        puVar2 = fcn.004016e0();\n        if (puVar2 != NULL) {\n            (***puVar2)(1);\n        }\n    }\n    (**(*piVar1 + 0x18))(0x20);\n    *in_FS_OFFSET = unaff_ESI;\n    return;\n}\n",
+        "token_count": 255
+    },
+    "00403910": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\ncode ** __thiscall fcn.00403910(code **param_1, uint param_2)\n\n{\n    uint *in_FS_OFFSET;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x8d5668;\n    uStack12 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack12;\n    fcn.0040434c(param_2);\n    *param_1 = vtable.std::bad_alloc.0;\n    *in_FS_OFFSET = param_1;\n    return param_1;\n}\n",
+        "token_count": 137
+    },
+    "00403970": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00403970(void)\n\n{\n    int32_t in_EAX;\n    int32_t unaff_EDI;\n    \n    if (in_EAX != unaff_EDI) {\n        do {\n            if (0xf < *(in_EAX + 0x18)) {\n                fcn.004048f7(*(in_EAX + 4));\n            }\n            *(in_EAX + 0x18) = 0xf;\n            *(in_EAX + 0x14) = 0;\n            *(in_EAX + 4) = 0;\n            in_EAX = in_EAX + 0x1c;\n        } while (in_EAX != unaff_EDI);\n    }\n    return;\n}\n",
+        "token_count": 158
+    },
+    "0040885a": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040885a(uint arg_8h)\n\n{\n    fcn.0040872e(arg_8h, 0, 0);\n    return;\n}\n",
+        "token_count": 41
+    },
+    "0040a57a": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0040a58e)\n// WARNING: Removing unreachable block (ram,0x0040a594)\n// WARNING: Removing unreachable block (ram,0x0040a596)\n\nvoid fcn.0040a57a(void)\n\n{\n    return;\n}\n",
+        "token_count": 66
+    },
+    "008d47b0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.008d47b0(void)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    uint8_t uVar3;\n    int32_t iVar4;\n    uint8_t uStack8;\n    \n    iVar2 = *0x34bf26c;\n    iVar1 = *0x9b19d8;\n    iVar4 = 0;\n    if (0 < *0x34bf26c) {\n        do {\n            uStack8 = *(iVar4 + iVar1);\n            uVar3 = fcn.008d3e70();\n            uStack8 = uStack8 ^ uVar3;\n            *(iVar4 + iVar1) = uStack8;\n            iVar4 = iVar4 + 1;\n        } while (iVar4 < iVar2);\n    }\n    return;\n}\n",
+        "token_count": 178
+    },
+    "00403e40": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00403e40(int32_t *param_1)\n\n{\n    if (*param_1 < 4) {\n        fcn.0040425e(*param_1 * 0x18 + 0x8ddcf0);\n    }\n    return;\n}\n",
+        "token_count": 63
+    },
+    "00404f7f": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00404f7f(uint arg_8h, uint arg_ch, uint arg_10h, uint arg_14h)\n\n{\n    uint in_EAX;\n    uint uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = fcn.0040b441(arg_8h, arg_ch, arg_10h, arg_14h, in_EAX, 0, 0, 0);\n    return uVar1;\n}\n",
+        "token_count": 112
+    },
+    "00402150": {
+        "rules": [
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "contain loop"
+        ],
+        "decompiled_code": "\nint32_t __thiscall fcn.00402150(int32_t param_1, char *param_2)\n\n{\n    char cVar1;\n    char *pcVar2;\n    \n    *(param_1 + 0x18) = 0xf;\n    *(param_1 + 0x14) = 0;\n    *(param_1 + 4) = 0;\n    pcVar2 = param_2;\n    do {\n        cVar1 = *pcVar2;\n        pcVar2 = pcVar2 + 1;\n    } while (cVar1 != '\\0');\n    fcn.00403330(param_2, pcVar2 - (param_2 + 1));\n    return param_1;\n}\n",
+        "token_count": 160
+    },
+    "00403090": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid fcn.00403090(char *param_1)\n\n{\n    char cVar1;\n    char *pcVar2;\n    \n    pcVar2 = param_1;\n    do {\n        cVar1 = *pcVar2;\n        pcVar2 = pcVar2 + 1;\n    } while (cVar1 != '\\0');\n    fcn.00403330(param_1, pcVar2 - (param_1 + 1));\n    return;\n}\n",
+        "token_count": 101
+    },
+    "004091da": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid __cdecl fcn.004091da(uint arg_8h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t *arg_8h_00;\n    int32_t *piVar3;\n    int32_t *piVar4;\n    int32_t unaff_EBP;\n    uint var_1ch;\n    uint var_4h;\n    \n    fcn.004082a8(0x8daaa0, 0xc);\n    fcn.004077ae(0xe);\n    *(unaff_EBP + -4) = 0;\n    arg_8h_00 = *0x8de288;\n    iVar1 = *(unaff_EBP + 8);\n    iVar2 = *(iVar1 + 4);\n    if (iVar2 != 0) {\n        piVar3 = 0x8de284;\n        do {\n            piVar4 = piVar3;\n            *(unaff_EBP + -0x1c) = arg_8h_00;\n            if (arg_8h_00 == NULL) goto code_r0x0040921e;\n            piVar3 = arg_8h_00;\n        } while (*arg_8h_00 != iVar2);\n        piVar4[1] = arg_8h_00[1];\n        fcn.0040445a(arg_8h_00);\ncode_r0x0040921e:\n        fcn.0040445a(*(iVar1 + 4));\n        *(iVar1 + 4) = 0;\n    }\n    *(unaff_EBP + -4) = 0xfffffffe;\n    fcn.00409241();\n    fcn.004082ed();\n    return;\n}\n",
+        "token_count": 394
+    }
+}

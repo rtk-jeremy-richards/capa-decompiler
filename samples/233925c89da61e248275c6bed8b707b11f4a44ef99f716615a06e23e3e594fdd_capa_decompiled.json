@@ -1,0 +1,18 @@
+{
+    "null": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1",
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00458004": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n// WARNING: Instruction at (ram,0x004580b5) overlaps instruction at (ram,0x004580b4)\n// \n// WARNING: Could not reconcile some variable overlaps\n// WARNING: Restarted to delay deadcode elimination for space: stack\n\nvoid __fastcall fcn.00458004(uint param_1, int32_t param_2, uint param_3, int32_t param_4)\n\n{\n    int32_t *piVar1;\n    uchar uVar2;\n    uchar *puVar3;\n    uint8_t uVar4;\n    char cVar5;\n    uint32_t uVar6;\n    uchar *puVar7;\n    uint32_t uVar8;\n    ushort uVar9;\n    int32_t *piVar10;\n    int32_t unaff_ESI;\n    uchar *unaff_EDI;\n    char in_AF;\n    uchar *puStack0000000c;\n    uint8_t in_stack_c12c660c;\n    uint32_t uStack28;\n    uint uStack20;\n    uchar uStack5;\n    \n    if (param_4 != 0xf) {\n    // WARNING: Bad instruction - Truncating control flow here\n        halt_baddata();\n    }\n    puVar3 = *(unaff_ESI + 0x35dfef9f);\n    uVar9 = param_2;\n    out(*puVar3, uVar9);\n    uVar6 = in(uVar9);\n    uVar4 = in_AF * '\\x06';\n    uVar2 = in(uVar9);\n    *unaff_EDI = uVar2;\n    *(uStack20 + 0x77ffdbff) = *(uStack20 + 0x77ffdbff);\n    out(uVar9, uVar6 & 0xffff0000 | uVar4 + (0x90 < (uVar4 & 0xf0) | in_AF * (0xf9 < uVar4)) * '`' + 0x10 | 0x1d);\n    puStack0000000c = uStack20 - uStack28 & 0xffffff00 | (uStack20 - uStack28) + puVar3[0x53] + (uStack20 < uStack28);\n    uVar6 = (puVar3[0x53] + param_2 * uStack28) / uStack20;\n    piVar10 = (uVar6 & 0xff) * 0x100;\n    uVar6 = uVar6 & 0xffffff0c;\n    puVar7 = puStack0000000c;\n    while( true ) {\n        uVar8 = puVar7 & 0xffffff00 | puVar7 ^ uStack28;\n        puVar7 = &stack0xfffffffc + uVar8;\n        if (puVar7 < 0) break;\n        *(&stack0xf7991049 + uVar8) = *(&stack0xf7991049 + uVar8) + -1;\n        piVar1 = piVar10 + 0x9144fbc;\n        uVar4 = puVar7 & 7;\n        *piVar1 = *piVar1 >> uVar4 | *piVar1 << 8 - uVar4;\n        uVar6 = 0x4e;\n    }\n    cVar5 = CONCAT11(0xed, uVar6) / in_stack_c12c660c;\n    out(0xf4, cVar5);\n    piVar1 = uStack20 + puVar3 * 4;\n    *piVar1 = &uStack5 + uVar8 + (0xaf < cVar5 - 0xeU || CARRY1(cVar5 + 0x42, 0xfb < uStack20._1_1_)) + *piVar1;\n    *piVar10 = *piVar10 << (&uStack5 + uVar8 & 0x1f);\n    func_0xe2c2b9d8();\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 895
+    }
+}

