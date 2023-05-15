@@ -1,0 +1,10 @@
+{
+    "null": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/a90d4ac7cf5b4bde87d45a81715c7353",
+            "validate payment card number using luhn algorithm with lookup table/6f7029bc2c134cb690df0e7c2f59f3d4"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_30h\n// WARNING: Variable defined which should be unmapped: var_2ch\n// WARNING: Variable defined which should be unmapped: var_28h\n// WARNING: Variable defined which should be unmapped: var_24h\n// WARNING: Variable defined which should be unmapped: var_20h\n\nuint entry0(void)\n\n{\n    int32_t iVar1;\n    code *pcVar2;\n    int32_t extraout_EDX;\n    uint32_t var_30h;\n    uint var_2ch;\n    int32_t var_28h;\n    uint var_24h;\n    int32_t var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    iVar1 = *0x445010;\n    var_20h = *0x445010 + 0x21e85;\n    var_28h = 0x442420;\n    pcVar2 = _sym.imp.USER32.dll_GetForegroundWindow + -2;\n    (*pcVar2)();\n    (*pcVar2)();\n    (*_sym.imp.KERNEL32.dll_TlsAlloc)();\n    if (extraout_EDX != -0x272cec5f) {\n        for (var_30h = 3; var_30h < 0xe4e315; var_30h = var_30h + 1) {\n            var_20h = var_20h + *0x443014;\n            var_28h = var_28h + 0x4c;\n        }\n        (*0x4257c9)(var_30h, iVar1 + 0x21e7d, var_28h, 0x4257c9, var_20h);\n    }\n    return 0;\n}\n",
+        "token_count": 410
+    }
+}

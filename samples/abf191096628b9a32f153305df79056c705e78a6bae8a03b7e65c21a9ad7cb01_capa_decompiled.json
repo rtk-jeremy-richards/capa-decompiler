@@ -1,0 +1,69 @@
+{
+    "null": {
+        "rules": [
+            "search for credit card data/546f8dc683b8415fa126b38355d21de5",
+            "parse credit card information/2fba96855ce44cd2afbbefaf4df20b4d"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00401960": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint fcn.00401960(void)\n\n{\n    uint var_2dh;\n    uint var_4h;\n    \n    return *(*0x444ac4 + -4);\n}\n",
+        "token_count": 39
+    },
+    "00401000": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00401000(uint32_t arg_8h, uint32_t arg_ch)\n\n{\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    // [00] -r-x section size 159744 named .text\n    if (arg_8h < arg_ch) {\n        arg_ch = arg_8h;\n    }\n    return arg_ch;\n}\n",
+        "token_count": 93
+    },
+    "004014a0": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004014a0(int32_t arg_8h, int32_t arg_ch, uint32_t arg_10h)\n\n{\n    uint var_20h;\n    uint var_18h;\n    uint var_10h;\n    uint var_ch;\n    uint32_t var_8h;\n    uint var_4h;\n    \n    for (var_8h = 0; var_8h < arg_10h; var_8h = var_8h + 1) {\n        *(arg_8h + var_8h) = *(arg_ch + var_8h);\n    }\n    return;\n}\n",
+        "token_count": 140
+    },
+    "00401210": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.00401210(void)\n\n{\n    uint *puVar1;\n    uint var_bdh;\n    \n    puVar1 = *0x444a9c;\n    *0x444a94 = *0x444ac8 + 0x1d110;\n    **0x444a9c = *0x444ab8;\n    puVar1[-1] = *0x444a90;\n    puVar1[-2] = *0x444a94;\n    return;\n}\n",
+        "token_count": 122
+    },
+    "00401260": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00401260(uint32_t *arg_8h, uint32_t arg_ch)\n\n{\n    uint var_464h;\n    uint var_8h;\n    uint var_4h;\n    \n    *0x444ad4 = arg_ch;\n    *arg_8h = *arg_8h ^ arg_ch;\n    return;\n}\n",
+        "token_count": 79
+    },
+    "004013d0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004013d0(int32_t arg_8h, uint32_t arg_ch)\n\n{\n    int32_t arg_8h_00;\n    uint var_158h;\n    uint var_154h;\n    uint var_3ah;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    for (*0x444a98 = 0; *0x444a98 < arg_ch; *0x444a98 = *0x444a98 + 4) {\n        arg_8h_00 = arg_8h + *0x444a98;\n        fcn.00401920(arg_8h_00, *0x444a98);\n        fcn.00401260(arg_8h_00, *0x444a98 + 0x201e6);\n    }\n    return;\n}\n",
+        "token_count": 193
+    },
+    "00401920": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00401920(int32_t *arg_8h, int32_t arg_ch)\n\n{\n    uint var_34h;\n    uint var_4h;\n    \n    *arg_8h = *arg_8h + arg_ch;\n    return;\n}\n",
+        "token_count": 61
+    },
+    "004019a0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "inspect load icon resource",
+            "link function at runtime on Windows"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.004019a0(uint arg_8h)\n\n{\n    uint uVar1;\n    int32_t iVar2;\n    uint uVar3;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = fcn.00401960(0x1a8);\n    *0x444a84 = uVar1;\n    iVar2 = (*_sym.imp.USER32.dll_LoadIconA)(0, 0x115c);\n    if (iVar2 == 0) {\n        str.hertualAlloc[0] = 'V';\n        str.hertualAlloc[1] = 'i';\n        uVar3 = (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(\"kernel32\", \"hertualAlloc\");\n        *0x444ad8 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(uVar3);\n        *0x444ae8 = *0x444ad8;\n        uVar1 = (**0x444ad8)(0, uVar1, *0x444410, 0x40);\n    }\n    else {\n        uVar1 = 0;\n    }\n    return uVar1;\n}\n",
+        "token_count": 290
+    }
+}

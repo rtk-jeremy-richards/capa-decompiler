@@ -1,0 +1,19 @@
+{
+    "null": {
+        "rules": [
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "log keystrokes via raw input data/18af53aa16f24c3fa3538f182ae5df5a",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\nulong dbg.pre_c_init(void)\n\n{\n    int32_t *piVar1;\n    uint *puVar2;\n    \n    // int pre_c_init();\n    *0x14001b020 = 0;\n    **0x140018450 = 1;\n    **0x140018460 = 1;\n    **0x140018470 = 1;\n    **0x140018440 = 1;\n    if (**0x1400182e0 == 0x5a4d) {\n        piVar1 = *0x1400182e0 + *(*0x1400182e0 + 0x1e);\n        if (*piVar1 == 0x4550) {\n            if (*(piVar1 + 6) == 0x10b) {\n                if (0xe < piVar1[0x1d]) {\n                    *0x14001b020 = piVar1[0x3a] != 0;\n                }\n            }\n            else if ((*(piVar1 + 6) == 0x20b) && (0xe < piVar1[0x21])) {\n                *0x14001b020 = piVar1[0x3e] != 0;\n            }\n        }\n    }\n    if (**0x140018430 == 0) {\n        sym.__set_app_type(1);\n    }\n    else {\n        sym.__set_app_type(2);\n    }\n    puVar2 = dbg.__p__fmode();\n    *puVar2 = **0x1400183f0;\n    puVar2 = dbg.__p__commode();\n    *puVar2 = **0x1400183d0;\n    dbg._setargv();\n    if (**0x140018270 != 1) {\n        return 0;\n    }\n    dbg.__mingw_setusermatherr(dbg._matherr);\n    return 0;\n}\n",
+        "token_count": 412
+    },
+    "140002a5": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nuint64_t fcn.140002a50(ulong arg1)\n\n{\n    uint64_t in_RAX;\n    uint64_t uVar1;\n    ulong *puVar2;\n    ulong auStackX8 [4];\n    uint64_t uStack16;\n    \n    puVar2 = auStackX8;\n    uVar1 = in_RAX;\n    if (0xfff < in_RAX) {\n        do {\n            puVar2 = puVar2 + -0x200;\n            *puVar2 = *puVar2;\n            uVar1 = uVar1 - 0x1000;\n        } while (0x1000 < uVar1);\n    }\n    uStack16 = in_RAX;\n    *(puVar2 - uVar1) = *(puVar2 - uVar1);\n    return uStack16;\n}\n",
+        "token_count": 182
+    }
+}

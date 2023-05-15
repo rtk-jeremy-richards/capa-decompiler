@@ -1,0 +1,183 @@
+{
+    "null": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00403f40": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nulong fcn.00403f40(uint *arg1)\n\n{\n    uint *puVar1;\n    \n    if ((arg1 != NULL) && (*0x434864 != 0)) {\n        *arg1 = *0x434870;\n        return 0;\n    }\n    puVar1 = fcn.004039f0();\n    *puVar1 = 0x16;\n    fcn.00406c80(0, 0, 0, 0);\n    return 0x16;\n}\n",
+        "token_count": 112
+    },
+    "00404290": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00404225)\n// WARNING: Removing unreachable block (ram,0x0040424e)\n\nvoid fcn.00404290(ulong arg1)\n\n{\n    code *pcVar1;\n    code **ppcVar2;\n    code **ppcVar3;\n    \n    fcn.00406a20(8);\n    if (*0x4348c4 != 1) {\n        *0x4348c0 = 1;\n        *0x43487c = 0;\n        ppcVar2 = fcn.00405a10(*0x4356b8);\n        ppcVar3 = fcn.00405a10(*0x4356b0);\n        if (ppcVar2 != NULL) {\n            while (ppcVar3 = ppcVar3 + -1,  ppcVar2 <= ppcVar3) {\n                if (*ppcVar3 != NULL) {\n                    (**ppcVar3)();\n                }\n            }\n        }\n        fcn.00403db0(0x42c408, 0x42c410);\n        fcn.00403db0(0x42c418, 0x42c428);\n    }\n    *0x4348c4 = 1;\n    fcn.004068d0(8);\n    fcn.00403d50(arg1);\n    pcVar1 = swi(3);\n    (*pcVar1)();\n    return;\n}\n",
+        "token_count": 322
+    },
+    "00407cc0": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check if file exists/0479f02c3c8a4099bfdd7ca8c1e3802e/20122460e93841beb56e12792b6a4896"
+        ],
+        "decompiled_code": "\nulong fcn.00407cc0(ulong arg1, ulong arg2, ulong arg3)\n\n{\n    int32_t iVar1;\n    int64_t iVar2;\n    int64_t iVar3;\n    int64_t arg1_00;\n    ulong uVar4;\n    code *pcVar5;\n    int64_t iVar6;\n    int32_t iStack56;\n    uint32_t uStack52;\n    uchar auStack48 [8];\n    uchar auStack40 [8];\n    uint8_t uStack32;\n    \n    iVar2 = fcn.004059b0();\n    iVar6 = 0;\n    iStack56 = 0;\n    uStack52 = 0;\n    if (*0x4350b8 == 0) {\n        iVar3 = (*_sym.imp.KERNEL32.dll_LoadLibraryA)(\"USER32.DLL\");\n        if ((iVar3 == 0) || (arg1_00 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar3, 0x42cc48),  arg1_00 == 0)) {\n            return 0;\n        }\n        *0x4350b8 = fcn.00405940(arg1_00);\n        uVar4 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar3, \"GetActiveWindow\");\n        *0x4350c0 = fcn.00405940(uVar4);\n        uVar4 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar3, \"GetLastActivePopup\");\n        *0x4350c8 = fcn.00405940(uVar4);\n        iVar1 = fcn.00403e50(&iStack56);\n        if (iVar1 != 0) {\n            fcn.00406b80(0, 0, 0, 0, 0);\n        }\n        if (iStack56 == 2) {\n            uVar4 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar3, \"GetUserObjectInformationA\");\n            *0x4350d8 = fcn.00405940(uVar4);\n            if (*0x4350d8 != 0) {\n                uVar4 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar3, \"GetProcessWindowStation\");\n                *0x4350d0 = fcn.00405940(uVar4);\n            }\n        }\n    }\n    if ((*0x4350d0 == iVar2) || (*0x4350d8 == iVar2)) {\ncode_r0x00407e83:\n        if (*0x4350c0 != iVar2) {\n            pcVar5 = fcn.00405a10(*0x4350c0);\n            iVar6 = (*pcVar5)();\n            if ((iVar6 != 0) && (*0x4350c8 != iVar2)) {\n                pcVar5 = fcn.00405a10(*0x4350c8);\n                iVar6 = (*pcVar5)(iVar6);\n            }\n        }\n    }\n    else {\n        pcVar5 = fcn.00405a10(*0x4350d0);\n        iVar3 = (*pcVar5)();\n        if (iVar3 != 0) {\n            pcVar5 = fcn.00405a10(*0x4350d8);\n            iVar1 = (*pcVar5)(iVar3, 1, auStack40, 0xc, auStack48);\n            if ((iVar1 != 0) && ((uStack32 & 1) != 0)) goto code_r0x00407e83;\n        }\n        iVar1 = fcn.00403f40(&uStack52);\n        if (iVar1 != 0) {\n            fcn.00406b80(0, 0, 0, 0, 0);\n        }\n        if (uStack52 < 4) {\n            arg3._0_4_ = arg3 | 0x40000;\n        }\n        else {\n            arg3._0_4_ = arg3 | 0x200000;\n        }\n    }\n    pcVar5 = fcn.00405a10(*0x4350b8);\n    uVar4 = (*pcVar5)(iVar6, arg1, arg2, arg3);\n    return uVar4;\n}\n",
+        "token_count": 933
+    },
+    "00426140": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nvoid fcn.00426140(ulong arg1)\n\n{\n    if (*0x4350e0 == 0) {\n        fcn.004287c0(0x433930, arg1, 0, 10);\n        return;\n    }\n    fcn.004287c0(0, arg1, 0, 10);\n    return;\n}\n",
+        "token_count": 80
+    },
+    "00429ed0": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00429dbd)\n\nuint64_t fcn.00429ed0(int64_t arg1, int64_t arg2, uint64_t arg3)\n\n{\n    int32_t iVar1;\n    uint *puVar2;\n    uint64_t uVar3;\n    int64_t iStack40;\n    int64_t iStack32;\n    int64_t iStack24;\n    char cStack16;\n    \n    cStack16 = '\\0';\n    iStack24 = fcn.00405cc0();\n    iStack40 = *(iStack24 + 0xc0);\n    iStack32 = *(iStack24 + 0xb8);\n    if ((iStack40 != *0x433920) && ((*0x434120 & *(iStack24 + 200)) == 0)) {\n        iStack40 = fcn.00408980();\n    }\n    if ((iStack32 != *0x433d70) && ((*0x434120 & *(iStack24 + 200)) == 0)) {\n        iStack32 = fcn.0040a370();\n    }\n    if ((*(iStack24 + 200) & 2) == 0) {\n        *(iStack24 + 200) = *(iStack24 + 200) | 2;\n        cStack16 = '\\x01';\n    }\n    if (arg3 == 0) {\n        if (cStack16 != '\\0') {\n            *(iStack24 + 200) = *(iStack24 + 200) & 0xfffffffd;\n        }\n        return 0;\n    }\n    if (((arg1 == 0) || (arg2 == 0)) || (0x7fffffff < arg3)) {\n        puVar2 = fcn.004039f0();\n        *puVar2 = 0x16;\n        fcn.00406c80(0, 0, 0, 0);\ncode_r0x00429e1c:\n        if (cStack16 != '\\0') {\n            *(iStack24 + 200) = *(iStack24 + 200) & 0xfffffffd;\n        }\n        uVar3 = 0x7fffffff;\n    }\n    else {\n        if (*(iStack32 + 8) == 0) {\n            uVar3 = fcn.0042aad0(arg1, arg2, arg3, 0);\n        }\n        else {\n            iVar1 = fcn.0042a990(&iStack40, *(iStack32 + 0xc), 0x1001, arg1);\n            if (iVar1 == 0) goto code_r0x00429e1c;\n            uVar3 = iVar1 - 2;\n        }\n        if (cStack16 != '\\0') {\n            *(iStack24 + 200) = *(iStack24 + 200) & 0xfffffffd;\n        }\n    }\n    return uVar3;\n}\n",
+        "token_count": 645
+    },
+    "0042b3d0": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0042b2ca)\n\nuint8_t * fcn.0042b3d0(uint8_t *arg1, ulong arg2)\n\n{\n    uint8_t uVar1;\n    int64_t iVar2;\n    int64_t iVar3;\n    uint *puVar4;\n    uint8_t *puVar5;\n    bool bVar6;\n    \n    iVar2 = fcn.00405cc0();\n    iVar3 = *(iVar2 + 0xb8);\n    if ((*(iVar2 + 0xc0) != *0x433920) && ((*0x434120 & *(iVar2 + 200)) == 0)) {\n        fcn.00408980();\n    }\n    if ((iVar3 != *0x433d70) && ((*0x434120 & *(iVar2 + 200)) == 0)) {\n        iVar3 = fcn.0040a370();\n    }\n    bVar6 = (*(iVar2 + 200) & 2) == 0;\n    if (bVar6) {\n        *(iVar2 + 200) = *(iVar2 + 200) | 2;\n    }\n    if (arg1 == NULL) {\n        puVar4 = fcn.004039f0();\n        *puVar4 = 0x16;\n        fcn.00406c80(0, 0, 0, 0);\n    }\n    else {\n        if (*(iVar3 + 8) == 0) {\n            arg1 = fcn.0042b3e0(arg1);\ncode_r0x0042b329:\n            if (!bVar6) {\n                return arg1;\n            }\n            *(iVar2 + 200) = *(iVar2 + 200) & 0xfffffffd;\n            return arg1;\n        }\n        uVar1 = *arg1;\n        while (uVar1 != 0) {\n            if ((*(uVar1 + 0x1d + iVar3) & 4) == 0) {\n                puVar5 = arg1;\n                if (arg2 == uVar1) break;\n            }\n            else {\n                if (arg1[1] == 0) goto code_r0x0042b39d;\n                puVar5 = arg1 + 1;\n                if (arg2 == CONCAT11(uVar1, arg1[1])) goto code_r0x0042b329;\n            }\n            arg1 = puVar5 + 1;\n            uVar1 = puVar5[1];\n        }\n        if (arg2 == uVar1) {\n            if (!bVar6) {\n                return arg1;\n            }\n            *(iVar2 + 200) = *(iVar2 + 200) & 0xfffffffd;\n            return arg1;\n        }\n    }\ncode_r0x0042b39d:\n    if (bVar6) {\n        *(iVar2 + 200) = *(iVar2 + 200) & 0xfffffffd;\n    }\n    return NULL;\n}\n",
+        "token_count": 660
+    },
+    "00403120": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17"
+        ],
+        "decompiled_code": "\nvoid fcn.00403120(ulong *arg1)\n\n{\n    *arg1 = 0x42c470;\n    if (*(arg1 + 2) != 0) {\n        fcn.004026f0(arg1[1]);\n    }\n    return;\n}\n",
+        "token_count": 60
+    },
+    "00405a10": {
+        "rules": [
+            "check if file exists/c301f2ef4d414d12851aaf7cbada9e20/bb34a6814d684c5e93a48a12384793c1"
+        ],
+        "decompiled_code": "\nulong fcn.00405a10(ulong arg1)\n\n{\n    int64_t iVar1;\n    code *UNRECOVERED_JUMPTABLE;\n    ulong uVar2;\n    \n    if ((*0x433500 == -1) || (iVar1 = (*_sym.imp.KERNEL32.dll_FlsGetValue)(),  iVar1 == 0)) {\n        iVar1 = (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(\"KERNEL32.DLL\");\n        if (iVar1 == 0) {\n            return arg1;\n        }\n        UNRECOVERED_JUMPTABLE = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar1, \"DecodePointer\");\n    }\n    else {\n        UNRECOVERED_JUMPTABLE = *(iVar1 + 0x2b0);\n    }\n    if (UNRECOVERED_JUMPTABLE == NULL) {\n        return arg1;\n    }\n    // WARNING: Could not recover jumptable at 0x00405a67. Too many branches\n    // WARNING: Treating indirect jump as call\n    uVar2 = (*UNRECOVERED_JUMPTABLE)(arg1);\n    return uVar2;\n}\n",
+        "token_count": 254
+    },
+    "00401000": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00401000(ulong noname_0, ulong arg2)\n\n{\n    int64_t iVar1;\n    ulong uVar2;\n    \n    // [00] -r-x section size 176128 named .text\n    iVar1 = *0x435298;\n    uVar2 = SUB168(ZEXT816(8) * ZEXT816(1), 0);\n    if (SUB168(ZEXT816(8) * ZEXT816(1) >> 0x40, 0) != 0) {\n        uVar2 = 0xffffffffffffffff;\n    }\n    uVar2 = fcn.00402650(uVar2);\n    *(iVar1 + 8) = uVar2;\n    uVar2 = SUB168(ZEXT816(0x10) * ZEXT816(1), 0);\n    if (SUB168(ZEXT816(0x10) * ZEXT816(1) >> 0x40, 0) != 0) {\n        uVar2 = 0xffffffffffffffff;\n    }\n    uVar2 = fcn.00402650(uVar2);\n    *(iVar1 + 0x18) = uVar2;\n    uVar2 = SUB168(ZEXT816(8) * ZEXT816(1), 0);\n    if (SUB168(ZEXT816(8) * ZEXT816(1) >> 0x40, 0) != 0) {\n        uVar2 = 0xffffffffffffffff;\n    }\n    uVar2 = fcn.00402650(uVar2);\n    *(iVar1 + 0x20) = uVar2;\n    uVar2 = SUB168(ZEXT816(8) * ZEXT816(1), 0);\n    if (SUB168(ZEXT816(8) * ZEXT816(1) >> 0x40, 0) != 0) {\n        uVar2 = 0xffffffffffffffff;\n    }\n    uVar2 = fcn.00402650(uVar2);\n    *(iVar1 + 0x10) = arg2;\n    *(iVar1 + 0x30) = 1;\n    *(iVar1 + 0x28) = uVar2;\n    return;\n}\n",
+        "token_count": 483
+    },
+    "00401400": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint64_t fcn.00401400(ulong hInstance, ulong noname_1, ulong noname_2, ulong arg4)\n\n{\n    int32_t iVar1;\n    uint64_t uVar2;\n    ulong uVar3;\n    ulong auStack152 [2];\n    uint32_t uStack136;\n    uint uStack104;\n    uint uStack100;\n    ulong uStack96;\n    uint uStack88;\n    uint uStack84;\n    ulong uStack80;\n    ulong uStack72;\n    ulong uStack64;\n    ulong uStack56;\n    ulong uStack48;\n    ulong uStack40;\n    ulong uStack32;\n    \n    (*_sym.imp.USER32.dll_LoadStringW)(hInstance, 0x67, 0x4352a0);\n    (*_sym.imp.USER32.dll_LoadStringW)(hInstance, 0x6d, 0x435390);\n    uStack96 = 0x401f90;\n    uStack104 = 0x50;\n    uStack100 = 3;\n    uStack88 = 0;\n    uStack84 = 0;\n    uStack80 = hInstance;\n    uStack72 = (*_sym.imp.USER32.dll_LoadIconW)(hInstance, 0x6b);\n    uStack64 = (*_sym.imp.USER32.dll_LoadCursorW)(0, 0x7f00);\n    uStack56 = 6;\n    uStack48 = 0x6d;\n    uStack40 = 0x435390;\n    uStack32 = (*_sym.imp.USER32.dll_LoadIconW)(uStack80, 0x6c);\n    (*_sym.imp.USER32.dll_RegisterClassExW)(&uStack104);\n    uVar2 = fcn.00401d60(hInstance);\n    if (uVar2 != 0) {\n        uVar3 = (*_sym.imp.USER32.dll_LoadAcceleratorsW)(hInstance, 0x6d);\n        iVar1 = (*_sym.imp.USER32.dll_GetMessageW)(auStack152, 0, 0, 0);\n        while (iVar1 != 0) {\n            iVar1 = (*_sym.imp.USER32.dll_TranslateAcceleratorW)(auStack152[0], uVar3, auStack152);\n            if (iVar1 == 0) {\n                (*_sym.imp.USER32.dll_TranslateMessage)(auStack152);\n                (*_sym.imp.USER32.dll_DispatchMessageW)(auStack152);\n            }\n            iVar1 = (*_sym.imp.USER32.dll_GetMessageW)(auStack152, 0, 0, 0);\n        }\n        uVar2 = uStack136;\n    }\n    return uVar2;\n}\n",
+        "token_count": 589
+    },
+    "00401810": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop",
+            "resolve function by parsing PE exports"
+        ],
+        "decompiled_code": "\nint64_t fcn.00401810(int64_t arg1, int64_t arg2)\n\n{\n    char cVar1;\n    char cVar2;\n    int64_t iVar3;\n    char *pcVar4;\n    int64_t iVar5;\n    uint32_t uVar6;\n    uint32_t *puVar7;\n    int64_t iVar8;\n    \n    iVar3 = *0x43427c;\n    iVar5 = *0x434278;\n    iVar8 = *0x434284;\n    uVar6 = 0;\n    iVar3 = *(arg1 + *(arg1 + iVar8 * -0xc0 + 0x3c) + 0x88 +\n             ((((((*0x434274 + iVar8 * -2) - iVar3 * iVar8) - iVar3 * iVar5 * iVar8) - *0x434270 * *0x434270 * iVar5) -\n              iVar5) + *0x434280 * iVar5 + *0x434280 * iVar3) * 6) + arg1;\n    puVar7 = *(iVar3 + 0x20) + arg1;\n    if (*(iVar3 + 0x18) != 0) {\n        do {\n            pcVar4 = *puVar7 + arg1;\n            iVar5 = arg2 - pcVar4;\n            do {\n                cVar1 = *pcVar4;\n                cVar2 = pcVar4[iVar5];\n                if (cVar1 != cVar2) break;\n                pcVar4 = pcVar4 + 1;\n            } while (cVar2 != '\\0');\n            if (cVar1 == cVar2) {\n                return *(*(iVar3 + 0x1c) + arg1 +\n                        *(*(iVar3 + 0x24) + arg1 +\n                         (uVar6 + (((*0x434280 + 1) * *0x434278 - (*0x43427c * *0x434280 + 2) * *0x43427c) + *0x434270 +\n                                  *0x434284 * 2) * 5) * 2) * 4) + arg1;\n            }\n            uVar6 = uVar6 + 1;\n            puVar7 = puVar7 + 1;\n        } while (uVar6 < *(iVar3 + 0x18));\n    }\n    return 0;\n}\n",
+        "token_count": 528
+    },
+    "00401d60": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nulong fcn.00401d60(ulong arg1)\n\n{\n    int64_t iVar1;\n    ulong uVar2;\n    int64_t lpMem;\n    uint64_t uVar3;\n    uint64_t uVar4;\n    code *pcVar5;\n    int64_t in_GS_OFFSET;\n    ulong auStackX8 [2];\n    code *apcStack56 [2];\n    \n    uVar4 = 0;\n    *0x435368 = arg1;\n    uVar2 = (*_sym.imp.USER32.dll_CreateWindowExW)\n                      (0, 0x435390, 0x4352a0, 0xcf0000, 200, 200, 0x104, 0x104, 0, 0, arg1, 0);\n    (*_sym.imp.USER32.dll_ShowWindow)(uVar2, 0);\n    iVar1 = *(in_GS_OFFSET + 0x60);\n    *0x435280 = 0x401c90;\n    auStackX8[0] = 0;\n    *0x435378 = 0x401cb0;\n    apcStack56[0] = NULL;\n    pcVar5 = 0x401cd0;\n    lpMem = fcn.00402780(100000000);\n    uVar3 = uVar4;\n    if (lpMem != 0) {\n        do {\n            *(uVar3 + lpMem) = uVar3;\n            uVar3 = uVar3 + 1;\n        } while (uVar3 < 100000000);\n        fcn.004026f0(lpMem);\n        if (uVar3 == 100000000) {\n            uVar3 = uVar4;\n            if (0x12 < *(*(iVar1 + 0x20) + 0x70)) {\n                uVar3 = 0x3e3;\n                *0x434270 = 0;\n                *0x435378 = fcn.00401810;\n                *0x434274 = 0;\n                uVar4 = 0x3e4;\n                *0x434278 = 0;\n                *0x434280 = 0;\n                *0x435280 = 0x401700;\n                *0x43427c = 0;\n                *0x434284 = 0;\n                pcVar5 = 0x401990;\n            }\n            (*pcVar5)(uVar3, apcStack56);\n            (*pcVar5)(uVar4, auStackX8);\n            *0x435468 = auStackX8[0];\n            *0x435470 = 0;\n            *0x435458 = 0;\n            *0x435460 = 1;\n            (*apcStack56[0])(0x435458);\n            (*_sym.imp.USER32.dll_SendMessageW)(uVar2, 2, 0);\n            (*_sym.imp.USER32.dll_UpdateWindow)(uVar2);\n            return 1;\n        }\n    }\n    return 0;\n}\n",
+        "token_count": 668
+    },
+    "004022b0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004022b0(void)\n\n{\n    ulong uVar1;\n    ulong uVar2;\n    \n    uVar1 = (*_sym.imp.GDI32.dll_CreateSolidBrush)(0x14aac8);\n    uVar2 = (*_sym.imp.GDI32.dll_CreateSolidBrush)(0xffffff);\n    (*_sym.imp.GDI32.dll_SelectObject)(*(*0x435298)[1], uVar1);\n    (*_sym.imp.USER32.dll_FillRect)(*(*0x435298)[1], 0x435288);\n    (*_sym.imp.GDI32.dll_Ellipse)\n              (*(*0x435298)[1], *0x435384 + *0x435478, *0x435370 - *0x435478, *0x435374 - *0x435478, \n               *0x435478 + *0x435380);\n    (*_sym.imp.GDI32.dll_BitBlt)\n              (**0x435298, 0, 0, *((*0x435298)[3] + 8), *((*0x435298)[3] + 0xc), *(*0x435298)[1], 0, 0, 0xcc0020);\n    (*_sym.imp.GDI32.dll_DeleteObject)(uVar2);\n    // WARNING: Could not recover jumptable at 0x004023b2. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*_sym.imp.GDI32.dll_DeleteObject)(uVar1);\n    return;\n}\n",
+        "token_count": 335
+    },
+    "004023c0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004023c0(ulong hWnd)\n\n{\n    ulong uVar1;\n    ulong uVar2;\n    \n    (*_sym.imp.USER32.dll_InvalidateRect)(hWnd, 0, 1);\n    (*_sym.imp.USER32.dll_UpdateWindow)(hWnd);\n    uVar1 = (*_sym.imp.USER32.dll_GetDC)(hWnd);\n    uVar2 = (*_sym.imp.GDI32.dll_CreateSolidBrush)(0x14aac8);\n    (*_sym.imp.GDI32.dll_SelectObject)(uVar1, uVar2);\n    (*_sym.imp.GDI32.dll_Ellipse)\n              (uVar1, *0x435384 + *0x435478, *0x435370 - *0x435478, *0x435374 - *0x435478, *0x435478 + *0x435380);\n    (*_sym.imp.GDI32.dll_DeleteObject)(uVar2);\n    // WARNING: Could not recover jumptable at 0x0040246f. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*_sym.imp.USER32.dll_ReleaseDC)(hWnd, uVar1);\n    return;\n}\n",
+        "token_count": 262
+    },
+    "004026f0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004026f0(int64_t lpMem)\n\n{\n    uint *puVar1;\n    int32_t iVar2;\n    uint32_t uVar3;\n    uint uVar4;\n    \n    if ((lpMem != 0) && (iVar2 = (*_sym.imp.KERNEL32.dll_HeapFree)(*0x434858, 0, lpMem),  iVar2 == 0)) {\n        puVar1 = fcn.004039f0();\n        uVar3 = (*_sym.imp.KERNEL32.dll_GetLastError)();\n        uVar4 = fcn.004039a0(uVar3);\n        *puVar1 = uVar4;\n    }\n    return;\n}\n",
+        "token_count": 151
+    },
+    "004058a0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x004058c1)\n// WARNING: Removing unreachable block (ram,0x004058c9)\n// WARNING: Removing unreachable block (ram,0x004058cb)\n\nvoid fcn.004058a0(void)\n\n{\n    return;\n}\n",
+        "token_count": 63
+    },
+    "00426380": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nulong fcn.00426380(uint *arg1)\n\n{\n    uint *puVar1;\n    \n    if (arg1 == NULL) {\n        puVar1 = fcn.004039f0();\n        *puVar1 = 0x16;\n        fcn.00406c80(0, 0, 0, 0);\n        return 0x16;\n    }\n    *arg1 = *0x434144;\n    return 0;\n}\n",
+        "token_count": 101
+    },
+    "004263d0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nulong fcn.004263d0(uint *arg1)\n\n{\n    uint *puVar1;\n    \n    if (arg1 == NULL) {\n        puVar1 = fcn.004039f0();\n        *puVar1 = 0x16;\n        fcn.00406c80(0, 0, 0, 0);\n        return 0x16;\n    }\n    *arg1 = *0x434148;\n    return 0;\n}\n",
+        "token_count": 102
+    },
+    "00426420": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nulong fcn.00426420(uint *arg1)\n\n{\n    uint *puVar1;\n    \n    if (arg1 == NULL) {\n        puVar1 = fcn.004039f0();\n        *puVar1 = 0x16;\n        fcn.00406c80(0, 0, 0, 0);\n        return 0x16;\n    }\n    *arg1 = *0x434140;\n    return 0;\n}\n",
+        "token_count": 101
+    },
+    "004042a0": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00404225)\n// WARNING: Removing unreachable block (ram,0x004041b2)\n// WARNING: Removing unreachable block (ram,0x004041e0)\n// WARNING: Removing unreachable block (ram,0x004041ee)\n// WARNING: Removing unreachable block (ram,0x004041f6)\n// WARNING: Removing unreachable block (ram,0x004041f8)\n// WARNING: Removing unreachable block (ram,0x004041fa)\n// WARNING: Removing unreachable block (ram,0x0040424e)\n\nvoid fcn.004042a0(ulong arg1)\n\n{\n    code *pcVar1;\n    \n    fcn.00406a20(8);\n    if (*0x4348c4 != 1) {\n        *0x4348c0 = 1;\n        *0x43487c = 0;\n        fcn.00403db0(0x42c418, 0x42c428);\n    }\n    *0x4348c4 = 1;\n    fcn.004068d0(8);\n    fcn.00403d50(arg1);\n    pcVar1 = swi(3);\n    (*pcVar1)();\n    return;\n}\n",
+        "token_count": 274
+    },
+    "004071a0": {
+        "rules": [
+            "link function at runtime on Windows"
+        ],
+        "decompiled_code": "\nulong fcn.004071a0(void)\n\n{\n    int64_t iVar1;\n    code *UNRECOVERED_JUMPTABLE;\n    ulong uVar2;\n    \n    uVar2 = *0x435080;\n    if ((*0x433500 == -1) || (iVar1 = (*_sym.imp.KERNEL32.dll_FlsGetValue)(),  iVar1 == 0)) {\n        iVar1 = (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(\"KERNEL32.DLL\");\n        if (iVar1 == 0) {\n            return uVar2;\n        }\n        UNRECOVERED_JUMPTABLE = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar1, \"DecodePointer\");\n    }\n    else {\n        UNRECOVERED_JUMPTABLE = *(iVar1 + 0x2b0);\n    }\n    if (UNRECOVERED_JUMPTABLE == NULL) {\n        return uVar2;\n    }\n    // WARNING: Could not recover jumptable at 0x00405a67. Too many branches\n    // WARNING: Treating indirect jump as call\n    uVar2 = (*UNRECOVERED_JUMPTABLE)(uVar2);\n    return uVar2;\n}\n",
+        "token_count": 265
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "null": {
+        "rules": [
+            "parse credit card information/4eef9ae1278b42f592aee8ead6d8bf37"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00402990": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint fcn.00402990(void)\n\n{\n    uint var_2dh;\n    uint var_4h;\n    \n    return *(*0x430664 + -4);\n}\n",
+        "token_count": 38
+    },
+    "00402500": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING (jumptable): Unable to track spacebase fully for stack\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.00402500(void)\n\n{\n    uint *puVar1;\n    uint var_bdh;\n    \n    puVar1 = *0x43063c;\n    *0x430634 = *0x430668 + 0x20110;\n    **0x43063c = *0x430658;\n    puVar1[-1] = *0x430630;\n    // WARNING: Could not recover jumptable at 0x00402546. Too many branches\n    // WARNING: Treating indirect jump as call\n    (**0x430634)();\n    return;\n}\n",
+        "token_count": 156
+    },
+    "004029d0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004029d0(int32_t *arg_8h, int32_t arg_ch)\n\n{\n    uint var_14h;\n    uint var_4h;\n    \n    *arg_8h = *arg_8h + arg_ch;\n    return;\n}\n",
+        "token_count": 62
+    },
+    "00402a20": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00402a20(uint noname_0, uint noname_1, uint32_t arg_10h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    uint var_20h;\n    uint var_18h;\n    uint var_10h;\n    uint var_ch;\n    uint32_t var_8h;\n    uint var_4h;\n    \n    iVar1 = *0x430668 + *0x430648;\n    iVar2 = *0x430664 + *0x43064c;\n    for (var_8h = 0; var_8h < arg_10h; var_8h = var_8h + 1) {\n        *(iVar1 + var_8h) = *(iVar2 + var_8h);\n    }\n    return;\n}\n",
+        "token_count": 183
+    },
+    "00402b00": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "link function at runtime on Windows"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_1ch\n\nuint __cdecl fcn.00402b00(uint arg_8h)\n\n{\n    uint uVar1;\n    uint uVar2;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint lpModuleName;\n    \n    str._33nel32[0] = 'k';\n    str._33nel32[1] = 'e';\n    str._33nel32[2] = 'r';\n    uVar1 = fcn.00402990(0x1a8, arg_8h);\n    *0x430680 = 0x56;\n    *0x430681 = 0x69;\n    *0x430682 = 0x72;\n    *0x430683 = 0x74;\n    *0x430684 = 0x75;\n    *0x430685 = 0x61;\n    *0x430686 = 0x6c;\n    *0x430687 = 0x41;\n    *0x430688 = 0x6c;\n    *0x430689 = 0x6c;\n    *0x43068a = 0x6f;\n    *0x43068b = 99;\n    *0x43068c = 0;\n    *0x430624 = uVar1;\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(\"$33nel32\", 0x430680, uVar1);\n    *0x430784 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(uVar2);\n    *0x430798 = *0x430784;\n    uVar1 = (**0x430784)(0, uVar1, *0x430570, 0x40);\n    return uVar1;\n}\n",
+        "token_count": 427
+    },
+    "00402c00": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00402c00(uint noname_0, uint32_t arg_ch)\n\n{\n    int32_t arg_8h;\n    uint var_158h;\n    uint var_154h;\n    uint var_3ah;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    for (*0x430638 = 0; *0x430638 < arg_ch; *0x430638 = *0x430638 + 4) {\n        arg_8h = *0x430668 + *0x430638;\n        fcn.004029d0(arg_8h, *0x430638);\n        fcn.00402950(arg_8h, *0x430638 + 0x10fc19);\n    }\n    return;\n}\n",
+        "token_count": 178
+    }
+}

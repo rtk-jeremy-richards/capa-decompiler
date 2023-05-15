@@ -1,0 +1,103 @@
+{
+    "null": {
+        "rules": [
+            "parse credit card information/562ff391f55141bc9728340148e50ea1"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "0085dd4b": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1",
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.0085dd4b(void)\n\n{\n    int32_t *in_EAX;\n    int32_t iVar1;\n    uint32_t uVar2;\n    uchar *puVar3;\n    uint *unaff_ESI;\n    uchar *puVar4;\n    uint *unaff_EDI;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    \n    *unaff_EDI = *unaff_ESI;\n    *in_EAX = *in_EAX + in_EAX;\n    if (unaff_ESI + 1 <= &stack0x00000060) {\n        uVar2 = unaff_ESI + -0x1f & 0xfffffffc;\n        puVar3 = uVar2 - 0x40;\n        *(uVar2 - 0x44) = unaff_EDI + 5;\n        *(uVar2 - 0x48) = unaff_ESI + 1;\n        *(uVar2 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar2, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar3 < 0) * 0x80 | (puVar3 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar3 & 0xff) & 1U) == 0) * 4 | uVar2 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        puVar4 = *0x10;\n        for (iVar1 = 0x40; iVar1 != 0; iVar1 = iVar1 + -1) {\n            *puVar3 = *puVar4;\n            puVar4 = puVar4 + 1;\n            puVar3 = puVar3 + 1;\n        }\n    }\n    return;\n}\n",
+        "token_count": 553
+    },
+    "0088d606": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa",
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nvoid fcn.0088d606(void)\n\n{\n    return;\n}\n",
+        "token_count": 16
+    },
+    "007c23f5": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.007c23f5(int32_t param_1)\n\n{\n    uint32_t uVar1;\n    uint32_t *puVar2;\n    \n    uVar1 = param_1 + 0x34ea4d5eU ^ 0x40d842b9;\n    puVar2 = (uVar1 >> 0x18 | (uVar1 & 0xff0000) >> 8 | (uVar1 & 0xff00) << 8 | uVar1 << 0x18) + 1;\n    uVar1 = *puVar2 ^ puVar2;\n    uVar1 = (uVar1 * -8 | -uVar1 >> 0x1d) + 1;\n    // WARNING: Could not recover jumptable at 0x00880bbd. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*(~(uVar1 * 8 | uVar1 >> 0x1d) + 0x849f82))();\n    return;\n}\n",
+        "token_count": 232
+    },
+    "007cc280": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.007cc280(int32_t param_1)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    uint32_t *puVar3;\n    uchar auStack228 [192];\n    uint uStack36;\n    \n    uStack36 = 0;\n    puVar3 = ~(0x33a9039aU - param_1) << 1 | -1 < 0x33a9039aU - param_1;\n    iVar1 = 0;\n    if (*0x10 != 0xe4) {\n        for (; (&stack0xffffff1c >> iVar1 & 1) == 0; iVar1 = iVar1 + 1) {\n        }\n    }\n    uVar2 = *puVar3 ^ puVar3;\n    uVar2 = ~(uVar2 >> 1 | ((uVar2 & 1) != 0) << 0x1f);\n    // WARNING: Could not recover jumptable at 0x008de086. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar2 * -8 | -uVar2 >> 0x1d) + 0xabe502))();\n    return;\n}\n",
+        "token_count": 268
+    },
+    "008a17e6": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nvoid fcn.008a17e6(void)\n\n{\n    int16_t iVar1;\n    uint16_t unaff_DI;\n    \n    iVar1 = 0xf;\n    if (unaff_DI != 0) {\n        for (; unaff_DI >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    return;\n}\n",
+        "token_count": 79
+    },
+    "008d1389": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid fcn.008d1389(void)\n\n{\n    uint8_t uVar1;\n    int32_t in_EAX;\n    uint32_t uVar2;\n    uint var_104h;\n    \n    uVar2 = 0;\n    do {\n        uVar1 = uVar2 & 0x1f;\n        uVar1 = (0x1d143745 << uVar1 | 0x1d143745 >> 0x20 - uVar1) + uVar2 ^ (&var_104h + uVar2)[in_EAX - &var_104h];\n        *(&var_104h + uVar2) = uVar1;\n        if (uVar1 == 0) break;\n        uVar2 = uVar2 + 1;\n    } while (uVar2 < 0x104);\n    (**0x7f22bc)(&var_104h);\n    return;\n}\n",
+        "token_count": 202
+    },
+    "00a81c66": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nuint32_t __fastcall fcn.00a81c66(char param_1)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint8_t uVar3;\n    uint32_t uVar4;\n    uint32_t uVar5;\n    uint32_t uVar6;\n    uint32_t uVar7;\n    uint32_t uVar8;\n    uint32_t uVar9;\n    uint32_t uVar10;\n    uint32_t unaff_EDI;\n    uchar auStack64 [12];\n    \n    uVar3 = param_1 + 0xbU & 0x1f;\n    uVar7 = auStack64 << uVar3 | auStack64 >> 0x20 - uVar3;\n    *(uVar7 - 4) = 0xff76d8ee;\n    uVar8 = uVar7 - 4 & 0xffff0000 | uVar7 - 3;\n    uVar6 = *(uVar8 + 0x8f);\n    uVar3 = param_1 + 0xdU & 0x1f;\n    uVar9 = uVar8 - 1 >> uVar3 | uVar8 - 1 << 0x20 - uVar3;\n    uVar1 = uVar6 >> 0x18 | (uVar6 & 0xff0000) >> 8;\n    uVar10 = uVar1 | (uVar6 & 0xff00) << 8;\n    uVar4 = (uVar10 | uVar6 << 0x18) << 2;\n    uVar5 = uVar9 << 3;\n    uVar2 = uVar4 >> 0x18;\n    uVar6 = -(uVar2 | ((uVar10 & 0x3fc000) << 2) >> 8 | (uVar1 & 0x3fc0) << 10 |\n             (uVar4 | (uVar6 << 0x18) >> 0x1e) << 0x18);\n    uVar6 = (*((uVar6 >> 0x18 | (uVar6 & 0xff0000) >> 8 | (uVar6 & 0xff00) << 8 | uVar2 * -0x1000000) +\n              (unaff_EDI | 0xff76d8ee)) ^ 3) + 0x82c6f713;\n    uVar10 = (uVar6 >> 0x18 | (uVar6 & 0xff0000) >> 8 | (uVar6 & 0xff00) << 8 | uVar6 * 0x1000000) + 0x50957599;\n    uVar6 = uVar10 >> 0x18 | (uVar10 & 0xff0000) >> 8;\n    uVar1 = (uVar10 & 0xff00) << 8;\n    *0xfffffff9 = *0xfffffff9 ^ uVar10 * 0x1000000 >> 0x18;\n    *0xfffffff5 = CONCAT31(uVar6 | uVar1, 3);\n    uVar6 = uVar1 | uVar10 * 0x1000000 | uVar6;\n    *(uVar6 - 10) = uVar6 - 6;\n    return ((uVar5 & 0xffff0000 | (uVar5 | uVar9 >> 0x1d) + 2) - 1 ^ 0x800000) - 3 & 0xffff00ff;\n}\n",
+        "token_count": 802
+    },
+    "00b663bb": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00b663bb(int32_t param_1)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    uint32_t *puVar3;\n    \n    rdtsc();\n    uVar2 = param_1 << 1 | param_1 < 0;\n    iVar1 = 0x1f;\n    if (uVar2 != 0) {\n        for (; uVar2 >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    puVar3 = -(~(uVar2 ^ 0x40f7337b) + 0xbaa8fcce);\n    uVar2 = ~-((*puVar3 ^ puVar3) + 0x4f5100b5) + 1;\n    // WARNING: Could not recover jumptable at 0x0083987e. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | uVar2 * 0x1000000) + 0xb6643a))();\n    return;\n}\n",
+        "token_count": 273
+    },
+    "00b6f1fe": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00b6f1fe(void)\n\n{\n    int16_t iVar1;\n    \n    iVar1 = 0xf;\n    if (*0x10 - 0x24U != 0) {\n        for (; *0x10 - 0x24U >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    return;\n}\n",
+        "token_count": 85
+    },
+    "00b78e95": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00b78e95(int32_t param_1)\n\n{\n    int32_t iVar1;\n    int16_t iVar2;\n    uint16_t uVar3;\n    uchar auStack36 [4];\n    \n    iVar1 = 0;\n    if (*0x10 != 0x24) {\n        for (; (auStack36 >> iVar1 & 1) == 0; iVar1 = iVar1 + 1) {\n        }\n    }\n    uVar3 = (~-param_1 << 3 | ~-param_1 >> 0x1d) + 1;\n    iVar2 = 0xf;\n    if (uVar3 != 0) {\n        for (; uVar3 >> iVar2 == 0; iVar2 = iVar2 + -1) {\n        }\n    }\n    return;\n}\n",
+        "token_count": 181
+    },
+    "00a560a9": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00a560a9(void)\n\n{\n    return;\n}\n",
+        "token_count": 17
+    },
+    "00b6ea56": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00b6ea56(uint32_t param_1)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    \n    iVar1 = (param_1 >> 0x18 | (param_1 & 0xff0000) >> 8 | (param_1 & 0xff00) << 8 | param_1 << 0x18) + 0x3c266635;\n    uVar2 = iVar1 * 2;\n    uVar2 = uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | (uVar2 & 0xff | iVar1 < 0) << 0x18;\n    uVar2 = (*(uVar2 - 5) ^ uVar2 - 1) + 0x8127e1d9;\n    // WARNING: Could not recover jumptable at 0x00b82699. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*(~((uVar2 >> 1 | ((uVar2 & 1) != 0) << 0x1f) + 1) + 0xb6eae9))();\n    return;\n}\n",
+        "token_count": 284
+    }
+}

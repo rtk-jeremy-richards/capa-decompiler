@@ -1,0 +1,41 @@
+{
+    "00422256": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nulong fcn.00422256(void)\n\n{\n    int32_t in_EAX;\n    int32_t iVar1;\n    uint32_t uVar2;\n    \n    iVar1 = in_EAX + 1;\n    uVar2 = 0x460083;\n    while( true ) {\n        *(uVar2 - 0x16e2f) = *(uVar2 - 0x16e2f) + 0xb0c;\n        uVar2 = uVar2 + 4;\n        in_EAX = in_EAX + iVar1 + -2;\n        if (0x46044e < uVar2) break;\n        iVar1 = 0x8c089e;\n    }\n    return CONCAT44(in_EAX, 0x413792);\n}\n",
+        "token_count": 169
+    },
+    "null": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x004227d6)\n// WARNING: Removing unreachable block (ram,0x00422644)\n// WARNING: Removing unreachable block (ram,0x00422898)\n\nvoid main(void)\n\n{\n    int32_t iVar1;\n    int32_t unaff_EBX;\n    int32_t iStack40;\n    \n    iVar1 = 0x40fae;\n    if (unaff_EBX < 5) {\n        iStack40 = 0xb;\n        iVar1 = unaff_EBX * 2;\n    }\n    if ((iVar1 <= *0x4233ef) && (iVar1 = 0x4234a3,  *0x4234a3 == iStack40)) {\n        iVar1 = 0x423256;\n    }\n    fcn.00422330(iVar1);\n    do {\n    } while (*0x42341d == 0x4e96);\n    (*_sym.imp.KERNEL32.dll_GetCommandLineW)();\n    fcn.00422330(iVar1);\n    do {\n    } while (*0x423101 == 0xdebe);\n    do {\n    } while (*0x4493e6 == 0x78a0);\n    fcn.00422330(iVar1);\n    (*_sym.imp.KERNEL32.dll_GetVersion)();\n    fcn.00422330();\n    do {\n    } while (*0x423515 == 0x423435);\n    do {\n    } while (*0x4493d9 == 0x449315);\n    iVar1 = 0xb;\n    do {\n        iVar1 = iVar1 + 1;\n    } while (*0x4231b4 == iVar1);\n    do {\n    } while (*0x44945e == 0x84e9);\n    return;\n}\n",
+        "token_count": 396
+    },
+    "004228b0": {
+        "rules": [
+            "hash data using aphash/0253f481fbfe42f6972c4d360912dc99",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.004228b0(int32_t param_1)\n\n{\n    uint8_t *puVar1;\n    uint *puVar2;\n    uint uVar3;\n    uint *in_FS_OFFSET;\n    uint var_18h;\n    uint uStack140;\n    uint uStack136;\n    int32_t iStack132;\n    uint uStack128;\n    uint8_t *puStack124;\n    uchar auStack120 [4];\n    uint uStack116;\n    uint uStack112;\n    uchar auStack108 [4];\n    uchar auStack104 [4];\n    uchar auStack100 [44];\n    uint32_t uStack56;\n    ushort uStack52;\n    uint *puStack32;\n    uint *puStack28;\n    uint uStack24;\n    uint uStack20;\n    uint uStack16;\n    uint uStack12;\n    uchar *var_4h;\n    \n    var_4h = &stack0xfffffffc;\n    iStack132 = param_1 * 0x80 + 0x49c4d;\n    uStack16 = 0x42c168;\n    uStack20 = 0x422ae0;\n    uStack24 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &uStack24;\n    uStack136 = 0x4246b;\n    puStack32 = &uStack140;\n    uStack140 = 0x76;\n    uStack12 = 0;\n    (*_sym.imp.MSVCRT.dll___set_app_type)(2);\n    *0x477dc4 = 0xffffffff;\n    *0x477dc8 = 0xffffffff;\n    puVar2 = (*_sym.imp.MSVCRT.dll___p__fmode)();\n    *puVar2 = *0x477dc0;\n    puVar2 = (*_sym.imp.MSVCRT.dll___p__commode)();\n    *puVar2 = *0x477dbc;\n    *0x477dcc = *_sym.imp.MSVCRT.dll__adjust_fdiv;\n    fcn.00422a85();\n    if (*0x449620 == 0) {\n        (*_sym.imp.MSVCRT.dll___setusermatherr)(0x422a82);\n    }\n    fcn.00422a6a();\n    sub.MSVCRT.dll__initterm(0x42d008, 0x42d00c);\n    uStack116 = *0x477db8;\n    (*_sym.imp.MSVCRT.dll___getmainargs)(auStack104, auStack120, auStack108, *0x477db4, &uStack116);\n    sub.MSVCRT.dll__initterm(0x42d000, 0x42d004);\n    puStack124 = *_sym.imp.MSVCRT.dll__acmdln;\n    if (*puStack124 != 0x22) {\n        do {\n            if (*puStack124 < 0x21) goto code_r0x004229e1;\n            puStack124 = puStack124 + 1;\n        } while( true );\n    }\n    do {\n        puStack124 = puStack124 + 1;\n        if (*puStack124 == 0) break;\n    } while (*puStack124 != 0x22);\n    if (*puStack124 != 0x22) goto code_r0x004229e1;\n    do {\n        puStack124 = puStack124 + 1;\ncode_r0x004229e1:\n        puVar1 = puStack124;\n    } while ((*puStack124 != 0) && (*puStack124 < 0x21));\n    uStack56 = 0;\n    (*_sym.imp.KERNEL32.dll_GetStartupInfoA)(auStack100);\n    if ((uStack56 & 1) == 0) {\n        uStack52 = 10;\n    }\n    uVar3 = (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(0, 0, puVar1, uStack52);\n    uStack112 = main(uVar3);\n    (*_sym.imp.MSVCRT.dll_exit)(uStack112);\n    uStack128 = **puStack28;\n    sub.MSVCRT.dll__XcptFilter(uStack128, puStack28);\n    return;\n}\n",
+        "token_count": 929
+    },
+    "004222e0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nulong fcn.004222e0(void)\n\n{\n    int32_t extraout_EDX;\n    uint32_t uVar1;\n    \n    uVar1 = 0xab;\n    do {\n        fcn.00422256();\n        uVar1 = uVar1 + 9;\n    } while (uVar1 < 0x2e371);\n    return CONCAT44(extraout_EDX + 7U >> 10 | (extraout_EDX + 7U) * 0x400000, 0x4a382);\n}\n",
+        "token_count": 118
+    },
+    "00422330": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t fcn.00422330(void)\n\n{\n    uint32_t uVar1;\n    int32_t iVar2;\n    \n    uVar1 = 0x68;\n    iVar2 = 0x4be91;\n    do {\n        iVar2 = iVar2 * 2;\n        uVar1 = uVar1 + 0x1c;\n    } while (uVar1 < 0x450);\n    return iVar2;\n}\n",
+        "token_count": 97
+    }
+}

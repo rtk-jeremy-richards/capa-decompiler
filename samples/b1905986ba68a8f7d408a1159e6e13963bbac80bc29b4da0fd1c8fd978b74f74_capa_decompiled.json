@@ -1,0 +1,9 @@
+{
+    "null": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint32_t entry0(void)\n\n{\n    uint8_t uVar1;\n    char cVar2;\n    uint8_t *puVar3;\n    char unaff_BH;\n    \n    puVar3 = sub.MSVBVM60.DLL_ThunRTMain(0x4012c8);\n    uVar1 = puVar3;\n    *puVar3 = *puVar3 + uVar1;\n    *puVar3 = *puVar3 + uVar1;\n    *puVar3 = *puVar3 + uVar1;\n    *puVar3 = *puVar3 ^ uVar1;\n    *puVar3 = *puVar3 + uVar1;\n    puVar3 = puVar3 + 1;\n    cVar2 = puVar3;\n    *puVar3 = *puVar3 + cVar2;\n    *puVar3 = *puVar3 + cVar2;\n    *puVar3 = *puVar3 + cVar2;\n    return puVar3 & 0xffff0000 | CONCAT11((puVar3 >> 8) + unaff_BH, cVar2);\n}\n",
+        "token_count": 249
+    }
+}

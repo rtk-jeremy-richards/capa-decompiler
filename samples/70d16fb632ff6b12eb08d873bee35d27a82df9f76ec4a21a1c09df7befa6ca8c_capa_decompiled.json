@@ -1,0 +1,22 @@
+{
+    "null": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\nvoid entry0(void)\n\n{\n    int32_t var_2d8h;\n    int32_t var_2d4h;\n    uint var_2d0h;\n    uint var_2c8h;\n    int32_t var_2c0h;\n    uint var_2bch;\n    uint var_2b8h;\n    uint var_2b0h;\n    uint lpBuffer;\n    code *var_1f4h;\n    uint var_f0h;\n    \n    *0x415558 = 2;\n    var_1f4h = 0xffe4eb3f;\n    for (var_2d4h = 0x18f6c1c; 0 < var_2d4h; var_2d4h = var_2d4h + -1) {\n        *0x41350c = *0x41350c + -1;\n        *0x414f68 = var_2d4h * 5 + *0x414f68;\n    }\n    (*_sym.imp.KERNEL32.dll_GetWindowsDirectoryA)(&lpBuffer, 0xa5);\n    *0x4158b0 = 2;\n    *0x414c90 = 1;\n    (*_sym.imp.KERNEL32.dll_GetWindowsDirectoryA)(&var_f0h, 0x5c);\n    *0x414780 = 0xb16fa;\n    for (var_2d8h = 0; var_2d8h < 0x3bc8d1; var_2d8h = var_2d8h + 1) {\n        *0x4158b0 = *0x4158b0 - var_2c0h * var_2d8h;\n        *0x415558 = *0x415558 - *0x4158b0;\n        if (var_2d8h % 1000000 == 0) {\n            var_1f4h = var_1f4h + var_2d8h;\n        }\n    }\n    // WARNING: Could not recover jumptable at 0x0040224d. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*var_1f4h)();\n    return;\n}\n",
+        "token_count": 503
+    },
+    "004023fb": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.004023fb(code *arg_8h)\n\n{\n    int32_t var_4h;\n    \n    for (var_4h = 0x1208bbc; 0 < var_4h; var_4h = var_4h + -1) {\n        *0x41350c = *0x41350c + -0x11;\n        *0x414f68 = var_4h * 0x11 + *0x414f68;\n    }\n    // WARNING: Could not recover jumptable at 0x00402438. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*arg_8h)();\n    return;\n}\n",
+        "token_count": 156
+    }
+}

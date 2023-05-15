@@ -1,0 +1,16 @@
+{
+    "null": {
+        "rules": [
+            "check for software breakpoints/4e3f376d71b04339ae2f170b8ad32c49"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_128h\n\nuint entry0(void)\n\n{\n    int32_t iVar1;\n    int32_t extraout_ECX;\n    uint *puVar2;\n    uint *puVar3;\n    uint var_128h;\n    uint var_124h;\n    uint var_120h;\n    uint var_11ch;\n    uint var_110h;\n    uint var_10ch;\n    uint lpFindFileData;\n    uint lpString;\n    uint var_24h;\n    uint lpFileName;\n    \n    iVar1 = *0x40f5f4;\n    puVar3 = &lpFindFileData;\n    puVar2 = &lpFileName;\n    (*_sym.imp.KERNEL32.dll_FindFirstFileA)(puVar2, puVar3);\n    *0x41130c = _sym.imp.KERNEL32.dll_GetWindowsDirectoryA;\n    (*_sym.imp.KERNEL32.dll_GlobalAddAtomW)(&lpString, puVar2, puVar3, iVar1 + 0xd99ab);\n    if ((*(*0x41130c + -2) == -0x34) || (*(*0x41130c + -3) == -0x70)) {\n        (*_sym.imp.KERNEL32.dll_lstrcatA)(0, 0);\n        if (extraout_ECX != -0x4d522a0b) {\n            *0x4114a0 = 5;\n            if ((*(*0x41130c + -2) == -0x34) || (*(*0x41130c + -3) == -0x70)) {\n                fcn.004089f8(0);\n            }\n            else {\n                *0x411080 = *0x411080 + 5;\n            }\n        }\n    }\n    else {\n        *0x411080 = *0x411080 + 5;\n    }\n    return 0;\n}\n",
+        "token_count": 421
+    },
+    "004089f8": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint fcn.004089f8(void)\n\n{\n    int32_t var_38h;\n    uint var_2ch;\n    int32_t var_18h;\n    uint var_14h;\n    int32_t var_ch;\n    code *var_8h;\n    uint var_4h;\n    \n    var_8h = 0xffe4d8c3;\n    for (var_38h = 8; var_38h < 0x381207; var_38h = var_38h + 1) {\n        *0x411180 = *0x411180 - var_18h;\n        if (var_38h % 1000000 == 0) {\n            *0x411180 = *0x411180 - var_ch;\n            var_8h = var_8h + var_38h;\n        }\n        if (0x36ef02 < var_38h) {\n            (*var_8h)();\n        }\n    }\n    return 0;\n}\n",
+        "token_count": 220
+    }
+}

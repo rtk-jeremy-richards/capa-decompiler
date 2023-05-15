@@ -1,0 +1,26 @@
+{
+    "00412eb0": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00412ebc)\n\nvoid fcn.00412eb0(void)\n\n{\n    code *pcVar1;\n    \n    pcVar1 = swi(3);\n    (*pcVar1)();\n    return;\n}\n",
+        "token_count": 56
+    },
+    "null": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa",
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\n// WARNING: Possible PIC construction at 0x00413014: Changing call to branch\n\nvoid main(void)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    \n    (*_sym.imp.USER32.dll_LoadCursorA)(0, 0x7f00);\n    iVar1 = *(_sym.imp.MSVCRT.dll__initterm + 5);\n    iVar2 = 0x13f28;\n    do {\n        (*(iVar1 + -0x8345d80))();\n        iVar2 = iVar2 + -1;\n    } while (iVar2 != 0);\n    // WARNING: Treating indirect jump as call\n    (*0x43c740)();\n    return;\n}\n",
+        "token_count": 152
+    },
+    "00412dd6": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid fcn.00412dd6(void)\n\n{\n    int32_t iVar1;\n    \n    do {\n    } while (*0x414388 == 0x414340);\n    iVar1 = 0x43cd29;\n    do {\n        *(iVar1 + -0x5e9) = *(iVar1 + -0x5e9) + 0xb00;\n        iVar1 = iVar1 + 4;\n    } while (iVar1 != 0x43d159);\n    do {\n    } while (*0x43cac3 == 0x43ca17);\n    return;\n}\n",
+        "token_count": 130
+    }
+}

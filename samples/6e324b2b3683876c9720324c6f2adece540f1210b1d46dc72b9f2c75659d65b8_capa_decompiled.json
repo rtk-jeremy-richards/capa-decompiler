@@ -1,0 +1,9 @@
+{
+    "0043c4f1": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n// WARNING: Instruction at (ram,0x0043c501) overlaps instruction at (ram,0x0043c4fe)\n// \n\nvoid __fastcall fcn.0043c4f1(uint32_t param_1)\n\n{\n    uint32_t in_EAX;\n    uint32_t uVar1;\n    int32_t unaff_EBX;\n    uint32_t *unaff_EDI;\n    \n    uVar1 = in_EAX & 0xffffff00 | *(unaff_EBX + (in_EAX & 0x96));\n    *(unaff_EDI + 0x5d77a05b) = *(unaff_EDI + 0x5d77a05b) - param_1;\n    while( true ) {\n        if (uVar1 == *unaff_EDI) {\n            in(3);\n    // WARNING: Bad instruction - Truncating control flow here\n            halt_baddata();\n        }\n        out(100, param_1);\n        uVar1 = param_1 & *((param_1 - 0x28) + unaff_EBX * 4);\n        param_1 = param_1 - 1;\n        if (param_1 == 0) break;\n        uVar1 = uVar1 & 0xffffff00 | *0x17265d77;\n        unaff_EDI = unaff_EDI + 1;\n    }\n    return;\n}\n",
+        "token_count": 316
+    }
+}

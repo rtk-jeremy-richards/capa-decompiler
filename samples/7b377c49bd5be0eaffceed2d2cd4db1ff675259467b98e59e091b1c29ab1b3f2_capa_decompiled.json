@@ -1,0 +1,20 @@
+{
+    "0042513d": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\n// WARNING (jumptable): Unable to track spacebase fully for stack\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.0042513d(void)\n\n{\n    uint *puVar1;\n    uint uVar2;\n    uint *puVar3;\n    uint32_t uVar4;\n    int32_t unaff_ESI;\n    char *pcVar5;\n    code *UNRECOVERED_JUMPTABLE;\n    int32_t iVar6;\n    ushort in_SS;\n    ushort in_FS;\n    \n    puVar1 = segment(in_FS, 0);\n    uVar4 = *0x10 & 0xffff0000 | *0x10 - 4U;\n    puVar3 = segment(in_SS, *0x10 - 4U);\n    *puVar3 = *puVar1;\n    uVar2 = segment(in_FS, 0);\n    *uVar2 = uVar4;\n    *(uVar4 - 4) = 0;\n    *(uVar4 - 8) = 0;\n    *(uVar4 - 0xc) = 0x10;\n    *(uVar4 - 0x10) = 0;\n    *(uVar4 - 0x14) = 0x80;\n    *(uVar4 - 0x18) = 0;\n    *(uVar4 - 0x1c) = 0;\n    *(uVar4 - 0x20) = 0;\n    *(uVar4 - 0x24) = 0;\n    *(uVar4 - 0x28) = 0x80000000;\n    *(uVar4 - 0x2c) = 0x2000;\n    *(uVar4 - 0x30) = 4;\n    *(uVar4 - 0x34) = 0x425170;\n    fcn.004251a6();\n    pcVar5 = unaff_ESI + 0x46;\n    iVar6 = 0x243c;\n    *(uVar4 - 0x34) = pcVar5;\n    do {\n        *pcVar5 = *pcVar5 + ';';\n        pcVar5 = pcVar5 + 1;\n        iVar6 = iVar6 + -1;\n    } while (iVar6 != 0);\n    UNRECOVERED_JUMPTABLE = *(uVar4 - 0x34);\n    puVar1 = segment(in_FS, 0);\n    puVar3 = segment(in_FS, 0);\n    puVar1 = segment(in_SS, *puVar1);\n    *puVar3 = *puVar1;\n    // WARNING: Could not recover jumptable at 0x004251a4. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*UNRECOVERED_JUMPTABLE)();\n    return;\n}\n",
+        "token_count": 624
+    },
+    "null": {
+        "rules": [
+            "hash data using fnv/71d430608aea45068f0f63fc2cdc3004",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid entry0(void)\n\n{\n    uint8_t uVar1;\n    uint32_t in_EAX;\n    char *pcVar2;\n    uint unaff_EBX;\n    \n    uVar1 = in_EAX;\n    out(0x22, uVar1);\n    pcVar2 = in_EAX & 0xffff0000 | CONCAT11(in_EAX >> 8 ^ uVar1, uVar1);\n    *pcVar2 = *pcVar2 - (unaff_EBX >> 8);\n    *0x27f8d0a = *0x27f8d0a | 0x33d0230f;\n    *0x6bacc10a = *0x6bacc10a | 0x66c18b25;\n    *0x4050010a = *0x4050010a | 0x81f18500;\n    *0x412f9e = *0x412f9e + -0x14cc39d5;\n    *0x412fa2 = *0x412fa2 + -0x38fd8073;\n    *0x412fa6 = *0x412fa6 | 0x9e982444;\n    *0x412faa = *0x412faa + 0x2b0040ff;\n    *0x412fae = 0x8deb33c6;\n    *0x412fb2 = *0x412fb2 | 0x5c8b027f;\n    *0x412fb6 = 0x3819824;\n    *0x412fba = *0x412fba + 0x66e02abf;\n    *0x412fbe = *0x412fbe + -0x6bd0cc7f;\n    *0x412fc2 = *0x412fc2 + -0x14ccd910;\n    *0x412fc6 = *0x412fc6 + 0x4b0c033;\n    *0x412fca = *0x412fca + -0x67dbbbff;\n    *0x412fce = *0x412fce + 0x4c8bc6b6;\n    *0x412fd2 = *0x412fd2 | 0x1819824;\n    *0x412fda = 0xac813181;\n    *0x412fde = 0xb60f35d4;\n    *0x412fe2 = 0x66ff85c6;\n    *0x412fe6 = *0x412fe6 + -0x3fcc31cd;\n    *0x412fea = *0x412fea + 0x440104b0;\n    *0x412fee = 0xff859824;\n    *0x412ff2 = *0x412ff2 + -0x7431cc9a;\n    *0x412ff6 = *0x412ff6 + -0x7e67dbb4;\n    *0x249530d2 = *0x249530d2 << 4;\n    return;\n}\n",
+        "token_count": 686
+    }
+}

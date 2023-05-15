@@ -1,0 +1,144 @@
+{
+    "00c7d4cf": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1",
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1",
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1",
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.00c7d4cf(void)\n\n{\n    uint32_t uVar1;\n    uchar *puVar2;\n    int32_t iVar3;\n    uchar *unaff_EBP;\n    uchar *puVar4;\n    uint unaff_ESI;\n    uint unaff_EDI;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint var_80h;\n    \n    if (unaff_EBP <= &stack0x00000060) {\n        uVar1 = unaff_EBP + -0x80 & 0xfffffffc;\n        puVar2 = uVar1 - 0x40;\n        *(uVar1 - 0x44) = unaff_EDI;\n        *(uVar1 - 0x48) = unaff_ESI;\n        *(uVar1 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar1, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar2 < 0) * 0x80 | (puVar2 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar2 & 0xff) & 1U) == 0) * 4 | uVar1 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        puVar4 = *0x10;\n        for (iVar3 = 0x40; iVar3 != 0; iVar3 = iVar3 + -1) {\n            *puVar2 = *puVar4;\n            puVar4 = puVar4 + 1;\n            puVar2 = puVar2 + 1;\n        }\n    }\n    return;\n}\n",
+        "token_count": 520
+    },
+    "0093752b": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n// WARNING (jumptable): Unable to track spacebase fully for stack\n// WARNING: Unable to track spacebase fully for stack\n\nvoid __fastcall fcn.0093752b(int32_t param_1, uint32_t param_2)\n\n{\n    uint8_t *puVar1;\n    uint8_t uVar2;\n    char *pcVar3;\n    uint32_t uVar4;\n    uchar *puVar5;\n    int32_t iVar6;\n    uchar *puVar7;\n    uint32_t unaff_EBX;\n    uint32_t *unaff_EBP;\n    uint *puVar8;\n    uint32_t *puVar9;\n    uint8_t *unaff_ESI;\n    uint32_t *unaff_EDI;\n    code *UNRECOVERED_JUMPTABLE;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint auStack12 [2];\n    uint32_t uStack4;\n    \n    while( true ) {\n        uVar4 = in(0xeb);\n        puVar1 = unaff_ESI + 1;\n        uStack4 = uVar4 & 0xffffff00 | *unaff_ESI;\n        puVar5 = param_1 + 1;\n        if (puVar5 == NULL || SCARRY4(param_1, 1) != puVar5 < 0) {\n    // WARNING: Bad instruction - Truncating control flow here\n            halt_baddata();\n        }\n        if (puVar5 == NULL || SCARRY4(param_1, 1) != puVar5 < 0) break;\n        param_2 = param_2 & 0xffffff00 | param_2 + (puVar5 >> 8);\n        puVar9 = puVar1 + -*(param_2 + 0x28);\n        *0x536b4ea2 = *puVar9;\n        unaff_EBP = unaff_EBP | *(unaff_EBX + uStack4 * 2);\n        *(unaff_EBP + -0xd9abcfb) = *(unaff_EBP + -0xd9abcfb) ^ unaff_EBP;\n        unaff_ESI = puVar9 + 5;\n        uVar2 = *(puVar9 + 1);\n        param_1 = uStack4 - 1;\n        if (param_1 != 0 && *0x536b4ea2 == -0x3c) {\n            auStack12[0] = 0xffffff81;\n            out(param_2, *0x536b4ea2 & 0xffffff00 | uVar2);\n            pcVar3 = *0x536b4ea2 & 0xffffff00 | uVar2;\n            *pcVar3 = *pcVar3 + uVar2;\n            iVar6 = ((*unaff_EDI ^ unaff_EBX ^ 0xbe91bd4) + 0x1bc17055 ^ 0x1de53a1b) + 0xd5caf211;\n            if (unaff_EBP <= &stack0x00000054) {\n                uVar4 = unaff_EBP + -0x20 & 0xfffffffc;\n                puVar5 = uVar4 - 0x40;\n                *(uVar4 - 0x44) = unaff_EDI;\n                *(uVar4 - 0x48) = unaff_ESI + (iVar6 * -2 | 0 < iVar6);\n                *(uVar4 - 0x4c) =\n                     (in_NT & 1) * 0x4000 | SBORROW4(uVar4, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n                     (puVar5 < 0) * 0x80 | (puVar5 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n                     ((POPCOUNT(puVar5 & 0xff) & 1U) == 0) * 4 | uVar4 < 0x40 | (in_ID & 1) * 0x200000 |\n                     (in_VIP & 1) * 0x100000 | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n                puVar8 = auStack12;\n                for (iVar6 = 0x40; iVar6 != 0; iVar6 = iVar6 + -1) {\n                    *puVar5 = *puVar8;\n                    puVar8 = puVar8 + 1;\n                    puVar5 = puVar5 + 1;\n                }\n            }\n            return;\n        }\n    }\n    uVar4 = (*unaff_EBP ^ unaff_EBX) + 0xf2deb8b4;\n    uVar4 = 1 - (uVar4 >> 1 | ((uVar4 & 1) != 0) << 0x1f);\n    UNRECOVERED_JUMPTABLE = unaff_EDI + (uVar4 >> 3 | uVar4 * 0x20000000);\n    if (puVar1 <= param_1 + 0x61U) {\n        uVar4 = unaff_ESI + -0x7f & 0xfffffffc;\n        puVar7 = uVar4 - 0x40;\n        *(uVar4 - 0x44) = UNRECOVERED_JUMPTABLE;\n        *(uVar4 - 0x48) = puVar1;\n        *(uVar4 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar4, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar7 < 0) * 0x80 | (puVar7 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar7 & 0xff) & 1U) == 0) * 4 | uVar4 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        for (iVar6 = 0x40; iVar6 != 0; iVar6 = iVar6 + -1) {\n            *puVar7 = *puVar5;\n            puVar5 = puVar5 + 1;\n            puVar7 = puVar7 + 1;\n        }\n        UNRECOVERED_JUMPTABLE = *(uVar4 - 0x44);\n    }\n    // WARNING: Could not recover jumptable at 0x00966f86. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*UNRECOVERED_JUMPTABLE)();\n    return;\n}\n",
+        "token_count": 1629
+    },
+    "00ab9a2a": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1",
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.00ab9a2a(void)\n\n{\n    uint32_t in_EAX;\n    uint32_t uVar1;\n    uchar *puVar2;\n    int32_t iVar3;\n    int32_t extraout_EDX;\n    uchar *unaff_ESI;\n    uchar *puVar4;\n    int32_t unaff_EDI;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    \n    (**((in_EAX & 0x812e1d60) + 0x1e))();\n    if (unaff_ESI <= &stack0x00000060) {\n        uVar1 = unaff_ESI + -0x80 & 0xfffffffc;\n        puVar2 = uVar1 - 0x40;\n        *(uVar1 - 0x44) = unaff_EDI - extraout_EDX;\n        *(uVar1 - 0x48) = unaff_ESI;\n        *(uVar1 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar1, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar2 < 0) * 0x80 | (puVar2 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar2 & 0xff) & 1U) == 0) * 4 | uVar1 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        puVar4 = *0x10;\n        for (iVar3 = 0x40; iVar3 != 0; iVar3 = iVar3 + -1) {\n            *puVar2 = *puVar4;\n            puVar4 = puVar4 + 1;\n            puVar2 = puVar2 + 1;\n        }\n    }\n    return;\n}\n",
+        "token_count": 554
+    },
+    "null": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "0093106e": {
+        "rules": [
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1",
+            "decompress data using LZO/d8e7b8e532bc4f7fa2e8bf7bf0025ad1"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.0093106e(void)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    uchar *puVar3;\n    uchar *unaff_EBP;\n    uint unaff_ESI;\n    uchar *puVar4;\n    uint unaff_EDI;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint var_80h;\n    \n    if (unaff_EBP <= &stack0x00000060) {\n        uVar2 = unaff_EBP + -0x80 & 0xfffffffc;\n        puVar3 = uVar2 - 0x40;\n        *(uVar2 - 0x44) = unaff_EDI;\n        *(uVar2 - 0x48) = unaff_ESI;\n        *(uVar2 - 0x4c) =\n             (in_NT & 1) * 0x4000 | SBORROW4(uVar2, 0x40) * 0x800 | (in_IF & 1) * 0x200 | (in_TF & 1) * 0x100 |\n             (puVar3 < 0) * 0x80 | (puVar3 == NULL) * 0x40 | (in_AF & 1) * 0x10 |\n             ((POPCOUNT(puVar3 & 0xff) & 1U) == 0) * 4 | uVar2 < 0x40 | (in_ID & 1) * 0x200000 | (in_VIP & 1) * 0x100000\n             | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n        puVar4 = *0x10;\n        for (iVar1 = 0x40; iVar1 != 0; iVar1 = iVar1 + -1) {\n            *puVar3 = *puVar4;\n            puVar4 = puVar4 + 1;\n            puVar3 = puVar3 + 1;\n        }\n    }\n    return;\n}\n",
+        "token_count": 518
+    },
+    "00807e46": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa",
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nvoid fcn.00807e46(void)\n\n{\n    return;\n}\n",
+        "token_count": 16
+    },
+    "00c84804": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nvoid fcn.00c84804(void)\n\n{\n    return;\n}\n",
+        "token_count": 16
+    },
+    "008c5c63": {
+        "rules": [
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0",
+            "hash data using aphash/10489b186fc44711a1078750698db7a9"
+        ],
+        "decompiled_code": "\n// WARNING: Unable to track spacebase fully for stack\n\nuint64_t __fastcall fcn.008c5c63(uint param_1, uint param_2)\n\n{\n    uint in_EAX;\n    char cVar3;\n    int16_t iVar1;\n    uint32_t uVar2;\n    uint32_t uVar4;\n    int32_t iVar5;\n    uint32_t uVar6;\n    uint32_t uVar7;\n    uint32_t uVar8;\n    uint unaff_EDI;\n    uchar auStack56 [4];\n    \n    uVar6 = &stack0xffffffc8 & 0xffff0000 | *0x10 - 0x37;\n    *(uVar6 - 4) = unaff_EDI;\n    *(uVar6 - 9) = 0xff6c5269;\n    uVar4 = *(uVar6 + 0x86) + 0x9476c28a;\n    uVar4 = 0xffffffff -\n            (((uVar4 >> 0x18 | (uVar4 & 0xff0000) >> 8 | (uVar4 & 0xff00) << 8 | uVar4 * 0x1000000) >> 1 |\n             ((uVar4 >> 0x18 & 1) != 0) << 0x1f) ^ 0x407f2ee7);\n    uVar4 = uVar4 >> 3 | uVar4 * 0x20000000;\n    iVar5 = -(uVar4 * -4 | -uVar4 >> 0x1e);\n    uVar7 = uVar6 - 0x14b & 0xffff0000 | *0x10 - 399;\n    uVar4 = iVar5 + 0x149a5b98;\n    uVar4 = uVar4 & 0xffff0000 | uVar4 + 1;\n    uVar2 = uVar4 + 0x93ae50;\n    cVar3 = uVar2 >> 8;\n    uVar2 = (uVar2 & 0xffff0000 | CONCAT11(cVar3 << 4 | CONCAT11(uVar4 < 0xff6c51b1, cVar3) >> 5, uVar2)) + 2;\n    iVar1 = CONCAT11(1, uVar2);\n    uVar2 = uVar2 & 0xffff0000;\n    uVar4 = *(iVar5 + 0x149a5b97) + 1U ^ (uVar2 | iVar1 + 1) - 1;\n    uVar8 = (uVar4 >> 1 | ((uVar4 & 1) != 0) << 0x1f) + 0xc2c6af55;\n    uVar4 = uVar8 >> 3;\n    uVar4 = (uVar4 | uVar8 * 0x20000000) >> 0x18 | (uVar4 & 0xff0000) >> 8 | (uVar4 & 0xff00) << 8 | uVar4 << 0x18;\n    *(uVar7 - 5) = (uVar2 | iVar1 + 2) + 3;\n    *(uVar7 - 4) = *(uVar7 - 4) ^ uVar4;\n    *(uVar7 - 4) = (uVar4 - 1) * 2;\n    return CONCAT44(param_2, in_EAX) & 0xffff00ffffffffff;\n}\n",
+        "token_count": 778
+    },
+    "008ca31b": {
+        "rules": [
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43",
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00acd380)\n\nint32_t __fastcall fcn.008ca31b(uint param_1, uint32_t param_2, int32_t param_3)\n\n{\n    int16_t *piVar1;\n    uint32_t uVar2;\n    \n    param_2 = param_2 >> 1;\n    if (param_2 < 0xd) {\n        return 0;\n    }\n    uVar2 = 0;\n    if (param_2 != 0) {\n        piVar1 = param_3 + 4;\n        do {\n            if (((((piVar1[-2] == 0x46) && (piVar1[-1] == 0x69)) && (*piVar1 == 0x6c)) &&\n                (((piVar1[1] == 0x65 && (piVar1[2] == 0x56)) &&\n                 ((piVar1[3] == 0x65 && ((piVar1[4] == 0x72 && (piVar1[5] == 0x73)))))))) &&\n               ((piVar1[6] == 0x69 &&\n                ((((piVar1[7] == 0x6f && (piVar1[8] == 0x6e)) && (piVar1[9] == 0)) && (piVar1[10] == 0)))))) {\n                return param_3 + 0x1a + uVar2 * 2;\n            }\n            uVar2 = uVar2 + 1;\n            piVar1 = piVar1 + 1;\n        } while (uVar2 < param_2);\n    }\n    return 0;\n}\n",
+        "token_count": 378
+    },
+    "0093cbbe": {
+        "rules": [
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\nuint32_t __thiscall fcn.0093cbbe(uint8_t *param_1, char param_2)\n\n{\n    uint8_t uVar1;\n    uint8_t uVar2;\n    uint8_t *in_EAX;\n    uint8_t uVar3;\n    \n    uVar3 = 0;\n    do {\n        uVar1 = *in_EAX;\n        uVar2 = *param_1;\n        param_1 = param_1 + 1;\n        in_EAX = in_EAX + 1;\n        if (param_2 != '\\0') {\n            uVar2 = uVar2 ^ (0x7bf9529c << (uVar3 & 0x1f) | 0x7bf9529c >> 0x20 - (uVar3 & 0x1f)) + uVar3;\n            uVar3 = uVar3 + 1;\n        }\n    } while ((uVar2 != 0) && (uVar2 == uVar1));\n    if (uVar2 < uVar1) {\n        return 0xffffffff;\n    }\n    return uVar1 < uVar2;\n}\n",
+        "token_count": 254
+    },
+    "00c4ab46": {
+        "rules": [
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0096215f)\n\nint32_t fcn.00c4ab46(int16_t *param_1, uint32_t param_2, uint param_3)\n\n{\n    char cVar1;\n    int16_t iVar2;\n    int16_t *piVar3;\n    uint8_t uVar4;\n    char *pcVar5;\n    int32_t iVar6;\n    int16_t *piVar7;\n    int32_t iVar8;\n    uint32_t uVar9;\n    int32_t *piVar10;\n    int32_t iVar11;\n    char *pcVar12;\n    uint8_t auStack280 [260];\n    int32_t iStack20;\n    int32_t iStack16;\n    uint32_t uStack12;\n    uint32_t uStack8;\n    \n    piVar3 = param_1;\n    if ((((param_1 == NULL) || (param_2 == 0)) || (*param_1 != 0x5a4d)) ||\n       ((piVar10 = *(param_1 + 0x1e) + param_1,  *piVar10 != 0x4550 || (uStack8 = piVar10[0x1e],  uStack8 == 0)))) {\n        return 0;\n    }\n    iStack20 = piVar10[0x1f];\n    uStack12 = 0xffffffff;\n    if (param_2 < 0x10000) {\n        uVar9 = param_2 - *(uStack8 + 0x10 + param_1);\n        if (*(uStack8 + 0x14 + param_1) <= uVar9) {\n            return 0;\n        }\n        uVar9 = *(*(uStack8 + 0x1c + param_1) + uVar9 * 4 + param_1);\n        if (uVar9 == 0) {\n            return 0;\n        }\n    }\n    else {\n        iVar8 = *(uStack8 + 0x18 + param_1);\n        if (iVar8 != 0) {\n            iVar8 = iVar8 + -1;\n            iStack16 = *(uStack8 + 0x20 + param_1) + param_1;\n            param_1 = NULL;\n            if (-1 < iVar8) {\n                do {\n                    iVar11 = iVar8 + param_1 >> 1;\n                    iVar6 = fcn.0093cbbe(param_3);\n                    if (iVar6 == -1) {\n                        iVar8 = iVar11 + -1;\n                    }\n                    else if (iVar6 == 0) {\n                        uStack12 = *(*(uStack8 + 0x24 + piVar3) + iVar11 * 2 + piVar3);\n                        param_1 = iVar8 + 1;\n                    }\n                    else if (iVar6 == 1) {\n                        param_1 = iVar11 + 1;\n                    }\n                } while (param_1 <= iVar8);\n            }\n        }\n        if (*(uStack8 + 0x14 + piVar3) <= uStack12) {\n            return 0;\n        }\n        uVar9 = *(*(uStack8 + 0x1c + piVar3) + uStack12 * 4 + piVar3);\n        if (uVar9 == 0) {\n            return 0;\n        }\n    }\n    if ((uVar9 < uStack8) || (iStack20 + uStack8 <= uVar9)) {\n        return uVar9 + piVar3;\n    }\n    pcVar5 = uVar9 + piVar3;\n    cVar1 = *pcVar5;\n    pcVar12 = pcVar5;\n    while( true ) {\n        if (cVar1 == '\\0') {\n            return 0;\n        }\n        if (cVar1 == '.') break;\n        cVar1 = pcVar12[1];\n        pcVar12 = pcVar12 + 1;\n    }\n    uVar9 = pcVar12 - pcVar5;\n    if (0x103 < uVar9) {\n        return 0;\n    }\n    param_1 = NULL;\n    if (pcVar12 != pcVar5) {\n        iVar8 = -pcVar5;\n        do {\n            if (*pcVar5 == '\\0') break;\n            pcVar5[auStack280 + iVar8] = *pcVar5;\n            param_1 = param_1 + 1;\n            pcVar5 = pcVar5 + 1;\n        } while (param_1 < uVar9);\n    }\n    auStack280[param_1] = 0;\n    piVar7 = (**0xb06050)(auStack280);\n    if ((piVar7 == NULL) && (piVar7 = (**0xb0604c)(auStack280),  piVar7 == NULL)) {\n        return 0;\n    }\n    if (piVar7 != piVar3) {\n        if (pcVar12[1] != '#') {\n            iVar8 = fcn.00c4ab46(piVar7, pcVar12 + 1, 0);\n            return iVar8;\n        }\n        pcVar5 = pcVar12 + 2;\n        iVar8 = 0;\n        cVar1 = pcVar12[2];\n        while ((cVar1 != '\\0' && (pcVar5 = pcVar5 + 1,  cVar1 - 0x30U < 10))) {\n            iVar8 = cVar1 + -0x30 + iVar8 * 10;\n            cVar1 = *pcVar5;\n        }\n        iVar8 = fcn.00c4ab46(piVar7, iVar8, 0);\n        return iVar8;\n    }\n    if (param_3 == '\\0') {\n        iVar8 = (**0xb06054)(piVar3, param_2);\n        return iVar8;\n    }\n    iVar2 = 0;\n    if (piVar7 != 0) {\n        for (; (piVar7 >> iVar2 & 1) == 0; iVar2 = iVar2 + 1) {\n        }\n    }\n    uVar9 = 0;\n    do {\n        uVar4 = uVar9 & 0x1f;\n        uVar4 = (0x7bf9529c << uVar4 | 0x7bf9529c >> 0x20 - uVar4) + uVar9 ^ (auStack280 + uVar9)[param_2 - auStack280];\n        auStack280[uVar9] = uVar4;\n        if (uVar4 == 0) break;\n        uVar9 = uVar9 + 1;\n    } while (uVar9 < 0x104);\n    iVar8 = (**0xb06054)(piVar3, auStack280);\n    return iVar8;\n}\n",
+        "token_count": 1500
+    },
+    "007dc9f8": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.007dc9f8(int32_t param_1)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint32_t unaff_EDI;\n    uint32_t *puVar4;\n    \n    iVar1 = 0;\n    if (unaff_EDI != 0) {\n        for (; (unaff_EDI >> iVar1 & 1) == 0; iVar1 = iVar1 + 1) {\n        }\n    }\n    puVar4 = ~(param_1 + 0x59111b22U >> 2 | (param_1 + 0x59111b22U) * 0x40000000) + 1;\n    iVar1 = 0x1f;\n    if (puVar4 != NULL) {\n        for (; puVar4 >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    uVar2 = (*puVar4 ^ puVar4) + 1;\n    uVar3 = uVar2 >> 1;\n    uVar3 = ((uVar3 & 0xff000000 | ((uVar2 & 1) != 0) << 0x1f) >> 0x18 | (uVar3 & 0xff0000) >> 8 | (uVar3 & 0xff00) << 8\n            | uVar3 << 0x18) - 1;\n    // WARNING: Could not recover jumptable at 0x007d1d8a. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar3 >> 0x18 | (uVar3 & 0xff0000) >> 8 | (uVar3 & 0xff00) << 8 | uVar3 * 0x1000000) + 0x8d2a1e))();\n    return;\n}\n",
+        "token_count": 425
+    },
+    "007dd8d3": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.007dd8d3(int32_t param_1)\n\n{\n    uint32_t uVar1;\n    uint32_t *puVar2;\n    \n    puVar2 = -(((param_1 + 1) * 2 | param_1 + 1 < 0) + 1);\n    rdtsc();\n    uVar1 = ~((*puVar2 ^ puVar2) - 1);\n    // WARNING: Could not recover jumptable at 0x008ce1c0. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*(~((uVar1 >> 0x18 | (uVar1 & 0xff0000) >> 8 | (uVar1 & 0xff00) << 8 | uVar1 << 0x18) + 1) + 0x7dd944))();\n    return;\n}\n",
+        "token_count": 195
+    },
+    "008e1fa0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.008e1fa0(int32_t param_1)\n\n{\n    uint32_t uVar1;\n    uint32_t *puVar2;\n    \n    rdtsc();\n    uVar1 = ~-param_1;\n    uVar1 = uVar1 >> 0x18 | (uVar1 & 0xff0000) >> 8 | (uVar1 & 0xff00) << 8 | uVar1 << 0x18;\n    puVar2 = uVar1 << 1 | uVar1 < 0;\n    uVar1 = *puVar2 ^ puVar2;\n    uVar1 = (uVar1 >> 0x18 | (uVar1 & 0xff0000) >> 8 | (uVar1 & 0xff00) << 8 | uVar1 << 0x18) + 1;\n    uVar1 = ~((uVar1 * 4 | uVar1 >> 0x1e) - 1);\n    uVar1 = ~(uVar1 >> 3 | uVar1 << 0x1d);\n    // WARNING: Could not recover jumptable at 0x008fe891. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar1 >> 1 | ((uVar1 & 1) != 0) << 0x1f) + 0x8c7f39))();\n    return;\n}\n",
+        "token_count": 321
+    },
+    "009153e2": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.009153e2(uint32_t param_1)\n\n{\n    uint32_t uVar1;\n    uint32_t *puVar2;\n    \n    uVar1 = ~(param_1 >> 3 | param_1 << 0x1d);\n    rdtsc();\n    puVar2 = -~-(uVar1 << 2 | uVar1 >> 0x1e) ^ 0x111a29f4;\n    uVar1 = ~(*puVar2 ^ puVar2) + 0x67e76e9b;\n    uVar1 = (uVar1 * 4 | uVar1 >> 0x1e) + 0x8d64ff12;\n    // WARNING: Could not recover jumptable at 0x00c8e5fe. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar1 >> 0x18 | (uVar1 & 0xff0000) >> 8 | (uVar1 & 0xff00) << 8 | uVar1 * 0x1000000) + 0x915462))();\n    return;\n}\n",
+        "token_count": 256
+    },
+    "00941985": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nvoid fcn.00941985(int32_t param_1)\n\n{\n    int16_t iVar1;\n    uint32_t uVar2;\n    uint32_t *puVar3;\n    \n    uVar2 = param_1 + 0xacc19447;\n    uVar2 = (uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | uVar2 * 0x1000000) ^ 0x757a01f1;\n    puVar3 = uVar2 << 2 | uVar2 >> 0x1e;\n    iVar1 = 0xf;\n    if (puVar3 != 0) {\n        for (; puVar3 >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    uVar2 = *puVar3 ^ puVar3;\n    uVar2 = (uVar2 >> 0x18 | (uVar2 & 0xff0000) >> 8 | (uVar2 & 0xff00) << 8 | uVar2 << 0x18) + 0xcce5e354;\n    // WARNING: Could not recover jumptable at 0x00c76e14. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*(0x7eb540 - ~((uVar2 * 8 | uVar2 >> 0x1d) + 1)))();\n    return;\n}\n",
+        "token_count": 337
+    },
+    "0095c176": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0095c176(int32_t param_1)\n\n{\n    uint32_t uVar1;\n    uint32_t *puVar2;\n    \n    puVar2 = ~((param_1 << 1 | param_1 < 0) - 0xbc2f4b) - 1;\n    uVar1 = ~((*puVar2 ^ puVar2) + 1);\n    // WARNING: Could not recover jumptable at 0x00c51493. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar1 * -2 | 0 < uVar1) + 0x7dd3c9))();\n    return;\n}\n",
+        "token_count": 153
+    },
+    "00c279d1": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0080aa31)\n\nvoid __fastcall fcn.00c279d1(uint param_1, uint16_t param_2, int32_t param_3)\n\n{\n    int16_t iVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    \n    iVar1 = 0xf;\n    if (*0x10 - 0x18U != 0) {\n        for (; *0x10 - 0x18U >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    uVar3 = ~((~-param_3 + 1U ^ 0x18270714) << 3 | ~-param_3 + 1U >> 0x1d);\n    iVar1 = 0xf;\n    if (param_2 != 0) {\n        for (; param_2 >> iVar1 == 0; iVar1 = iVar1 + -1) {\n        }\n    }\n    uVar3 = *(uVar3 + 0xddc4c089) ^ uVar3 + 0xddc4c08d;\n    uVar3 = ~(uVar3 << 3 | uVar3 >> 0x1d);\n    uVar2 = (uVar3 >> 0x18 | (uVar3 & 0xff0000) >> 8 | (uVar3 & 0xff00) << 8 | uVar3 << 0x18) + 0xe878d953;\n    uVar3 = uVar2 * 4;\n    // WARNING: Could not recover jumptable at 0x00ad27b2. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*((uVar3 >> 0x18 | (uVar3 & 0xff0000) >> 8 | (uVar3 & 0xff00) << 8 | (uVar3 | uVar2 >> 0x1e) << 0x18) + 0x80aa2a))\n              ();\n    return;\n}\n",
+        "token_count": 459
+    }
+}

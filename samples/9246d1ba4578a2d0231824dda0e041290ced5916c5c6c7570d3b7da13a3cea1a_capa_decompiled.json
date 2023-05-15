@@ -1,0 +1,30 @@
+{
+    "04b5c68f": {
+        "rules": [
+            "check OS version/4b1f5bfe83db45b5a81c3c2e0ddf7ce2"
+        ],
+        "decompiled_code": "\nvoid fcn.04b5c68f(uint32_t param_1)\n\n{\n    uint8_t *puVar1;\n    int32_t *piVar2;\n    uint32_t uVar3;\n    int32_t iVar4;\n    uint32_t uVar5;\n    int32_t unaff_EBX;\n    int32_t iVar6;\n    int32_t iVar7;\n    code *UNRECOVERED_JUMPTABLE;\n    \n    iVar4 = unaff_EBX + 9 + *(*(unaff_EBX + 0x3c) + 0x78 + unaff_EBX);\n    uVar5 = 0xffffffff;\n    iVar7 = *(iVar4 + 0x17);\n    do {\n        uVar5 = uVar5 + 1;\n        piVar2 = iVar7 + unaff_EBX;\n        iVar7 = iVar7 + 4;\n        if (*(iVar4 + 0xf) <= uVar5) {\n            return;\n        }\n        uVar3 = 0;\n        iVar6 = *piVar2 + -3 + unaff_EBX;\n        do {\n            uVar3 = uVar3 * 0xf - *(iVar6 + 3);\n            puVar1 = iVar6 + 4;\n            iVar6 = iVar6 + 1;\n        } while (9 < *puVar1);\n    } while ((uVar3 ^ param_1) != 0x12742bf0);\n    // WARNING: Could not recover jumptable at 0x04b5c64f. Too many branches\n    // WARNING: Treating indirect jump as call\n    (*UNRECOVERED_JUMPTABLE)();\n    return;\n}\n",
+        "token_count": 365
+    },
+    "04b5c725": {
+        "rules": [
+            "execute shellcode via CopyFile2/5e26aed72a5343dd8575e85c80658d9d/1e72b327ed77488fa8075dcc8fba7738"
+        ],
+        "decompiled_code": "\nvoid fcn.04b5c725(void)\n\n{\n    int32_t unaff_EBP;\n    uint var_246h;\n    \n    fcn.04b5c6f3();\n    *(unaff_EBP + -0x246) = 5;\n    fcn.04b5c6f3();\n    return;\n}\n",
+        "token_count": 74
+    },
+    "null": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "04b5c6f3": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nulong fcn.04b5c6f3(void)\n\n{\n    ulong uVar1;\n    int32_t iVar2;\n    int32_t unaff_EBP;\n    int32_t unaff_ESI;\n    code *unaff_EDI;\n    code *in_stack_00000050;\n    code *in_stack_00000054;\n    uint var_246h;\n    uint uStack4;\n    \n    do {\n        uStack4 = 8;\n        (*in_stack_00000054)();\n        *(unaff_EBP + -0x246) = *(unaff_EBP + -0x246) + 1;\n        (*in_stack_00000054)();\n        (*in_stack_00000054)(&uStack4);\n        (*in_stack_00000054)();\n        (*in_stack_00000050)();\n        iVar2 = (*unaff_EDI)();\n    } while (unaff_ESI == iVar2);\n    uVar1 = rdtsc();\n    return uVar1;\n}\n",
+        "token_count": 215
+    }
+}

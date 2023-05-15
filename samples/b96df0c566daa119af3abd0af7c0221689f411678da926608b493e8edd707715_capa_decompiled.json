@@ -1,0 +1,45 @@
+{
+    "0135db13": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n\nvoid __fastcall int.0135db13(int32_t param_1, uint8_t *param_2)\n\n{\n    char *pcVar1;\n    uint *puVar2;\n    code *pcVar3;\n    uint32_t in_EAX;\n    ushort extraout_DX;\n    uint *puVar4;\n    uint unaff_EBP;\n    uint *unaff_ESI;\n    uint *unaff_EDI;\n    ushort in_CS;\n    ushort in_DS;\n    uchar uVar5;\n    char cVar6;\n    uint uStack11;\n    uchar uStack7;\n    ushort uStack6;\n    uchar auStack4 [4];\n    \n    auStack4[3] = unaff_EBP >> 0x18;\n    *(param_2 + auStack4 * 8 + -0xf823acf) = auStack4 + *(param_2 + auStack4 * 8 + -0xf823acf);\n    pcVar1 = segment(in_DS, unaff_ESI);\n    if (param_1 != 0) {\n        if ((POPCOUNT(*pcVar1 - (param_2 >> 8)) & 1U) == 0) {\n            return;\n        }\n        *param_2 = *param_2 >> 1 | *param_2 << 7;\n        return;\n    }\n    if ((in_EAX & 0x2d) != 0) {\n        return;\n    }\n    puVar2 = in_EAX & 0xffffff00;\n    *unaff_EDI = *unaff_ESI;\n    cVar6 = SCARRY4(param_2, 1);\n    uVar5 = param_2 + 1 < 0;\n    auStack4[1] = in_CS;\n    auStack4[2] = in_CS >> 8;\n    uStack7 = 0xa9;\n    uStack6 = 0x35db;\n    auStack4[0] = 1;\n    func_0x902b0a8c();\n    pcVar3 = swi(4);\n    if (cVar6 == '\\x01') {\n        (*pcVar3)();\n    }\n    if (!uVar5) {\n        uStack7 = 0xb1;\n        uStack6 = 0x35db;\n        auStack4[0] = 1;\n        func_0xa712d758();\n        puVar4 = &uStack7;\n        cVar6 = '\\x0f';\n        do {\n            puVar2 = puVar2 + -1;\n            puVar4 = puVar4 + -1;\n            *puVar4 = *puVar2;\n            cVar6 = cVar6 + -1;\n        } while ('\\0' < cVar6);\n        uVar5 = in(extraout_DX);\n        *(unaff_EDI + 1) = uVar5;\n        LOCK();\n        return;\n    }\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 658
+    },
+    "013c8a53": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.013c8a53(int32_t param_1)\n\n{\n    int32_t *piVar1;\n    int32_t unaff_EBX;\n    int32_t unaff_EDI;\n    \n    LOCK();\n    piVar1 = unaff_EBX + 0x5dc7a908 + unaff_EDI * 2;\n    *piVar1 = *piVar1 + param_1;\n    do {\n    // WARNING: Do nothing block with infinite loop\n    } while( true );\n}\n",
+        "token_count": 114
+    },
+    "null": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "0157e15b": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n\nvoid fcn.0157e15b(void)\n\n{\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 43
+    },
+    "0168e88b": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n\nvoid __fastcall fcn.0168e88b(uint8_t param_1, ushort param_2)\n\n{\n    uint uVar1;\n    uint8_t uVar2;\n    uint8_t uVar3;\n    int32_t in_EAX;\n    uint *unaff_EDI;\n    uchar in_CF;\n    \n    uVar3 = (param_1 & 0x1f) % 9;\n    uVar2 = *(unaff_EDI + -0x628da8fb);\n    *(unaff_EDI + -0x628da8fb) = CONCAT11(in_CF, uVar2) >> uVar3 | uVar2 << 9 - uVar3;\n    uVar1 = in(param_2);\n    *unaff_EDI = uVar1;\n    *(in_EAX * 5 + -0x30) = in_EAX;\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 219
+    },
+    "0199df33": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Control flow encountered bad instruction data\n\nvoid fcn.0199df33(void)\n\n{\n    uint in_EAX;\n    uint8_t *unaff_ESI;\n    bool in_PF;\n    \n    do {\n    } while (!in_PF);\n    *unaff_ESI = *unaff_ESI | in_EAX >> 8;\n    // WARNING: Bad instruction - Truncating control flow here\n    halt_baddata();\n}\n",
+        "token_count": 94
+    }
+}

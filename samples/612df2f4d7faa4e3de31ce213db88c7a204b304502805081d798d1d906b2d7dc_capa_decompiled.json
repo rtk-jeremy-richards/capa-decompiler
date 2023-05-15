@@ -1,0 +1,160 @@
+{
+    "00401005": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x00401797)\n\nint32_t fcn.00401005(int32_t param_1)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t aiStack32 [8];\n    \n    iVar1 = *(*(param_1 + 0x3c) + 0x78 + param_1);\n    aiStack32[0] = *(iVar1 + 0x1c + param_1) + param_1;\n    iVar2 = *(iVar1 + param_1 + 0x24);\n    if (*(iVar1 + param_1 + 0x18) == 0) {\n        return 0;\n    }\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_char__struct_std::char_traits_char___class_std::allocator_char__::constructor_char_const__\n    )(*(*(iVar1 + 0x20 + param_1) + param_1) + param_1);\n    fcn.0040103c(aiStack32);\n    fcn.00401028();\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_char__struct_std::char_traits_char___class_std::allocator_char__::destructor_void_\n    )();\n    return *(aiStack32[0] + *(iVar2 + param_1) * 4) + param_1;\n}\n",
+        "token_count": 316
+    },
+    "null": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00401046": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nint32_t * fcn.00401046(int32_t *param_1, char *param_2)\n\n{\n    char cVar1;\n    char *pcVar2;\n    int32_t iVar3;\n    int32_t iVar4;\n    int32_t iVar5;\n    int32_t *in_FS_OFFSET;\n    int32_t *var_8h;\n    char *var_ch_2;\n    uint var_10h;\n    uint var_ch;\n    uint var_20h;\n    uint var_1ch;\n    uint32_t var_18h;\n    int32_t var_14h;\n    int32_t var_ch_3;\n    uint uStack12;\n    uint var_4h;\n    \n    var_4h = 0xffffffff;\n    uStack12 = 0x4049a8;\n    var_ch_3 = *in_FS_OFFSET;\n    *in_FS_OFFSET = &var_ch_3;\n    iVar5 = 0;\n    var_14h = 0;\n    pcVar2 = var_ch_2;\n    do {\n        cVar1 = *pcVar2;\n        pcVar2 = pcVar2 + 1;\n    } while (cVar1 != '\\0');\n    iVar3 = pcVar2 - (var_ch_2 + 1);\n    iVar4 = *(*(*var_8h + 4) + 0x18 + var_8h);\n    if ((0 < iVar4) && (iVar3 < iVar4)) {\n        iVar5 = iVar4 - iVar3;\n    }\n    fcn.00401069(var_8h);\n    if (var_1ch == '\\0') {\n        var_14h = 4;\n        goto code_r0x0040269f;\n    }\n    var_4h = 1;\n    if ((*(*(*var_8h + 4) + 0x10 + var_8h) & 0x1c0) == 0x40) {\ncode_r0x00402671:\n        iVar4 = (*\n                _sym.imp.MSVCP90.dll_public:_int___thiscall_std::basic_streambuf_char__struct_std::char_traits_char__::sputn_char_const___int_\n                )(var_ch_2, iVar3);\n        if (iVar4 == iVar3) {\n            for (; 0 < iVar5; iVar5 = iVar5 + -1) {\n                var_18h = var_18h & 0xffffff00 | *(*(*var_8h + 4) + 0x30 + var_8h);\n                iVar4 = (*\n                        _sym.imp.MSVCP90.dll_public:_int___thiscall_std::basic_streambuf_char__struct_std::char_traits_char__::sputc_char_\n                        )(var_18h);\n                if (iVar4 == -1) {\n                    var_14h = 4;\n                    break;\n                }\n            }\n        }\n        else {\n            var_14h = 4;\n        }\n    }\n    else {\n        for (; 0 < iVar5; iVar5 = iVar5 + -1) {\n            var_18h = var_18h & 0xffffff00 | *(*(*var_8h + 4) + 0x30 + var_8h);\n            iVar4 = (*\n                    _sym.imp.MSVCP90.dll_public:_int___thiscall_std::basic_streambuf_char__struct_std::char_traits_char__::sputc_char_\n                    )(var_18h);\n            if (iVar4 == -1) {\n                var_14h = 4;\n                break;\n            }\n        }\n        if (var_14h == 0) goto code_r0x00402671;\n    }\n    *(var_8h + *(*var_8h + 4) + 0x18) = 0;\ncode_r0x0040269f:\n    var_4h = 0;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_ios_char__struct_std::char_traits_char__::setstate_int__bool_\n    )(var_14h, 0);\n    var_4h = 0xffffffff;\n    fcn.00401037();\n    *in_FS_OFFSET = var_ch_3;\n    return var_8h;\n}\n",
+        "token_count": 939
+    },
+    "00401069": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "\nint32_t ** __thiscall fcn.00401069(int32_t **param_1, int32_t *param_2)\n\n{\n    uint32_t uVar1;\n    int32_t **in_FS_OFFSET;\n    int32_t *piStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack4 = 0xffffffff;\n    uStack8 = 0x404948;\n    piStack12 = *in_FS_OFFSET;\n    uVar1 = *0x408004 ^ &stack0xffffffe8;\n    *in_FS_OFFSET = &piStack12;\n    *param_1 = param_2;\n    if (*(*(*param_2 + 4) + 0x28 + param_2) != 0) {\n        (*_sym.imp.MSVCP90.dll_public:_void___thiscall_std::_Mutex::_Lock_void_)(uVar1);\n    }\n    uStack4 = 0;\n    if ((*(param_2 + *(*param_2 + 4) + 8) == 0) && (*(param_2 + *(*param_2 + 4) + 0x2c) != 0)) {\n        (*\n        _sym.imp.MSVCP90.dll_public:_class_std::basic_ostream_char__struct_std::char_traits_char______thiscall_std::basic_ostream_char__struct_std::char_traits_char__::flush_void_\n        )();\n    }\n    *(param_1 + 1) = *(*(*param_2 + 4) + 8 + param_2) == 0;\n    *in_FS_OFFSET = piStack12;\n    return param_1;\n}\n",
+        "token_count": 357
+    },
+    "00402b74": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00402b74(uint arg_8h)\n\n{\n    uint in_EAX;\n    uint uVar1;\n    int32_t in_ECX;\n    uint in_EDX;\n    uint unaff_EBX;\n    uint unaff_EBP;\n    uint unaff_ESI;\n    uint unaff_EDI;\n    ushort in_ES;\n    ushort in_CS;\n    ushort in_SS;\n    ushort in_DS;\n    ushort in_FS;\n    ushort in_GS;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint unaff_retaddr;\n    int32_t var_328h;\n    uint var_324h;\n    uint var_320h;\n    \n    if (in_ECX == *0x408004) {\n        return;\n    }\n    *0x408368 = (in_NT & 1) * 0x4000 | SBORROW4(&stack0xfffffffc, 0x328) * 0x800 | (in_IF & 1) * 0x200 |\n                (in_TF & 1) * 0x100 | (&var_328h < 0) * 0x80 | (*0x10 == 0x32c) * 0x40 | (in_AF & 1) * 0x10 |\n                ((POPCOUNT(&var_328h & 0xff) & 1U) == 0) * 4 | &stack0xfffffffc < 0x328 | (in_ID & 1) * 0x200000 |\n                (in_VIP & 1) * 0x100000 | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n    *0x40836c = &arg_8h;\n    *0x4082a8 = 0x10001;\n    *0x408250 = 0xc0000409;\n    *0x408254 = 1;\n    var_328h = *0x408004;\n    var_324h = *0x408008;\n    *0x40825c = unaff_retaddr;\n    *0x408334 = in_GS;\n    *0x408338 = in_FS;\n    *0x40833c = in_ES;\n    *0x408340 = in_DS;\n    *0x408344 = unaff_EDI;\n    *0x408348 = unaff_ESI;\n    *0x40834c = unaff_EBX;\n    *0x408350 = in_EDX;\n    *0x408354 = in_ECX;\n    *0x408358 = in_EAX;\n    *0x40835c = unaff_EBP;\n    *0x408360 = unaff_retaddr;\n    *0x408364 = in_CS;\n    *0x408370 = in_SS;\n    *0x4082a0 = (*_sym.imp.KERNEL32.dll_IsDebuggerPresent)();\n    sub.MSVCR90.dll__crt_debugger_hook(1);\n    (*_sym.imp.KERNEL32.dll_SetUnhandledExceptionFilter)(0);\n    (*_sym.imp.KERNEL32.dll_UnhandledExceptionFilter)(0x4068ec);\n    if (*0x4082a0 == 0) {\n        sub.MSVCR90.dll__crt_debugger_hook(1);\n    }\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCurrentProcess)(0xc0000409);\n    (*_sym.imp.KERNEL32.dll_TerminateProcess)(uVar1);\n    return;\n}\n",
+        "token_count": 822
+    },
+    "00401028": {
+        "rules": [
+            "encrypt data using HC-128/425018b86d394d5ebff49c9438559e47"
+        ],
+        "decompiled_code": "\nuint32_t fcn.00401028(uint8_t *param_1)\n\n{\n    uint8_t uVar1;\n    code *pcVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    \n    pcVar2 = _sym.imp.USER32.dll_ShowWindow;\n    uVar3 = 0xffffffff;\n    uVar1 = *param_1;\n    while (uVar1 != 0) {\n        uVar4 = uVar3 ^ uVar1;\n        (*pcVar2)(0, 0);\n        param_1 = param_1 + 1;\n        uVar3 = (uVar4 << 0x1e) >> 0x1f & 0xee0e612cU ^\n                (uVar4 << 0x1f) >> 0x1f & 0x77073096U ^ (uVar4 << 0x1d) >> 0x1f & 0x76dc419U ^\n                (uVar4 << 0x19) >> 0x1f & 0x76dc4190U ^ (uVar4 << 0x1a) >> 0x1f & 0x3b6e20c8U ^\n                (uVar4 << 0x1b) >> 0x1f & 0x1db71064U ^ (uVar4 << 0x1c) >> 0x1f & 0xedb8832U ^ uVar3 >> 8 ^\n                (uVar4 << 0x18) >> 0x1f & 0xedb88320U;\n        uVar1 = *param_1;\n    }\n    return ~uVar3;\n}\n",
+        "token_count": 380
+    },
+    "00401078": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/a90d4ac7cf5b4bde87d45a81715c7353",
+            "validate payment card number using luhn algorithm with lookup table/6f7029bc2c134cb690df0e7c2f59f3d4",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "enumerate PE sections/0325759584d940e7b69154ed16836be2"
+        ],
+        "decompiled_code": "\nvoid fcn.00401078(uint param_1)\n\n{\n    code *pcVar1;\n    uint uStack72;\n    uint uStack68;\n    uint uStack64;\n    uint uStack60;\n    uint uStack56;\n    \n    pcVar1 = _sym.imp.USER32.dll_LoadIconA;\n    uStack56 = 0x6b;\n    uStack60 = param_1;\n    uStack64 = 0x4027df;\n    (*_sym.imp.USER32.dll_LoadIconA)();\n    uStack64 = 0x7f00;\n    uStack68 = 0;\n    uStack72 = 0x4027f0;\n    (*_sym.imp.USER32.dll_LoadCursorA)();\n    uStack72 = 0x6c;\n    (*pcVar1)(3);\n    (*_sym.imp.USER32.dll_RegisterClassExA)(&stack0xffffffb8);\n    return;\n}\n",
+        "token_count": 199
+    },
+    "00401019": {
+        "rules": [
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x004013be)\n// WARNING: Could not reconcile some variable overlaps\n\nvoid fcn.00401019(uint *param_1)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    int32_t iVar3;\n    uint32_t uVar4;\n    uint *puVar5;\n    int32_t unaff_EBP;\n    uint ***pppuVar6;\n    int32_t *in_FS_OFFSET;\n    uint32_t in_stack_00000014;\n    uint32_t in_stack_00000018;\n    uint *puStack52;\n    uint ***apppuStack48 [4];\n    uint32_t uStack32;\n    uint32_t uStack28;\n    int32_t iStack20;\n    uint32_t uStack16;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x40488c;\n    uStack12 = *in_FS_OFFSET;\n    uStack16 = *0x408004 ^ &puStack52;\n    uVar2 = *0x408004 ^ &stack0xffffffbc;\n    *in_FS_OFFSET = &uStack12;\n    puStack52 = param_1;\n    apppuStack48[0] = NULL;\n    uStack4 = 1;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::constructor_wchar_t_const__\n    )(0x406800, uVar2);\n    uStack8 = CONCAT31(uStack8._1_3_, 2);\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::constructor_class_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t___const__\n    )(&param_1);\n    uVar2 = 0;\n    if (in_stack_00000014 != 0) {\n        do {\n            puVar5 = param_1;\n            if (in_stack_00000018 < 8) {\n                puVar5 = &param_1;\n            }\n            uVar4 = uVar2 % uStack32;\n            if (uStack32 < uVar4) {\n                (*_sym.imp.MSVCR90.dll__invalid_parameter_noinfo)();\n            }\n            pppuVar6 = apppuStack48[0];\n            if (uStack28 < 8) {\n                pppuVar6 = apppuStack48;\n            }\n            if (*(unaff_EBP + 0x14) <= uVar2 && uVar2 != *(unaff_EBP + 0x14)) {\n                (*_sym.imp.MSVCR90.dll__invalid_parameter_noinfo)();\n            }\n            if (*(unaff_EBP + 0x18) < 8) {\n                iVar3 = unaff_EBP + 4;\n            }\n            else {\n                iVar3 = *(unaff_EBP + 4);\n            }\n            iVar1 = uVar2 * 2;\n            uVar2 = uVar2 + 1;\n            *(iVar3 + -2 + uVar2 * 2) = *(pppuVar6 + uVar4 * 2) ^ *(puVar5 + iVar1);\n        } while (uVar2 < in_stack_00000014);\n    }\n    uStack12._0_1_ = 1;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::destructor_void_\n    )();\n    uStack12 = uStack12._1_3_ << 8;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::destructor_void_\n    )();\n    *in_FS_OFFSET = iStack20;\n    fcn.00402b74(unaff_EBP);\n    return;\n}\n",
+        "token_count": 930
+    },
+    "0040103c": {
+        "rules": [
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a",
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0040154e)\n// WARNING: Could not reconcile some variable overlaps\n\nvoid fcn.0040103c(uint *param_1)\n\n{\n    uint8_t *puVar1;\n    uint32_t uVar2;\n    int32_t iVar3;\n    uint32_t uVar4;\n    uint *puVar5;\n    int32_t unaff_EBP;\n    uint ***pppuVar6;\n    int32_t *in_FS_OFFSET;\n    uint32_t in_stack_00000014;\n    uint32_t in_stack_00000018;\n    uint *puStack52;\n    uint ***apppuStack48 [4];\n    uint32_t uStack32;\n    uint32_t uStack28;\n    int32_t iStack20;\n    uint32_t uStack16;\n    uint uStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x4048fc;\n    uStack12 = *in_FS_OFFSET;\n    uStack16 = *0x408004 ^ &puStack52;\n    uVar2 = *0x408004 ^ &stack0xffffffbc;\n    *in_FS_OFFSET = &uStack12;\n    puStack52 = param_1;\n    apppuStack48[0] = NULL;\n    uStack4 = 1;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::constructor_wchar_t_const__\n    )(0x40681c, uVar2);\n    uStack8 = CONCAT31(uStack8._1_3_, 2);\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_char__struct_std::char_traits_char___class_std::allocator_char__::constructor_class_std::basic_string_char__struct_std::char_traits_char___class_std::allocator_char___const__\n    )(&param_1);\n    uVar2 = 0;\n    if (in_stack_00000014 != 0) {\n        do {\n            puVar5 = param_1;\n            if (in_stack_00000018 < 0x10) {\n                puVar5 = &param_1;\n            }\n            uVar4 = uVar2 % uStack32;\n            if (uStack32 < uVar4) {\n                (*_sym.imp.MSVCR90.dll__invalid_parameter_noinfo)();\n            }\n            pppuVar6 = apppuStack48[0];\n            if (uStack28 < 8) {\n                pppuVar6 = apppuStack48;\n            }\n            if (*(unaff_EBP + 0x14) <= uVar2 && uVar2 != *(unaff_EBP + 0x14)) {\n                (*_sym.imp.MSVCR90.dll__invalid_parameter_noinfo)();\n            }\n            if (*(unaff_EBP + 0x18) < 0x10) {\n                iVar3 = unaff_EBP + 4;\n            }\n            else {\n                iVar3 = *(unaff_EBP + 4);\n            }\n            puVar1 = puVar5 + uVar2;\n            uVar2 = uVar2 + 1;\n            *(iVar3 + -1 + uVar2) = *(pppuVar6 + uVar4 * 2) ^ *puVar1;\n        } while (uVar2 < in_stack_00000014);\n    }\n    uStack12._0_1_ = 1;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::destructor_void_\n    )();\n    uStack12 = uStack12._1_3_ << 8;\n    (*\n    _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_char__struct_std::char_traits_char___class_std::allocator_char__::destructor_void_\n    )();\n    *in_FS_OFFSET = iStack20;\n    fcn.00402b74(unaff_EBP);\n    return;\n}\n",
+        "token_count": 917
+    },
+    "0040106e": {
+        "rules": [
+            "enumerate PE sections/e92b906b5db4485ea433dde72854611a"
+        ],
+        "decompiled_code": "\nbool fcn.0040106e(void)\n\n{\n    code *pcVar1;\n    int32_t iVar2;\n    uint uStack24;\n    uint uStack20;\n    uint uStack16;\n    uint uStack12;\n    uint uStack4;\n    \n    pcVar1 = _sym.imp.ADVAPI32.dll_CryptAcquireContextA;\n    uStack12 = 0;\n    uStack16 = 1;\n    uStack20 = 0;\n    uStack24 = 0;\n    uStack4 = 0;\n    iVar2 = (*_sym.imp.ADVAPI32.dll_CryptAcquireContextA)(&uStack4);\n    if (iVar2 == 0) {\n        return false;\n    }\n    iVar2 = (*pcVar1)(&uStack24, 0, 0, 1, 8);\n    return iVar2 != 0;\n}\n",
+        "token_count": 193
+    },
+    "00401023": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382"
+        ],
+        "decompiled_code": "\nvoid fcn.00401023(int16_t *param_1, int32_t param_2, uint32_t param_3)\n\n{\n    int16_t iVar1;\n    int16_t *piVar2;\n    uint32_t uVar3;\n    uint32_t uVar4;\n    \n    uVar3 = 0;\n    if (param_3 != 0) {\n        do {\n            piVar2 = param_1;\n            do {\n                iVar1 = *piVar2;\n                piVar2 = piVar2 + 1;\n            } while (iVar1 != 0);\n            uVar4 = uVar3 + 1;\n            *(uVar3 + param_2) = *(uVar3 + param_2) ^ *(param_1 + uVar3 % (piVar2 - (param_1 + 1) >> 1));\n            uVar3 = uVar4;\n        } while (uVar4 != param_3);\n    }\n    return;\n}\n",
+        "token_count": 215
+    },
+    "0040102d": {
+        "rules": [
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nint32_t fcn.0040102d(void)\n\n{\n    int32_t *piVar1;\n    code *pcVar2;\n    int32_t iVar3;\n    uint uVar4;\n    int32_t *piVar5;\n    uchar auStack76 [16];\n    uint uStack60;\n    int32_t iStack56;\n    int32_t iStack52;\n    uchar *puStack32;\n    \n    iStack52 = 0x40165c;\n    iVar3 = fcn.0040105a();\n    piVar1 = *(*(iVar3 + 0xc) + 0xc);\n    iStack52 = 0x401669;\n    iVar3 = fcn.0040106e();\n    pcVar2 = _sym.imp.MSVCR90.dll__wcslwr;\n    piVar5 = piVar1;\n    if (iVar3 == 0) {\n        do {\n            iStack52 = piVar5[0xc];\n            iStack56 = 0x401679;\n            uVar4 = (*pcVar2)();\n            puStack32 = &stack0xffffffb4;\n            (*\n            _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::constructor_wchar_t_const__\n            )(uVar4);\n            iStack56 = fcn.00401019(&stack0xffffffe0);\n            if (*(iStack56 + 0x18) < 8) {\n                iStack56 = iStack56 + 4;\n            }\n            else {\n                iStack56 = *(iStack56 + 4);\n            }\n            uStack60 = 0x4016aa;\n            iVar3 = fcn.00401028();\n            iStack56 = 0x4016bf;\n            (*\n            _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_string_wchar_t__struct_std::char_traits_wchar_t___class_std::allocator_wchar_t__::destructor_void_\n            )();\n            if (iVar3 == -0xf06ddfe) {\n                return piVar5[6];\n            }\n            piVar5 = *piVar5;\n        } while (piVar5 != piVar1);\n    }\n    return 0;\n}\n",
+        "token_count": 504
+    },
+    "0040100f": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nuint32_t fcn.0040100f(uint param_1, int32_t *param_2, int32_t param_3, uint param_4)\n\n{\n    uint32_t in_EAX;\n    code *pcVar1;\n    int32_t iVar2;\n    uint32_t uVar3;\n    uint unaff_EDI;\n    int32_t *piVar4;\n    \n    if (param_3 == 0) {\n        return in_EAX & 0xffffff00;\n    }\n    pcVar1 = fcn.0040101e(L\"Crypt32.dll\", \"CryptStringToBinaryA\");\n    piVar4 = param_2;\n    iVar2 = (*pcVar1)(param_3, param_4, 1, 0, param_2, 0, 0);\n    if (iVar2 == 0) {\n        return 0;\n    }\n    iVar2 = (*_sym.imp.MSVCR90.dll_malloc)(*param_2 + 1);\n    *piVar4 = iVar2;\n    if (iVar2 == 0) {\n        return 0;\n    }\n    sub.MSVCR90.dll_memset(iVar2, 0, *param_2 + 1);\n    uVar3 = (*pcVar1)(param_3, unaff_EDI, 1, *piVar4, param_2, 0, 0);\n    return uVar3 & 0xffffff00 | uVar3 != 0;\n}\n",
+        "token_count": 320
+    },
+    "0040101e": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040101e(uint param_1, uint param_2)\n\n{\n    uint uVar1;\n    code *pcVar2;\n    code *pcVar3;\n    \n    uVar1 = fcn.0040102d(0xc405de);\n    pcVar2 = fcn.00401005(uVar1);\n    uVar1 = fcn.0040102d(0xa67c815d);\n    pcVar3 = fcn.00401005(uVar1);\n    uVar1 = (*pcVar2)(param_1, 0, 0, param_2);\n    (*pcVar3)(uVar1);\n    return;\n}\n",
+        "token_count": 147
+    },
+    "00401037": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00401037(int32_t **param_1)\n\n{\n    char cVar1;\n    uint32_t uVar2;\n    int32_t **in_FS_OFFSET;\n    int32_t *piStack12;\n    uint uStack8;\n    uint uStack4;\n    \n    uStack8 = 0x404978;\n    piStack12 = *in_FS_OFFSET;\n    uVar2 = *0x408004 ^ &stack0xffffffec;\n    *in_FS_OFFSET = &piStack12;\n    uStack4 = 0;\n    cVar1 = (*_sym.imp.MSVCP90.dll_bool___cdecl_std::uncaught_exception_void_)(uVar2);\n    if (cVar1 == '\\0') {\n        (*\n        _sym.imp.MSVCP90.dll_public:_void___thiscall_std::basic_ostream_char__struct_std::char_traits_char__::_Osfx_void_\n        )();\n    }\n    uStack4 = 0xffffffff;\n    if (*(*(**param_1 + 4) + 0x28 + *param_1) != 0) {\n        (*_sym.imp.MSVCP90.dll_public:_void___thiscall_std::_Mutex::_Unlock_void_)();\n    }\n    *in_FS_OFFSET = piStack12;\n    return;\n}\n",
+        "token_count": 280
+    },
+    "0040316c": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.0040316c(void)\n\n{\n    code **ppcVar1;\n    \n    ppcVar1 = 0x406d10;\n    do {\n        if (*ppcVar1 != NULL) {\n            (**ppcVar1)();\n        }\n        ppcVar1 = ppcVar1 + 1;\n    } while (ppcVar1 < 0x406e10);\n    return;\n}\n",
+        "token_count": 91
+    },
+    "0040105a": {
+        "rules": [
+            "PEB access"
+        ],
+        "decompiled_code": "\nuint fcn.0040105a(void)\n\n{\n    int32_t in_FS_OFFSET;\n    \n    return *(in_FS_OFFSET + 0x30);\n}\n",
+        "token_count": 34
+    },
+    "0040105f": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\nuint fcn.0040105f(void)\n\n{\n    char cVar1;\n    code *pcVar2;\n    code *pcVar3;\n    code *pcVar4;\n    uint uVar5;\n    uint *puVar6;\n    uint *puVar7;\n    int32_t iVar8;\n    uint *unaff_retaddr;\n    code *pcStack152;\n    uint *puStack148;\n    char *pcStack144;\n    uint uStack140;\n    uint *puStack136;\n    uint uStack132;\n    uint *puStack128;\n    uint *puStack124;\n    uint *puStack120;\n    uint *puStack116;\n    uint uStack112;\n    uint uStack108;\n    uint uStack104;\n    uint uStack100;\n    uint uStack96;\n    uint uStack92;\n    uint uStack88;\n    uint uStack80;\n    uint uStack76;\n    uint uStack72;\n    uint *puStack68;\n    uint uStack64;\n    code *pcStack60;\n    uint uStack56;\n    uint uStack52;\n    \n    uStack52 = \n    _sym.imp.MSVCP90.dll_class_std::basic_ostream_char__struct_std::char_traits_char______cdecl_std::endl_class_std::basic_ostream_char__struct_std::char_traits_char____\n    ;\n    uStack56 = 0x4068e8;\n    pcStack60 = _sym.imp.MSVCP90.dll_class_std::basic_ostream_char__struct_std::char_traits_char___std::cout;\n    uStack64 = 0x40286e;\n    fcn.00401046();\n    uStack56 = 0x402879;\n    (*\n    _sym.imp.MSVCP90.dll_public:_class_std::basic_ostream_char__struct_std::char_traits_char______thiscall_std::basic_ostream_char__struct_std::char_traits_char__::operator___class_std::basic_ostream_char__struct_std::char_traits_char_______cdecl___class_std::basic_ostream_char__struct_std::char_traits_char_____\n    )();\n    pcVar2 = _sym.imp.USER32.dll_LoadStringA;\n    uStack56 = 100;\n    pcStack60 = 0x408190;\n    uStack64 = 0x67;\n    uStack72 = 0x40288f;\n    puStack68 = unaff_retaddr;\n    (*_sym.imp.USER32.dll_LoadStringA)();\n    uStack72 = 100;\n    uStack76 = 0x408128;\n    uStack80 = 0x6d;\n    uStack88 = 0x40289b;\n    (*pcVar2)();\n    uStack92 = 0x4028a1;\n    fcn.00401078();\n    uStack88 = 0x58ad1fbb;\n    uStack92 = 0x4028ae;\n    uStack92 = fcn.0040102d();\n    uStack96 = 0x4028b4;\n    pcVar2 = fcn.00401005();\n    uStack88 = 0xab246614;\n    uStack92 = 0x4028c3;\n    uStack92 = fcn.0040102d();\n    uStack96 = 0x4028c9;\n    pcVar3 = fcn.00401005();\n    uStack88 = 0xac196480;\n    uStack92 = 0x4028d8;\n    uStack92 = fcn.0040102d();\n    uStack96 = 0x4028de;\n    pcVar4 = fcn.00401005();\n    uStack88 = 0x706879f8;\n    uStack92 = 0x4028ed;\n    uStack92 = fcn.0040102d();\n    uStack96 = 0x4028f3;\n    fcn.00401005();\n    uStack88 = 10;\n    uStack92 = 0x22b;\n    uStack96 = 0;\n    uStack100 = 0x402905;\n    uVar5 = (*pcVar2)();\n    uStack104 = 0;\n    uStack108 = 0x40290c;\n    uStack100 = uVar5;\n    puVar6 = (*pcVar3)();\n    uStack112 = 0;\n    puStack116 = 0x402913;\n    uStack108 = uVar5;\n    puVar7 = (*pcVar4)();\n    puStack120 = 0x40291a;\n    puStack116 = puVar6;\n    puStack128 = (*pcStack60)();\n    puStack124 = 0x402923;\n    puStack120 = puVar7;\n    uStack140 = (*_sym.imp.MSVCR90.dll_malloc)();\n    puStack136 = 0x40292d;\n    uStack132 = uStack140;\n    puStack124 = puVar7;\n    sub.MSVCR90.dll_memcpy();\n    puStack120 = 0x3015c371;\n    puStack124 = 0x40293a;\n    puStack124 = fcn.0040102d();\n    puStack128 = 0x402940;\n    pcVar2 = fcn.00401005();\n    puStack120 = 0x40;\n    puStack124 = 0x1000;\n    uStack132 = 0;\n    puStack136 = 0x40294f;\n    puStack128 = puVar7;\n    pcVar2 = (*pcVar2)();\n    pcStack144 = &puStack116;\n    uStack80 = 0;\n    puStack116 = NULL;\n    puStack148 = &uStack80;\n    pcStack152 = 0x40296c;\n    puStack136 = puVar7;\n    cVar1 = fcn.0040100f();\n    if (cVar1 == '\\0') {\n        puStack136 = NULL;\n        uStack140 = 0;\n        pcStack144 = \"Decrypt Key Fail\";\n        puStack148 = NULL;\n        pcStack152 = 0x402984;\n        (*_sym.imp.USER32.dll_MessageBoxA)();\n    }\n    puStack136 = puStack116;\n    uStack140 = uStack80;\n    puStack148 = 0x402994;\n    pcStack144 = pcVar2;\n    sub.MSVCR90.dll_memcpy();\n    puStack148 = puStack116;\n    pcStack152 = pcVar2;\n    fcn.00401023(0x406894);\n    puStack136 = 0x4029a9;\n    (*pcVar2)();\n    puStack136 = puStack68;\n    pcStack144 = 0x4029b4;\n    iVar8 = fcn.00401041();\n    if (iVar8 == 0) {\n        return 0;\n    }\n    puStack136 = 0x6d;\n    pcStack144 = 0x4029ce;\n    uVar5 = (*_sym.imp.USER32.dll_LoadAcceleratorsA)();\n    pcVar2 = _sym.imp.USER32.dll_GetMessageA;\n    pcStack144 = NULL;\n    puStack148 = NULL;\n    pcStack152 = NULL;\n    iVar8 = (*_sym.imp.USER32.dll_GetMessageA)(&puStack120);\n    pcVar4 = _sym.imp.USER32.dll_TranslateMessage;\n    pcVar3 = _sym.imp.USER32.dll_TranslateAcceleratorA;\n    while (iVar8 != 0) {\n        iVar8 = (*pcVar3)(puStack136, uVar5, &puStack136);\n        if (iVar8 == 0) {\n            (*pcVar4)(&puStack148);\n            (*_sym.imp.USER32.dll_DispatchMessageA)(&pcStack152);\n        }\n        iVar8 = (*pcVar2)(&puStack148, 0, 0, 0);\n    }\n    return puStack128;\n}\n",
+        "token_count": 1712
+    }
+}

